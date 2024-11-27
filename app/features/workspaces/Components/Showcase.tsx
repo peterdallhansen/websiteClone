@@ -184,11 +184,12 @@ function Showcase() {
             }}
           >
             <div className="w-full h-full flex flex-col items-start justify-start text-left ">
-              <h2 className="text-xl md:text-xl xl:text-[16px] leading-tight text-white max-w-[750px] mb-6 font-bold inline-flex items-center flex-row justify-center align-center mt-1">
-                <Users className="mr-2 size-4" />
-                Demographics
-              </h2>
-
+              <a href="/features/demographics">
+                <h2 className="text-xl md:text-xl xl:text-[16px] leading-tight text-white max-w-[750px] mb-6 font-bold inline-flex items-center flex-row justify-center align-center mt-1">
+                  <Users className="mr-2 size-4" />
+                  Demographics
+                </h2>
+              </a>
               <a href="#">
                 <h2 className="text-xl md:text-xl xl:text-[16px] leading-tight text-white max-w-[750px] mb-6 font-bold inline-flex items-center flex-row justify-center align-center ">
                   <TrendingUpIcon className="mr-2 size-4" />
@@ -245,7 +246,7 @@ function Showcase() {
                 </a>
 
                 <Image
-                  src={"https://startup-template-sage.vercel.app/hero-dark.png"}
+                  src={"/images/localhost_3001_ (1).png"}
                   width={1000}
                   height={400}
                   quality={100}

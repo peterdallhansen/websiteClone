@@ -14,42 +14,58 @@ import {
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
 import Image from "next/image";
+import Logo from "../Logo";
+import {
+  UserIcon,
+  GlobeIcon,
+  BarChartIcon,
+  CalendarIcon,
+  LayersIcon,
+  Share,
+  Share2,
+} from "lucide-react";
 
-const components: { title: string; href: string; description: string }[] = [
+const components: {
+  title: string;
+  href: string;
+  description: string;
+  icon: React.ElementType;
+}[] = [
   {
     title: "Demographics",
     href: "/features/demographics",
-    description:
-      "A modal dialog that interrupts the user with important content and expects a response.",
+    description: "User data insights.",
+    icon: UserIcon,
   },
   {
     title: "Workspaces",
     href: "/features/workspaces",
-    description:
-      "For sighted users to preview content available behind a link.",
+    description: "Optimize for productivity",
+    icon: LayersIcon,
   },
   {
-    title: "Progress",
+    title: "3D Map",
     href: "/docs/primitives/progress",
-    description:
-      "Displays an indicator showing the completion progress of a task, typically displayed as a progress bar.",
+    description: "Interactive mapping.",
+    icon: GlobeIcon,
   },
   {
-    title: "Scroll-area",
+    title: "Analytics",
     href: "/docs/primitives/scroll-area",
-    description: "Visually or semantically separates content.",
+    description: "Data-driven insights.",
+    icon: BarChartIcon,
   },
   {
-    title: "Tabs",
+    title: "Calendar",
     href: "/docs/primitives/tabs",
-    description:
-      "A set of layered sections of content—known as tab panels—that are displayed one at a time.",
+    description: "Schedule events.",
+    icon: CalendarIcon,
   },
   {
-    title: "Tooltip",
+    title: "Integration",
     href: "/docs/primitives/tooltip",
-    description:
-      "A popup that displays information related to an element when the element receives keyboard focus or the mouse hovers over it.",
+    description: "Seamless connections.",
+    icon: Share2,
   },
 ];
 
@@ -63,29 +79,6 @@ export function NavigationMenuDemo() {
           </NavigationMenuTrigger>
           <NavigationMenuContent>
             <ul className="grid gap-3 p-4 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
-              <li className="row-span-3">
-                <NavigationMenuLink asChild>
-                  <a
-                    className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
-                    href="/"
-                  >
-                    <Image
-                      src={"/images/Icon-medium.png"}
-                      width={50}
-                      height={50}
-                      alt="Zonify-Logo"
-                      className="h-6 w-6"
-                    />
-                    <div className="mb-2 mt-4 text-lg font-medium">
-                      shadcn/ui
-                    </div>
-                    <p className="text-sm leading-tight text-muted-foreground">
-                      Beautifully designed components built with Radix UI and
-                      Tailwind CSS.
-                    </p>
-                  </a>
-                </NavigationMenuLink>
-              </li>
               <ListItem href="/docs" title="Introduction">
                 Re-usable components built using Radix UI and Tailwind CSS.
               </ListItem>
@@ -105,13 +98,25 @@ export function NavigationMenuDemo() {
           <NavigationMenuContent>
             <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
               {components.map((component) => (
-                <ListItem
+                <div
                   key={component.title}
-                  title={component.title}
-                  href={component.href}
+                  className={cn(
+                    "group block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none ",
+                    "inline-flex items-center gap-2 "
+                  )}
                 >
-                  {component.description}
-                </ListItem>
+                  <component.icon className="size-10 p-2 border rounded-[10px] min-w-[40px] h-[40px] bg-transparent text-current group-hover:bg-white group-hover:border-white group-hover:text-black " />
+
+                  <ListItem
+                    key={component.title}
+                    title={component.title}
+                    href={component.href}
+                  >
+                    <p className="text-sm font-medium  mt-1 text-white text-opacity-60 group-hover:text-opacity-100 ">
+                      {component.description}
+                    </p>
+                  </ListItem>
+                </div>
               ))}
             </ul>
           </NavigationMenuContent>
@@ -137,14 +142,7 @@ const ListItem = React.forwardRef<
   return (
     <li>
       <NavigationMenuLink asChild>
-        <a
-          ref={ref}
-          className={cn(
-            "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
-            className
-          )}
-          {...props}
-        >
+        <a ref={ref} {...props}>
           <div className="text-sm font-medium leading-none">{title}</div>
           <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
             {children}

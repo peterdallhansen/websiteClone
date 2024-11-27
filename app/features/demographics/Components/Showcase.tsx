@@ -204,7 +204,7 @@ function Showcase() {
                   Insights
                 </h2>
               </a>
-              <a href="#">
+              <a href="/features/workspaces">
                 <h2 className="text-xl md:text-xl xl:text-[16px] leading-tight text-white max-w-[750px] mb-6 font-bold inline-flex items-center flex-row justify-center align-center">
                   <Briefcase className="mr-2 size-4" />
                   Workspaces

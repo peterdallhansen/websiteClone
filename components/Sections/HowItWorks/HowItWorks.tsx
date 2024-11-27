@@ -24,7 +24,7 @@ const HowItWorks = () => {
       title: "AI-Powered Dashboard",
       description: "Visualize trends and gain insights at a glance.",
       Icon: BarChart3,
-      image: "/images/Dashboard.jpeg",
+      image: "/images/localhost_3001_ (1).png",
     },
     {
       title: "Natural Language Processing",
@@ -47,7 +47,7 @@ const HowItWorks = () => {
   ];
 
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center flex-1 p-8 pb-20 gap-16 sm:p-20">
+    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center flex-1 p-8 pb-20 gap-16 sm:p-20 ">
       <main className="flex flex-col gap-4 row-start-2 items-center">
         <BlurFade delay={0.25} inView>
           <h4
@@ -115,24 +115,24 @@ const HowItWorks = () => {
           </div>
         </section>
 
-        <div className="relative w-[100%] rounded-xl aspect-[2428/1217] h-[750px]">
+        <div className="relative w-[100%] rounded-xl aspect-[2428/1217] h-[750px] bg-transparent">
           <div
             style={{
               boxShadow: "0px 0px 300px -57px rgba(107,183,255,1)",
               borderRadius: "1rem", // Match the rounded-xl radius
               zIndex: 9999,
             }}
-            className="w-full h-full"
+            className="w-full h-full bg-transparent"
           >
             <BorderBeam
               colorFrom="rgb(0, 119, 255)"
               colorTo="rgba(107,183,255,1)"
+              className="w-full h-full"
             />
-
             <Image
-              className="w-full h-full rounded-xl bg-transparent"
-              width={2428}
-              height={2000}
+              className="rounded-xl"
+              fill
+              style={{ objectFit: "contain", backgroundColor: "transparent" }}
               quality={100}
               alt="Dashboard-Image"
               src={cards[activeCard].image}
