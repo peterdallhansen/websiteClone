@@ -5,9 +5,13 @@ import BlurFade from "@/components/ui/blur-fade";
 import {
   ArrowRightIcon,
   BarChart2Icon,
+  BarChartIcon,
   Briefcase,
+  BriefcaseBusiness,
+  Building2,
   ClockIcon,
   CogIcon,
+  FileText,
   GlobeIcon,
   SlidersHorizontal,
   TrendingUpIcon,
@@ -22,62 +26,61 @@ function Showcase() {
 
   const features = [
     {
-      id: "audience-insights",
-      Icon: UserIcon,
-      name: "Audience Insights",
-      description: "Understand your visitors with detailed demographic data.",
-      href: "#audience-insights",
+      id: "workspace-insights",
+      Icon: BriefcaseBusiness,
+      name: "Workspace Insights",
+      description: "Understand usage patterns and optimize space allocation.",
+      href: "#workspace-insights",
       cta: "Learn more",
       className: "row-span-2 col-span-3 lg:col-span-1",
       background: <></>,
     },
     {
-      id: "geolocation-analytics",
-      Icon: GlobeIcon,
-      name: "Geolocation Analytics",
-      description: "Track visitor origins and map out geographic trends.",
-      href: "#geolocation-analytics",
+      id: "tenant-management",
+      Icon: Users,
+      name: "Tenant Management",
+      description: "Streamline tenant operations and improve satisfaction.",
+      href: "#tenant-management",
       cta: "Learn more",
       className: "row-span-2 col-span-3 lg:col-span-2",
       background: <></>,
     },
     {
-      id: "trend-analysis",
-      Icon: TrendingUpIcon,
-      name: "Trend Analysis",
-      description: "Spot key patterns and changes in visitor behavior.",
-      href: "#trend-analysis",
+      id: "facility-optimization",
+      Icon: Building2,
+      name: "Facility Optimization",
+      description: "Enhance operational efficiency across your facilities.",
+      href: "#facility-optimization",
       cta: "Learn more",
       className: "row-span-2 col-span-3 lg:col-span-2",
       background: <></>,
     },
     {
-      id: "custom-reporting",
-      Icon: CogIcon,
-      name: "Custom Reporting",
-      description: "Generate reports tailored to your needs and goals.",
-      href: "#custom-reporting",
+      id: "custom-workspace-reports",
+      Icon: FileText,
+      name: "Custom Workspace Reports",
+      description: "Generate reports tailored to your workspace needs.",
+      href: "#custom-workspace-reports",
       cta: "Learn more",
       className: "row-span-3 col-span-3 lg:col-span-1",
       background: <></>,
     },
     {
-      id: "real-time-monitoring",
+      id: "real-time-tracking",
       Icon: ClockIcon,
-      name: "Real-Time Monitoring",
-      description:
-        "Get live updates on footfall and demographics as they happen.",
-      href: "#real-time-monitoring",
+      name: "Real-Time Tracking",
+      description: "Get live updates on workspace activity and metrics.",
+      href: "#real-time-tracking",
       cta: "Learn more",
       className: "row-span-1 col-span-3 lg:col-span-2",
       background: <></>,
     },
     {
-      id: "performance-metrics",
-      Icon: BarChart2Icon,
-      name: "Performance Metrics",
-      description: "Analyze key performance indicators with precision.",
-      href: "#performance-metrics",
+      id: "workspace-performance",
+      Icon: BarChartIcon,
+      name: "Workspace Performance",
+      description: "Measure and analyze workspace efficiency with precision.",
+      href: "#workspace-performance",
       cta: "Learn more",
       className: "row-span-2 col-span-3 lg:col-span-4",
       background: <></>,
@@ -87,46 +90,46 @@ function Showcase() {
   const sections = useMemo(
     () => [
       {
-        id: "audience-insights",
-        title: "Audience Insights",
-        body: `With Audience Insights, you gain a comprehensive understanding of who your visitors are. Dive deep into demographic data, including age, gender, and key behavioral trends. Uncover patterns that help you tailor your strategies and create meaningful connections with your audience. By leveraging these insights, you can optimize your engagement tactics and improve decision-making to drive growth and success. Transform raw visitor data into actionable intelligence to stay ahead of the competition.`,
+        id: "workspace-insights",
+        title: "Workspace Insights",
+        body: `Gain a clear understanding of workspace usage patterns, including occupancy rates, peak usage times, and resource allocation. This feature helps you identify underutilized spaces and optimize layouts to enhance productivity and cost-efficiency. Transform workspace data into actionable strategies that benefit your team and organization.`,
         cta: "Learn more",
-        href: "#audience-insights",
+        href: "#workspace-insights",
       },
       {
-        id: "geolocation-analytics",
-        title: "Geolocation Analytics",
-        body: `Understand where your visitors are coming from with Geolocation Analytics. Visualize geographic trends and gain actionable insights into regional footfall patterns. This feature helps you identify key markets, adapt to location-specific demands, and make data-driven decisions that align with your business goals. Leverage detailed maps to target the right audiences and expand your reach effectively.`,
+        id: "tenant-management",
+        title: "Tenant Management",
+        body: `Simplify tenant operations with centralized management tools. From onboarding to communication, this feature streamlines tenant interactions and ensures satisfaction. Keep track of lease agreements, payment statuses, and requests, making tenant management seamless and efficient.`,
         cta: "Learn more",
-        href: "#geolocation-analytics",
+        href: "#tenant-management",
       },
       {
-        id: "trend-analysis",
-        title: "Trend Analysis",
-        body: `Stay ahead of the curve with Trend Analysis. Identify emerging patterns in visitor behavior, track changes over time, and pinpoint key areas for improvement. Whether it's footfall peaks, demographic shifts, or seasonal variations, this feature equips you with the insights needed to anticipate audience needs and refine your strategies. Make informed decisions based on real-world data.`,
+        id: "facility-optimization",
+        title: "Facility Optimization",
+        body: `Maximize operational efficiency by optimizing facility management processes. Use real-time data to optimize cleaning schedules, adjust staffing levels, and enhance visitor flow. Gain insights into peak usage times to improve space utilization and deliver a seamless experience while reducing operational costs. This approach ensures facilities are managed intelligently and effectively.`,
         cta: "Learn more",
-        href: "#trend-analysis",
+        href: "#facility-optimization",
       },
       {
-        id: "custom-reporting",
-        title: "Custom Reporting",
-        body: `Generate tailored reports with ease using Custom Reporting. Filter, sort, and analyze data to align with your unique business objectives. Whether you need a quick snapshot or a detailed breakdown, this feature empowers you to present actionable insights in a clear and professional manner. Enhance collaboration and strategic planning with visually compelling and informative reports.`,
+        id: "custom-workspace-reports",
+        title: "Custom Workspace Reports",
+        body: `Create detailed reports tailored to your workspace management needs. Highlight key metrics, trends, and insights to support strategic decision-making. Whether you need high-level overviews or deep dives into specific areas, Custom Workspace Reports keep you informed and prepared.`,
         cta: "Learn more",
-        href: "#custom-reporting",
+        href: "#custom-workspace-reports",
       },
       {
-        id: "real-time-monitoring",
-        title: "Real-Time Monitoring",
-        body: `Experience the power of live updates with Real-Time Monitoring. Stay informed with instant insights into footfall and demographic data as it happens. Monitor key metrics in real time, enabling you to make timely decisions and address challenges proactively. This feature ensures you stay responsive to changes, keeping your strategies dynamic and effective.`,
+        id: "real-time-tracking",
+        title: "Real-Time Tracking",
+        body: `Stay updated with real-time tracking of workspace activity. Monitor occupancy levels, environmental conditions, and resource usage as they happen. This feature empowers you to respond quickly to changes, improving responsiveness and operational agility.`,
         cta: "Learn more",
-        href: "#real-time-monitoring",
+        href: "#real-time-tracking",
       },
       {
-        id: "performance-metrics",
-        title: "Performance Metrics",
-        body: `Analyze your business performance with our comprehensive Performance Metrics. Track essential KPIs, monitor growth trends, and gain insights into your operational efficiency. This feature allows you to set benchmarks, measure progress, and make data-driven decisions to enhance your business strategies. Stay informed and stay ahead with detailed performance analytics.`,
+        id: "workspace-performance",
+        title: "Workspace Performance",
+        body: `Track and analyze key performance metrics across your workspaces. Identify trends, measure efficiency, and gain actionable insights to drive better outcomes. Use this data to improve productivity, reduce costs, and align workspace operations with your organizational goals.`,
         cta: "Learn more",
-        href: "#performance-metrics",
+        href: "#workspace-performance",
       },
     ],
     []
@@ -156,10 +159,12 @@ function Showcase() {
       <main className="flex flex-col gap-4 row-start-2 items-center ">
         <BlurFade delay={0} inView>
           <h2 className="text-xl md:text-1xl xl:text-2xl leading-tight text-white text-center max-w-[750px] text-opacity-80 mb-20">
-            Gain detailed insights into footfall patterns, age groups, gender
-            distribution, and demographic trends to understand your audience
-            better, enhance engagement strategies, and drive meaningful
-            connections for your business growth.
+            Gain detailed insights into workspace utilization, operational
+            efficiency, and user preferences. Understand patterns, identify
+            trends, and make informed decisions to optimize your environments.
+            Enhance productivity, collaboration, and user satisfaction while
+            driving meaningful improvements in workspace management and business
+            growth.
           </h2>
         </BlurFade>
 
@@ -179,10 +184,23 @@ function Showcase() {
             }}
           >
             <div className="w-full h-full flex flex-col items-start justify-start text-left ">
-              <h2 className="text-xl md:text-xl xl:text-[16px] leading-tight text-white max-w-[750px] mb-4 font-bold inline-flex items-center flex-row justify-center align-center">
+              <h2 className="text-xl md:text-xl xl:text-[16px] leading-tight text-white max-w-[750px] mb-6 font-bold inline-flex items-center flex-row justify-center align-center mt-1">
                 <Users className="mr-2 size-4" />
                 Demographics
               </h2>
+
+              <a href="#">
+                <h2 className="text-xl md:text-xl xl:text-[16px] leading-tight text-white max-w-[750px] mb-6 font-bold inline-flex items-center flex-row justify-center align-center ">
+                  <TrendingUpIcon className="mr-2 size-4" />
+                  Insights
+                </h2>
+              </a>
+              <a href="#">
+                <h2 className="text-xl md:text-xl xl:text-[16px] leading-tight text-white max-w-[750px] mb-4 font-bold inline-flex items-center flex-row justify-center align-center">
+                  <Briefcase className="mr-2 size-4" />
+                  Workspaces
+                </h2>
+              </a>
               {sections.map((section) => (
                 <div key={section.id}>
                   <a href={`#${section.id}`}>
@@ -200,18 +218,6 @@ function Showcase() {
               ))}
               <a href="#">
                 <h2 className="text-xl md:text-xl xl:text-[16px] leading-tight text-white max-w-[750px] mb-6 font-bold inline-flex items-center flex-row justify-center align-center mt-1">
-                  <TrendingUpIcon className="mr-2 size-4" />
-                  Insights
-                </h2>
-              </a>
-              <a href="#">
-                <h2 className="text-xl md:text-xl xl:text-[16px] leading-tight text-white max-w-[750px] mb-6 font-bold inline-flex items-center flex-row justify-center align-center">
-                  <Briefcase className="mr-2 size-4" />
-                  Workspaces
-                </h2>
-              </a>
-              <a href="#">
-                <h2 className="text-xl md:text-xl xl:text-[16px] leading-tight text-white max-w-[750px] mb-6 font-bold inline-flex items-center flex-row justify-center align-center">
                   <SlidersHorizontal className="mr-2 size-4" />
                   Management
                 </h2>
@@ -239,13 +245,14 @@ function Showcase() {
                 </a>
 
                 <Image
-                  src={"/images/localhost_3001_ (1).png"}
+                  src={"https://startup-template-sage.vercel.app/hero-dark.png"}
                   width={1000}
                   height={400}
+                  quality={100}
                   style={{
                     borderRadius: 15,
                   }}
-                  className="mb-20 border"
+                  className="mb-20"
                   alt={section.title}
                 />
               </div>

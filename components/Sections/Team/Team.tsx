@@ -1,8 +1,22 @@
+"use client";
 import BlurFade from "@/components/ui/blur-fade";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import { LinkedInLogoIcon } from "@radix-ui/react-icons";
+import { MailIcon, PhoneIcon } from "lucide-react";
 import Image from "next/image";
-import React from "react";
 
 interface TeamMember {
+  picture: string;
+  name: string;
+  title: string;
+  phone?: string;
+  email?: string;
+  linkedin?: string;
+  previously?: string[];
+  job?: string;
+}
+interface TeamMemberProps {
   picture: string;
   name: string;
   title: string;
@@ -16,37 +30,8 @@ interface TeamMember {
 interface TeamSectionProps {
   title: string;
   members: TeamMember[];
+  index: number;
 }
-
-const TeamMember = ({
-  name,
-  role,
-  description,
-  image,
-}: {
-  name: string;
-  role: string;
-  description: string;
-  image: string;
-}) => (
-  <div className="flex flex-col items-center space-y-4">
-    <div className="rounded-full bg-muted p-1">
-      <img
-        src={image || "/placeholder.svg"}
-        alt={name}
-        width={120}
-        height={120}
-        className="h-30 w-30 rounded-full object-cover"
-        style={{ aspectRatio: "120/120", objectFit: "cover" }}
-      />
-    </div>
-    <div className="text-center">
-      <h3 className="text-xl font-bold">{name}</h3>
-      <p className="text-muted-foreground">{role}</p>
-      <p className="text-sm text-muted-foreground">{description}</p>
-    </div>
-  </div>
-);
 
 const management: TeamMember[] = [
   {
@@ -72,6 +57,7 @@ const management: TeamMember[] = [
     ],
   },
 ];
+
 const board: TeamMember[] = [
   {
     picture: "/SMO.jpg",
@@ -127,50 +113,77 @@ const legal: TeamMember[] = [
   },
 ];
 
-const TeamSection: React.FC<TeamSectionProps> = ({ title, members }) => {
-  const calculateGridCols = () => {
-    if (members.length === 1) return "grid-cols-1";
-    if (members.length === 2) return "grid-cols-2";
-    return "md:grid-cols-3 lg:grid-cols-5";
-  };
-
+function TeamMemberCard({
+  picture,
+  name,
+  title,
+  phone,
+  email,
+  linkedin,
+  previously,
+  job,
+}: TeamMemberProps) {
   return (
-    <section className="flex flex-col items-center space-y-4">
-      <BlurFade delay={0.25} inView>
-        <h4 className="text-sm md:text-xl font-bold my-8">{title}</h4>
-      </BlurFade>
-      <div className={`grid ${calculateGridCols()} justify-center gap-6`}>
-        {members.map((member, index) => (
-          <div
-            key={index}
-            className="team-member flex flex-col items-center space-y-4 max-w-[350px]"
-          >
-            <Image
-              src={member.picture}
-              width={120}
-              height={120}
-              alt={member.name}
-              className="rounded-full"
-            />
-            <h3 className="text-xl font-bold">{member.name}</h3>
-            <p className="text-muted-foreground">{member.title}</p>
-            <p className="text-sm text-center">
-              {member.job || member.previously?.join(" ")}
-            </p>
-            {member.phone && <p>{member.phone}</p>}
-            {member.email && (
-              <a href={`mailto:${member.email}`}>{member.email}</a>
-            )}
-            {member.linkedin && (
+    <Card className="overflow-hidden w-full h-full">
+      <div className="aspect-square overflow-hidden w-full">
+        <Image
+          src={picture}
+          alt={name}
+          width={250}
+          height={200}
+          quality={100}
+          className="object-cover w-full h-full transition-transform duration-300 hover:scale-110"
+        />
+      </div>
+      <CardContent className="p-3">
+        <h3 className="text-lg font-bold">{name}</h3>
+        <p className="text-xs text-muted-foreground mb-1">{title}</p>
+        {job && <p className="text-xs mb-2">{job}</p>}
+        {previously && <p className="text-xs mb-2">{previously.join(" ")}</p>}
+        <div className="flex space-x-1 mt-2">
+          {phone && (
+            <Button variant="outline" size="sm" asChild>
+              <a href={`tel:${phone}`} aria-label="Phone">
+                <PhoneIcon className="h-3 w-3" />
+              </a>
+            </Button>
+          )}
+          {email && (
+            <Button variant="outline" size="sm" asChild>
+              <a href={`mailto:${email}`} aria-label="Email">
+                <MailIcon className="h-3 w-3" />
+              </a>
+            </Button>
+          )}
+          {linkedin && (
+            <Button variant="outline" size="sm" asChild>
               <a
-                href={member.linkedin}
+                href={linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="LinkedIn"
               >
-                LinkedIn
+                <LinkedInLogoIcon className="h-3 w-3" />
               </a>
-            )}
-          </div>
+            </Button>
+          )}
+        </div>
+      </CardContent>
+    </Card>
+  );
+}
+
+const TeamSection: React.FC<TeamSectionProps> = ({ title, members, index }) => {
+  return (
+    <section className="space-y-6">
+      <BlurFade delay={0.25 + 0.25 * index} inView>
+        <h2 className="text-2xl font-bold text-center mb-6">{title}</h2>
+      </BlurFade>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 gap-4">
+        {members.map((member, index) => (
+          <BlurFade key={index} delay={0.1 * index} inView>
+            <TeamMemberCard {...member} />
+          </BlurFade>
         ))}
       </div>
     </section>
@@ -183,48 +196,44 @@ const sections = [
   { title: "Legal Advisors", members: legal },
 ];
 
-function Team() {
+export function Team() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center flex-1 p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-4 row-start-2 items-center">
-        <section className="w-full py-12 md:py-24 lg:py-32">
-          <div className="container grid gap-8 px-4 md:px-6">
-            <div className="space-y-2 text-center">
-              <BlurFade delay={0.25} inView>
-                <h4
-                  className="text-sm md:text-lg text-accent"
-                  style={{
-                    textShadow: "0 0 12px rgba(107, 183, 225, 1)",
-                    backgroundImage:
-                      "linear-gradient(309deg, rgb(166, 221, 255) 2.25%, rgba(107,183,225,1) 48.08%, rgb(0, 119, 255) 100%)",
-                    backgroundClip: "text",
-                    WebkitBackgroundClip: "text",
-                    color: "transparent",
-                  }}
-                >
-                  Meet The Team
-                </h4>
-              </BlurFade>
-              <BlurFade delay={0.5} inView>
-                <h2 className="text-2xl md:text-3xl xl:text-4xl font-bold mb-8 leading-tight text-white">
-                  The talented individuals behind our success.
-                </h2>
-              </BlurFade>
-            </div>
+    <div className="bg-gradient-to-b from-background to-background/80 min-h-screen py-16">
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-16">
+          <BlurFade delay={0.25} inView>
+            <h4
+              className="text-sm md:text-lg text-accent text-center"
+              style={{
+                textShadow: "0 0 12px rgba(107, 183, 225, 1)",
+                backgroundImage:
+                  "linear-gradient(309deg, rgb(166, 221, 255) 2.25%, rgba(107,183,225,1) 48.08%, rgb(0, 119, 255) 100%)",
+                backgroundClip: "text",
+                WebkitBackgroundClip: "text",
+                color: "transparent",
+              }}
+            >
+              Meet Our Team
+            </h4>
+          </BlurFade>
+          <BlurFade delay={0.5} inView>
+            <h2 className="text-2xl md:text-3xl xl:text-4xl font-bold mb-8 leading-tight text-white">
+              The talented individuals behind our success.
+            </h2>
+          </BlurFade>
+        </div>
 
-            {/* Team Sections */}
-            {sections.map((section, index) => (
-              <TeamSection
-                key={index}
-                title={section.title}
-                members={section.members}
-              />
-            ))}
-          </div>
-        </section>
-      </main>
+        <div className="space-y-20">
+          {sections.map((section, index) => (
+            <TeamSection
+              key={index}
+              title={section.title}
+              members={section.members}
+              index={index}
+            />
+          ))}
+        </div>
+      </div>
     </div>
   );
 }
-
-export default Team;

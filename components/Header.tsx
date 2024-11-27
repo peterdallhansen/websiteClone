@@ -67,13 +67,19 @@ export default function Header() {
 
               {/* Login and CTA Buttons */}
               <div className="w-full flex flex-col items-center space-y-4 ">
-                <Link href="http://dev.zonify.ai/sign-in" className="w-full">
+                <Link
+                  href="mailto:contact@zonify.ai?subject=Contact%20Us&body=Hello%20there!"
+                  className="w-full"
+                >
                   <Button variant="outline" className="w-full text-center">
                     Contact
                   </Button>
                 </Link>
 
-                <Link href="http://dev.zonify.ai/sign-in" className="w-full">
+                <Link
+                  href="http://accounts.zonify.ai/sign-in"
+                  className="w-full"
+                >
                   <Button
                     variant="outline"
                     className="w-full text-center bg-accent"
@@ -88,10 +94,13 @@ export default function Header() {
           <>
             <NavigationMenuDemo />
             <div className="flex items-center space-x-4">
-              <a className="text-sm" href="https://docs.zonify.ai">
+              <a
+                className="text-sm"
+                href="mailto:contact@zonify.ai?subject=Contact%20Us&body=Hello%20there!"
+              >
                 Contact
               </a>
-              <Link href="http://dev.zonify.ai/sign-in">
+              <Link href="http://accounts.zonify.ai/sign-in">
                 <Button
                   variant="outline"
                   className="text-sm px-6 py-5 hover:bg-secondary/80"

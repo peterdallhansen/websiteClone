@@ -132,7 +132,7 @@ const HowItWorks = () => {
             <Image
               className="w-full h-full rounded-xl bg-transparent"
               width={2428}
-              height={1217}
+              height={2000}
               quality={100}
               alt="Dashboard-Image"
               src={cards[activeCard].image}

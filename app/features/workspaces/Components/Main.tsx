@@ -1,4 +1,3 @@
-import { BentoDemo } from "@/components/ui/BentoDemo";
 import BlurFade from "@/components/ui/blur-fade";
 import HeroVideoDialog from "@/components/ui/hero-video-dialog";
 import React from "react";
@@ -19,18 +18,19 @@ function Main() {
               color: "transparent",
             }}
           >
-            Demographics
+            Workspaces
           </h4>
         </BlurFade>
         <BlurFade delay={0.5} inView>
           <h2 className="text-2xl md:text-3xl xl:text-5xl font-bold  leading-tight text-white text-center  ">
-            Discover Your Audience
+            Optimize Your Operations
           </h2>
         </BlurFade>
         <BlurFade delay={0.6} inView>
           <h2 className="text-xl md:text-1xl xl:text-2xl  mb-8 leading-tight text-white text-center max-w-[750px] text-opacity-60">
-            Gain insights into footfall patterns, age groups, and gender
-            distribution to optimize engagement strategies.
+            Unlock seamless organization and efficiency with tools designed to
+            streamline operations and enhance collaboration across all your
+            workspace needs.
           </h2>
         </BlurFade>
         <BlurFade delay={0.6} inView>
@@ -39,7 +39,7 @@ function Main() {
               className="hidden dark:block"
               animationStyle="from-center"
               videoSrc="https://www.youtube.com/embed/qh3NGpYRG3I?si=4rb-zSdDkVK9qxxb"
-              thumbnailSrc="/images/localhost_3001_ (1).png"
+              thumbnailSrc="https://startup-template-sage.vercel.app/hero-dark.png"
               thumbnailAlt="Hero Video"
             />
           </div>
