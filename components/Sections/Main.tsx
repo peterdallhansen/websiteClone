@@ -43,23 +43,6 @@ function Main() {
 
       {/* Text Content */}
       <div className="absolute top-1/3 left-[10%] flex flex-col items-start justify-center space-y-6">
-        <BlurFade
-          delay={0.25}
-          inView
-          className="flex items-center justify-start w-full h-full "
-        >
-          <a
-            href="/compliance"
-            className={cn(
-              "group rounded-full border border-black/5 bg-neutral-100 text-base text-white transition-all ease-in hover:cursor-pointer hover:bg-neutral-200 dark:border-white/5 dark:bg-neutral-900 dark:hover:bg-neutral-800"
-            )}
-          >
-            <AnimatedShinyText className="inline-flex items-center justify-center px-4 py-1 transition ease-out hover:text-neutral-600 hover:duration-300 hover:dark:text-neutral-400">
-              <Check className="mr-1 size-4 " />
-              <span>GDPR Compliant</span>
-            </AnimatedShinyText>
-          </a>
-        </BlurFade>
         <BlurFade delay={0.25} inView>
           <h1 className="text-5xl md:text-7xl xl:text-8xl font-extrabold text-white leading-tight">
             Footfall Analytics <br /> for Smarter Retail

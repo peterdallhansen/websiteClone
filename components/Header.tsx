@@ -8,6 +8,7 @@ import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
 import { Menu } from "lucide-react"; // Use an icon library for the hamburger icon
 import { Sheet, SheetContent, SheetTrigger } from "./ui/sheet";
+import Logo from "./Logo";
 
 export default function Header() {
   const [isMobile, setIsMobile] = useState(false);
@@ -32,16 +33,7 @@ export default function Header() {
   return (
     <header className="relative sticky top-0 z-50 py-4 backdrop-blur ">
       <div className="flex justify-between items-center  mx-auto md:px-[64px] px-4 sm:px-4 md:px-4 xl-px-[64px]">
-        <div className="flex items-center space-x-2">
-          <Image
-            src="/images/Logo-dark.png"
-            width={160}
-            height={40}
-            alt="Zonify Logo"
-            className="object-contain"
-            priority
-          />
-        </div>
+        <Logo />
 
         {isMobile ? (
           <Sheet>
@@ -55,18 +47,7 @@ export default function Header() {
               className="p-6 flex flex-col items-left space-y-4"
             >
               {/* Logo Section */}
-              <div className="flex flex-col items-left space-y-2">
-                <Image
-                  src="/images/Logo-dark.png"
-                  width={200}
-                  style={{
-                    marginLeft: "-1.35rem",
-                  }}
-                  height={48}
-                  alt="Zonify Logo"
-                  className="object-contain"
-                />
-              </div>
+              <Logo width={200} height={48} />
 
               {/* Navigation Links */}
               <nav className="flex flex-col items-left space-y-4 text-lg font-medium">

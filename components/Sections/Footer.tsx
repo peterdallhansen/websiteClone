@@ -10,28 +10,19 @@ import {
   User,
   Briefcase,
   Edit,
-  Mic,
   Handshake,
 } from "lucide-react";
 import Image from "next/image";
 import { FaLinkedin } from "react-icons/fa";
+import Logo from "../Logo";
 
 export function Footer() {
   return (
-    <footer className="bg-black border-t">
+    <footer className="bg-black border-t mt-auto">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Company Logo */}
-          <div className="flex items-center">
-            <Link href="/" className="flex items-center space-x-2">
-              <Image
-                src={"/images/Logo-dark.png"}
-                alt="Zonify-Logo"
-                width={240}
-                height={100}
-              />
-            </Link>
-          </div>
+          <Logo width={240} height={100} />
 
           {/* Navigation Links */}
           <nav className="space-y-4">
@@ -69,13 +60,11 @@ export function Footer() {
             </ul>
           </nav>
 
-          {/* Placeholder for additional footer columns */}
+          {/* Additional Columns */}
           <div className="space-y-4">
             <h3 className="text-sm font-semibold text-white uppercase tracking-wider">
               Company
             </h3>
-            {/* Add company-related links here */}
-
             <ul className="space-y-2">
               <li>
                 <Link
@@ -104,7 +93,6 @@ export function Footer() {
                   Blog
                 </Link>
               </li>
-
               <li>
                 <Link
                   href="/partners"
@@ -160,7 +148,7 @@ export function Footer() {
           </p>
           <div className="flex space-x-6 mt-4 md:mt-0">
             <a
-              href="https://www.linkedin.com/company/zonify-    ai"
+              href="https://www.linkedin.com/company/zonify-ai"
               className="text-gray-500 hover:text-gray-900"
               target="_blank"
               rel="noopener noreferrer"
@@ -172,5 +160,15 @@ export function Footer() {
         </div>
       </div>
     </footer>
+  );
+}
+
+// Main layout wrapper
+export function AppLayout({ children }: { children: React.ReactNode }) {
+  return (
+    <div className="min-h-screen flex flex-col">
+      <main className="flex-grow">{children}</main>
+      <Footer />
+    </div>
   );
 }
