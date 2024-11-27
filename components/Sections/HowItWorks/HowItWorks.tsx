@@ -24,21 +24,25 @@ const HowItWorks = () => {
       title: "AI-Powered Dashboard",
       description: "Visualize trends and gain insights at a glance.",
       Icon: BarChart3,
+      image: "/images/Dashboard.jpeg",
     },
     {
       title: "Natural Language Processing",
       description: "Analyze text and extract sentiment effortlessly.",
       Icon: Brain,
+      image: "/images/Paths.jpeg",
     },
     {
       title: "Predictive Analytics",
       description: "Forecast trends and make data-driven decisions.",
       Icon: LineChart,
+      image: "/images/Heat (2).jpeg",
     },
     {
       title: "Automated Reporting",
       description: "Generate comprehensive reports with one click.",
       Icon: FileText,
+      image: "/images/Paths.jpeg",
     },
   ];
 
@@ -57,12 +61,12 @@ const HowItWorks = () => {
               color: "transparent",
             }}
           >
-            How It Works
+            Empower Your Workflow
           </h4>
         </BlurFade>
         <BlurFade delay={0.5} inView>
           <h2 className="text-2xl md:text-3xl xl:text-4xl font-bold  leading-tight text-white text-center">
-            Just 4 steps to get started
+            4 Key Features to Unlock Your Potential
           </h2>
         </BlurFade>
         <section className="w-full py-12 md:py-24 lg:py-32 bg-background align-center flex justify-center">
@@ -81,7 +85,7 @@ const HowItWorks = () => {
                   >
                     <CardContent className="pt-6 text-center">
                       <div className="mb-4 flex items-center justify-center">
-                        <div className="rounded-full bg-[#2A3547] p-4">
+                        <div className="rounded-full bg-transparent p-4">
                           <card.Icon className="h-8 w-8 text-accent" />
                         </div>
                       </div>
@@ -111,24 +115,29 @@ const HowItWorks = () => {
           </div>
         </section>
 
-        <div className="relative w-[50%] rounded-xl aspect-[2428/1217]">
-          {/* Move BorderBeam outside of BlurFade */}
-          <Ripple />
-          <BorderBeam
-            colorFrom="rgba(107, 183, 225, 1)"
-            colorTo="rgb(0, 119, 255)"
-            className="absolute top-0 left-0 w-full h-full z-10"
-          />
-          <BlurFade delay={0} inView key={activeCard} className="">
+        <div className="relative w-[100%] rounded-xl aspect-[2428/1217] h-[750px]">
+          <div
+            style={{
+              boxShadow: "0px 0px 300px -57px rgba(107,183,255,1)",
+              borderRadius: "1rem", // Match the rounded-xl radius
+              zIndex: 9999,
+            }}
+            className="w-full h-full"
+          >
+            <BorderBeam
+              colorFrom="rgb(0, 119, 255)"
+              colorTo="rgba(107,183,255,1)"
+            />
+
             <Image
-              className="w-full h-full rounded-xl object-contain"
+              className="w-full h-full rounded-xl bg-transparent"
               width={2428}
               height={1217}
               quality={100}
               alt="Dashboard-Image"
-              src="/images/Screenshot_24-11-2024_135117_dev.zonify.ai.jpeg"
+              src={cards[activeCard].image}
             />
-          </BlurFade>
+          </div>
         </div>
       </main>
     </div>

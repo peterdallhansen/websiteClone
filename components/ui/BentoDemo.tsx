@@ -95,7 +95,7 @@ export function BentoDemo() {
     {
       Icon: LucideChartSpline,
       name: "Detailed Analytics",
-      description: "We automatically save your files as you type.",
+      description: "Explore Hundreds of Impactful Analytics",
       href: "#",
       cta: "Learn more",
       className: "col-span-3 lg:col-span-1",
@@ -156,7 +156,7 @@ export function BentoDemo() {
     {
       Icon: LucideCalendar,
       name: "Calendar",
-      description: "Use the calendar to filter your files by date.",
+      description: "Plan, Schedule, and Measure Event Success.",
       className: "col-span-3 lg:col-span-1",
       href: "#",
       cta: "Learn more",

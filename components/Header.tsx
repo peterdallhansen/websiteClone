@@ -111,7 +111,10 @@ export default function Header() {
                 Contact
               </a>
               <Link href="http://dev.zonify.ai/sign-in">
-                <Button variant="outline" className="text-sm px-6">
+                <Button
+                  variant="outline"
+                  className="text-sm px-6 py-5 hover:bg-secondary/80"
+                >
                   Login
                 </Button>
               </Link>

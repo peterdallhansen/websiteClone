@@ -3,7 +3,16 @@ import Header from "../Header";
 import { BorderBeam } from "../ui/border-beam";
 import BlurFade from "../ui/blur-fade";
 import { Button } from "../ui/button";
-import { LucidePlayCircle, LucideVideo } from "lucide-react";
+import {
+  ArrowRightIcon,
+  Check,
+  LucidePlay,
+  LucidePlayCircle,
+  LucideVideo,
+} from "lucide-react";
+import AnimatedShinyText from "../ui/animated-shiny-text";
+import { cn } from "@/lib/utils";
+import { FaCirclePlay } from "react-icons/fa6";
 
 function Main() {
   return (
@@ -34,6 +43,23 @@ function Main() {
 
       {/* Text Content */}
       <div className="absolute top-1/3 left-[10%] flex flex-col items-start justify-center space-y-6">
+        <BlurFade
+          delay={0.25}
+          inView
+          className="flex items-center justify-start w-full h-full "
+        >
+          <a
+            href="/compliance"
+            className={cn(
+              "group rounded-full border border-black/5 bg-neutral-100 text-base text-white transition-all ease-in hover:cursor-pointer hover:bg-neutral-200 dark:border-white/5 dark:bg-neutral-900 dark:hover:bg-neutral-800"
+            )}
+          >
+            <AnimatedShinyText className="inline-flex items-center justify-center px-4 py-1 transition ease-out hover:text-neutral-600 hover:duration-300 hover:dark:text-neutral-400">
+              <Check className="mr-1 size-4 " />
+              <span>GDPR Compliant</span>
+            </AnimatedShinyText>
+          </a>
+        </BlurFade>
         <BlurFade delay={0.25} inView>
           <h1 className="text-5xl md:text-7xl xl:text-8xl font-extrabold text-white leading-tight">
             Footfall Analytics <br /> for Smarter Retail
@@ -48,9 +74,14 @@ function Main() {
         </BlurFade>
         <BlurFade delay={0.75} inView>
           <div className="flex items-center space-x-4">
-            <Button className="bg-accent text-white py-5">Contact Sales</Button>
-            <Button variant={"ghost"} className="py-5">
-              <LucidePlayCircle />
+            <Button className="bg-accent hover:text-muted-foreground  text-white py-5 font-bold">
+              Contact Sales
+            </Button>
+            <Button
+              variant={"ghost"}
+              className="py-5 hover:bg-transparent hover:text-muted font-bold "
+            >
+              <FaCirclePlay size={24} />
               Watch video
             </Button>
           </div>
