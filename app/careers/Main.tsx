@@ -24,7 +24,7 @@ export default function Main() {
         </BlurFade>
         <BlurFade delay={0.5} inView>
           <h2 className="text-2xl md:text-3xl xl:text-5xl font-bold  leading-tight text-white text-center  ">
-            Be A Part Of Something Great
+            Be a Part of Something Great
           </h2>
         </BlurFade>
         <BlurFade delay={0.6} inView className="mt-2">

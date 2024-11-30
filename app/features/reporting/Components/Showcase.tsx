@@ -5,22 +5,12 @@ import { BentoCard, BentoGrid } from "@/components/ui/bento-grid";
 import BlurFade from "@/components/ui/blur-fade";
 import {
   ArrowRightIcon,
-  BarChart2Icon,
   BarChartIcon,
-  Briefcase,
   BriefcaseBusiness,
   Building2,
   ClockIcon,
-  CogIcon,
-  File,
   FileText,
-  Globe,
-  GlobeIcon,
-  Layers,
-  Share2,
-  SlidersHorizontal,
   TrendingUpIcon,
-  UserIcon,
   Users,
 } from "lucide-react";
 import Image from "next/image";
@@ -31,63 +21,53 @@ function Showcase() {
 
   const features = [
     {
-      id: "workspace-insights",
-      Icon: BriefcaseBusiness,
-      name: "Workspace Insights",
-      description: "Understand usage patterns and optimize space allocation.",
-      href: "#workspace-insights",
+      id: "custom-reports",
+      Icon: FileText,
+      name: "Customizable Reports",
+      description: "Tailor reports to your specific needs and goals.",
+      href: "#custom-reports",
       cta: "Learn more",
       className: "row-span-2 col-span-3 lg:col-span-1",
       background: <></>,
     },
     {
-      id: "tenant-management",
-      Icon: Users,
-      name: "Tenant Management",
-      description: "Streamline tenant operations and improve satisfaction.",
-      href: "#tenant-management",
+      id: "data-visualization",
+      Icon: BarChartIcon,
+      name: "Data Visualization",
+      description: "Visualize key metrics with dynamic charts and graphs.",
+      href: "#data-visualization",
       cta: "Learn more",
       className: "row-span-2 col-span-3 lg:col-span-2",
       background: <></>,
     },
     {
-      id: "facility-optimization",
-      Icon: Building2,
-      name: "Facility Optimization",
-      description: "Enhance operational efficiency across your facilities.",
-      href: "#facility-optimization",
+      id: "real-time-insights",
+      Icon: ClockIcon,
+      name: "Real-Time Insights",
+      description: "Access up-to-the-minute data for faster decision-making.",
+      href: "#real-time-insights",
       cta: "Learn more",
       className: "row-span-2 col-span-3 lg:col-span-2",
       background: <></>,
     },
     {
-      id: "custom-workspace-reports",
-      Icon: FileText,
-      name: "Custom Workspace Reports",
-      description: "Generate reports tailored to your workspace needs.",
-      href: "#custom-workspace-reports",
+      id: "trend-analysis",
+      Icon: TrendingUpIcon,
+      name: "Trend Analysis",
+      description: "Discover patterns and predict future outcomes.",
+      href: "#trend-analysis",
       cta: "Learn more",
       className: "row-span-3 col-span-3 lg:col-span-1",
       background: <></>,
     },
     {
-      id: "real-time-tracking",
-      Icon: ClockIcon,
-      name: "Real-Time Tracking",
-      description: "Get live updates on workspace activity and metrics.",
-      href: "#real-time-tracking",
+      id: "performance-metrics",
+      Icon: BriefcaseBusiness,
+      name: "Performance Metrics",
+      description: "Evaluate your success with measurable data.",
+      href: "#performance-metrics",
       cta: "Learn more",
       className: "row-span-1 col-span-3 lg:col-span-2",
-      background: <></>,
-    },
-    {
-      id: "workspace-performance",
-      Icon: BarChartIcon,
-      name: "Workspace Performance",
-      description: "Measure and analyze workspace efficiency with precision.",
-      href: "#workspace-performance",
-      cta: "Learn more",
-      className: "row-span-2 col-span-3 lg:col-span-4",
       background: <></>,
     },
   ];
@@ -95,46 +75,39 @@ function Showcase() {
   const sections = useMemo(
     () => [
       {
-        id: "workspace-insights",
-        title: "Workspace Insights",
-        body: `Gain a clear understanding of workspace usage patterns, including occupancy rates, peak usage times, and resource allocation. This feature helps you identify underutilized spaces and optimize layouts to enhance productivity and cost-efficiency. Transform workspace data into actionable strategies that benefit your team and organization.`,
+        id: "custom-reports",
+        title: "Customizable Reports",
+        body: `Create tailored reports that match your unique requirements. Filter, sort, and organize data to gain a clear picture of performance metrics, trends, and outcomes that matter most to you.`,
         cta: "Learn more",
-        href: "#workspace-insights",
+        href: "#custom-reports",
       },
       {
-        id: "tenant-management",
-        title: "Tenant Management",
-        body: `Simplify tenant operations with centralized management tools. From onboarding to communication, this feature streamlines tenant interactions and ensures satisfaction. Keep track of lease agreements, payment statuses, and requests, making tenant management seamless and efficient.`,
+        id: "data-visualization",
+        title: "Data Visualization",
+        body: `Transform complex datasets into intuitive charts, graphs, and dashboards. Communicate insights effectively and make informed decisions with visually engaging analytics.`,
         cta: "Learn more",
-        href: "#tenant-management",
+        href: "#data-visualization",
       },
       {
-        id: "facility-optimization",
-        title: "Facility Optimization",
-        body: `Maximize operational efficiency by optimizing facility management processes. Use real-time data to optimize cleaning schedules, adjust staffing levels, and enhance visitor flow. Gain insights into peak usage times to improve space utilization and deliver a seamless experience while reducing operational costs. This approach ensures facilities are managed intelligently and effectively.`,
+        id: "real-time-insights",
+        title: "Real-Time Insights",
+        body: `Access live data updates for accurate and timely decision-making. Stay ahead by monitoring performance in real time and responding proactively to changes.`,
         cta: "Learn more",
-        href: "#facility-optimization",
+        href: "#real-time-insights",
       },
       {
-        id: "custom-workspace-reports",
-        title: "Custom Workspace Reports",
-        body: `Create detailed reports tailored to your workspace management needs. Highlight key metrics, trends, and insights to support strategic decision-making. Whether you need high-level overviews or deep dives into specific areas, Custom Workspace Reports keep you informed and prepared.`,
+        id: "trend-analysis",
+        title: "Trend Analysis",
+        body: `Identify patterns and trends that shape your business. Use predictive analytics to anticipate challenges and capitalize on opportunities for sustained growth.`,
         cta: "Learn more",
-        href: "#custom-workspace-reports",
+        href: "#trend-analysis",
       },
       {
-        id: "real-time-tracking",
-        title: "Real-Time Tracking",
-        body: `Stay updated with real-time tracking of workspace activity. Monitor occupancy levels, environmental conditions, and resource usage as they happen. This feature empowers you to respond quickly to changes, improving responsiveness and operational agility.`,
+        id: "performance-metrics",
+        title: "Performance Metrics",
+        body: `Track essential metrics to evaluate success. From sales figures to operational efficiency, measure progress against benchmarks and drive continuous improvement.`,
         cta: "Learn more",
-        href: "#real-time-tracking",
-      },
-      {
-        id: "workspace-performance",
-        title: "Workspace Performance",
-        body: `Track and analyze key performance metrics across your workspaces. Identify trends, measure efficiency, and gain actionable insights to drive better outcomes. Use this data to improve productivity, reduce costs, and align workspace operations with your organizational goals.`,
-        cta: "Learn more",
-        href: "#workspace-performance",
+        href: "#performance-metrics",
       },
     ],
     []
@@ -164,13 +137,11 @@ function Showcase() {
       <main className="flex flex-col gap-4 row-start-2 items-center ">
         <BlurFade delay={0} inView>
           <h2 className="text-xl md:text-1xl xl:text-2xl leading-tight text-white text-center max-w-[750px] text-opacity-80 mb-20">
-            Gain detailed insights into workspace utilization, operational
-            efficiency, and user preferences. Understand patterns, identify
-            trends, and make informed decisions to optimize your environments.
-            Enhance productivity, collaboration, and user satisfaction while
-            driving meaningful improvements in workspace management and business
-            growth.
-          </h2>
+            Leverage customizable reports, real-time data, and advanced
+            analytics to uncover trends and gain actionable insights. Access
+            accurate, up-to-date information to make data-driven decisions with
+            confidence, optimize performance, and drive measurable success.
+          </h2>{" "}
         </BlurFade>
 
         <BlurFade delay={0.25} inView>
@@ -191,7 +162,7 @@ function Showcase() {
             <SidebarMenu
               sections={sections}
               activeSection={activeSection}
-              currentPath="/features/workspaces"
+              currentPath="/features/reporting"
             />
           </div>
 

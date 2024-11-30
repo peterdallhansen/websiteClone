@@ -1,4 +1,5 @@
 "use client";
+import SidebarMenu from "@/components/SidebarMenu";
 import AnimatedShinyText from "@/components/ui/animated-shiny-text";
 import { BentoCard, BentoGrid } from "@/components/ui/bento-grid";
 import BlurFade from "@/components/ui/blur-fade";
@@ -8,7 +9,11 @@ import {
   Briefcase,
   ClockIcon,
   CogIcon,
+  File,
+  Globe,
   GlobeIcon,
+  Layers,
+  Share2,
   SlidersHorizontal,
   TrendingUpIcon,
   UserIcon,
@@ -178,45 +183,11 @@ function Showcase() {
               position: "sticky",
             }}
           >
-            <div className="w-full h-full flex flex-col items-start justify-start text-left ">
-              <h2 className="text-xl md:text-xl xl:text-[16px] leading-tight text-white max-w-[750px] mb-4 font-bold inline-flex items-center flex-row justify-center align-center">
-                <Users className="mr-2 size-4" />
-                Demographics
-              </h2>
-              {sections.map((section) => (
-                <div key={section.id}>
-                  <a href={`#${section.id}`}>
-                    <h2
-                      className={`text-xl md:text-xl xl:text-[14px] leading-tight max-w-[750px] mb-2 font-semibold ${
-                        activeSection === section.id
-                          ? "text-white"
-                          : "text-white text-opacity-40"
-                      }`}
-                    >
-                      {section.title}
-                    </h2>
-                  </a>
-                </div>
-              ))}
-              <a href="#">
-                <h2 className="text-xl md:text-xl xl:text-[16px] leading-tight text-white max-w-[750px] mb-6 font-bold inline-flex items-center flex-row justify-center align-center mt-1">
-                  <TrendingUpIcon className="mr-2 size-4" />
-                  Insights
-                </h2>
-              </a>
-              <a href="/features/workspaces">
-                <h2 className="text-xl md:text-xl xl:text-[16px] leading-tight text-white max-w-[750px] mb-6 font-bold inline-flex items-center flex-row justify-center align-center">
-                  <Briefcase className="mr-2 size-4" />
-                  Workspaces
-                </h2>
-              </a>
-              <a href="#">
-                <h2 className="text-xl md:text-xl xl:text-[16px] leading-tight text-white max-w-[750px] mb-6 font-bold inline-flex items-center flex-row justify-center align-center">
-                  <SlidersHorizontal className="mr-2 size-4" />
-                  Management
-                </h2>
-              </a>
-            </div>
+            <SidebarMenu
+              sections={sections}
+              activeSection={activeSection}
+              currentPath="/features/demographics"
+            />
           </div>
 
           <div className="flex align-start justify-start flex-col h-full container text-left ">
@@ -224,7 +195,7 @@ function Showcase() {
               <div key={index}>
                 <h2
                   id={section.id}
-                  className="text-xl md:text-1xl xl:text-4xl leading-tight text-white  max-w-[750px] mb-8 text-left font-bold scroll-mt-60"
+                  className="text-xl md:text-1xl xl:text-4xl leading-tight text-white  max-w-[750px] mb-8 text-left font-bold scroll-mt-40"
                 >
                   {section.title}
                 </h2>

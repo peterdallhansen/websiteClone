@@ -23,6 +23,7 @@ import {
   LayersIcon,
   Share,
   Share2,
+  FileIcon,
 } from "lucide-react";
 
 const components: {
@@ -45,27 +46,27 @@ const components: {
   },
   {
     title: "3D Map",
-    href: "/docs/primitives/progress",
+    href: "/features/map",
     description: "Interactive mapping.",
     icon: GlobeIcon,
   },
   {
-    title: "Analytics",
-    href: "/docs/primitives/scroll-area",
-    description: "Data-driven insights.",
-    icon: BarChartIcon,
-  },
-  {
     title: "Calendar",
-    href: "/docs/primitives/tabs",
+    href: "/features/calendar",
     description: "Schedule events.",
     icon: CalendarIcon,
   },
   {
     title: "Integration",
-    href: "/docs/primitives/tooltip",
+    href: "/features/integration",
     description: "Seamless connections.",
     icon: Share2,
+  },
+  {
+    title: "Reporting",
+    href: "/features/reporting",
+    description: "Automated reporting.",
+    icon: FileIcon,
   },
 ];
 
@@ -73,6 +74,37 @@ export function NavigationMenuDemo() {
   return (
     <NavigationMenu>
       <NavigationMenuList>
+        <NavigationMenuItem>
+          <NavigationMenuTrigger className="bg-transparent">
+            Features
+          </NavigationMenuTrigger>
+          <NavigationMenuContent>
+            <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
+              {components.map((component) => (
+                <a
+                  href={component.href}
+                  key={component.title}
+                  className={cn(
+                    "group block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none ",
+                    "inline-flex items-center gap-2 "
+                  )}
+                >
+                  <component.icon className="size-10 p-2 border rounded-[10px] min-w-[40px] h-[40px] bg-transparent text-current group-hover:bg-white group-hover:border-white group-hover:text-black " />
+
+                  <ListItem
+                    key={component.title}
+                    title={component.title}
+                    href={component.href}
+                  >
+                    <p className="text-sm font-medium  mt-1 text-white text-opacity-60 group-hover:text-opacity-100 ">
+                      {component.description}
+                    </p>
+                  </ListItem>
+                </a>
+              ))}
+            </ul>
+          </NavigationMenuContent>
+        </NavigationMenuItem>
         <NavigationMenuItem>
           <NavigationMenuTrigger className="bg-transparent">
             Case Studies
@@ -91,42 +123,13 @@ export function NavigationMenuDemo() {
             </ul>
           </NavigationMenuContent>
         </NavigationMenuItem>
-        <NavigationMenuItem>
-          <NavigationMenuTrigger className="bg-transparent">
-            Features
-          </NavigationMenuTrigger>
-          <NavigationMenuContent>
-            <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
-              {components.map((component) => (
-                <div
-                  key={component.title}
-                  className={cn(
-                    "group block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none ",
-                    "inline-flex items-center gap-2 "
-                  )}
-                >
-                  <component.icon className="size-10 p-2 border rounded-[10px] min-w-[40px] h-[40px] bg-transparent text-current group-hover:bg-white group-hover:border-white group-hover:text-black " />
 
-                  <ListItem
-                    key={component.title}
-                    title={component.title}
-                    href={component.href}
-                  >
-                    <p className="text-sm font-medium  mt-1 text-white text-opacity-60 group-hover:text-opacity-100 ">
-                      {component.description}
-                    </p>
-                  </ListItem>
-                </div>
-              ))}
-            </ul>
-          </NavigationMenuContent>
-        </NavigationMenuItem>
         <NavigationMenuItem>
-          <Link href="/docs" legacyBehavior passHref>
+          <Link href="/about-us" legacyBehavior passHref>
             <NavigationMenuLink
               className={cn(navigationMenuTriggerStyle(), "bg-transparent")}
             >
-              Documentation
+              About Us
             </NavigationMenuLink>
           </Link>
         </NavigationMenuItem>

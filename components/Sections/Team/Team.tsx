@@ -81,7 +81,7 @@ const board: TeamMember[] = [
     job: "Software Architect & Integration - Co-Owner at AlphaPeople",
   },
   {
-    picture: "/LA.jpg",
+    picture: "/LA2.png",
     name: "Lars Andersen",
     title: "Entrepreneurship",
     linkedin: "https://www.linkedin.com/in/seedcapitallarsandersen/",
@@ -105,7 +105,7 @@ const legal: TeamMember[] = [
     job: "Partner, DLA Piper",
   },
   {
-    picture: "/NLG.jpg",
+    picture: "/NLG 2.jpg",
     name: "Nicholas Lerche-Gredal",
     title: "Corporate Law & M&A",
     linkedin: "https://www.linkedin.com/in/nicholaslerchegredal",

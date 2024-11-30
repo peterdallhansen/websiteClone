@@ -3,17 +3,14 @@ import SidebarMenu from "@/components/SidebarMenu";
 import AnimatedShinyText from "@/components/ui/animated-shiny-text";
 import { BentoCard, BentoGrid } from "@/components/ui/bento-grid";
 import BlurFade from "@/components/ui/blur-fade";
+import DotPattern from "@/components/ui/dot-pattern";
 import {
   ArrowRightIcon,
   BarChart2Icon,
-  BarChartIcon,
   Briefcase,
-  BriefcaseBusiness,
-  Building2,
   ClockIcon,
   CogIcon,
   File,
-  FileText,
   Globe,
   GlobeIcon,
   Layers,
@@ -31,61 +28,78 @@ function Showcase() {
 
   const features = [
     {
-      id: "workspace-insights",
-      Icon: BriefcaseBusiness,
-      name: "Workspace Insights",
-      description: "Understand usage patterns and optimize space allocation.",
-      href: "#workspace-insights",
+      id: "event-planning",
+      Icon: CogIcon,
+      name: "Event Planning",
+      description: "Organize your events with precision and clarity.",
+      href: "#event-planning",
       cta: "Learn more",
       className: "row-span-2 col-span-3 lg:col-span-1",
       background: <></>,
     },
     {
-      id: "tenant-management",
-      Icon: Users,
-      name: "Tenant Management",
-      description: "Streamline tenant operations and improve satisfaction.",
-      href: "#tenant-management",
-      cta: "Learn more",
-      className: "row-span-2 col-span-3 lg:col-span-2",
-      background: <></>,
-    },
-    {
-      id: "facility-optimization",
-      Icon: Building2,
-      name: "Facility Optimization",
-      description: "Enhance operational efficiency across your facilities.",
-      href: "#facility-optimization",
-      cta: "Learn more",
-      className: "row-span-2 col-span-3 lg:col-span-2",
-      background: <></>,
-    },
-    {
-      id: "custom-workspace-reports",
-      Icon: FileText,
-      name: "Custom Workspace Reports",
-      description: "Generate reports tailored to your workspace needs.",
-      href: "#custom-workspace-reports",
-      cta: "Learn more",
-      className: "row-span-3 col-span-3 lg:col-span-1",
-      background: <></>,
-    },
-    {
-      id: "real-time-tracking",
+      id: "schedule-management",
       Icon: ClockIcon,
-      name: "Real-Time Tracking",
-      description: "Get live updates on workspace activity and metrics.",
-      href: "#real-time-tracking",
+      name: "Schedule Management",
+      description: "Effortlessly manage schedules across teams and projects.",
+      href: "#schedule-management",
+      cta: "Learn more",
+      className: "row-span-2 col-span-3 lg:col-span-2",
+      background: <></>,
+    },
+    {
+      id: "validation-tools",
+      Icon: Briefcase,
+      name: "Validation Tools",
+      description: "Ensure everything is on track and ready for success.",
+      href: "#validation-tools",
       cta: "Learn more",
       className: "row-span-1 col-span-3 lg:col-span-2",
       background: <></>,
     },
     {
-      id: "workspace-performance",
-      Icon: BarChartIcon,
-      name: "Workspace Performance",
-      description: "Measure and analyze workspace efficiency with precision.",
-      href: "#workspace-performance",
+      id: "success-measurement",
+      Icon: BarChart2Icon,
+      name: "Success Measurement",
+      description: "Analyze key metrics to gauge event impact.",
+      href: "#success-measurement",
+      cta: "Learn more",
+      className: "row-span-2 col-span-3 lg:col-span-1",
+      background: <></>,
+    },
+    {
+      id: "team-collaboration",
+      Icon: Users,
+      name: "Team Collaboration",
+      description: "Enhance collaboration with shared calendars and tasks.",
+      href: "#team-collaboration",
+      cta: "Learn more",
+      className: "row-span-2 col-span-3 lg:col-span-2",
+      background: (
+        <div className="relative flex h-[600px] [mask-image:radial-gradient(620px_circle_at_top_center,white,transparent)]  w-full flex-col items-center justify-center overflow-hidden rounded-lg   md:shadow-xl">
+          <Image
+            src={"/images/Share.png"}
+            alt="Share preview"
+            width={1281}
+            height={1054}
+            quality={100}
+            className="w-[50%] absolute bottom-0 object-contain hover:bottom-2 transition-all  "
+            style={{
+              borderRadius: "15px",
+              zIndex: 99999,
+            }}
+          />
+
+          <DotPattern />
+        </div>
+      ),
+    },
+    {
+      id: "reminders-alerts",
+      Icon: SlidersHorizontal,
+      name: "Reminders & Alerts",
+      description: "Stay informed with automatic reminders and alerts.",
+      href: "#reminders-alerts",
       cta: "Learn more",
       className: "row-span-2 col-span-3 lg:col-span-4",
       background: <></>,
@@ -95,46 +109,46 @@ function Showcase() {
   const sections = useMemo(
     () => [
       {
-        id: "workspace-insights",
-        title: "Workspace Insights",
-        body: `Gain a clear understanding of workspace usage patterns, including occupancy rates, peak usage times, and resource allocation. This feature helps you identify underutilized spaces and optimize layouts to enhance productivity and cost-efficiency. Transform workspace data into actionable strategies that benefit your team and organization.`,
+        id: "event-planning",
+        title: "Event Planning",
+        body: `Plan your events with ease using intuitive tools designed for clarity and organization. Ensure every detail is accounted for with templates and customizable workflows that fit your needs.`,
         cta: "Learn more",
-        href: "#workspace-insights",
+        href: "#event-planning",
       },
       {
-        id: "tenant-management",
-        title: "Tenant Management",
-        body: `Simplify tenant operations with centralized management tools. From onboarding to communication, this feature streamlines tenant interactions and ensures satisfaction. Keep track of lease agreements, payment statuses, and requests, making tenant management seamless and efficient.`,
+        id: "schedule-management",
+        title: "Schedule Management",
+        body: `Keep track of every event, task, and deadline with an advanced scheduling system. Coordinate across teams, adjust timelines on the fly, and avoid conflicts effortlessly.`,
         cta: "Learn more",
-        href: "#tenant-management",
+        href: "#schedule-management",
       },
       {
-        id: "facility-optimization",
-        title: "Facility Optimization",
-        body: `Maximize operational efficiency by optimizing facility management processes. Use real-time data to optimize cleaning schedules, adjust staffing levels, and enhance visitor flow. Gain insights into peak usage times to improve space utilization and deliver a seamless experience while reducing operational costs. This approach ensures facilities are managed intelligently and effectively.`,
+        id: "validation-tools",
+        title: "Validation Tools",
+        body: `Use built-in validation tools to check dependencies, approvals, and readiness before events go live. Avoid last-minute surprises with a structured approach to planning.`,
         cta: "Learn more",
-        href: "#facility-optimization",
+        href: "#validation-tools",
       },
       {
-        id: "custom-workspace-reports",
-        title: "Custom Workspace Reports",
-        body: `Create detailed reports tailored to your workspace management needs. Highlight key metrics, trends, and insights to support strategic decision-making. Whether you need high-level overviews or deep dives into specific areas, Custom Workspace Reports keep you informed and prepared.`,
+        id: "success-measurement",
+        title: "Success Measurement",
+        body: `Analyze outcomes with comprehensive metrics and insights. Measure attendee engagement, feedback, and ROI to refine your strategies for future success.`,
         cta: "Learn more",
-        href: "#custom-workspace-reports",
+        href: "#success-measurement",
       },
       {
-        id: "real-time-tracking",
-        title: "Real-Time Tracking",
-        body: `Stay updated with real-time tracking of workspace activity. Monitor occupancy levels, environmental conditions, and resource usage as they happen. This feature empowers you to respond quickly to changes, improving responsiveness and operational agility.`,
+        id: "team-collaboration",
+        title: "Team Collaboration",
+        body: `Enable seamless collaboration with shared calendars, task assignments, and progress tracking. Keep everyone aligned and informed at every stage.`,
         cta: "Learn more",
-        href: "#real-time-tracking",
+        href: "#team-collaboration",
       },
       {
-        id: "workspace-performance",
-        title: "Workspace Performance",
-        body: `Track and analyze key performance metrics across your workspaces. Identify trends, measure efficiency, and gain actionable insights to drive better outcomes. Use this data to improve productivity, reduce costs, and align workspace operations with your organizational goals.`,
+        id: "reminders-alerts",
+        title: "Reminders & Alerts",
+        body: `Never miss a beat with automated reminders and alerts for key tasks and deadlines. Stay proactive and focused with notifications tailored to your preferences.`,
         cta: "Learn more",
-        href: "#workspace-performance",
+        href: "#reminders-alerts",
       },
     ],
     []
@@ -164,12 +178,9 @@ function Showcase() {
       <main className="flex flex-col gap-4 row-start-2 items-center ">
         <BlurFade delay={0} inView>
           <h2 className="text-xl md:text-1xl xl:text-2xl leading-tight text-white text-center max-w-[750px] text-opacity-80 mb-20">
-            Gain detailed insights into workspace utilization, operational
-            efficiency, and user preferences. Understand patterns, identify
-            trends, and make informed decisions to optimize your environments.
-            Enhance productivity, collaboration, and user satisfaction while
-            driving meaningful improvements in workspace management and business
-            growth.
+            Elevate your event planning with a powerful calendar platform. Plan
+            effectively, schedule seamlessly, validate readiness, and measure
+            success with tools that keep you ahead.
           </h2>
         </BlurFade>
 
@@ -190,8 +201,8 @@ function Showcase() {
           >
             <SidebarMenu
               sections={sections}
+              currentPath={"/feautures/calendar"}
               activeSection={activeSection}
-              currentPath="/features/workspaces"
             />
           </div>
 
@@ -218,11 +229,10 @@ function Showcase() {
                   src={"/images/localhost_3001_ (1).png"}
                   width={1000}
                   height={400}
-                  quality={100}
                   style={{
                     borderRadius: 15,
                   }}
-                  className="mb-20"
+                  className="mb-20 border"
                   alt={section.title}
                 />
               </div>

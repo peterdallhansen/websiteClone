@@ -44,7 +44,16 @@ function Main() {
       {/* Text Content */}
       <div className="absolute top-1/3 left-[10%] flex flex-col items-start justify-center space-y-6">
         <BlurFade delay={0.25} inView>
-          <h1 className="text-5xl md:text-7xl xl:text-8xl font-extrabold text-white leading-tight">
+          <h1
+            className="text-5xl md:text-7xl xl:text-8xl font-extrabold text-white leading-tight"
+            style={{
+              backgroundClip: "text",
+              WebkitBackgroundClip: "text",
+              color: "transparent",
+              backgroundImage:
+                "linear-gradient(281deg, rgba(255, 255, 255, 0.56) 0%, rgba(255, 255, 255, 0.88) 47%, rgb(255, 255, 255) 100%)",
+            }}
+          >
             Footfall Analytics <br /> for Smarter Retail
           </h1>
         </BlurFade>
@@ -57,7 +66,7 @@ function Main() {
         </BlurFade>
         <BlurFade delay={0.75} inView>
           <div className="flex items-center space-x-4">
-            <Button className="bg-accent hover:text-muted-foreground  text-white py-5 font-bold">
+            <Button className="bg-accent hover:text-muted-foreground  text-white py-5 ">
               Contact Sales
             </Button>
             <Button

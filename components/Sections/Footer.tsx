@@ -32,7 +32,7 @@ export function Footer() {
             <ul className="space-y-2">
               <li>
                 <Link
-                  href="/features"
+                  href="/#features"
                   className="text-base text-gray-500 hover:text-gray-900 flex items-center"
                 >
                   <Laptop className="w-5 h-5 mr-2" />

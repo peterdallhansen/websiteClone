@@ -3,9 +3,10 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import { Inter } from "@next/font/google";
 import { cn } from "@/lib/utils";
+import Head from "next/head";
 
 export const metadata: Metadata = {
-  title: "Zonify.ai",
+  title: "Zonify.ai – Footfall Analytics Made Profitable",
   description: "Footfall Analytics Reinvented",
 };
 

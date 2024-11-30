@@ -77,10 +77,10 @@ const HowItWorks = () => {
                   delay={0.25 + 0.25 * index}
                   inView
                   key={index}
-                  className="border-none bg-transparent relative cursor-pointer"
+                  className="border-none bg-transparent relative cursor-pointer h-full"
                 >
                   <Card
-                    className="border-none bg-transparent relative cursor-pointer"
+                    className="border-none bg-transparent relative cursor-pointer h-full"
                     onClick={() => setActiveCard(index)}
                   >
                     <CardContent className="pt-6 text-center">
@@ -115,7 +115,11 @@ const HowItWorks = () => {
           </div>
         </section>
 
-        <div className="relative w-[100%] rounded-xl aspect-[2428/1217] h-[750px] bg-transparent">
+        <BlurFade
+          inView
+          key={activeCard}
+          className="relative w-full rounded-xl max-w-screen-lg h-[500px] bg-transparent"
+        >
           <div
             style={{
               boxShadow: "0px 0px 300px -57px rgba(107,183,255,1)",
@@ -131,14 +135,15 @@ const HowItWorks = () => {
             />
             <Image
               className="rounded-xl"
-              fill
+              height={700}
+              width={2000}
               style={{ objectFit: "contain", backgroundColor: "transparent" }}
               quality={100}
               alt="Dashboard-Image"
               src={cards[activeCard].image}
             />
           </div>
-        </div>
+        </BlurFade>
       </main>
     </div>
   );
