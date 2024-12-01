@@ -8,7 +8,6 @@ interface Item {
   name: string;
   description: string;
   icon: string; // Image URL
-  color: string;
   time: string;
 }
 
@@ -18,174 +17,150 @@ let notifications = [
     description: "15% increase near BAAN Bodycare from 2-3 PM.",
     time: "15m ago",
     icon: "/images/Icon-medium.png",
-    color: "#00C9A7",
   },
   {
     name: "Dwell Time Up",
     description: "COFFEA SENTIO visitors stayed 20 mins on avg today.",
     time: "10m ago",
     icon: "/images/Icon-medium.png",
-    color: "#FFB800",
   },
   {
     name: "New Heatmap",
     description: "H&M saw peak activity from 1-2 PM today.",
     time: "5m ago",
     icon: "/images/Icon-medium.png",
-    color: "#FF3D71",
   },
   {
     name: "Low Footfall",
     description: "KOP & KANDE had only 25 visitors from 11 AM - 12 PM.",
     time: "2m ago",
     icon: "/images/Icon-medium.png",
-    color: "#1E86FF",
   },
   {
     name: "Sales Opportunity",
     description: "Zone B traffic high—promote DEICHMANN offers.",
     time: "1h ago",
     icon: "/images/Icon-medium.png",
-    color: "#FFA500",
   },
   {
     name: "Peak Hours",
     description: "THE BURGER CONCEPT's busiest time: 6-7 PM.",
     time: "2h ago",
     icon: "/images/Icon-medium.png",
-    color: "#3498DB",
   },
   {
     name: "Weekend Summary",
     description: "FLYING TIGER saw 450 visitors, up 12%.",
     time: "Yesterday",
     icon: "/images/Icon-medium.png",
-    color: "#8E44AD",
   },
   {
     name: "Event Boost",
     description: "MO’RICE traffic up 25% during food fest.",
     time: "2 days ago",
     icon: "/images/Icon-medium.png",
-    color: "#E74C3C",
   },
   {
     name: "Footfall Surge",
     description: "15% increase near BAAN Bodycare from 2-3 PM.",
     time: "15m ago",
     icon: "/images/Icon-medium.png",
-    color: "#00C9A7",
   },
   {
     name: "Dwell Time Up",
     description: "COFFEA SENTIO visitors stayed 20 mins on avg today.",
     time: "10m ago",
     icon: "/images/Icon-medium.png",
-    color: "#FFB800",
   },
   {
     name: "New Heatmap",
     description: "H&M saw peak activity from 1-2 PM today.",
     time: "5m ago",
     icon: "/images/Icon-medium.png",
-    color: "#FF3D71",
   },
   {
     name: "Low Footfall",
     description: "KOP & KANDE had only 25 visitors from 11 AM - 12 PM.",
     time: "2m ago",
     icon: "/images/Icon-medium.png",
-    color: "#1E86FF",
   },
   {
     name: "Sales Opportunity",
     description: "Zone B traffic high—promote DEICHMANN offers.",
     time: "1h ago",
     icon: "/images/Icon-medium.png",
-    color: "#FFA500",
   },
   {
     name: "Peak Hours",
     description: "THE BURGER CONCEPT's busiest time: 6-7 PM.",
     time: "2h ago",
     icon: "/images/Icon-medium.png",
-    color: "#3498DB",
   },
   {
     name: "Weekend Summary",
     description: "FLYING TIGER saw 450 visitors, up 12%.",
     time: "Yesterday",
     icon: "/images/Icon-medium.png",
-    color: "#8E44AD",
   },
   {
     name: "Event Boost",
     description: "MO’RICE traffic up 25% during food fest.",
     time: "2 days ago",
     icon: "/images/Icon-medium.png",
-    color: "#E74C3C",
   },
   {
     name: "Footfall Surge",
     description: "15% increase near BAAN Bodycare from 2-3 PM.",
     time: "15m ago",
     icon: "/images/Icon-medium.png",
-    color: "#00C9A7",
   },
   {
     name: "Dwell Time Up",
     description: "COFFEA SENTIO visitors stayed 20 mins on avg today.",
     time: "10m ago",
     icon: "/images/Icon-medium.png",
-    color: "#FFB800",
   },
   {
     name: "New Heatmap",
     description: "H&M saw peak activity from 1-2 PM today.",
     time: "5m ago",
     icon: "/images/Icon-medium.png",
-    color: "#FF3D71",
   },
   {
     name: "Low Footfall",
     description: "KOP & KANDE had only 25 visitors from 11 AM - 12 PM.",
     time: "2m ago",
     icon: "/images/Icon-medium.png",
-    color: "#1E86FF",
   },
   {
     name: "Sales Opportunity",
     description: "Zone B traffic high—promote DEICHMANN offers.",
     time: "1h ago",
     icon: "/images/Icon-medium.png",
-    color: "#FFA500",
   },
   {
     name: "Peak Hours",
     description: "THE BURGER CONCEPT's busiest time: 6-7 PM.",
     time: "2h ago",
     icon: "/images/Icon-medium.png",
-    color: "#3498DB",
   },
   {
     name: "Weekend Summary",
     description: "FLYING TIGER saw 450 visitors, up 12%.",
     time: "Yesterday",
     icon: "/images/Icon-medium.png",
-    color: "#8E44AD",
   },
   {
     name: "Event Boost",
     description: "MO’RICE traffic up 25% during food fest.",
     time: "2 days ago",
     icon: "/images/Icon-medium.png",
-    color: "#E74C3C",
   },
 ];
 
 notifications = Array.from({ length: 10 }, () => notifications).flat();
 
-const Notification = ({ name, description, icon, color, time }: Item) => {
+const Notification = ({ name, description, icon, time }: Item) => {
   return (
     <figure
       className={cn(

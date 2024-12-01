@@ -1,14 +1,12 @@
 "use client";
 
+import { Menu } from "lucide-react"; // Use an icon library for the hamburger icon
 import Link from "next/link";
-import Image from "next/image";
+import { useEffect, useState } from "react";
+import Logo from "./Logo";
 import { Button } from "./ui/button";
 import { NavigationMenuDemo } from "./ui/NavigationMenuDemo";
-import { useTheme } from "next-themes";
-import { useEffect, useState } from "react";
-import { Menu } from "lucide-react"; // Use an icon library for the hamburger icon
 import { Sheet, SheetContent, SheetTrigger } from "./ui/sheet";
-import Logo from "./Logo";
 
 export default function Header() {
   const [isMobile, setIsMobile] = useState(false);
@@ -31,8 +29,8 @@ export default function Header() {
   }, []);
 
   return (
-    <header className="relative sticky top-0 z-50 py-3 backdrop-blur  w-screen">
-      <div className="flex justify-between items-center  mx-auto md:px-[64px] px-4 sm:px-4 md:px-4 xl-px-[64px]">
+    <header className="fixed top-0 z-50 py-3 backdrop-blur w-screen">
+      <div className="flex justify-between items-center  mx-auto md:px-[64px] px-4 sm:px-4 md:px-4 xl-px-[64px] ">
         <Logo />
 
         {isMobile ? (

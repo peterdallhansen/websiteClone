@@ -8,11 +8,9 @@ import {
   ArrowRightIcon,
   BarChartIcon,
   BriefcaseBusiness,
-  Building2,
   ClockIcon,
   FileText,
   TrendingUpIcon,
-  Users,
 } from "lucide-react";
 import Image from "next/image";
 import { useEffect, useMemo, useState } from "react";

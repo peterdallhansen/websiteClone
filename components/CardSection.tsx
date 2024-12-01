@@ -1,18 +1,25 @@
-import {
-  Leaf,
-  Target,
-  BarChart,
-  BarChart3,
-  Eye,
-  MapPin,
-  Search,
-} from "lucide-react";
-import { MagicCard } from "./ui/magic-card";
+import { BarChart3, MapPin, Search } from "lucide-react";
 import BlurFade from "./ui/blur-fade";
+import { MagicCard } from "./ui/magic-card";
 
 function CardSection() {
   return (
     <div className="container items-center flex flex-col  mt-20 lg:mt-40 mb-20 p-4">
+      <BlurFade delay={0.25} inView>
+        <h4
+          className="text-sm md:text-lg text-accent text-center"
+          style={{
+            textShadow: "0 0 12px rgba(107, 183, 225, 1)",
+            backgroundImage:
+              "linear-gradient(309deg, rgb(166, 221, 255) 2.25%, rgba(107,183,225,1) 48.08%, rgb(0, 119, 255) 100%)",
+            backgroundClip: "text",
+            WebkitBackgroundClip: "text",
+            color: "transparent",
+          }}
+        >
+          Our Mission
+        </h4>
+      </BlurFade>
       <BlurFade delay={0} inView>
         <h3 className="lg:text-6xl font-bold mb-2 text-center md:text-5xl text-[26px] sm:text-4xl">
           Redefining Footfall Analytics

@@ -1,5 +1,3 @@
-import Header from "@/components/Header";
-import { Footer } from "@/components/Sections/Footer";
 import { Team } from "@/components/Sections/Team/Team";
 
 export default function Home() {

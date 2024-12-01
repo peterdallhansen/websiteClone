@@ -1,18 +1,16 @@
-import Link from "next/link";
 import {
-  Laptop,
-  FileText,
   BookOpen,
-  Linkedin,
-  Clipboard,
-  Shield,
-  Scale,
-  User,
   Briefcase,
+  Clipboard,
   Edit,
+  FileText,
   Handshake,
+  Laptop,
+  Scale,
+  Shield,
+  User,
 } from "lucide-react";
-import Image from "next/image";
+import Link from "next/link";
 import { FaLinkedin } from "react-icons/fa";
 import Logo from "../Logo";
 
@@ -121,7 +119,7 @@ export function Footer() {
               </li>
               <li>
                 <Link
-                  href="/privacy"
+                  href="/privacy-policy"
                   className="text-base text-gray-500 hover:text-gray-900 flex items-center"
                 >
                   <Shield className="w-5 h-5 mr-2" />

@@ -6,18 +6,11 @@ import BlurFade from "@/components/ui/blur-fade";
 import {
   ArrowRightIcon,
   BarChart2Icon,
-  Briefcase,
   ClockIcon,
   CogIcon,
-  File,
-  Globe,
   GlobeIcon,
-  Layers,
-  Share2,
-  SlidersHorizontal,
   TrendingUpIcon,
   UserIcon,
-  Users,
 } from "lucide-react";
 import Image from "next/image";
 import { useEffect, useMemo, useState } from "react";

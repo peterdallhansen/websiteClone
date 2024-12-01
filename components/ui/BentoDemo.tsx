@@ -1,26 +1,21 @@
 "use client";
-import { CalendarIcon, FileTextIcon } from "@radix-ui/react-icons";
 import {
   BellIcon,
   LucideArrowDownRight,
-  LucideArrowRightCircle,
   LucideArrowUpRight,
   LucideCalendar,
   LucideChartSpline,
   Share2Icon,
 } from "lucide-react";
 
-import { cn } from "@/lib/utils";
 import { Calendar } from "@/components/ui/calendar";
+import { cn } from "@/lib/utils";
+import Image from "next/image";
+import { useEffect, useState } from "react";
+import { AnimatedBeamDemo } from "./AnimatedBeamDemo";
+import { AnimatedListDemo } from "./AnimatedListDemo";
 import { BentoCard, BentoGrid } from "./bento-grid";
 import Marquee from "./marquee";
-import { AnimatedListDemo } from "./AnimatedListDemo";
-import { AnimatedBeamDemo } from "./AnimatedBeamDemo";
-import FlickeringGrid from "./flickering-grid";
-import Image from "next/image";
-import BlurFade from "./blur-fade";
-import ReactApexChart from "react-apexcharts";
-import { useEffect, useState } from "react";
 
 const files = [
   {
@@ -45,7 +40,13 @@ const files = [
   },
 ];
 
-function RandomFeatureCard({ file, index }: { file: any; index: number }) {
+function RandomFeatureCard({
+  file,
+  index,
+}: {
+  file: { name: string; body: string };
+  index: number;
+}) {
   const [randomNumber, setRandomNumber] = useState<string>("0");
   const [randomPercent, setRandomPercent] = useState<string>("0%");
 
@@ -127,18 +128,23 @@ export function BentoDemo() {
       description: "Get notified when something happens.",
       href: "#",
       cta: "Learn more",
-      className: "row-span-3 lg:row-span-2",
+      className: "row-span-1 lg:row-span-2",
 
       background: (
-        <FlickeringGrid
-          className="absolute right-2 top-0 h-[300px] w-full border-none transition-all duration-300 ease-out [mask-image:linear-gradient(to_top,transparent_10%,#000_100%)] group-hover:scale-105"
-          squareSize={4}
-          gridGap={6}
-          color="#60A5FA"
-          maxOpacity={0.5}
-          flickerChance={0.1}
-          height={800}
-        />
+        <div className="absolute flex h-full [mask-image:radial-gradient(800px_circle_at_center,white,transparent)]  w-full flex-col items-center justify-center overflow-hidden rounded-lg   md:shadow-xl">
+          <Image
+            src={"/images/calendar.png"}
+            alt="Drag & Drop Preview"
+            width={6374}
+            height={3574}
+            quality={100}
+            className="w-[80%] scale-[2.5] ml-[-90px] sm:ml-[-110px] sm:scale-[2] md:scale-[2] absolute sm:bottom-32 object-contain hover:bottom-36 transition-all"
+            style={{
+              borderRadius: "15px",
+              zIndex: 99999,
+            }}
+          />
+        </div>
       ),
     },
     {

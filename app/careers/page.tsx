@@ -1,5 +1,3 @@
-import Header from "@/components/Header";
-import { Footer } from "@/components/Sections/Footer";
 import Main from "./Main";
 
 export default function Careers() {

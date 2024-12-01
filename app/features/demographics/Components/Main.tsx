@@ -1,7 +1,5 @@
-import { BentoDemo } from "@/components/ui/BentoDemo";
 import BlurFade from "@/components/ui/blur-fade";
 import HeroVideoDialog from "@/components/ui/hero-video-dialog";
-import React from "react";
 
 function Main() {
   return (

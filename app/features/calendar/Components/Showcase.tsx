@@ -10,17 +10,9 @@ import { cn } from "@/lib/utils";
 import {
   ArrowRightIcon,
   BarChart2Icon,
-  Briefcase,
   ClockIcon,
   CogIcon,
-  File,
-  Globe,
-  GlobeIcon,
-  Layers,
-  Share2,
   SlidersHorizontal,
-  TrendingUpIcon,
-  UserIcon,
   Users,
 } from "lucide-react";
 import Image from "next/image";
@@ -60,7 +52,6 @@ function Showcase() {
           numSquares={30}
           maxOpacity={0.1}
           duration={3}
-          repeatDelay={1}
           className={cn(
             "[mask-image:radial-gradient(500px_circle_at_center,white,transparent)]",
             "inset-x-0  height-[200%]   skew-y-12"
@@ -77,7 +68,7 @@ function Showcase() {
       cta: "Learn more",
       className: "row-span-2 col-span-3 lg:col-span-3",
       background: (
-        <div className="absolute flex h-full [mask-image:radial-gradient(650px_circle_at_top_center,white,transparent)]  w-full flex-col items-center justify-center overflow-hidden rounded-lg   md:shadow-xl">
+        <div className="absolute flex h-full [mask-image:radial-gradient(700px_circle_at_top_center,white,transparent)]  w-full flex-col items-center justify-center overflow-hidden rounded-lg   md:shadow-xl">
           <Image
             src={"/images/calendar.png"}
             alt="Drag & Drop Preview"
@@ -90,8 +81,6 @@ function Showcase() {
               zIndex: 99999,
             }}
           />
-
-          <DotPattern />
         </div>
       ),
     },

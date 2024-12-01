@@ -5,22 +5,11 @@ import { BentoCard, BentoGrid } from "@/components/ui/bento-grid";
 import BlurFade from "@/components/ui/blur-fade";
 import {
   ArrowRightIcon,
-  BarChart2Icon,
   BarChartIcon,
-  Briefcase,
   BriefcaseBusiness,
   Building2,
   ClockIcon,
-  CogIcon,
-  File,
   FileText,
-  Globe,
-  GlobeIcon,
-  Layers,
-  Share2,
-  SlidersHorizontal,
-  TrendingUpIcon,
-  UserIcon,
   Users,
 } from "lucide-react";
 import Image from "next/image";

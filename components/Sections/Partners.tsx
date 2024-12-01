@@ -1,6 +1,3 @@
-import { cn } from "@/lib/utils";
-import React from "react";
-import Marquee from "../ui/marquee";
 import Image from "next/image";
 import BlurFade from "../ui/blur-fade";
 
@@ -35,17 +32,19 @@ function Partners() {
             inView
             delay={index * 0.1 + 0.2}
             key={company.name}
-            className="flex items-center justify-center opacity-50 transition-opacity hover:opacity-100 gap-4"
+            className="flex items-center justify-center opacity-50 transition-opacity hover:opacity-100 gap-4 group"
           >
             <Image
               src={company.logo}
               height={40}
               width={120}
               alt={`${company.name} logo`}
-              className="h-10 w-auto rounded"
+              className="h-10 w-auto rounded opacity-80 transition-opacity group-hover:opacity-100"
             />
             {company.name && (
-              <h6 className="hidden sm:block">{company.name}</h6>
+              <h6 className="hidden sm:block opacity-80 transition-opacity group-hover:opacity-100 group">
+                {company.name}
+              </h6>
             )}
           </BlurFade>
         ))}

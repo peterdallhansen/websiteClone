@@ -1,8 +1,3 @@
-import Header from "@/components/Header";
-import Features from "@/components/Sections/Features/Features";
-import { Footer } from "@/components/Sections/Footer";
-import HowItWorks from "@/components/Sections/HowItWorks/HowItWorks";
-import Team from "@/components/Sections/Team/Team";
 import Main from "./Components/Main";
 import Showcase from "./Components/Showcase";
 

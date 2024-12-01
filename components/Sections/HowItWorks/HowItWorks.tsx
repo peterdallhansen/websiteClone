@@ -1,12 +1,10 @@
 "use client";
-import React, { useState, useEffect } from "react";
-import { BarChart3, Brain, FileText, LineChart } from "lucide-react";
-import { Card, CardContent } from "@/components/ui/card";
-import FlickeringGrid from "@/components/ui/flickering-grid";
-import { BorderBeam } from "@/components/ui/border-beam";
-import Image from "next/image";
 import BlurFade from "@/components/ui/blur-fade";
-import Ripple from "@/components/ui/ripple";
+import { BorderBeam } from "@/components/ui/border-beam";
+import { Card, CardContent } from "@/components/ui/card";
+import { BarChart3, Brain, FileText, LineChart } from "lucide-react";
+import Image from "next/image";
+import { useEffect, useState } from "react";
 
 const HowItWorks = () => {
   const [activeCard, setActiveCard] = useState(0);

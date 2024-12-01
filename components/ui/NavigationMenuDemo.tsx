@@ -1,9 +1,8 @@
 "use client";
 
-import * as React from "react";
 import Link from "next/link";
+import * as React from "react";
 
-import { cn } from "@/lib/utils";
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -13,17 +12,14 @@ import {
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
-import Image from "next/image";
-import Logo from "../Logo";
+import { cn } from "@/lib/utils";
 import {
-  UserIcon,
-  GlobeIcon,
-  BarChartIcon,
   CalendarIcon,
-  LayersIcon,
-  Share,
-  Share2,
   FileIcon,
+  GlobeIcon,
+  LayersIcon,
+  Share2,
+  UserIcon,
 } from "lucide-react";
 
 const components: {
@@ -141,7 +137,7 @@ export function NavigationMenuDemo() {
 const ListItem = React.forwardRef<
   React.ElementRef<"a">,
   React.ComponentPropsWithoutRef<"a">
->(({ className, title, children, ...props }, ref) => {
+>(({ title, children, ...props }, ref) => {
   return (
     <li>
       <NavigationMenuLink asChild>
