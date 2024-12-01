@@ -31,7 +31,7 @@ export default function Header() {
   }, []);
 
   return (
-    <header className="relative sticky top-0 z-50 py-4 backdrop-blur ">
+    <header className="relative sticky top-0 z-50 py-3 backdrop-blur  w-screen">
       <div className="flex justify-between items-center  mx-auto md:px-[64px] px-4 sm:px-4 md:px-4 xl-px-[64px]">
         <Logo />
 

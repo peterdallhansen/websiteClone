@@ -1,9 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url("https://fonts.cdnfonts.com/css/typo-grotesk");
 
 body {
-  font-family: "Inter", sans-serif;
+  font-family: "Typo Grotesk", sans-serif;
+  font-family: "Typo Grotesk Thin", sans-serif;
+  font-family: "Typo Grotesk Black", sans-serif;
+
   overflow-x: hidden;
 }
 

@@ -45,7 +45,7 @@ function Main() {
       <div className="absolute top-1/3 left-[10%] flex flex-col items-start justify-center space-y-6">
         <BlurFade delay={0.25} inView>
           <h1
-            className="text-5xl md:text-7xl xl:text-8xl font-extrabold text-white leading-tight"
+            className="text-5xl md:text-7xl xl:text-8xl font-bold text-white leading-tight"
             style={{
               backgroundClip: "text",
               WebkitBackgroundClip: "text",

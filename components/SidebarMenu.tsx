@@ -39,7 +39,7 @@ const SidebarMenu: React.FC<SidebarMenuProps> = ({
   ];
 
   return (
-    <div className="w-full h-full flex flex-col items-start justify-start text-left gap-4 ">
+    <div className="w-full h-full flex flex-col items-start justify-start text-left gap-4  ">
       {menuItems.map((item, index) => (
         <div key={index}>
           {item.isCurrent || currentPath === item.href ? (

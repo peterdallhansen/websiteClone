@@ -3,6 +3,7 @@ import SidebarMenu from "@/components/SidebarMenu";
 import AnimatedShinyText from "@/components/ui/animated-shiny-text";
 import { BentoCard, BentoGrid } from "@/components/ui/bento-grid";
 import BlurFade from "@/components/ui/blur-fade";
+import DotPattern from "@/components/ui/dot-pattern";
 import {
   ArrowRightIcon,
   BarChartIcon,
@@ -38,7 +39,29 @@ function Showcase() {
       href: "#data-visualization",
       cta: "Learn more",
       className: "row-span-2 col-span-3 lg:col-span-2",
-      background: <></>,
+      background: (
+        <div
+          style={{
+            boxShadow: "inset 0px -240px 200px 0px rgba(0,153,255,0.75)",
+          }}
+          className="absolute flex h-full [mask-image:radial-gradient(550px_circle_at_top_center,white,transparent)]  w-full flex-col items-center justify-center overflow-hidden rounded-lg   md:shadow-xl"
+        >
+          <Image
+            src={"/images/cards.png"}
+            alt="Drag & Drop Preview"
+            width={2783}
+            height={1741}
+            quality={100}
+            className="w-[80%] absolute bottom-64 object-contain hover:bottom-60 transition-all  "
+            style={{
+              borderRadius: "15px",
+              zIndex: 99999,
+            }}
+          />
+
+          <DotPattern />
+        </div>
+      ),
     },
     {
       id: "real-time-insights",

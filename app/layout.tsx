@@ -4,6 +4,8 @@ import { ThemeProvider } from "@/components/ThemeProvider";
 import { Inter } from "@next/font/google";
 import { cn } from "@/lib/utils";
 import Head from "next/head";
+import Header from "@/components/Header";
+import { Footer } from "@/components/Sections/Footer";
 
 export const metadata: Metadata = {
   title: "Zonify.ai – Footfall Analytics Made Profitable",
@@ -22,14 +24,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={cn(inter.variable, "scroll-smooth")}>
-      <body className={` antialiased`}>
+      <body className={`  antialiased`}>
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"
           forcedTheme="dark"
           disableTransitionOnChange
         >
+          <Header />
           {children}
+          <Footer />
         </ThemeProvider>
       </body>
     </html>

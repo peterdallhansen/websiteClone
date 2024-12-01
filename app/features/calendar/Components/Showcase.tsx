@@ -1,9 +1,12 @@
 "use client";
 import SidebarMenu from "@/components/SidebarMenu";
+import AnimatedGridPattern from "@/components/ui/animated-grid-pattern";
 import AnimatedShinyText from "@/components/ui/animated-shiny-text";
+import { AnimatedListDemo } from "@/components/ui/AnimatedListDemo";
 import { BentoCard, BentoGrid } from "@/components/ui/bento-grid";
 import BlurFade from "@/components/ui/blur-fade";
 import DotPattern from "@/components/ui/dot-pattern";
+import { cn } from "@/lib/utils";
 import {
   ArrowRightIcon,
   BarChart2Icon,
@@ -34,8 +37,36 @@ function Showcase() {
       description: "Organize your events with precision and clarity.",
       href: "#event-planning",
       cta: "Learn more",
-      className: "row-span-2 col-span-3 lg:col-span-1",
-      background: <></>,
+      className: "row-span-1 col-span-2 lg:col-span-1",
+      background: (
+        <DotPattern
+          className={cn(
+            "[mask-image:radial-gradient(200px_circle_at_center,white,transparent)]"
+          )}
+        />
+      ),
+    },
+
+    {
+      id: "success-measurement",
+      Icon: BarChart2Icon,
+      name: "Success Measurement",
+      description: "Analyze key metrics to gauge event impact.",
+      href: "#success-measurement",
+      cta: "Learn more",
+      className: "row-span-1 col-span-3 lg:col-span-2",
+      background: (
+        <AnimatedGridPattern
+          numSquares={30}
+          maxOpacity={0.1}
+          duration={3}
+          repeatDelay={1}
+          className={cn(
+            "[mask-image:radial-gradient(500px_circle_at_center,white,transparent)]",
+            "inset-x-0  height-[200%]   skew-y-12"
+          )}
+        />
+      ),
     },
     {
       id: "schedule-management",
@@ -44,28 +75,25 @@ function Showcase() {
       description: "Effortlessly manage schedules across teams and projects.",
       href: "#schedule-management",
       cta: "Learn more",
-      className: "row-span-2 col-span-3 lg:col-span-2",
-      background: <></>,
-    },
-    {
-      id: "validation-tools",
-      Icon: Briefcase,
-      name: "Validation Tools",
-      description: "Ensure everything is on track and ready for success.",
-      href: "#validation-tools",
-      cta: "Learn more",
-      className: "row-span-1 col-span-3 lg:col-span-2",
-      background: <></>,
-    },
-    {
-      id: "success-measurement",
-      Icon: BarChart2Icon,
-      name: "Success Measurement",
-      description: "Analyze key metrics to gauge event impact.",
-      href: "#success-measurement",
-      cta: "Learn more",
-      className: "row-span-2 col-span-3 lg:col-span-1",
-      background: <></>,
+      className: "row-span-2 col-span-3 lg:col-span-3",
+      background: (
+        <div className="absolute flex h-full [mask-image:radial-gradient(650px_circle_at_top_center,white,transparent)]  w-full flex-col items-center justify-center overflow-hidden rounded-lg   md:shadow-xl">
+          <Image
+            src={"/images/calendar.png"}
+            alt="Drag & Drop Preview"
+            width={6374}
+            height={3574}
+            quality={100}
+            className="w-[80%] absolute bottom-48 object-contain hover:bottom-[180px] transition-all  "
+            style={{
+              borderRadius: "15px",
+              zIndex: 99999,
+            }}
+          />
+
+          <DotPattern />
+        </div>
+      ),
     },
     {
       id: "team-collaboration",
@@ -101,8 +129,10 @@ function Showcase() {
       description: "Stay informed with automatic reminders and alerts.",
       href: "#reminders-alerts",
       cta: "Learn more",
-      className: "row-span-2 col-span-3 lg:col-span-4",
-      background: <></>,
+      className: "row-span-2 col-span-1 lg:col-span-1",
+      background: (
+        <AnimatedListDemo className="absolute right-2 top-4 h-[600px] w-full border-none transition-all duration-300 ease-out [mask-image:linear-gradient(to_top,transparent_10%,#000_100%)] group-hover:scale-105" />
+      ),
     },
   ];
 
@@ -194,7 +224,7 @@ function Showcase() {
         <div className="w-full flex flex-row gap-8 pt-40 relative">
           {/* Sidebar */}
           <div
-            className="self-start w-[400px] sticky top-40"
+            className="self-start w-[400px] sticky top-40 hidden sm:flex"
             style={{
               position: "sticky",
             }}
