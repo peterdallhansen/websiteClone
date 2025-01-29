@@ -81,7 +81,7 @@ const board: TeamMember[] = [
     job: "Software Architect & Integration - Co-Owner at AlphaPeople",
   },
   {
-    picture: "/LA2.png",
+    picture: "/LA3.jpg",
     name: "Lars Andersen",
     title: "Entrepreneurship",
     linkedin: "https://www.linkedin.com/in/seedcapitallarsandersen/",
@@ -93,6 +93,33 @@ const board: TeamMember[] = [
     title: "Airports",
     linkedin: "https://www.linkedin.com/in/ole-wieth-christensen-8418ab1",
     job: "Professional Board Member, Former Director at CPH Airports",
+  },
+  {
+    picture: "/MEB.jpg",
+    name: "Mariam El Bacha",
+    title: "Cinemas",
+    linkedin: "https://www.linkedin.com/in/mariam-el-bacha-60494a19/",
+    job: `Territory General Manager, Vue International -
+CEO, Cinepax Cinemas -
+COO, MBO Cinemas -
+COO, CJ CGV`,
+  },
+  {
+    picture: "/MND.jpg",
+    name: "Morten Norup Dühr",
+    title: "Leisure",
+    linkedin:
+      "https://www.linkedin.com/in/morten-ring-norup-d%C3%BChr-9ab39055/",
+    job: `Professional Board member
+CCO, ADmire - Service Provider, Mobility & IT Infrastructure
+CEO & Cofounder, Admire Mobility - Managed Service Provider, Mobility & IT Infrastructure
+CSO, Comenxa - Software Development`,
+  },
+  {
+    picture: "/TSA.jpeg",
+    name: "Tine Skøtt Aggerholm",
+    title: "Shopping Centers",
+    linkedin: "https://www.linkedin.com/in/tineaggerholm/",
   },
 ];
 

@@ -14,7 +14,7 @@ const Logo: React.FC<props> = ({
   return (
     <a className={className} href="/">
       <Image
-        src="/images/Logo-dark.png"
+        src="/images/Logo-alt2-dark.png"
         width={width}
         height={height}
         alt="Zonify Logo"

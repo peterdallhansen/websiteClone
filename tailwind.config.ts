@@ -105,6 +105,18 @@ const config: Config = {
             transform: "translate(-50%, -50%) scale(0.9)",
           },
         },
+        wiggleRight: {
+          "0%": { transform: "translateX(0)" },
+          "45%": { transform: "translateX(2px)" },
+
+          "100%": { transform: "translateX(0)" },
+        },
+        wiggleLeft: {
+          "0%": { transform: "translateX(0)" },
+          "45%": { transform: "translateX(-2px)" },
+
+          "100%": { transform: "translateX(0)" },
+        },
       },
       animation: {
         marquee: "marquee var(--duration) infinite linear",
@@ -113,6 +125,8 @@ const config: Config = {
         shine: "shine var(--duration) infinite linear",
         "shiny-text": "shiny-text 8s infinite",
         ripple: "ripple var(--duration,2s) ease calc(var(--i, 0)*.2s) infinite",
+        wiggleRight: "wiggleRight 0.5s ease-in-out",
+        wiggleLeft: "wiggleLeft 0.5s ease-in-out",
       },
     },
   },

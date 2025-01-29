@@ -1,3 +1,4 @@
+// Import necessary libraries and components
 import {
   BookOpen,
   Briefcase,
@@ -14,129 +15,130 @@ import Link from "next/link";
 import { FaLinkedin } from "react-icons/fa";
 import Logo from "../Logo";
 
+// Define the type for a single link (TypeScript interface)
+interface FooterLink {
+  href: string;
+  label: string;
+  Icon: React.ComponentType<React.SVGProps<SVGSVGElement>>;
+}
+
+// Define the type for a footer section
+interface FooterSection {
+  title: string;
+  links: FooterLink[];
+}
+
+// Define the footer sections data
+const footerSections: FooterSection[] = [
+  {
+    title: "Product",
+    links: [
+      {
+        href: "/#features",
+        label: "Features",
+        Icon: Laptop,
+      },
+      {
+        href: "/case-studies",
+        label: "Case Studies",
+        Icon: FileText,
+      },
+      {
+        href: "/docs",
+        label: "Documentation",
+        Icon: BookOpen,
+      },
+    ],
+  },
+  {
+    title: "Company",
+    links: [
+      {
+        href: "/about-us",
+        label: "About Us",
+        Icon: User,
+      },
+      {
+        href: "/careers",
+        label: "Careers",
+        Icon: Briefcase,
+      },
+      {
+        href: "/blog",
+        label: "Blog",
+        Icon: Edit,
+      },
+      {
+        href: "/partners",
+        label: "Partners",
+        Icon: Handshake,
+      },
+    ],
+  },
+
+  {
+    title: "Legal",
+    links: [
+      {
+        href: "/terms",
+        label: "Terms",
+        Icon: Clipboard,
+      },
+      {
+        href: "/privacy-policy",
+        label: "Privacy",
+        Icon: Shield,
+      },
+      {
+        href: "/compliance",
+        label: "Compliance",
+        Icon: Scale,
+      },
+    ],
+  },
+];
+
+// Define the social media links data
+const socialLinks = [
+  {
+    href: "https://www.linkedin.com/company/zonify-ai",
+    label: "LinkedIn",
+    Icon: FaLinkedin,
+  },
+  // Add more social links here if needed
+];
+
+// Footer Component
 export function Footer() {
   return (
     <footer className="bg-black border-t mt-auto">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Company Logo */}
-          <Logo width={240} height={100} />
-
-          {/* Navigation Links */}
-          <nav className="space-y-4">
-            <h3 className="text-sm font-semibold text-white uppercase tracking-wider">
-              Product
-            </h3>
-            <ul className="space-y-2">
-              <li>
-                <Link
-                  href="/#features"
-                  className="text-base text-gray-500 hover:text-gray-900 flex items-center"
-                >
-                  <Laptop className="w-5 h-5 mr-2" />
-                  Features
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/case-studies"
-                  className="text-base text-gray-500 hover:text-gray-900 flex items-center"
-                >
-                  <FileText className="w-5 h-5 mr-2" />
-                  Case Studies
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/docs"
-                  className="text-base text-gray-500 hover:text-gray-900 flex items-center"
-                >
-                  <BookOpen className="w-5 h-5 mr-2" />
-                  Documentation
-                </Link>
-              </li>
-            </ul>
-          </nav>
-
-          {/* Additional Columns */}
-          <div className="space-y-4">
-            <h3 className="text-sm font-semibold text-white uppercase tracking-wider">
-              Company
-            </h3>
-            <ul className="space-y-2">
-              <li>
-                <Link
-                  href="/about-us"
-                  className="text-base text-gray-500 hover:text-gray-900 flex items-center"
-                >
-                  <User className="w-5 h-5 mr-2" />
-                  About Us
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/careers"
-                  className="text-base text-gray-500 hover:text-gray-900 flex items-center"
-                >
-                  <Briefcase className="w-5 h-5 mr-2" />
-                  Careers
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/blog"
-                  className="text-base text-gray-500 hover:text-gray-900 flex items-center"
-                >
-                  <Edit className="w-5 h-5 mr-2" />
-                  Blog
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/partners"
-                  className="text-base text-gray-500 hover:text-gray-900 flex items-center"
-                >
-                  <Handshake className="w-5 h-5 mr-2" />
-                  Partners
-                </Link>
-              </li>
-            </ul>
+          <div className="md:col-span-1">
+            <Logo width={240} height={100} />
           </div>
 
-          <div className="space-y-4">
-            <h3 className="text-sm font-semibold text-white uppercase tracking-wider">
-              Legal
-            </h3>
-            <ul className="space-y-2">
-              <li>
-                <Link
-                  href="/terms"
-                  className="text-base text-gray-500 hover:text-gray-900 flex items-center"
-                >
-                  <Clipboard className="w-5 h-5 mr-2" />
-                  Terms
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/privacy-policy"
-                  className="text-base text-gray-500 hover:text-gray-900 flex items-center"
-                >
-                  <Shield className="w-5 h-5 mr-2" />
-                  Privacy
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/compliance"
-                  className="text-base text-gray-500 hover:text-gray-900 flex items-center"
-                >
-                  <Scale className="w-5 h-5 mr-2" />
-                  Compliance
-                </Link>
-              </li>
-            </ul>
-          </div>
+          {/* Navigation Sections */}
+          {footerSections.map((section) => (
+            <nav key={section.title} className="space-y-4">
+              <h3 className="text-sm font-semibold text-white uppercase tracking-wider">
+                {section.title}
+              </h3>
+              <ul className="space-y-2">
+                {section.links.map((link) => (
+                  <li key={link.href}>
+                    <Link href={link.href} legacyBehavior>
+                      <a className="text-base text-gray-500 hover:text-gray-900 flex items-center">
+                        <link.Icon className="w-5 h-5 mr-2" />
+                        {link.label}
+                      </a>
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </nav>
+          ))}
         </div>
 
         {/* Copyright and Social Links */}
@@ -145,15 +147,18 @@ export function Footer() {
             &copy; 2025 Zonfiy.ai, ApS. All rights reserved.
           </p>
           <div className="flex space-x-6 mt-4 md:mt-0">
-            <a
-              href="https://www.linkedin.com/company/zonify-ai"
-              className="text-gray-500 hover:text-gray-900"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <span className="sr-only">LinkedIn</span>
-              <FaLinkedin className="w-6 h-6" />
-            </a>
+            {socialLinks.map((social) => (
+              <a
+                key={social.href}
+                href={social.href}
+                className="text-gray-500 hover:text-gray-900"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span className="sr-only">{social.label}</span>
+                <social.Icon className="w-6 h-6" />
+              </a>
+            ))}
           </div>
         </div>
       </div>
@@ -161,11 +166,12 @@ export function Footer() {
   );
 }
 
-// Main layout wrapper
+// Main Layout Wrapper
 export function AppLayout({ children }: { children: React.ReactNode }) {
   return (
     <div className="min-h-screen flex flex-col">
       <main className="flex-grow">{children}</main>
+      <Footer /> {/* Include Footer in the Layout */}
     </div>
   );
 }

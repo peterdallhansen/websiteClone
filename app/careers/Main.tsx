@@ -6,19 +6,22 @@ import { Button } from "@/components/ui/button";
 export default function Main() {
   return (
     <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center flex-1 p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-4 row-start-2 items-center">
+      <img
+        src="/images/Image5.jpg"
+        className="
+          absolute top-1/2 left-1/2
+          w-full h-full p-4
+          md:max-w-[1900px] md:h-auto md:p-0 md:rounded-xl
+          object-cover
+          transform -translate-x-1/2 -translate-y-1/2
+          pointer-events-none
+          rounded-3xl
+        "
+      />
+
+      <main className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex flex-col items-center justify-center space-y-6 z-[10] px-4 text-center min-w-[350px]  ">
         <BlurFade delay={0.25} inView>
-          <h4
-            className="text-sm md:text-lg text-accent text-center"
-            style={{
-              textShadow: "0 0 12px rgba(107, 183, 225, 1)",
-              backgroundImage:
-                "linear-gradient(309deg, rgb(166, 221, 255) 2.25%, rgba(107,183,225,1) 48.08%, rgb(0, 119, 255) 100%)",
-              backgroundClip: "text",
-              WebkitBackgroundClip: "text",
-              color: "transparent",
-            }}
-          >
+          <h4 className="text-sm md:text-lg text-white text-center">
             Join Our Team
           </h4>
         </BlurFade>
@@ -29,7 +32,7 @@ export default function Main() {
         </BlurFade>
         <BlurFade delay={0.6} inView className="mt-2">
           <a href="mailto:contact@zonify.ai?subject=Contact%20Us&body=Hello%20there!">
-            <Button>Contact Us</Button>
+            <Button className="rounded-3xl">Contact Us</Button>
           </a>
         </BlurFade>
       </main>

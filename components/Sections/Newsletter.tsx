@@ -1,13 +1,11 @@
 "use client";
-import { useState } from "react";
 import BlurFade from "@/components/ui/blur-fade";
 import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { AnimatedSubscribeButton } from "../ui/animated-subscribe-button";
-import { CheckIcon, ChevronRightIcon } from "lucide-react";
-import ShineBorder from "../ui/shine-border";
 import { cn } from "@/lib/utils";
+import { CheckIcon, ChevronRightIcon } from "lucide-react";
+import { useState } from "react";
+import { AnimatedSubscribeButton } from "../ui/animated-subscribe-button";
 
 export default function NewsletterSection() {
   const [email, setEmail] = useState("");

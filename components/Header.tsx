@@ -80,7 +80,7 @@ export default function Header() {
                 >
                   <Button
                     variant="outline"
-                    className="w-full text-center bg-accent"
+                    className="w-full text-center bg-accent "
                   >
                     Login
                   </Button>
@@ -91,18 +91,15 @@ export default function Header() {
         ) : (
           <>
             <NavigationMenuDemo />
-            <div className="flex items-center space-x-4">
+            <div className="flex items-center space-x-4 ">
               <a
-                className="text-sm"
+                className="text-sm hover:text-white/60 active:text-white/40 "
                 href="mailto:contact@zonify.ai?subject=Contact%20Us&body=Hello%20there!"
               >
                 Contact
               </a>
               <Link href="http://accounts.zonify.ai/sign-in">
-                <Button
-                  variant="outline"
-                  className="text-sm px-6 py-5 hover:bg-secondary/80"
-                >
+                <Button className="text-sm px-7 py-5 hover:bg-white/60 active:bg-white/40  rounded-3xl">
                   Login
                 </Button>
               </Link>

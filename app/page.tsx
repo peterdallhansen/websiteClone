@@ -1,21 +1,23 @@
 import CardSection from "@/components/CardSection";
 import Features from "@/components/Sections/Features/Features";
-import HowItWorks from "@/components/Sections/HowItWorks/HowItWorks";
+import { Gallery } from "@/components/Sections/Gallary/Gallary";
+import Info from "@/components/Sections/Info/page";
 import Main from "@/components/Sections/Main";
 import NewsletterSection from "@/components/Sections/Newsletter";
 import Partners from "@/components/Sections/Partners";
-import BlurFade from "@/components/ui/blur-fade";
 
 export default function Home() {
   return (
     <div
-      className="min-h-screen bg-background antialiased w-full mx-auto scroll-smooth flex flex-col overflow-hidden overflow-x-hidden items-center"
+      className="min-h-screen bg-background antialiased w-full mx-auto scroll-smooth flex flex-col overflow-hidden x items-center"
       style={{
-        transform: "translateY(-80px)",
+        transform: "translateY(-90px)",
       }}
     >
       {/** Main Section */}
       <Main />
+      <Info />
+      <Gallery />
       <Partners />
       <CardSection />
 
