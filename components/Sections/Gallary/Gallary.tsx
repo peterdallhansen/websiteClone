@@ -19,6 +19,7 @@ const Gallarys = [
     title: "Microsoft For Startups",
     label: "News",
     backgroundImage: "/images/Frame45.png",
+    dark: true,
   },
   {
     title: "Magasin",

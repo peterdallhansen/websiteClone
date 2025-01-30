@@ -22,11 +22,7 @@ function Main() {
         loop
         playsInline
       >
-        <source
-          src="/vecteezy_concept-2at-deep-blue-gradient-abstract-liquid-background_10884972.mp4"
-          type="video/mp4"
-        />
-        Your browser does not support the video tag.
+        <source src="/videos/loop4.mp4" type="video/mp4" />
       </video>
       {/*  <video
         className="
@@ -43,7 +39,7 @@ function Main() {
         loop
         playsInline
       >
-        <source src="/operator-16x9-loop.mp4" type="video/mp4" />
+        <source src="/videos/vid2.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
 
@@ -62,7 +58,7 @@ function Main() {
         loop
         playsInline
       >
-        <source src="/operator-16x9-loop.mp4" type="video/mp4" />
+        <source src="/videos/vid3.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video> */}
 

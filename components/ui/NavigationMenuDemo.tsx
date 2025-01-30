@@ -14,11 +14,17 @@ import {
 } from "@/components/ui/navigation-menu";
 import { cn } from "@/lib/utils";
 import {
+  Building,
   CalendarIcon,
   FileIcon,
+  Film,
   GlobeIcon,
   LayersIcon,
+  PlaneTakeoff,
   Share2,
+  ShoppingCart,
+  Store,
+  Train,
   UserIcon,
 } from "lucide-react";
 
@@ -66,6 +72,49 @@ const components: {
   },
 ];
 
+const caseStudies: {
+  title: string;
+  href: string;
+  description: string;
+  icon: React.ElementType;
+}[] = [
+  {
+    title: "Retail",
+    href: "/case-studies/retail",
+    description: "Optimize customer flow.",
+    icon: ShoppingCart,
+  },
+  {
+    title: "Malls",
+    href: "/case-studies/malls",
+    description: "Manage foot traffic.",
+    icon: Building,
+  },
+  {
+    title: "Leisure",
+    href: "/case-studies/leisure",
+    description: "Enhance visitor experience.",
+    icon: Film,
+  },
+  {
+    title: "Supermarkets",
+    href: "/case-studies/supermarkets",
+    description: "Optimize store layout.",
+    icon: Store,
+  },
+  {
+    title: "Airports",
+    href: "/case-studies/airports",
+    description: "Manage passenger flow.",
+    icon: PlaneTakeoff,
+  },
+  {
+    title: "Public Transportation",
+    href: "/case-studies/public-transportation",
+    description: "Analyze ridership patterns.",
+    icon: Train,
+  },
+];
 export function NavigationMenuDemo() {
   return (
     <NavigationMenu>
@@ -106,16 +155,29 @@ export function NavigationMenuDemo() {
             Case Studies
           </NavigationMenuTrigger>
           <NavigationMenuContent>
-            <ul className="grid gap-3 p-4 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
-              <ListItem href="/docs" title="Introduction">
-                Re-usable components built using Radix UI and Tailwind CSS.
-              </ListItem>
-              <ListItem href="/docs/installation" title="Installation">
-                How to install dependencies and structure your app.
-              </ListItem>
-              <ListItem href="/docs/primitives/typography" title="Typography">
-                Styles for headings, paragraphs, lists...etc
-              </ListItem>
+            <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] bg-transparent">
+              {caseStudies.map((component) => (
+                <a
+                  href={component.href}
+                  key={component.title}
+                  className={cn(
+                    "group block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none ",
+                    "inline-flex items-center gap-2 "
+                  )}
+                >
+                  <component.icon className="size-10 p-2 border rounded-[10px] min-w-[40px] h-[40px] bg-transparent text-current group-hover:bg-white group-hover:border-white group-hover:text-black " />
+
+                  <ListItem
+                    key={component.title}
+                    title={component.title}
+                    href={component.href}
+                  >
+                    <p className="text-sm font-medium  mt-1 text-white text-opacity-60 group-hover:text-opacity-100 ">
+                      {component.description}
+                    </p>
+                  </ListItem>
+                </a>
+              ))}
             </ul>
           </NavigationMenuContent>
         </NavigationMenuItem>

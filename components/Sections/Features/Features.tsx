@@ -10,17 +10,7 @@ function Features() {
     >
       <main className="flex flex-col gap-4 row-start-2 items-center ">
         <BlurFade delay={0.25} inView>
-          <h4
-            className="text-sm md:text-lg text-accent text-center"
-            style={{
-              textShadow: "0 0 12px rgba(107, 183, 225, 1)",
-              backgroundImage:
-                "linear-gradient(309deg, rgb(166, 221, 255) 2.25%, rgba(107,183,225,1) 48.08%, rgb(0, 119, 255) 100%)",
-              backgroundClip: "text",
-              WebkitBackgroundClip: "text",
-              color: "transparent",
-            }}
-          >
+          <h4 className="text-sm md:text-lg text-white text-center">
             Features
           </h4>
         </BlurFade>

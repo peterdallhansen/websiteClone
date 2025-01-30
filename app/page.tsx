@@ -1,6 +1,7 @@
 import CardSection from "@/components/CardSection";
 import Features from "@/components/Sections/Features/Features";
 import { Gallery } from "@/components/Sections/Gallary/Gallary";
+import HowItWorks from "@/components/Sections/HowItWorks/HowItWorks";
 import Info from "@/components/Sections/Info/page";
 import Main from "@/components/Sections/Main";
 import NewsletterSection from "@/components/Sections/Newsletter";
@@ -18,13 +19,12 @@ export default function Home() {
       <Main />
       <Info />
       <Gallery />
-      <Partners />
-      <CardSection />
+      {/*   <Partners />
+      <CardSection /> */}
 
-      {/**Features */}
       <Features />
-      {/**How it Works */}
-      {/** <HowItWorks /> */}
+
+      {/*    <HowItWorks /> */}
       <NewsletterSection />
     </div>
   );
