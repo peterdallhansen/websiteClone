@@ -71,8 +71,8 @@ export default function TermsAndConditions() {
           </BlurFade>
           <BlurFade delay={0.2} inView>
             <h2 className="text-xl md:text-lg xl:text-2xl mb-8 leading-tight text-white text-center max-w-[750px] text-opacity-60">
-              Welcome to Zonify.ai. By using our services, you agree to these
-              terms. Please read them carefully.
+              By using our services, you agree to these terms. <br />
+              Please read them carefully.
             </h2>
           </BlurFade>
         </CardHeader>

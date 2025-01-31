@@ -65,15 +65,14 @@ function Main() {
       {/* Text Content - Centered */}
       <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex flex-col items-center justify-center space-y-6 z-[10] px-4 text-center min-w-[350px]  ">
         <BlurFade delay={0} inView>
-          <h1 className="text-5xl md:text-7xl xl:text-8xl font-bold text-white leading-tight">
-            Unleash Generic Title
+          <h1 className="text-5xl md:text-7xl xl:text-8xl font-bold text-white leading-tight text-wrap  md:text-nowrap">
+            Customer Profiling Unveiled
           </h1>
         </BlurFade>
         <BlurFade delay={0.1} inView>
           <h2 className="text-lg md:text-xl text-gray-200 leading-normal font-semibold">
-            Profit from understanding your consumers thoroughly. <br />
-            Get access to panoramic and holistic insights on your entire
-            operation.
+            Through AI-driven customer profiling, we help you capitalize on the
+            full value of your customer base
           </h2>
         </BlurFade>
 

@@ -9,12 +9,7 @@ import Partners from "@/components/Sections/Partners";
 
 export default function Home() {
   return (
-    <div
-      className="min-h-screen bg-background antialiased w-full mx-auto scroll-smooth flex flex-col overflow-hidden x items-center"
-      style={{
-        transform: "translateY(-90px)",
-      }}
-    >
+    <div className="min-h-screen bg-background antialiased w-full mx-auto scroll-smooth flex flex-col overflow-hidden x items-center">
       {/** Main Section */}
       <Main />
       <Info />
@@ -22,7 +17,7 @@ export default function Home() {
       {/*   <Partners />
       <CardSection /> */}
 
-      <Features />
+      {/*  <Features /> */}
 
       {/*    <HowItWorks /> */}
       <NewsletterSection />

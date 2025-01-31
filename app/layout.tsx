@@ -22,8 +22,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={cn(inter.variable, "scroll-smooth")}>
-      <body className={`  antialiased`}>
+    <html lang="en" className={cn(inter.variable, "scroll-smooth,")}>
+      <body className={`  antialiased p-0 `}>
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"
