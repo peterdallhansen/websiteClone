@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 
 export default function WIP() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center flex-1 p-8 pb-20 gap-16 sm:p-20">
+    <div className="relative h-screen w-screen overflow-hidden ">
       <img
         src="/images/Image5.jpg"
         className="

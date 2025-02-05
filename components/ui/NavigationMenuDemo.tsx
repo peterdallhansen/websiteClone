@@ -80,37 +80,37 @@ const caseStudies: {
 }[] = [
   {
     title: "Retail",
-    href: "/case-studies/retail",
+    href: "/industries/retail",
     description: "Optimize customer flow.",
     icon: ShoppingCart,
   },
   {
     title: "Malls",
-    href: "/case-studies/malls",
+    href: "/industries/malls",
     description: "Manage foot traffic.",
     icon: Building,
   },
   {
     title: "Leisure",
-    href: "/case-studies/leisure",
+    href: "/industries/leisure",
     description: "Enhance visitor experience.",
     icon: Film,
   },
   {
     title: "Supermarkets",
-    href: "/case-studies/supermarkets",
+    href: "/industries/supermarkets",
     description: "Optimize store layout.",
     icon: Store,
   },
   {
     title: "Airports",
-    href: "/case-studies/airports",
+    href: "/industries/airports",
     description: "Manage passenger flow.",
     icon: PlaneTakeoff,
   },
   {
     title: "Public Transportation",
-    href: "/case-studies/public-transportation",
+    href: "/industries/public-transportation",
     description: "Analyze ridership patterns.",
     icon: Train,
   },

@@ -2,7 +2,7 @@ import Main from "./Main";
 
 export default function Careers() {
   return (
-    <div className="min-h-screen bg-background antialiased w-full mx-auto scroll-smooth flex flex-col">
+    <div className="min-h-screen bg-background antialiased w-full mx-auto scroll-smooth flex flex-col overflow-hidden x items-center">
       <Main />
     </div>
   );

@@ -11,10 +11,10 @@ import Image from "next/image";
 export default function Info() {
   return (
     <div
-      className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center flex-1 p-8 pb-20 gap-16 sm:p-20"
+      className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center flex-1 p-8 pb-20 gap-32 sm:p-20"
       id="features"
     >
-      <main className="flex flex-col gap-4 row-start-2 items-center ">
+      <main className="flex flex-col gap-32 row-start-2 items-center ">
         {/* First Section */}
         <section className="container px-4 md:px-6">
           <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 xl:grid-cols-2">
@@ -26,7 +26,6 @@ export default function Info() {
               </div>
               <div className="space-y-8">
                 <div className="flex items-start gap-4">
-                  <CircleSlash className="w-6 h-6 mt-1" />
                   <div className="space-y-2">
                     <h3 className="text-xl font-bold">World-class expertise</h3>
                     <p className="text-gray-500 dark:text-gray-400">
@@ -37,7 +36,6 @@ export default function Info() {
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
-                  <BarChart3 className="w-6 h-6 mt-1" />
                   <div className="space-y-2">
                     <h3 className="text-xl font-bold">
                       Real-time understanding company data
@@ -51,7 +49,6 @@ export default function Info() {
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
-                  <Lock className="w-6 h-6 mt-1" />
                   <div className="space-y-2">
                     <h3 className="text-xl font-bold">
                       Controlled access to your company data
@@ -126,7 +123,6 @@ export default function Info() {
               </div>
               <div className="space-y-8">
                 <div className="flex items-start gap-4">
-                  <Apps className="w-6 h-6 mt-1" />
                   <div className="space-y-2">
                     <h3 className="text-xl font-bold">
                       Native apps knowledge aggregation
@@ -139,7 +135,6 @@ export default function Info() {
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
-                  <LineChart className="w-6 h-6 mt-1" />
                   <div className="space-y-2">
                     <h3 className="text-xl font-bold">
                       Third-party apps knowledge aggregation
@@ -151,7 +146,6 @@ export default function Info() {
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
-                  <Workflow className="w-6 h-6 mt-1" />
                   <div className="space-y-2">
                     <h3 className="text-xl font-bold">Multi-apps workflows</h3>
                     <p className="text-gray-500 dark:text-gray-400">
@@ -200,7 +194,6 @@ export default function Info() {
               </div>
               <div className="space-y-8">
                 <div className="flex items-start gap-4">
-                  <CircleSlash className="w-6 h-6 mt-1" />
                   <div className="space-y-2">
                     <h3 className="text-xl font-bold">World-class expertise</h3>
                     <p className="text-gray-500 dark:text-gray-400">
@@ -211,7 +204,6 @@ export default function Info() {
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
-                  <BarChart3 className="w-6 h-6 mt-1" />
                   <div className="space-y-2">
                     <h3 className="text-xl font-bold">
                       Real-time understanding company data
@@ -225,7 +217,6 @@ export default function Info() {
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
-                  <Lock className="w-6 h-6 mt-1" />
                   <div className="space-y-2">
                     <h3 className="text-xl font-bold">
                       Controlled access to your company data
