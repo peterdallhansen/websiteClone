@@ -1,6 +1,5 @@
-import Link from "next/link";
-import { Home } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 export default function NotFound() {
   return (
@@ -11,7 +10,7 @@ export default function NotFound() {
           Page Not Found
         </h2>
         <p className="text-xl text-white mb-8">
-          Oops! The page you're looking for doesn't exist.
+          Oops! The page you&apos;re looking for doesn&apos;t exist.
         </p>
         <Link href="/">
           <Button className="text-sm px-7 py-5 hover:bg-white/60 active:bg-white/40  rounded-3xl">

@@ -28,7 +28,7 @@ export default function WIP() {
         </BlurFade>
         <BlurFade delay={0.5} inView>
           <h2 className="text-2xl md:text-3xl xl:text-5xl font-bold leading-tight text-white text-center">
-            We're Still Crafting This Piece
+            We&apos;re Still Crafting This Piece
           </h2>
         </BlurFade>
         <BlurFade delay={0.6} inView>

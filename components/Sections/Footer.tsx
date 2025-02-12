@@ -111,7 +111,7 @@ const socialLinks = [
 // Footer Component
 export function Footer() {
   return (
-    <footer className="bg-black border-t mt-auto">
+    <footer className="bg-black  mt-auto">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Company Logo */}
@@ -129,8 +129,7 @@ export function Footer() {
                 {section.links.map((link) => (
                   <li key={link.href}>
                     <Link href={link.href} legacyBehavior>
-                      <a className="text-base text-gray-500 hover:text-gray-900 flex items-center">
-                        <link.Icon className="w-5 h-5 mr-2" />
+                      <a className="text-base text-white/60 hover:text-white flex items-center">
                         {link.label}
                       </a>
                     </Link>
@@ -142,8 +141,8 @@ export function Footer() {
         </div>
 
         {/* Copyright and Social Links */}
-        <div className="mt-8 border-t border-gray-200 pt-8 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-base text-gray-500">
+        <div className="mt-8  border-gray-200 pt-8 flex flex-col md:flex-row justify-between items-center">
+          <p className="text-base text-white/60">
             &copy; 2025 Zonfiy.ai, ApS. All rights reserved.
           </p>
           <div className="flex space-x-6 mt-4 md:mt-0">
@@ -151,7 +150,7 @@ export function Footer() {
               <a
                 key={social.href}
                 href={social.href}
-                className="text-gray-500 hover:text-gray-900"
+                className="text-white/60 hover:text-white "
                 target="_blank"
                 rel="noopener noreferrer"
               >

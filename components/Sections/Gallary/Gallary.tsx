@@ -10,11 +10,7 @@ const Gallarys = [
     label: "News",
     backgroundImage: "/images/Frame-1.jpg",
   },
-  {
-    title: "NVIDIA Inception",
-    label: "News",
-    backgroundImage: "/images/Frame-2.png",
-  },
+
   {
     title: "Microsoft For Startups",
     label: "News",
@@ -22,40 +18,15 @@ const Gallarys = [
     dark: true,
   },
   {
-    title: "Magasin",
+    title: "Retail Debut",
     label: "Story",
     backgroundImage: "/images/1733477217351.jpeg",
   },
   {
     title: "Example",
     label: "News",
-    backgroundImage: "/images/Image4.jpg",
-  },
-  {
-    title: "Microsoft For Startups",
-    label: "News",
-    backgroundImage: "/images/Frame45.png",
-  },
-
-  {
-    title: "Example",
-    label: "News",
-    backgroundImage: "/images/Image4.jpg",
-  },
-  {
-    title: "Microsoft For Startups",
-    label: "News",
-    backgroundImage: "/images/Image1.jpg",
-  },
-  {
-    title: "Magasin",
-    label: "Story",
-    backgroundImage: "/images/Image5.jpg",
-  },
-  {
-    title: "Example",
-    label: "News",
-    backgroundImage: "/images/Image6.jpg",
+    backgroundImage: "/images/1725378290468.jpeg",
+    dark: true,
   },
 ];
 

@@ -1,11 +1,3 @@
-import {
-  AppWindowIcon as Apps,
-  BarChart3,
-  CircleSlash,
-  LineChart,
-  Lock,
-  Workflow,
-} from "lucide-react";
 import Image from "next/image";
 
 export default function Info() {
@@ -21,42 +13,44 @@ export default function Info() {
             <div className="flex flex-col justify-center space-y-8">
               <div className="space-y-2">
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
-                  Meet the intelligent workspace
+                  AI-Powered Predictive Tools & Digital Twin Capabilities
                 </h2>
               </div>
               <div className="space-y-8">
                 <div className="flex items-start gap-4">
                   <div className="space-y-2">
-                    <h3 className="text-xl font-bold">World-class expertise</h3>
-                    <p className="text-gray-500 dark:text-gray-400">
-                      Our AI employees can take on any function, from Operation
-                      Managers to RevOps Manager. Their skills are brushed up
-                      continuously and forever.
+                    <h3 className="text-xl font-bold">
+                      Customer Flow Forecasting
+                    </h3>
+                    <p className="text-gray-500 dark:text-white/60">
+                      Predict future customer traffic and demographic trends
+                      using advanced machine learning models that analyze
+                      historical and real-time data.
                     </p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
                   <div className="space-y-2">
                     <h3 className="text-xl font-bold">
-                      Real-time understanding company data
+                      Initiative Impact & KPI Nowcasting
                     </h3>
-                    <p className="text-gray-500 dark:text-gray-400">
-                      Our AI employees understand your company data sitting on
-                      FrameOS in real-time. If one of your 280 Wikis is
-                      modified, it will influence the answer of that AI Product
-                      Manager to your Software Engineer.
+                    <p className="text-gray-500 dark:text-white/60">
+                      Bridge the gap between real-time data and delayed sources
+                      with precise nowcasting—enabling you to measure the true
+                      impact of your initiatives instantly.
                     </p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
                   <div className="space-y-2">
                     <h3 className="text-xl font-bold">
-                      Controlled access to your company data
+                      Proactive, AI-Driven Decision-Making
                     </h3>
-                    <p className="text-gray-500 dark:text-gray-400">
-                      Control at the software-layer, which folder each AI
-                      assistants have access to. Want to keep that payroll data
-                      off the grid? Just tick it off.
+                    <p className="text-gray-500 dark:text-white/60">
+                      Harness a suite of AI-powered tools that not only describe
+                      and predict outcomes but also prescribe optimal
+                      strategies, helping you seize opportunities and mitigate
+                      risks proactively.
                     </p>
                   </div>
                 </div>
@@ -68,13 +62,13 @@ export default function Info() {
                 alt="Dashboard Preview"
                 className="rounded-lg overflow-hidden aspect-square object-cover"
                 height={600}
-                src="/images/Image6.jpg"
+                src="https://images.ctfassets.net/kftzwdyauwt9/40aiELEfuIYvjOaqimB3YR/b7d45af79b84671ef6e73e95f079aabd/Expanded_access_to_GPT-4o.jpg?w=1920&q=90&fm=webp"
                 width={800} // Square aspect ratio
                 quality={100}
               />
 
               {/* Inner Image */}
-              <div className="absolute inset-0 flex items-center justify-center">
+              {/*   <div className="absolute inset-0 flex items-center justify-center">
                 <Image
                   alt="Inner Preview"
                   className="rounded-md overflow-hidden aspect-square object-cover  shadow-lg"
@@ -83,7 +77,7 @@ export default function Info() {
                   width={500} // Square aspect ratio
                   quality={100}
                 />
-              </div>
+              </div> */}
             </div>
           </div>
         </section>
@@ -97,7 +91,7 @@ export default function Info() {
                 alt="Dashboard Preview"
                 className="rounded-lg overflow-hidden aspect-square object-cover"
                 height={600}
-                src="/images/Image4.jpg"
+                src="https://images.ctfassets.net/kftzwdyauwt9/3gDBc446Nxn0ByyZMZdFVD/1e993b5470a4fc82279d2099ddef8321/Catcus_Heatmap_2.png?w=3840&q=90&fm=webp"
                 width={800} // Square aspect ratio
                 quality={100}
               />
@@ -118,7 +112,7 @@ export default function Info() {
             <div className="flex flex-col justify-center space-y-8">
               <div className="space-y-2">
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
-                  Go beyond Frame.
+                  From Zero to EU Industry Leader in Just Five Months
                 </h2>
               </div>
               <div className="space-y-8">
@@ -127,7 +121,7 @@ export default function Info() {
                     <h3 className="text-xl font-bold">
                       Native apps knowledge aggregation
                     </h3>
-                    <p className="text-gray-500 dark:text-gray-400">
+                    <p className="text-gray-500 dark:text-white/60">
                       Feed our AI employees with content sitting on our 10
                       productivity apps. From Whiteboard to Wiki, the more data,
                       the better the insights.
@@ -139,7 +133,7 @@ export default function Info() {
                     <h3 className="text-xl font-bold">
                       Third-party apps knowledge aggregation
                     </h3>
-                    <p className="text-gray-500 dark:text-gray-400">
+                    <p className="text-gray-500 dark:text-white/60">
                       Search your business data beyond Frame. From your Figma
                       screen content to your Hubspot CRM - we go the extra mile.
                     </p>
@@ -148,7 +142,7 @@ export default function Info() {
                 <div className="flex items-start gap-4">
                   <div className="space-y-2">
                     <h3 className="text-xl font-bold">Multi-apps workflows</h3>
-                    <p className="text-gray-500 dark:text-gray-400">
+                    <p className="text-gray-500 dark:text-white/60">
                       Create automated workflows powered by Native or
                       Third-party apps. From Slack to Email, automate your
                       business processes.
@@ -189,42 +183,57 @@ export default function Info() {
             <div className="flex flex-col justify-center space-y-8">
               <div className="space-y-2">
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
-                  Meet the intelligent workspace
+                  Cutting-Edge Technology & Innovative Solutions
                 </h2>
               </div>
               <div className="space-y-8">
                 <div className="flex items-start gap-4">
                   <div className="space-y-2">
-                    <h3 className="text-xl font-bold">World-class expertise</h3>
-                    <p className="text-gray-500 dark:text-gray-400">
-                      Our AI employees can take on any function, from Operation
-                      Managers to RevOps Manager. Their skills are brushed up
-                      continuously and forever.
+                    <h3 className="text-xl font-bold">
+                      Feature-Rich Analytics Platform
+                    </h3>
+                    <p className="text-gray-500 dark:text-white/60">
+                      Our platform delivers real-time detection, advanced
+                      filtering, role-based access, and comprehensive
+                      metrics—enabling detailed insights into customer behavior
+                      and tenant performance.
                     </p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
                   <div className="space-y-2">
                     <h3 className="text-xl font-bold">
-                      Real-time understanding company data
+                      GDPR-Compliant & AI-Enabled
                     </h3>
-                    <p className="text-gray-500 dark:text-gray-400">
-                      Our AI employees understand your company data sitting on
-                      FrameOS in real-time. If one of your 280 Wikis is
-                      modified, it will influence the answer of that AI Product
-                      Manager to your Software Engineer.
+                    <p className="text-gray-500 dark:text-white/60">
+                      Designed with elevated GDPR-friendly technology, our
+                      solution is fully compliant with EU standards while
+                      harnessing AI to offer proactive business intelligence.
                     </p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
                   <div className="space-y-2">
                     <h3 className="text-xl font-bold">
-                      Controlled access to your company data
+                      Unified Knowledge Engine
                     </h3>
-                    <p className="text-gray-500 dark:text-gray-400">
-                      Control at the software-layer, which folder each AI
-                      assistants have access to. Want to keep that payroll data
-                      off the grid? Just tick it off.
+                    <p className="text-gray-500 dark:text-white/60">
+                      Experience holistic, real-time causal insights through our
+                      unique graph-based data model, which seamlessly handles
+                      complex queries and delivers actionable analytics.
+                    </p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-4">
+                  <div className="space-y-2">
+                    <h3 className="text-xl font-bold">
+                      Seamless Integration & Flexibility
+                    </h3>
+                    <p className="text-gray-500 dark:text-white/60">
+                      Our software-only architecture leverages existing video
+                      infrastructures to ensure a painless deployment,
+                      simplified maintenance, and remote, zero-hardware
+                      installation.
                     </p>
                   </div>
                 </div>
@@ -236,13 +245,13 @@ export default function Info() {
                 alt="Dashboard Preview"
                 className="rounded-lg overflow-hidden aspect-square object-cover"
                 height={600}
-                src="/images/Image5.jpg"
+                src="https://images.ctfassets.net/kftzwdyauwt9/394XMDlnt7tUSkXFMeC6fg/8f24272beda1ea1835d65fff318adbf3/Customizable_AI_for_any_project_or_course.jpg?w=1920&q=90&fm=webp"
                 width={800} // Square aspect ratio
                 quality={100}
               />
 
               {/* Inner Image */}
-              <div className="absolute inset-0 flex items-center justify-center">
+              {/*  <div className="absolute inset-0 flex items-center justify-center">
                 <Image
                   alt="Inner Preview"
                   className="rounded-md overflow-hidden  object-cover scale-125 md:scale-150  "
@@ -251,7 +260,7 @@ export default function Info() {
                   width={900} // Square aspect ratio
                   quality={100}
                 />
-              </div>
+              </div> */}
             </div>
           </div>
         </section>

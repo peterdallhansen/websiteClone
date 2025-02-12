@@ -1,13 +1,13 @@
 "use client";
 
-import { ChevronDown, ChevronUp, Menu } from "lucide-react"; // Use an icon library for the hamburger icon
+import { AnimatePresence, motion } from "framer-motion";
+import { Menu } from "lucide-react"; // Use an icon library for the hamburger icon
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import Logo from "./Logo";
 import { Button } from "./ui/button";
 import { NavigationMenuDemo } from "./ui/NavigationMenuDemo";
 import { Sheet, SheetContent, SheetTrigger } from "./ui/sheet";
-import { motion, AnimatePresence } from "framer-motion";
 
 export default function Header() {
   const [isMobile, setIsMobile] = useState(false);
@@ -41,27 +41,27 @@ export default function Header() {
       label: "Solutions",
       sublinks: [
         {
-          label: "Demographics",
-          href: "/solutions/demographics",
+          label: "Analytics Hub",
+          href: "/solutions/analytics-hub",
         },
         {
-          label: "Workspaces",
-          href: "/solutions/workspaces",
+          label: "Real-Time Dashboard",
+          href: "/solutions/real-time-dashboard",
         },
         {
-          label: "Demographics",
-          href: "/solutions/demographics",
+          label: "Predictive Tools",
+          href: "/solutions/predictive-tool",
         },
         {
-          label: "Workspaces",
-          href: "/solutions/workspaces",
+          label: "Digital Twin",
+          href: "/solutions/digital-twin",
         },
         {
-          label: "Demographics",
-          href: "/solutions/demographics",
+          label: "AI-Powered BI",
+          href: "/solutions/ai-powered-bi",
         },
         {
-          label: "Workspaces",
+          label: "Scalable Integration",
           href: "/solutions/workspaces",
         },
       ],

@@ -16,6 +16,7 @@ import { cn } from "@/lib/utils";
 import {
   Building,
   CalendarIcon,
+  ChartArea,
   FileIcon,
   Film,
   GlobeIcon,
@@ -26,6 +27,7 @@ import {
   Store,
   Train,
   UserIcon,
+  Zap,
 } from "lucide-react";
 
 const components: {
@@ -35,40 +37,40 @@ const components: {
   icon: React.ElementType;
 }[] = [
   {
-    title: "Demographics",
+    title: "Analytics Hub",
     href: "/features/demographics",
-    description: "User data insights.",
+    description: "Real-time unified insights.",
     icon: UserIcon,
   },
   {
-    title: "Workspaces",
+    title: "Real-Time Dashboard",
     href: "/features/workspaces",
-    description: "Optimize for productivity",
+    description: "Instant views for decisions.",
     icon: LayersIcon,
   },
   {
-    title: "3D Map",
+    title: "Predictive Tools",
     href: "/features/map",
-    description: "Interactive mapping.",
+    description: "Accurate trend forecasts.",
+    icon: ChartArea,
+  },
+  {
+    title: "Digital Twin",
+    href: "/features/integration",
+    description: "Simulate scenarios, optimize outcomes.",
     icon: GlobeIcon,
   },
   {
-    title: "Calendar",
+    title: "AI-Powered BI",
     href: "/features/calendar",
-    description: "Schedule events.",
-    icon: CalendarIcon,
+    description: "Transform data with AI.",
+    icon: Zap,
   },
   {
-    title: "Integration",
+    title: "Scalable Integration",
     href: "/features/integration",
-    description: "Seamless connections.",
+    description: "Seamless connectivity with systems.",
     icon: Share2,
-  },
-  {
-    title: "Reporting",
-    href: "/features/reporting",
-    description: "Automated reporting.",
-    icon: FileIcon,
   },
 ];
 
@@ -81,40 +83,41 @@ const caseStudies: {
   {
     title: "Retail",
     href: "/industries/retail",
-    description: "Optimize customer flow.",
+    description: "Transform retail with advanced analytics.",
     icon: ShoppingCart,
   },
   {
     title: "Malls",
     href: "/industries/malls",
-    description: "Manage foot traffic.",
+    description: "Optimize malls with data intelligence.",
     icon: Building,
   },
   {
     title: "Leisure",
     href: "/industries/leisure",
-    description: "Enhance visitor experience.",
+    description: "Boost leisure with smart analytics.",
     icon: Film,
   },
   {
     title: "Supermarkets",
     href: "/industries/supermarkets",
-    description: "Optimize store layout.",
+    description: "Boost efficiency with in-store insights.",
     icon: Store,
   },
   {
     title: "Airports",
     href: "/industries/airports",
-    description: "Manage passenger flow.",
+    description: "Streamline airports with predictive analytics.",
     icon: PlaneTakeoff,
   },
   {
     title: "Public Transportation",
     href: "/industries/public-transportation",
-    description: "Analyze ridership patterns.",
+    description: "Boost transit with real-time insights.",
     icon: Train,
   },
 ];
+
 export function NavigationMenuDemo() {
   return (
     <NavigationMenu>

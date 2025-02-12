@@ -1,6 +1,4 @@
-import Info from "@/components/Sections/Info/page";
 import BlurFade from "@/components/ui/blur-fade";
-import React from "react";
 
 function Main() {
   return (

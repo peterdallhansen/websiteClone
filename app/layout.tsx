@@ -7,7 +7,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Zonify.ai – Footfall Analytics Made Profitable",
+  title: "Zonify.ai – Pioneering Real-Time Analytics",
   description: "Footfall Analytics Reinvented",
 };
 

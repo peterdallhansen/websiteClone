@@ -50,21 +50,21 @@ export default function PartnersPage() {
           {partners.map((partner) => (
             <div
               key={partner.id}
-              className="rounded-lg shadow-md p-6 flex flex-col items-center bg-white bg-opacity-10 backdrop-blur-sm"
+              className="rounded-lg shadow-md p-6 flex flex-col items-center  bg-opacity-10 backdrop-blur-sm"
             >
-              <div className="w-48 h-36 mb-4 relative">
+              <div className="w-64 h-48 mb-4 relative">
                 <Image
                   src={partner.logo || "/placeholder.svg"}
                   alt={`${partner.name} logo`}
                   layout="fill"
                   objectFit="contain"
-                  className="rounded"
+                  className="rounded opacity-80 transition-opacity hover:opacity-100"
                 />
               </div>
-              <h3 className="text-xl font-semibold mb-2 text-center text-white">
+              {/*   <h3 className="text-xl font-semibold mb-2 text-center text-white">
                 {partner.name}
-              </h3>
-              <p className="text-gray-300 text-center">{partner.description}</p>
+              </h3> */}
+              {/*  <p className="text-gray-300 text-center">{partner.description}</p> */}
             </div>
           ))}
         </div>

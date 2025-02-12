@@ -3,7 +3,7 @@ import { Button } from "../ui/button";
 
 function Main() {
   return (
-    <div className="relative h-screen w-screen overflow-hidden mb-20 ">
+    <div className="relative h-screen w-screen overflow-hidden mb-20  ">
       {/* Shine Borders */}
 
       {/* Video Background - Centered */}
@@ -11,7 +11,7 @@ function Main() {
         className="
           absolute top-1/2 left-1/2
           w-full h-full p-4
-          lg:max-w-[90vw] 2xl:max-w-[80vw]   lg:h-auto md:p-0 md:rounded-xl
+          lg:w-auto  lg:max-h-[90vh] md:p-0 md:rounded-xl
           object-cover
           transform -translate-x-1/2 -translate-y-1/2
           pointer-events-none
@@ -65,8 +65,8 @@ function Main() {
       {/* Text Content - Centered */}
       <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex flex-col items-center justify-center space-y-6 z-[10] px-4 text-center min-w-[350px]  ">
         <BlurFade delay={0} inView>
-          <h1 className="text-5xl md:text-6xl xl:text-7xl xl:text-8xl font-bold text-white leading-tight text-wrap  md:text-nowrap">
-            Customer Profiling Unveiled
+          <h1 className="text-5xl md:text-5xl xl:text-7xl xl:text-7xl font-bold text-white leading-tight text-wrap  ">
+            Pioneering Real-Time Analytics <br /> for Smarter Decisions
           </h1>
         </BlurFade>
         <BlurFade delay={0.1} inView>

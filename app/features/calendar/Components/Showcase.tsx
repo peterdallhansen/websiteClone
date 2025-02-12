@@ -21,151 +21,48 @@ import { useEffect, useMemo, useState } from "react";
 function Showcase() {
   const [activeSection, setActiveSection] = useState("");
 
-  const features = [
-    {
-      id: "event-planning",
-      Icon: CogIcon,
-      name: "Event Planning",
-      description: "Organize your events with precision and clarity.",
-      href: "#event-planning",
-      cta: "Learn more",
-      className: "row-span-1 col-span-2 lg:col-span-1",
-      background: (
-        <DotPattern
-          className={cn(
-            "[mask-image:radial-gradient(200px_circle_at_center,white,transparent)]"
-          )}
-        />
-      ),
-    },
-
-    {
-      id: "success-measurement",
-      Icon: BarChart2Icon,
-      name: "Success Measurement",
-      description: "Analyze key metrics to gauge event impact.",
-      href: "#success-measurement",
-      cta: "Learn more",
-      className: "row-span-1 col-span-3 lg:col-span-2",
-      background: (
-        <AnimatedGridPattern
-          numSquares={30}
-          maxOpacity={0.1}
-          duration={3}
-          className={cn(
-            "[mask-image:radial-gradient(500px_circle_at_center,white,transparent)]",
-            "inset-x-0  height-[200%]   skew-y-12"
-          )}
-        />
-      ),
-    },
-    {
-      id: "schedule-management",
-      Icon: ClockIcon,
-      name: "Schedule Management",
-      description: "Effortlessly manage schedules across teams and projects.",
-      href: "#schedule-management",
-      cta: "Learn more",
-      className: "row-span-2 col-span-3 lg:col-span-3",
-      background: (
-        <div className="absolute flex h-full [mask-image:radial-gradient(700px_circle_at_top_center,white,transparent)]  w-full flex-col items-center justify-center overflow-hidden rounded-lg   md:shadow-xl">
-          <Image
-            src={"/images/calendar.png"}
-            alt="Drag & Drop Preview"
-            width={6374}
-            height={3574}
-            quality={100}
-            className="w-[80%] absolute bottom-48 object-contain hover:bottom-[180px] transition-all  "
-            style={{
-              borderRadius: "15px",
-              zIndex: 99999,
-            }}
-          />
-        </div>
-      ),
-    },
-    {
-      id: "team-collaboration",
-      Icon: Users,
-      name: "Team Collaboration",
-      description: "Enhance collaboration with shared calendars and tasks.",
-      href: "#team-collaboration",
-      cta: "Learn more",
-      className: "row-span-2 col-span-3 lg:col-span-2",
-      background: (
-        <div className="relative flex h-[600px] [mask-image:radial-gradient(620px_circle_at_top_center,white,transparent)]  w-full flex-col items-center justify-center overflow-hidden rounded-lg   md:shadow-xl">
-          <Image
-            src={"/images/Share.png"}
-            alt="Share preview"
-            width={1281}
-            height={1054}
-            quality={100}
-            className="w-[50%] absolute bottom-0 object-contain hover:bottom-2 transition-all  "
-            style={{
-              borderRadius: "15px",
-              zIndex: 99999,
-            }}
-          />
-
-          <DotPattern />
-        </div>
-      ),
-    },
-    {
-      id: "reminders-alerts",
-      Icon: SlidersHorizontal,
-      name: "Reminders & Alerts",
-      description: "Stay informed with automatic reminders and alerts.",
-      href: "#reminders-alerts",
-      cta: "Learn more",
-      className: "row-span-2 col-span-1 lg:col-span-1",
-      background: (
-        <AnimatedListDemo className="absolute right-2 top-4 h-[600px] w-full border-none transition-all duration-300 ease-out [mask-image:linear-gradient(to_top,transparent_10%,#000_100%)] group-hover:scale-105" />
-      ),
-    },
-  ];
-
   const sections = useMemo(
     () => [
       {
         id: "event-planning",
         title: "Event Planning",
-        body: `Plan your events with ease using intuitive tools designed for clarity and organization. Ensure every detail is accounted for with templates and customizable workflows that fit your needs.`,
+        body: `Plan and coordinate events effortlessly with our intuitive platform. Customize templates and workflows to ensure every detail is covered.`,
         cta: "Learn more",
         href: "#event-planning",
+        image: "/images/frame69.png",
       },
       {
         id: "schedule-management",
         title: "Schedule Management",
-        body: `Keep track of every event, task, and deadline with an advanced scheduling system. Coordinate across teams, adjust timelines on the fly, and avoid conflicts effortlessly.`,
+        body: `Optimize your timelines with dynamic scheduling tools. Sync tasks, set deadlines, and execute flawlessly.`,
         cta: "Learn more",
         href: "#schedule-management",
       },
       {
         id: "validation-tools",
         title: "Validation Tools",
-        body: `Use built-in validation tools to check dependencies, approvals, and readiness before events go live. Avoid last-minute surprises with a structured approach to planning.`,
+        body: `Confirm dependencies and approvals ahead of time using robust validation tools to guarantee readiness before every event.`,
         cta: "Learn more",
         href: "#validation-tools",
       },
       {
         id: "success-measurement",
         title: "Success Measurement",
-        body: `Analyze outcomes with comprehensive metrics and insights. Measure attendee engagement, feedback, and ROI to refine your strategies for future success.`,
+        body: `Analyze engagement and ROI with comprehensive metrics. Refine strategies with data-driven insights post-event.`,
         cta: "Learn more",
         href: "#success-measurement",
       },
       {
         id: "team-collaboration",
         title: "Team Collaboration",
-        body: `Enable seamless collaboration with shared calendars, task assignments, and progress tracking. Keep everyone aligned and informed at every stage.`,
+        body: `Facilitate seamless teamwork with shared calendars and task assignments. Keep everyone aligned and informed throughout the planning process.`,
         cta: "Learn more",
         href: "#team-collaboration",
       },
       {
         id: "reminders-alerts",
         title: "Reminders & Alerts",
-        body: `Never miss a beat with automated reminders and alerts for key tasks and deadlines. Stay proactive and focused with notifications tailored to your preferences.`,
+        body: `Stay on track with automated reminders and timely alerts. Never miss a deadline with notifications tailored to your schedule.`,
         cta: "Learn more",
         href: "#reminders-alerts",
       },
@@ -193,8 +90,8 @@ function Showcase() {
   }, [sections]);
 
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center flex-1 p-8  pb-20 gap-16 sm:p-20 ">
-      <main className="flex flex-col gap-4 row-start-2 items-center ">
+    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center flex-1 p-8 pb-20 gap-16 sm:p-20">
+      <main className="flex flex-col gap-4 row-start-2 items-center">
         <BlurFade delay={0} inView>
           <h2 className="text-xl md:text-1xl xl:text-2xl leading-tight text-white text-center max-w-[750px] text-opacity-80 mb-20">
             Elevate your event planning with a powerful calendar platform. Plan
@@ -203,54 +100,51 @@ function Showcase() {
           </h2>
         </BlurFade>
 
-        <BlurFade delay={0.25} inView>
-          <BentoGrid className="hidden sm:grid">
-            {features.map((feature, idx) => (
-              <BentoCard key={idx} {...feature} />
-            ))}
-          </BentoGrid>
-        </BlurFade>
         <div className="w-full flex flex-row gap-8 pt-40 relative">
           {/* Sidebar */}
           <div
             className="self-start w-[400px] sticky top-40 hidden sm:flex"
-            style={{
-              position: "sticky",
-            }}
+            style={{ position: "sticky" }}
           >
             <SidebarMenu
               sections={sections}
-              currentPath={"/feautures/calendar"}
+              currentPath={"/features/calendar"}
               activeSection={activeSection}
             />
           </div>
 
-          <div className="flex align-start justify-start flex-col h-full container text-left ">
+          <div className="flex align-start justify-start flex-col h-full container text-left">
             {sections.map((section, index) => (
               <div key={index}>
                 <h2
                   id={section.id}
-                  className="text-xl md:text-1xl xl:text-4xl leading-tight text-white  max-w-[750px] mb-8 text-left font-bold scroll-mt-40"
+                  className="text-xl md:text-1xl xl:text-4xl leading-tight text-white max-w-[750px] mb-8 text-left font-bold scroll-mt-40"
                 >
                   {section.title}
                 </h2>
-                <h2 className="text-xl md:text-1xl xl:text-md leading-tight text-white max-w-[750px] text-opacity-60 mb-8 text-left">
+                <p className="text-xl md:text-1xl xl:text-md leading-tight text-white max-w-[750px] text-opacity-60 mb-8 text-left">
                   {section.body}
-                </h2>
+                </p>
                 <a href={section.href}>
-                  <AnimatedShinyText className="inline-flex items-center justify-center px-4  pl-0 py-1 transition ease-out hover:text-neutral-600 hover:duration-300 hover:dark:text-neutral-400  mb-8 ">
+                  <AnimatedShinyText className="inline-flex items-center justify-center px-4 pl-0 py-1 transition ease-out hover:text-neutral-600  hover:dark:text-neutral-400 mb-8">
                     <span>{section.cta}</span>
                     <ArrowRightIcon className="ml-1 size-3 transition-transform duration-300 ease-in-out group-hover:translate-x-0.5" />
                   </AnimatedShinyText>
                 </a>
 
                 <Image
-                  src={"/images/localhost_3001_ (1).png"}
+                  src={
+                    section.image
+                      ? section.image
+                      : index % 2 !== 0
+                      ? "/images/Frame611.png"
+                      : index === 2
+                      ? "/images/Frame64.png"
+                      : "/images/Frame66.png"
+                  }
                   width={1000}
-                  height={400}
-                  style={{
-                    borderRadius: 15,
-                  }}
+                  height={600}
+                  style={{ borderRadius: 15 }}
                   className="mb-20 border"
                   alt={section.title}
                 />

@@ -4,26 +4,16 @@ import { MagicCard } from "./ui/magic-card";
 
 function CardSection() {
   return (
-    <div className="container items-center flex flex-col  mt-20 lg:mt-40 mb-20 p-4">
+    <div className="container items-center flex flex-col space-y-6 mt-20 lg:mt-40 mb-20 p-4">
       <BlurFade delay={0.25} inView>
-        <h4
-          className="text-sm md:text-lg text-accent text-center"
-          style={{
-            textShadow: "0 0 12px rgba(107, 183, 225, 1)",
-            backgroundImage:
-              "linear-gradient(309deg, rgb(166, 221, 255) 2.25%, rgba(107,183,225,1) 48.08%, rgb(0, 119, 255) 100%)",
-            backgroundClip: "text",
-            WebkitBackgroundClip: "text",
-            color: "transparent",
-          }}
-        >
+        <h4 className="text-sm md:text-lg text-white text-center">
           Our Mission
         </h4>
       </BlurFade>
       <BlurFade delay={0} inView>
-        <h3 className="lg:text-6xl font-bold mb-2 text-center md:text-5xl text-[26px] sm:text-4xl">
+        <h2 className="text-2xl md:text-3xl xl:text-5xl font-bold leading-tight text-white text-center">
           Redefining Footfall Analytics
-        </h3>
+        </h2>
       </BlurFade>
       <BlurFade delay={0.25} inView>
         <h2 className="text-lg md:text-1xl xl:text-2xl mb-16 leading-tight text-white text-center max-w-[750px] text-opacity-60">

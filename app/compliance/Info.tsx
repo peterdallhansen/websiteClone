@@ -36,7 +36,7 @@ export default function Info() {
                     <h3 className="text-xl font-bold">
                       Robust Data Protection
                     </h3>
-                    <p className="text-gray-500 dark:text-gray-400">
+                    <p className="text-gray-500 dark:text-white/60">
                       Our platform is built with advanced security protocols to
                       safeguard personal data. Data is encrypted both in transit
                       and at rest, ensuring robust protection against
@@ -50,7 +50,7 @@ export default function Info() {
                     <h3 className="text-xl font-bold">
                       User Consent Management
                     </h3>
-                    <p className="text-gray-500 dark:text-gray-400">
+                    <p className="text-gray-500 dark:text-white/60">
                       The platform inherently manages user consents, ensuring
                       all data processing activities align with GDPR
                       requirements. Consent records are maintained transparently
@@ -64,7 +64,7 @@ export default function Info() {
                     <h3 className="text-xl font-bold">
                       Controlled Data Access
                     </h3>
-                    <p className="text-gray-500 dark:text-gray-400">
+                    <p className="text-gray-500 dark:text-white/60">
                       Access to sensitive personal data is strictly controlled
                       within the platform. Role-based access ensures that only
                       authorized personnel can view or modify data, maintaining
@@ -142,7 +142,7 @@ export default function Info() {
                     <h3 className="text-xl font-bold">
                       Automated Data Breach Notifications
                     </h3>
-                    <p className="text-gray-500 dark:text-gray-400">
+                    <p className="text-gray-500 dark:text-white/60">
                       Receive real-time alerts and automated notifications in
                       the event of a data breach, ensuring swift action and
                       compliance with GDPR reporting requirements.
@@ -155,7 +155,7 @@ export default function Info() {
                     <h3 className="text-xl font-bold">
                       Comprehensive Data Management
                     </h3>
-                    <p className="text-gray-500 dark:text-gray-400">
+                    <p className="text-gray-500 dark:text-white/60">
                       Manage all your data processing activities with detailed
                       logs and reports. Maintain transparency and accountability
                       for all personal data handling.
@@ -168,7 +168,7 @@ export default function Info() {
                     <h3 className="text-xl font-bold">
                       Dedicated Compliance Support
                     </h3>
-                    <p className="text-gray-500 dark:text-gray-400">
+                    <p className="text-gray-500 dark:text-white/60">
                       Access expert support to navigate GDPR complexities. Our
                       team is here to assist you in maintaining compliance and
                       addressing any concerns.
@@ -219,7 +219,7 @@ export default function Info() {
                   <Consent className="w-6 h-6 mt-1" />
                   <div className="space-y-2">
                     <h3 className="text-xl font-bold">Right to Access</h3>
-                    <p className="text-gray-500 dark:text-gray-400">
+                    <p className="text-gray-500 dark:text-white/60">
                       Enable individuals to request access to their personal
                       data. Provide transparent and comprehensive responses to
                       all access requests.
@@ -230,7 +230,7 @@ export default function Info() {
                   <Bell className="w-6 h-6 mt-1" />
                   <div className="space-y-2">
                     <h3 className="text-xl font-bold">Right to Erasure</h3>
-                    <p className="text-gray-500 dark:text-gray-400">
+                    <p className="text-gray-500 dark:text-white/60">
                       Facilitate the complete deletion of personal data upon
                       request. Ensure that all data removal processes comply
                       with GDPR standards.
@@ -241,7 +241,7 @@ export default function Info() {
                   <LockClosedIcon className="w-6 h-6 mt-1" />
                   <div className="space-y-2">
                     <h3 className="text-xl font-bold">Data Portability</h3>
-                    <p className="text-gray-500 dark:text-gray-400">
+                    <p className="text-gray-500 dark:text-white/60">
                       Allow individuals to obtain and reuse their personal data
                       across different services. Support seamless data transfers
                       while maintaining security.

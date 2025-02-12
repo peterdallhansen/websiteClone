@@ -1,10 +1,12 @@
+import CardSection from "@/components/CardSection";
+import Features from "@/components/Sections/Features/Features";
 import { Gallery } from "@/components/Sections/Gallary/Gallary";
+import HowItWorks from "@/components/Sections/HowItWorks/HowItWorks";
 import Info from "@/components/Sections/Info/page";
 import Main from "@/components/Sections/Main";
 import News from "@/components/Sections/News/News";
-import NewsletterSection from "@/components/Sections/Newsletter";
+import Partners from "@/components/Sections/Partners";
 import BlurFade from "@/components/ui/blur-fade";
-import { Button } from "@/components/ui/button";
 
 export default function Home() {
   return (
@@ -36,6 +38,7 @@ export default function Home() {
           />
         </div>
       </div> */}
+
       <main className=" flex-col items-center justify-center space-y-6 z-[10] px-4 text-center max-w-[800px] py-40">
         <BlurFade delay={0.25} inView>
           <h4 className="text-sm md:text-lg text-white text-center">
@@ -44,14 +47,15 @@ export default function Home() {
         </BlurFade>
         <BlurFade delay={0.5} inView>
           <h2 className="text-2xl md:text-3xl xl:text-5xl font-bold leading-tight text-white text-center">
-            We're Aiming For Excellence
+            Empowering Smarter Decisions
           </h2>
         </BlurFade>
         <BlurFade delay={0.6} inView>
           <p className="text-base md:text-lg text-white text-center ">
-            Our team is hard at work putting the finishing touches on this
-            article. Please bear with us as we ensure it meets our high
-            standards of quality and insight.
+            Transforming raw data into actionable insights with advanced,
+            AI-driven analytics that not only fuel your business success but
+            also drive sustainable growth, inspire innovation, and empower
+            operational excellence across every sector.
           </p>
         </BlurFade>
       </main>

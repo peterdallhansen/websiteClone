@@ -30,7 +30,7 @@ const SidebarMenu: React.FC<SidebarMenuProps> = ({
     { href: "/features/workspaces", label: "Workspaces", icon: Layers },
     { href: "/features/map", label: "3D Map", icon: Globe },
     {
-      href: "/feautures/calendar",
+      href: "/features/calendar",
       label: "Calendar",
       icon: Users,
     },
@@ -39,7 +39,7 @@ const SidebarMenu: React.FC<SidebarMenuProps> = ({
   ];
 
   return (
-    <div className="w-full h-full flex flex-col items-start justify-start text-left gap-4  ">
+    <div className="w-full h-full flex flex-col items-start justify-start text-left gap-4   ">
       {menuItems.map((item, index) => (
         <div key={index}>
           {item.isCurrent || currentPath === item.href ? (
@@ -54,7 +54,7 @@ const SidebarMenu: React.FC<SidebarMenuProps> = ({
                   {sections.map((section) => (
                     <a key={section.id} href={`#${section.id}`}>
                       <h2
-                        className={`text-xl md:text-xl xl:text-[14px] leading-tight max-w-[750px] mb-2 font-semibold ${
+                        className={`text-xl md:text-xl xl:text-[14px] leading-tight max-w-[750px] mb-2 font-semibold hover:text-white/80 ${
                           activeSection === section.id
                             ? "text-white"
                             : "text-white text-opacity-40"
@@ -69,7 +69,7 @@ const SidebarMenu: React.FC<SidebarMenuProps> = ({
             </>
           ) : (
             <a href={item.href}>
-              <h2 className=" text-xl md:text-xl xl:text-[16px] leading-tight text-white max-w-[750px] font-bold inline-flex items-center flex-row justify-center align-center">
+              <h2 className=" text-xl md:text-xl xl:text-[16px] leading-tight text-white/60 hover:text-white max-w-[750px] font-bold inline-flex items-center flex-row justify-center align-center">
                 <item.icon className="mr-2 size-4" />
                 {item.label}
               </h2>

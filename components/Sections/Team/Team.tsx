@@ -140,6 +140,15 @@ const legal: TeamMember[] = [
   },
 ];
 
+const developers: TeamMember[] = [
+  {
+    picture: "/images/PDH.jpeg",
+    name: "Peter Dall-Hansen",
+    title: "Frontend Developer",
+    linkedin: "https://www.linkedin.com/in/marlenewintherplas",
+  },
+];
+
 function TeamMemberCard({
   picture,
   name,
@@ -162,9 +171,9 @@ function TeamMemberCard({
           className="object-cover w-full h-full transition-transform duration-300 hover:scale-110"
         />
       </div>
-      <CardContent className="p-3">
+      <CardContent className="p-3 ">
         <h3 className="text-lg font-bold">{name}</h3>
-        <p className="text-xs text-muted-foreground mb-1">{title}</p>
+        <p className="text-xs text-white/60 mb-1">{title}</p>
         {job && <p className="text-xs mb-2">{job}</p>}
         {previously && <p className="text-xs mb-2">{previously.join(" ")}</p>}
         <div className="flex space-x-1 mt-2">
@@ -206,7 +215,7 @@ const TeamSection: React.FC<TeamSectionProps> = ({ title, members, index }) => {
       <BlurFade delay={0.25 + 0.25 * index} inView>
         <h2 className="text-2xl font-bold text-center mb-6">{title}</h2>
       </BlurFade>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 gap-4">
+      <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4 gap-4">
         {members.map((member, index) => (
           <BlurFade key={index} delay={0.1 * index} inView>
             <TeamMemberCard {...member} />
@@ -225,7 +234,7 @@ const sections = [
 
 export function Team() {
   return (
-    <div className="bg-gradient-to-b from-background to-background/80 min-h-screen py-16">
+    <div className="bg-gradient-to-b from-background to-background/80  min-h-screen py-20">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <BlurFade delay={0.25} inView>

@@ -1,13 +1,13 @@
 "use client";
 
-import { ChevronDown, ChevronUp, Menu } from "lucide-react"; // Use an icon library for the hamburger icon
+import Logo from "@/components/Logo";
+import { Button } from "@/components/ui/button";
+import { NavigationMenuDemo } from "@/components/ui/NavigationMenuDemo";
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { AnimatePresence, motion } from "framer-motion";
+import { Menu } from "lucide-react"; // Use an icon library for the hamburger icon
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import Logo from "./Logo";
-import { Button } from "./ui/button";
-import { NavigationMenuDemo } from "./ui/NavigationMenuDemo";
-import { Sheet, SheetContent, SheetTrigger } from "./ui/sheet";
-import { motion, AnimatePresence } from "framer-motion";
 
 export default function Header() {
   const [isMobile, setIsMobile] = useState(false);
