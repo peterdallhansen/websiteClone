@@ -65,12 +65,12 @@ export default function TermsAndConditions() {
       <Card className="bg-transparent border-none">
         <CardHeader>
           <BlurFade delay={0} inView>
-            <h2 className="text-2xl md:text-3xl xl:text-5xl font-bold leading-tight text-white text-center">
+            <h2 className="text-2xl md:text-3xl xl:text-5xl font-bold leading-tight text-primary text-center">
               Terms & Conditions
             </h2>
           </BlurFade>
           <BlurFade delay={0.2} inView>
-            <h2 className="text-xl md:text-lg xl:text-2xl mb-8 leading-tight text-white text-center max-w-[750px] text-opacity-60">
+            <h2 className="text-xl md:text-lg xl:text-2xl mb-8 leading-tight text-primary text-center max-w-[750px] text-opacity-60">
               By using our services, you agree to these terms. <br />
               Please read them carefully.
             </h2>

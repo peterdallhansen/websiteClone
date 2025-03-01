@@ -189,7 +189,7 @@ const Notification = ({ name, description, icon, time }: Item) => {
           />
         </div>
         <div className="flex flex-col overflow-hidden">
-          <figcaption className="flex flex-row items-center whitespace-pre text-lg font-medium dark:text-white">
+          <figcaption className="flex flex-row items-center whitespace-pre text-lg font-medium dark:text-primary">
             <span className="text-sm text-gray-500 sm:text-lg">{name}</span>
             <span className="mx-1 text-gray-500">·</span>
             <span className="text-xs text-gray-500">{time}</span>
@@ -211,7 +211,7 @@ export function AnimatedListDemo({ className }: { className?: string }) {
         className
       )}
     >
-      <AnimatedList delay={4000} >
+      <AnimatedList delay={4000}>
         {notifications.map((item, idx) => (
           <Notification {...item} key={idx} />
         ))}

@@ -39,7 +39,7 @@ export const AnimatedSubscribeButton: React.FC<
         </motion.button>
       ) : (
         <motion.button
-          className={`relative flex w-[200px] cursor-pointer items-center justify-center rounded-md border-none p-[10px]  disabled:bg-muted bg-white disabled:text-opacity-50 disabled:cursor-default disabled:text-white text-black`}
+          className={`relative flex w-[200px] cursor-pointer items-center justify-center rounded-md border-none p-[10px]  disabled:bg-muted bg-white disabled:text-opacity-50 disabled:cursor-default disabled:text-primary text-black`}
           onClick={() => setIsSubscribed(true)}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}

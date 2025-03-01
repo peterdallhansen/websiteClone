@@ -137,14 +137,14 @@ export function NavigationMenuDemo() {
                     "inline-flex items-center gap-2 "
                   )}
                 >
-                  <component.icon className="size-10 p-2 border rounded-[10px] min-w-[40px] h-[40px] bg-transparent text-current group-hover:bg-white group-hover:border-white group-hover:text-black " />
+                  <component.icon className="size-10 p-2 border rounded-[10px] min-w-[40px] h-[40px] bg-transparent text-current group-hover:bg-primary group-hover:border-primary group-hover:text-background " />
 
                   <ListItem
                     key={component.title}
                     title={component.title}
                     href={component.href}
                   >
-                    <p className="text-sm font-medium  mt-1 text-white text-opacity-60 group-hover:text-opacity-100 ">
+                    <p className="text-sm font-medium  mt-1 text-primary text-opacity-60 group-hover:text-opacity-100 ">
                       {component.description}
                     </p>
                   </ListItem>
@@ -175,7 +175,7 @@ export function NavigationMenuDemo() {
                     title={component.title}
                     href={component.href}
                   >
-                    <p className="text-sm font-medium  mt-1 text-white text-opacity-60 group-hover:text-opacity-100 ">
+                    <p className="text-sm font-medium  mt-1 text-primary text-opacity-60 group-hover:text-opacity-100 ">
                       {component.description}
                     </p>
                   </ListItem>

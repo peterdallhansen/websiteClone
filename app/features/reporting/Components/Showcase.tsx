@@ -157,7 +157,7 @@ function Showcase() {
     <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center flex-1 p-8  pb-20 gap-16 sm:p-20 ">
       <main className="flex flex-col gap-4 row-start-2 items-center ">
         <BlurFade delay={0} inView>
-          <h2 className="text-xl md:text-1xl xl:text-2xl leading-tight text-white text-center max-w-[750px] text-opacity-80 mb-20">
+          <h2 className="text-xl md:text-1xl xl:text-2xl leading-tight text-primary text-center max-w-[750px] text-opacity-80 mb-20">
             Leverage customizable reports, real-time data, and advanced
             analytics to uncover trends and gain actionable insights. Access
             accurate, up-to-date information to make data-driven decisions with
@@ -192,11 +192,11 @@ function Showcase() {
               <div key={index}>
                 <h2
                   id={section.id}
-                  className="text-xl md:text-1xl xl:text-4xl leading-tight text-white  max-w-[750px] mb-8 text-left font-bold scroll-mt-40"
+                  className="text-xl md:text-1xl xl:text-4xl leading-tight text-primary  max-w-[750px] mb-8 text-left font-bold scroll-mt-40"
                 >
                   {section.title}
                 </h2>
-                <h2 className="text-xl md:text-1xl xl:text-md leading-tight text-white max-w-[750px] text-opacity-60 mb-8 text-left">
+                <h2 className="text-xl md:text-1xl xl:text-md leading-tight text-primary max-w-[750px] text-opacity-60 mb-8 text-left">
                   {section.body}
                 </h2>
                 <a href={section.href}>

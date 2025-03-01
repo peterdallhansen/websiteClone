@@ -32,7 +32,7 @@ export function GallaryCard({
       href={href}
       className={cn(
         "relative flex flex-col items-center justify-center w-[300px] md:w-[800px] h-[400px] rounded-2xl p-6 cursor-",
-        "transition-transform hover:scale-[1.02] hover:rounded-none transition-all",
+        "transition-transform hover:scale-[1.02]  transition-all duration-500",
         // Apply gradient only if backgroundImage is not provided
         !backgroundImage && gradient
       )}

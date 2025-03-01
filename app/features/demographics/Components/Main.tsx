@@ -8,17 +8,17 @@ function Main() {
     <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center flex-1 p-8 pb-0 gap-16 sm:p-20">
       <main className="flex flex-col gap-4 row-start-2 items-center">
         <BlurFade delay={0.25} inView>
-          <h4 className="text-sm md:text-lg text-white text-center">
+          <h4 className="text-sm md:text-lg text-primary text-center">
             Analytics Hub
           </h4>
         </BlurFade>
         <BlurFade delay={0.5} inView>
-          <h2 className="text-2xl md:text-3xl xl:text-5xl font-bold leading-tight text-white text-center">
+          <h2 className="text-2xl md:text-3xl xl:text-5xl font-bold leading-tight text-primary text-center">
             Unlock Actionable Insights with Advanced Analytics
           </h2>
         </BlurFade>
         <BlurFade delay={0.6} inView>
-          <p className="text-xl md:text-1xl xl:text-2xl mb-8 leading-tight text-white text-center max-w-[750px] text-opacity-60">
+          <p className="text-xl md:text-1xl xl:text-2xl mb-8 leading-tight text-primary text-center max-w-[750px] text-opacity-60">
             Leverage real-time data and powerful visualization tools to
             transform your raw data into strategic insights that drive business
             growth.

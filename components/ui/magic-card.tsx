@@ -73,7 +73,7 @@ export function MagicCard({
     <div
       ref={cardRef}
       className={cn(
-        "group relative flex size-full overflow-hidden rounded-xl bg-[#101010]  border text-black dark:text-white",
+        "group relative flex size-full overflow-hidden rounded-xl bg-[#101010]  border text-black dark:text-primary",
         "transform-gpu dark:bg-black dark:[border:1px_solid_rgba(255,255,255,.1)] dark:[box-shadow:0_-20px_80px_-20px_#ffffff1f_inset]",
         className
       )}

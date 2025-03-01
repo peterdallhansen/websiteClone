@@ -22,12 +22,12 @@ function Main() {
           </h4>
         </BlurFade>
         <BlurFade delay={0.5} inView>
-          <h2 className="text-2xl md:text-3xl xl:text-5xl font-bold  leading-tight text-white text-center  ">
+          <h2 className="text-2xl md:text-3xl xl:text-5xl font-bold  leading-tight text-primary text-center  ">
             Optimize Your Operations
           </h2>
         </BlurFade>
         <BlurFade delay={0.6} inView>
-          <h2 className="text-xl md:text-1xl xl:text-2xl  mb-8 leading-tight text-white text-center max-w-[750px] text-opacity-60">
+          <h2 className="text-xl md:text-1xl xl:text-2xl  mb-8 leading-tight text-primary text-center max-w-[750px] text-opacity-60">
             Unlock seamless organization and efficiency with tools designed to
             streamline operations and enhance collaboration across all your
             workspace needs.

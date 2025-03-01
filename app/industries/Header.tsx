@@ -169,10 +169,10 @@ export default function Header() {
                   <div key={link.label} className="w-full">
                     <button
                       onClick={() => toggleMenu(link.label)}
-                      className={`flex justify-between items-center w-full hover:text-white text-left ${
+                      className={`flex justify-between items-center w-full hover:text-primary text-left ${
                         expandedMenu === link.label
-                          ? "text-white"
-                          : "text-white/60"
+                          ? "text-primary"
+                          : "text-primary/60"
                       } focus:outline-none`}
                       aria-expanded={expandedMenu === link.label}
                       aria-controls={`${link.label}-sublinks`}
@@ -241,7 +241,7 @@ export default function Header() {
             <NavigationMenuDemo />
             <div className="flex items-center space-x-4 ">
               <a
-                className="text-sm hover:text-white/60 active:text-white/40 "
+                className="text-sm hover:text-primary/60 active:text-primary/40 "
                 href="mailto:contact@zonify.ai?subject=Contact%20Us&body=Hello%20there!"
               >
                 Contact

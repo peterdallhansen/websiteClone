@@ -22,12 +22,12 @@ function Main() {
           </h4>
         </BlurFade>
         <BlurFade delay={0.5} inView>
-          <h2 className="text-2xl md:text-3xl xl:text-5xl font-bold  leading-tight text-white text-center  ">
+          <h2 className="text-2xl md:text-3xl xl:text-5xl font-bold  leading-tight text-primary text-center  ">
             Actionable Insights at Your Fingertips
           </h2>
         </BlurFade>
         <BlurFade delay={0.6} inView>
-          <h2 className="text-xl md:text-1xl xl:text-2xl  mb-8 leading-tight text-white text-center max-w-[750px] text-opacity-60">
+          <h2 className="text-xl md:text-1xl xl:text-2xl  mb-8 leading-tight text-primary text-center max-w-[750px] text-opacity-60">
             Leverage customizable reports, real-time data, and comprehensive
             analytics to uncover trends and make data-driven decisions with
             confidence.

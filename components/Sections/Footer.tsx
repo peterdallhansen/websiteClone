@@ -111,7 +111,7 @@ const socialLinks = [
 // Footer Component
 export function Footer() {
   return (
-    <footer className="bg-black  mt-auto">
+    <footer className=" bg-transparent  mt-auto">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Company Logo */}
@@ -122,14 +122,14 @@ export function Footer() {
           {/* Navigation Sections */}
           {footerSections.map((section) => (
             <nav key={section.title} className="space-y-4">
-              <h3 className="text-sm font-semibold text-white uppercase tracking-wider">
+              <h3 className="text-sm font-semibold text-primary uppercase tracking-wider">
                 {section.title}
               </h3>
               <ul className="space-y-2">
                 {section.links.map((link) => (
                   <li key={link.href}>
                     <Link href={link.href} legacyBehavior>
-                      <a className="text-base text-white/60 hover:text-white flex items-center">
+                      <a className="text-base text-primary/60 hover:text-primary flex items-center">
                         {link.label}
                       </a>
                     </Link>
@@ -142,7 +142,7 @@ export function Footer() {
 
         {/* Copyright and Social Links */}
         <div className="mt-8  border-gray-200 pt-8 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-base text-white/60">
+          <p className="text-base text-primary/60">
             &copy; 2025 Zonfiy.ai, ApS. All rights reserved.
           </p>
           <div className="flex space-x-6 mt-4 md:mt-0">
@@ -150,7 +150,7 @@ export function Footer() {
               <a
                 key={social.href}
                 href={social.href}
-                className="text-white/60 hover:text-white "
+                className="text-primary/60 hover:text-primary "
                 target="_blank"
                 rel="noopener noreferrer"
               >

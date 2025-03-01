@@ -24,12 +24,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={cn(inter.variable, "scroll-smooth")}>
       <body className={`  antialiased p-0 `}>
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="dark"
-          forcedTheme="dark"
-          disableTransitionOnChange
-        >
+        <ThemeProvider attribute="class" defaultTheme="dark">
           <Header />
           {children}
           <Footer />

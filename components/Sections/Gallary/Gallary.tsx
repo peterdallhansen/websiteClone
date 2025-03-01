@@ -93,11 +93,11 @@ export function Gallery() {
 
       <div
         ref={scrollRef}
-        className="flex gap-5 overflow-x-auto snap-x snap-mandatory scrollbar-hide"
+        className="flex gap-5 overflow-x-auto snap-x snap-mandatory scrollbar-hide py-2 "
         style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
       >
         {Gallarys.map((product, index) => (
-          <div key={index} className="snap-start">
+          <div key={index} className="snap-start overflow-visible ">
             <GallaryCard {...product} />
           </div>
         ))}

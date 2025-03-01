@@ -10,13 +10,13 @@ function Features() {
     >
       <main className="flex flex-col gap-4 row-start-2 items-center ">
         <BlurFade delay={0.25} inView>
-          <h4 className="text-sm md:text-lg text-white text-center">
+          <h4 className="text-sm md:text-lg text-primary text-center">
             Features
           </h4>
         </BlurFade>
 
         <BlurFade delay={0.5} inView>
-          <h2 className="text-2xl md:text-3xl xl:text-4xl font-bold mb-8 leading-tight text-white text-center  ">
+          <h2 className="text-2xl md:text-3xl xl:text-4xl font-bold mb-8 leading-tight text-primary text-center  ">
             Uncover Unexplored Business Insights
           </h2>
         </BlurFade>

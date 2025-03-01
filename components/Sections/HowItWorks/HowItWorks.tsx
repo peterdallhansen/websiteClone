@@ -63,7 +63,7 @@ const HowItWorks = () => {
           </h4>
         </BlurFade>
         <BlurFade delay={0.5} inView>
-          <h2 className="text-2xl md:text-3xl xl:text-4xl font-bold  leading-tight text-white text-center">
+          <h2 className="text-2xl md:text-3xl xl:text-4xl font-bold  leading-tight text-primary text-center">
             4 Key Features to Unlock Your Potential
           </h2>
         </BlurFade>

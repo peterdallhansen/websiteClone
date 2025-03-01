@@ -30,7 +30,7 @@ export default function NewsletterSection() {
 
   return (
     <div className="container mx-auto px-4 py-8 max-w-[900px]">
-      <Card className="bg-transparent text-white border-none">
+      <Card className="bg-transparent text-primary border-none">
         <BlurFade delay={0} inView>
           <CardContent className="text-center space-y-6">
             <h2 className="text-2xl md:text-3xl xl:text-5xl font-bold leading-tight">
@@ -49,7 +49,7 @@ export default function NewsletterSection() {
                 <Input
                   type="email"
                   placeholder="Enter your email address"
-                  className={`w-full px-4 py-3 h-11 text-white text-opacity-70 ${
+                  className={`w-full px-4 py-3 h-11 text-primary text-opacity-70 ${
                     error ? "border-red-500" : ""
                   }`}
                   value={email}

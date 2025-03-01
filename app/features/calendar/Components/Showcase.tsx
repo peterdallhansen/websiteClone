@@ -93,7 +93,7 @@ function Showcase() {
     <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center flex-1 p-8 pb-20 gap-16 sm:p-20">
       <main className="flex flex-col gap-4 row-start-2 items-center">
         <BlurFade delay={0} inView>
-          <h2 className="text-xl md:text-1xl xl:text-2xl leading-tight text-white text-center max-w-[750px] text-opacity-80 mb-20">
+          <h2 className="text-xl md:text-1xl xl:text-2xl leading-tight text-primary text-center max-w-[750px] text-opacity-80 mb-20">
             Elevate your event planning with a powerful calendar platform. Plan
             effectively, schedule seamlessly, validate readiness, and measure
             success with tools that keep you ahead.
@@ -118,11 +118,11 @@ function Showcase() {
               <div key={index}>
                 <h2
                   id={section.id}
-                  className="text-xl md:text-1xl xl:text-4xl leading-tight text-white max-w-[750px] mb-8 text-left font-bold scroll-mt-40"
+                  className="text-xl md:text-1xl xl:text-4xl leading-tight text-primary max-w-[750px] mb-8 text-left font-bold scroll-mt-40"
                 >
                   {section.title}
                 </h2>
-                <p className="text-xl md:text-1xl xl:text-md leading-tight text-white max-w-[750px] text-opacity-60 mb-8 text-left">
+                <p className="text-xl md:text-1xl xl:text-md leading-tight text-primary max-w-[750px] text-opacity-60 mb-8 text-left">
                   {section.body}
                 </p>
                 <a href={section.href}>

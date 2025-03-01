@@ -44,7 +44,7 @@ const SidebarMenu: React.FC<SidebarMenuProps> = ({
         <div key={index}>
           {item.isCurrent || currentPath === item.href ? (
             <>
-              <h2 className=" text-xl md:text-xl xl:text-[16px] leading-tight text-white max-w-[750px] font-bold inline-flex mb-2 items-center flex-row justify-center align-center">
+              <h2 className=" text-xl md:text-xl xl:text-[16px] leading-tight text-primary max-w-[750px] font-bold inline-flex mb-2 items-center flex-row justify-center align-center">
                 <item.icon className="mr-2 size-4" />
                 {item.label}
               </h2>
@@ -54,10 +54,10 @@ const SidebarMenu: React.FC<SidebarMenuProps> = ({
                   {sections.map((section) => (
                     <a key={section.id} href={`#${section.id}`}>
                       <h2
-                        className={`text-xl md:text-xl xl:text-[14px] leading-tight max-w-[750px] mb-2 font-semibold hover:text-white/80 ${
+                        className={`text-xl md:text-xl xl:text-[14px] leading-tight max-w-[750px] mb-2 font-semibold hover:text-primary/80 ${
                           activeSection === section.id
-                            ? "text-white"
-                            : "text-white text-opacity-40"
+                            ? "text-primary"
+                            : "text-primary text-opacity-40"
                         }`}
                       >
                         {section.title}
@@ -69,7 +69,7 @@ const SidebarMenu: React.FC<SidebarMenuProps> = ({
             </>
           ) : (
             <a href={item.href}>
-              <h2 className=" text-xl md:text-xl xl:text-[16px] leading-tight text-white/60 hover:text-white max-w-[750px] font-bold inline-flex items-center flex-row justify-center align-center">
+              <h2 className=" text-xl md:text-xl xl:text-[16px] leading-tight text-primary/60 hover:text-primary max-w-[750px] font-bold inline-flex items-center flex-row justify-center align-center">
                 <item.icon className="mr-2 size-4" />
                 {item.label}
               </h2>

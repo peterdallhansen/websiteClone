@@ -132,7 +132,7 @@ const legal: TeamMember[] = [
     job: "Partner, DLA Piper",
   },
   {
-    picture: "/NLG 2.jpg",
+    picture: "/NLG2.jpg",
     name: "Nicholas Lerche-Gredal",
     title: "Corporate Law & M&A",
     linkedin: "https://www.linkedin.com/in/nicholaslerchegredal",
@@ -177,17 +177,20 @@ function TeamMemberCard({
           backdropFilter: "blur(4px)",
         }}
       >
-        <Button
-          variant="ghost"
-          size="icon"
-          asChild
-          className="absolute top-2 right-2"
-        >
-          <a href={`tel:${phone}`} aria-label="Phone">
-            <ArrowUpRight className="h-4 w-4" />
-          </a>
-        </Button>
-        <h3 className="text-lg font-bold">{name}</h3>
+        {linkedin && (
+          <Button
+            variant="ghost"
+            size="icon"
+            asChild
+            className="absolute top-2 right-2"
+          >
+            <a href={linkedin} aria-label="More">
+              <ArrowUpRight color="#fff" className="h-4 w-4" />
+            </a>
+          </Button>
+        )}
+
+        <h3 className="text-lg text-white font-bold">{name}</h3>
         <p className="text-xs text-white font-semibold mb-1">{title}</p>
         {job && <p className="text-xs text-white/80 mb-2">{job}</p>}
         {previously && (
@@ -197,14 +200,14 @@ function TeamMemberCard({
           {phone && (
             <Button variant="ghost" size="icon" asChild>
               <a href={`tel:${phone}`} aria-label="Phone">
-                <PhoneIcon className="h-3 w-3" />
+                <PhoneIcon color="#fff" className="h-3 w-3" />
               </a>
             </Button>
           )}
           {email && (
             <Button variant="ghost" size="icon" asChild>
               <a href={`mailto:${email}`} aria-label="Email">
-                <MailIcon className="h-3 w-3" />
+                <MailIcon color="#fff" className="h-3 w-3" />
               </a>
             </Button>
           )}
@@ -216,7 +219,7 @@ function TeamMemberCard({
                 rel="noopener noreferrer"
                 aria-label="LinkedIn"
               >
-                <LinkedInLogoIcon className="h-3 w-3" />
+                <LinkedInLogoIcon color="#fff" className="h-3 w-3" />
               </a>
             </Button>
           )}
@@ -229,10 +232,10 @@ function TeamMemberCard({
 const TeamSection: React.FC<TeamSectionProps> = ({ title, members, index }) => {
   return (
     <section className="space-y-6">
-      <BlurFade delay={0.25 + 0.25 * index} inView>
+      <BlurFade delay={0.25 + 0.1 * index} inView>
         <h2 className="text-2xl font-bold text-center mb-6">{title}</h2>
       </BlurFade>
-      <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4 gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4 gap-4">
         {members.map((member, index) => (
           <BlurFade key={index} delay={0.1 * index} inView>
             <TeamMemberCard {...member} />
@@ -255,12 +258,12 @@ export function Team() {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <BlurFade delay={0.25} inView>
-            <h4 className="text-sm md:text-lg text-white text-center">
+            <h4 className="text-sm md:text-lg text-primary text-center">
               Our Team
             </h4>
           </BlurFade>
           <BlurFade delay={0.5} inView>
-            <h2 className="text-2xl md:text-3xl xl:text-4xl font-bold mb-8 leading-tight text-white">
+            <h2 className="text-2xl md:text-3xl xl:text-4xl font-bold mb-8 leading-tight text-primary">
               Meet the team behind Zonify.ai
             </h2>
           </BlurFade>

@@ -21,12 +21,12 @@ export default function Main() {
 
       <main className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex flex-col items-center justify-center space-y-6 z-[10] px-4 text-center min-w-[350px]  ">
         <BlurFade delay={0.25} inView>
-          <h4 className="text-sm md:text-lg text-white text-center">
+          <h4 className="text-sm md:text-lg text-primary text-center">
             Join Our Team
           </h4>
         </BlurFade>
         <BlurFade delay={0.5} inView>
-          <h2 className="text-2xl md:text-3xl xl:text-5xl font-bold  leading-tight text-white text-center  ">
+          <h2 className="text-2xl md:text-3xl xl:text-5xl font-bold  leading-tight text-primary text-center  ">
             Be a Part of Something Great
           </h2>
         </BlurFade>

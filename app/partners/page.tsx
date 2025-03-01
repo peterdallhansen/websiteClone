@@ -37,12 +37,12 @@ export default function PartnersPage() {
     <div className="flex items-center justify-center min-h-[70vh] pt-20 ">
       <div className="container mx-auto px-4 py-8">
         <BlurFade delay={0.25} inView>
-          <h4 className="text-sm md:text-lg text-white text-center mb-2">
+          <h4 className="text-sm md:text-lg text-primary text-center mb-2">
             Our Partners
           </h4>
         </BlurFade>
         <BlurFade delay={0.5} inView>
-          <h2 className="text-2xl md:text-3xl xl:text-5xl font-bold leading-tight text-white text-center mb-8">
+          <h2 className="text-2xl md:text-3xl xl:text-5xl font-bold leading-tight text-primary text-center mb-8">
             Trusted by Industry Leaders
           </h2>
         </BlurFade>
@@ -61,7 +61,7 @@ export default function PartnersPage() {
                   className="rounded opacity-80 transition-opacity hover:opacity-100"
                 />
               </div>
-              {/*   <h3 className="text-xl font-semibold mb-2 text-center text-white">
+              {/*   <h3 className="text-xl font-semibold mb-2 text-center text-primary">
                 {partner.name}
               </h3> */}
               {/*  <p className="text-gray-300 text-center">{partner.description}</p> */}
