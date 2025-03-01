@@ -15,58 +15,60 @@ export default function Home() {
   const { setTheme } = useTheme();
   const mainRef = useRef(null);
   const missionStatementRef = useRef(null);
-
-  const [isMainVisible, setIsMainVisible] = useState(false);
-  const [isMissionVisible, setIsMissionVisible] = useState(false);
+  const [sectionsVisible, setSectionsVisible] = useState({
+    main: false,
+    mission: false,
+  });
 
   useEffect(() => {
-    // Observer for the Main section
-    const mainObserver = new IntersectionObserver(
-      ([entry]) => {
-        setIsMainVisible(entry.isIntersecting);
+    const observer = new IntersectionObserver(
+      (entries) => {
+        // Use functional updates to get the current state
+        setSectionsVisible((prevVisibility) => {
+          const updatedVisibility = { ...prevVisibility };
+          entries.forEach((entry) => {
+            if (entry.target === mainRef.current) {
+              updatedVisibility.main = entry.isIntersecting;
+            }
+            if (entry.target === missionStatementRef.current) {
+              updatedVisibility.mission = entry.isIntersecting;
+            }
+          });
+          return updatedVisibility;
+        });
       },
       { threshold: 0.1 }
     );
 
-    // Observer for the Mission Statement section
-    const missionObserver = new IntersectionObserver(
-      ([entry]) => {
-        setIsMissionVisible(entry.isIntersecting);
-      },
-      { threshold: 0.1 }
-    );
+    if (mainRef.current) observer.observe(mainRef.current);
+    if (missionStatementRef.current)
+      observer.observe(missionStatementRef.current);
 
-    if (mainRef.current) {
-      mainObserver.observe(mainRef.current);
-    }
-
-    if (missionStatementRef.current) {
-      missionObserver.observe(missionStatementRef.current);
-    }
-
+    // Cleanup the observer on unmount
     return () => {
-      setTheme("dark");
-      if (mainRef.current) {
-        mainObserver.unobserve(mainRef.current);
-      }
-      if (missionStatementRef.current) {
-        missionObserver.unobserve(missionStatementRef.current);
-      }
+      if (mainRef.current) observer.unobserve(mainRef.current);
+      if (missionStatementRef.current)
+        observer.unobserve(missionStatementRef.current);
     };
-  }, []);
+  }, []); // empty dependency array is fine now
 
-  // Switch themes based on the visibility of the two sections:
-  // If either section is visible, use dark mode; otherwise, light mode.
   useEffect(() => {
-    if (isMainVisible || isMissionVisible) {
+    if (sectionsVisible.main) {
+      console.log("Main became visible");
+    }
+    if (sectionsVisible.mission) {
+      console.log("Mission became visible");
+    }
+    // Switch themes based on the visibility of the two sections:
+    if (sectionsVisible.main || sectionsVisible.mission) {
       setTheme("dark");
     } else {
       setTheme("light");
     }
-  }, [isMainVisible, isMissionVisible, setTheme]);
+  }, [sectionsVisible]);
 
   return (
-    <div className="min-h-screen bg-background antialiased w-full mx-auto scroll-smooth flex flex-col overflow-hidden items-center transition-colors duration-500">
+    <main className="min-h-screen bg-background antialiased w-full mx-auto scroll-smooth flex flex-col overflow-hidden items-center transition-colors duration-500">
       {/* Main Section with ref */}
       <div ref={mainRef}>
         <Main />
@@ -75,7 +77,7 @@ export default function Home() {
       <Offerings />
 
       {/* Mission Statement Section with ref */}
-      <main className="flex-col items-center justify-center space-y-6 z-[10] px-4 text-center max-w-[800px] py-40 ">
+      <section className="flex-col items-center justify-center space-y-6 z-[10] px-4 text-center max-w-[800px] py-40 ">
         <BlurFade delay={0.25} inView>
           <h4 className="text-sm md:text-lg text-primary text-center">
             Mission Statement
@@ -94,9 +96,9 @@ export default function Home() {
             operational excellence across every sector.
           </p>
         </BlurFade>
-      </main>
-      <div className=" items-center justify-items-center  mb-20  gap-32 sm:p-20 py-40 ">
-        <section className="w-[1200px] h-[700px] bg-[#F6F6F6] rounded-xl p-20 flex relative">
+      </section>
+      <section className=" items-center justify-items-center  mb-20  gap-32 sm:p-20 py-40 ">
+        <div className="w-[1200px] h-[700px] bg-[#F6F6F6] rounded-2xl p-20 flex relative">
           <div className=" space-y-6 w-full   ">
             <h4 className="text-sm md:text-lg text-black text-left">
               GDPR Compliance
@@ -116,7 +118,10 @@ export default function Home() {
               so you gain actionable insights without compromising privacy.
             </p>
             <a href={"/compliance"}>
-              <AnimatedShinyText className="inline-flex items-center justify-center px-4 pl-0 py-2 transition ease-out hover:text-black/60  text-accent   mb-8">
+              <AnimatedShinyText
+                color={"text-accent"}
+                className="inline-flex items-center justify-center px-4 pl-0 py-2 transition ease-out hover:text-black/60  text-accent   mb-8"
+              >
                 <span>{"Read Full Article"}</span>
                 <ArrowRightIcon className="ml-1 size-3 transition-transform duration-300 ease-in-out group-hover:translate-x-0.5" />
               </AnimatedShinyText>
@@ -126,8 +131,8 @@ export default function Home() {
             className="h-full w-2/3 flex align-center justify-center "
             color="black"
           />
-        </section>
-      </div>
+        </div>
+      </section>
       <div
         ref={missionStatementRef}
         className=" antialiased w-full mx-auto scroll-smooth flex flex-col overflow-hidden items-center "
@@ -135,6 +140,6 @@ export default function Home() {
         {/*   <News /> */}
         <Gallery />
       </div>
-    </div>
+    </main>
   );
 }

@@ -70,7 +70,7 @@ export function Gallery() {
   };
 
   return (
-    <div className="relative w-full max-w-screen mx-auto px-4 mb-20">
+    <section className="relative w-full max-w-screen mx-auto px-4 mb-20">
       <div className="flex justify-between items-center mb-6 max-w-[1500px] mx-auto">
         <h2 className="text-2xl font-bold">Gallery</h2>
         <div className="flex gap-2">
@@ -102,6 +102,6 @@ export function Gallery() {
           </div>
         ))}
       </div>
-    </div>
+    </section>
   );
 }

@@ -8,7 +8,7 @@ export default function Info() {
       className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center flex-1 p-8 pb-20 gap-32 sm:p-20"
       id="features"
     >
-      <main className="flex flex-col gap-32 row-start-2 items-center ">
+      <section className="flex flex-col gap-32 row-start-2 items-center ">
         {/* First Section */}
         <section className="container px-4 md:px-6">
           <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 xl:grid-cols-2">
@@ -250,7 +250,7 @@ export default function Info() {
             </div>
           </div>
         </section>
-      </main>
+      </section>
     </div>
   );
 }

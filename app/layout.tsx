@@ -5,6 +5,7 @@ import { cn } from "@/lib/utils";
 import { Inter } from "@next/font/google";
 import type { Metadata } from "next";
 import "./globals.css";
+import CookieBanner from "@/components/CookieBanner";
 
 export const metadata: Metadata = {
   title: "Zonify.ai – Pioneering Real-Time Analytics",
@@ -28,6 +29,8 @@ export default function RootLayout({
           <Header />
           {children}
           <Footer />
+          {/* Cookies banner not needed if google analytics is only used to track traffic */}
+          {/* <CookieBanner /> */}
         </ThemeProvider>
       </body>
     </html>
