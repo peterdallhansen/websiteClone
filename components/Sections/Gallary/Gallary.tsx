@@ -9,6 +9,7 @@ const Gallarys = [
     title: "NVIDIA Inception",
     label: "News",
     backgroundImage: "/images/Frame-1.jpg",
+    href: "https://www.linkedin.com/feed/update/urn:li:activity:7290028182383042560",
   },
 
   {
@@ -16,17 +17,20 @@ const Gallarys = [
     label: "News",
     backgroundImage: "/images/Frame45.png",
     dark: true,
+    href: "https://www.linkedin.com/feed/update/urn:li:activity:7275098778791989248",
   },
   {
     title: "Retail Debut",
     label: "Story",
     backgroundImage: "/images/1733477217351.jpeg",
+    href: "https://www.linkedin.com/feed/update/urn:li:activity:7270730429932978176",
   },
   {
     title: "Example",
     label: "News",
     backgroundImage: "/images/1725378290468.jpeg",
     dark: true,
+    href: "https://www.linkedin.com/feed/update/urn:li:activity:7236761072173502464",
   },
 ];
 

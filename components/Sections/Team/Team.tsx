@@ -3,7 +3,7 @@ import BlurFade from "@/components/ui/blur-fade";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { LinkedInLogoIcon } from "@radix-ui/react-icons";
-import { MailIcon, PhoneIcon } from "lucide-react";
+import { ArrowUpRight, MailIcon, PhoneIcon } from "lucide-react";
 import Image from "next/image";
 
 interface TeamMember {
@@ -160,39 +160,56 @@ function TeamMemberCard({
   job,
 }: TeamMemberProps) {
   return (
-    <Card className="overflow-hidden w-full h-full">
-      <div className="aspect-square overflow-hidden w-full">
-        <Image
-          src={picture}
-          alt={name}
-          width={250}
-          height={200}
-          quality={100}
-          className="object-cover w-full h-full transition-transform duration-300 hover:scale-110"
-        />
-      </div>
-      <CardContent className="p-3 ">
+    <div
+      className={`overflow-hidden w-full h-[500px] rounded-2xl flex p-3`}
+      style={{
+        backgroundImage: `url(${picture})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+        flexDirection: "column-reverse",
+      }}
+    >
+      <div
+        className="rounded-xl p-4"
+        style={{
+          backgroundColor: "rgba(0,0,0,0.5)",
+          backdropFilter: "blur(4px)",
+        }}
+      >
+        <Button
+          variant="ghost"
+          size="icon"
+          asChild
+          className="absolute top-2 right-2"
+        >
+          <a href={`tel:${phone}`} aria-label="Phone">
+            <ArrowUpRight className="h-4 w-4" />
+          </a>
+        </Button>
         <h3 className="text-lg font-bold">{name}</h3>
-        <p className="text-xs text-white/60 mb-1">{title}</p>
-        {job && <p className="text-xs mb-2">{job}</p>}
-        {previously && <p className="text-xs mb-2">{previously.join(" ")}</p>}
+        <p className="text-xs text-white font-semibold mb-1">{title}</p>
+        {job && <p className="text-xs text-white/80 mb-2">{job}</p>}
+        {previously && (
+          <p className="text-xs text-white/80 mb-2">{previously.join(" ")}</p>
+        )}
         <div className="flex space-x-1 mt-2">
           {phone && (
-            <Button variant="outline" size="sm" asChild>
+            <Button variant="ghost" size="icon" asChild>
               <a href={`tel:${phone}`} aria-label="Phone">
                 <PhoneIcon className="h-3 w-3" />
               </a>
             </Button>
           )}
           {email && (
-            <Button variant="outline" size="sm" asChild>
+            <Button variant="ghost" size="icon" asChild>
               <a href={`mailto:${email}`} aria-label="Email">
                 <MailIcon className="h-3 w-3" />
               </a>
             </Button>
           )}
           {linkedin && (
-            <Button variant="outline" size="sm" asChild>
+            <Button variant="ghost" size="icon" asChild>
               <a
                 href={linkedin}
                 target="_blank"
@@ -204,8 +221,8 @@ function TeamMemberCard({
             </Button>
           )}
         </div>
-      </CardContent>
-    </Card>
+      </div>
+    </div>
   );
 }
 
@@ -239,12 +256,12 @@ export function Team() {
         <div className="text-center mb-16">
           <BlurFade delay={0.25} inView>
             <h4 className="text-sm md:text-lg text-white text-center">
-              Meet Our Team
+              Our Team
             </h4>
           </BlurFade>
           <BlurFade delay={0.5} inView>
             <h2 className="text-2xl md:text-3xl xl:text-4xl font-bold mb-8 leading-tight text-white">
-              The talented individuals behind our success.
+              Meet the team behind Zonify.ai
             </h2>
           </BlurFade>
         </div>

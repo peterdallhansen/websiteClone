@@ -106,7 +106,7 @@ function Showcase() {
           >
             <SidebarMenu
               sections={sections}
-              currentPath={"/features/analytics-hub"}
+              currentPath={"/features/demographics"}
               activeSection={activeSection}
             />
           </div>

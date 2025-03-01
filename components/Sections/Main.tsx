@@ -7,9 +7,9 @@ function Main() {
       {/* Center container for video and overlay */}
       <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
         {/* Video Container */}
-        <div className="relative  h-[90vh] w-[80vw] flex align-center justify-center">
+        <div className="relative  h-screen w-screen flex align-center justify-center rounded-2xl p-16 py-8 pt-16">
           <video
-            className="w-full h-full p-4 lg:w-auto lg:max-h-[90vh] md:p-0 md:rounded-xl object-cover rounded-3xl"
+            className="w-full h-full p-4 lg:w-full md:p-0 md:rounded-xl object-cover "
             autoPlay
             muted
             loop
@@ -43,11 +43,10 @@ function Main() {
             </BlurFade>
           </div> */}
           {/* Text Overlay - positioned relative to the video container */}
-          <div className="absolute bottom-8 left-8 p-8 flex flex-col items-start justify-center space-y-6 z-10 text-left min-w-[350px]">
+          <div className="absolute bottom-8 left-12 p-16 flex flex-col items-start justify-center space-y-6 z-10 text-left min-w-[350px]">
             <BlurFade delay={0} inView>
               <h1 className="text-5xl md:text-5xl xl:text-7xl font-bold text-white leading-tight">
-                Empowering <br />
-                Smarter Decisions
+                AI-Driven Insights <br /> from Every Footstep
               </h1>
             </BlurFade>
             <BlurFade delay={0.1} inView>

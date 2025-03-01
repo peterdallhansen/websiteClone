@@ -34,13 +34,13 @@ const footerSections: FooterSection[] = [
     title: "Product",
     links: [
       {
-        href: "/#features",
-        label: "Features",
+        href: "/solutions",
+        label: "Solutions",
         Icon: Laptop,
       },
       {
-        href: "/case-studies",
-        label: "Case Studies",
+        href: "/industries",
+        label: "Industries",
         Icon: FileText,
       },
       {

@@ -6,6 +6,7 @@ interface GallaryCardProps {
   gradient?: string; // Made optional
   backgroundImage?: string; // New optional prop for background image
   dark?: boolean;
+  href?: string;
 }
 
 export function GallaryCard({
@@ -14,6 +15,7 @@ export function GallaryCard({
   gradient,
   backgroundImage,
   dark,
+  href,
 }: GallaryCardProps) {
   // Determine the background style if a backgroundImage is provided
   const backgroundStyle = backgroundImage
@@ -27,7 +29,7 @@ export function GallaryCard({
 
   return (
     <a
-      href="/"
+      href={href}
       className={cn(
         "relative flex flex-col items-center justify-center w-[300px] md:w-[800px] h-[400px] rounded-2xl p-6 cursor-",
         "transition-transform hover:scale-[1.02] hover:rounded-none transition-all",

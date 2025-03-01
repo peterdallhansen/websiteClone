@@ -1,3 +1,5 @@
+import { AnimatedListDemo } from "@/components/ui/AnimatedListDemo";
+import { Zap } from "lucide-react";
 import Image from "next/image";
 
 export default function Info() {
@@ -13,7 +15,8 @@ export default function Info() {
             <div className="flex flex-col justify-center space-y-8">
               <div className="space-y-2">
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
-                  AI-Powered Predictive Tools & Digital Twin Capabilities
+                  Hvordan vi er verdensmestre i at indsamle footfall data
+                  (hvordan)
                 </h2>
               </div>
               <div className="space-y-8">
@@ -60,9 +63,9 @@ export default function Info() {
               {/* Main Image */}
               <Image
                 alt="Dashboard Preview"
-                className="rounded-lg overflow-hidden aspect-square object-cover"
+                className="rounded-lg overflow-hidden aspect-square object-cover bg-[#f6f6f6]"
                 height={600}
-                src="https://images.ctfassets.net/kftzwdyauwt9/40aiELEfuIYvjOaqimB3YR/b7d45af79b84671ef6e73e95f079aabd/Expanded_access_to_GPT-4o.jpg?w=1920&q=90&fm=webp"
+                src="/phone2.png"
                 width={800} // Square aspect ratio
                 quality={100}
               />
@@ -85,34 +88,20 @@ export default function Info() {
         {/* Second Section */}
         <section className="container px-4 md:px-6">
           <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 xl:grid-cols-2">
-            <div className="relative flex items-center justify-center md:inline hidden">
+            <div className="relative flex items-center justify-center">
               {/* Main Image */}
-              <Image
-                alt="Dashboard Preview"
-                className="rounded-lg overflow-hidden aspect-square object-cover"
-                height={600}
-                src="https://images.ctfassets.net/kftzwdyauwt9/3gDBc446Nxn0ByyZMZdFVD/1e993b5470a4fc82279d2099ddef8321/Catcus_Heatmap_2.png?w=3840&q=90&fm=webp"
-                width={800} // Square aspect ratio
-                quality={100}
-              />
+              <div className="rounded-lg overflow-hidden aspect-square object-cover bg-[#f6f6f6] w-full h-full" />
 
               {/* Inner Image */}
-              <div className="absolute inset-0 flex items-center justify-center">
-                <Image
-                  alt="Inner Preview"
-                  className="rounded-md overflow-hidden aspect-square object-cover"
-                  height={700}
-                  src="/images/iPhone 16 Pro.png"
-                  width={700} // Square aspect ratio
-                  quality={100}
-                  unoptimized
-                />
+              <div className="absolute inset-0 flex items-center justify-center overflow-hidden">
+                {/* <Zap className="scale-[10] md:scale-[20]" /> */}
+                <AnimatedListDemo className="absolute right-2 top-4 h-full w-full border-none transition-all duration-300 ease-out  group-hover:scale-105" />
               </div>
             </div>
             <div className="flex flex-col justify-center space-y-8">
               <div className="space-y-2">
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
-                  From Zero to EU Industry Leader in Just Five Months
+                  A Scalable, AI-Powered Ecosystem
                 </h2>
               </div>
               <div className="space-y-8">
@@ -241,26 +230,19 @@ export default function Info() {
             </div>
             <div className="relative flex items-center justify-center">
               {/* Main Image */}
-              <Image
-                alt="Dashboard Preview"
-                className="rounded-lg overflow-hidden aspect-square object-cover"
-                height={600}
-                src="https://images.ctfassets.net/kftzwdyauwt9/394XMDlnt7tUSkXFMeC6fg/8f24272beda1ea1835d65fff318adbf3/Customizable_AI_for_any_project_or_course.jpg?w=1920&q=90&fm=webp"
-                width={800} // Square aspect ratio
-                quality={100}
-              />
+              <div className="rounded-lg overflow-hidden aspect-square object-cover w-full h-full bg-[#f6f6f6]" />
 
               {/* Inner Image */}
-              {/*  <div className="absolute inset-0 flex items-center justify-center">
+              <div className="absolute inset-0 flex items-center justify-center">
                 <Image
                   alt="Inner Preview"
-                  className="rounded-md overflow-hidden  object-cover scale-125 md:scale-150  "
+                  className="rounded-md overflow-hidden  object-cover   "
                   height={900}
-                  src="/images/download (4).png"
+                  src="/images/workspaces.png"
                   width={900} // Square aspect ratio
                   quality={100}
                 />
-              </div> */}
+              </div>
             </div>
           </div>
         </section>
