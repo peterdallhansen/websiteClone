@@ -15,7 +15,7 @@ function Main() {
             loop
             playsInline
           >
-            <source src="/2.mp4" type="video/mp4" />
+            <source src="/videos/Untitled design (2).mp4" type="video/mp4" />
           </video>
           {/*    <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex flex-col items-center justify-center space-y-6 z-[10] px-4 text-center min-w-[350px]  ">
             <BlurFade delay={0} inView>
