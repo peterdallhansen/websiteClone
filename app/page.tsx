@@ -50,6 +50,7 @@ export default function Home() {
 
     // Cleanup the observer on unmount
     return () => {
+      setTheme("dark");
       if (mainRef.current) observer.unobserve(mainRef.current);
       if (missionStatementRef.current)
         observer.unobserve(missionStatementRef.current);

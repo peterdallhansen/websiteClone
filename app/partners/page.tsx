@@ -19,7 +19,7 @@ const partners: Partner[] = [
   {
     id: 2,
     name: "NVIDIA",
-    logo: "/images/Partners/nvidia-inception-logo2.webp",
+    logo: "/images/Partners/NVIDIA.png",
     description:
       "NVIDIA specializes in the design and manufacture of graphics processing units (GPUs) for gaming and professional markets, as well as system on a chip units (SoCs) for the mobile computing and automotive market.",
   },
@@ -43,24 +43,27 @@ export default function PartnersPage() {
         </BlurFade>
         <BlurFade delay={0.5} inView>
           <h2 className="text-2xl md:text-3xl xl:text-5xl font-bold leading-tight text-primary text-center mb-8">
-            Trusted by Industry Leaders
+            Collaborating with Industry Experts
           </h2>
         </BlurFade>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {partners.map((partner) => (
+          {partners.map((partner, index) => (
             <div
               key={partner.id}
               className="rounded-lg shadow-md p-6 flex flex-col items-center  bg-opacity-10 backdrop-blur-sm"
             >
-              <div className="w-64 h-48 mb-4 relative">
-                <Image
-                  src={partner.logo || "/placeholder.svg"}
-                  alt={`${partner.name} logo`}
-                  layout="fill"
-                  objectFit="contain"
-                  className="rounded opacity-80 transition-opacity hover:opacity-100"
-                />
-              </div>
+              <BlurFade inView delay={0.25 + 0.2 * index}>
+                <div className="w-64 h-48 mb-4 relative">
+                  <Image
+                    src={partner.logo || "/placeholder.svg"}
+                    alt={`${partner.name} logo`}
+                    layout="fill"
+                    objectFit="contain"
+                    className="rounded opacity-80 transition-opacity hover:opacity-100"
+                  />
+                </div>
+              </BlurFade>
+
               {/*   <h3 className="text-xl font-semibold mb-2 text-center text-primary">
                 {partner.name}
               </h3> */}

@@ -26,6 +26,10 @@ const nextConfig = {
         protocol: "https",
         hostname: "bestofhorsens.dk",
       },
+      {
+        protocol: "https",
+        hostname: "images.pexels.com",
+      },
     ],
   },
 };

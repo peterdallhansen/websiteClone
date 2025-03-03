@@ -60,7 +60,7 @@ const management: TeamMember[] = [
 
 const board: TeamMember[] = [
   {
-    picture: "/SMO.jpg",
+    picture: "/SMO2.jpg",
     name: "Simon Møller Olsen",
     title: "Retail Data Analytics",
     linkedin: "https://www.linkedin.com/in/simon-m%C3%B8ller-olsen-58090",
@@ -74,7 +74,7 @@ const board: TeamMember[] = [
     job: "Data Scientist - A.P. Møller Maersk",
   },
   {
-    picture: "/LLU.jpg",
+    picture: "/upscalemedia-transformed.webp",
     name: "Lars Lund",
     title: "Software Integration",
     linkedin: "https://www.linkedin.com/in/larslunddk/",
@@ -88,44 +88,17 @@ const board: TeamMember[] = [
     job: "General Partner - SEED Capital",
   },
   {
-    picture: "/OWC.jpg",
+    picture: "/Ole-Wieth-Christensen-scaled.jpg",
     name: "Ole Wieth Christensen",
     title: "Airports",
     linkedin: "https://www.linkedin.com/in/ole-wieth-christensen-8418ab1",
     job: "Professional Board Member, Former Director at CPH Airports",
   },
-  {
-    picture: "/MEB.jpg",
-    name: "Mariam El Bacha",
-    title: "Cinemas",
-    linkedin: "https://www.linkedin.com/in/mariam-el-bacha-60494a19/",
-    job: `Territory General Manager, Vue International -
-CEO, Cinepax Cinemas -
-COO, MBO Cinemas -
-COO, CJ CGV`,
-  },
-  {
-    picture: "/MND.jpg",
-    name: "Morten Norup Dühr",
-    title: "Leisure",
-    linkedin:
-      "https://www.linkedin.com/in/morten-ring-norup-d%C3%BChr-9ab39055/",
-    job: `Professional Board member
-CCO, ADmire - Service Provider, Mobility & IT Infrastructure
-CEO & Cofounder, Admire Mobility - Managed Service Provider, Mobility & IT Infrastructure
-CSO, Comenxa - Software Development`,
-  },
-  {
-    picture: "/TSA.jpeg",
-    name: "Tine Skøtt Aggerholm",
-    title: "Shopping Centers",
-    linkedin: "https://www.linkedin.com/in/tineaggerholm/",
-  },
 ];
 
 const legal: TeamMember[] = [
   {
-    picture: "/MWP.jpg",
+    picture: "/MWP3.jpg",
     name: "Marlene Winther Plas",
     title: "Compliance & IT Law",
     linkedin: "https://www.linkedin.com/in/marlenewintherplas",
@@ -264,7 +237,7 @@ export function Team() {
           </BlurFade>
           <BlurFade delay={0.5} inView>
             <h2 className="text-2xl md:text-3xl xl:text-4xl font-bold mb-8 leading-tight text-primary">
-              Meet the team behind Zonify.ai
+              Meet the people behind Zonify.ai
             </h2>
           </BlurFade>
         </div>

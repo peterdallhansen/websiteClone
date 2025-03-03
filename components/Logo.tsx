@@ -15,15 +15,6 @@ const Logo: React.FC<Props> = ({
   height = 40,
 }) => {
   const { theme } = useTheme();
-  const [mounted, setMounted] = useState(false);
-
-  // When mounted, we have access to the client-side theme value.
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
-  // Avoid rendering until after mounting to prevent hydration mismatch.
-  if (!mounted) return null;
 
   const lightLogo = "/images/Logo-alt2-light.png";
   const darkLogo = "/images/Logo-alt2-dark.png";

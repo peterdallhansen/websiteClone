@@ -7,50 +7,12 @@ import { useEffect, useRef, useState } from "react";
 export default function Offerings() {
   const offerings = [
     {
-      id: 1,
+      id: 8,
       category: "Real-Time Analytics",
       title: "Instant Visitor Insights",
       description:
-        "Monitor every visitor in real time and convert footfall data into actionable insights that guide your operations.",
-      image:
-        "https://www.apple.com/v/iphone-16e/b/images/overview/product-stories/design/slide-gallery/ceramic_shield_endframe__e9tcnvwqygqe_xlarge.jpg",
-      alt: "Real-Time Analytics Dashboard",
-    },
-    {
-      id: 2,
-      category: "Predictive Tools",
-      title: "Forecast Future Trends",
-      description:
-        "Leverage predictive analytics to anticipate visitor behavior and optimize staffing, layout, and marketing strategies.",
-      image:
-        "https://www.apple.com/v/iphone-16e/b/images/overview/product-stories/design/slide-gallery/face_id_startframe__c8zsh127isgi_xlarge.jpg",
-      alt: "Predictive Analytics Interface",
-    },
-    {
-      id: 3,
-      category: "AI-Powered BI",
-      title: "Insight-Driven Decisions",
-      description:
-        "Transform complex data into clear, actionable insights with our AI-powered business intelligence platform.",
-      image: "/images/Phone3.png",
-      alt: "AI-Powered Business Intelligence Dashboard",
-    },
-    {
-      id: 4,
-      category: "Scalable Integration",
-      title: "Effortless System Connectivity",
-      description:
-        "Seamlessly integrate with your current systems to unify data streams and streamline your operations for scalable growth.",
-      image: "/AI2.png",
-      alt: "Scalable Integration",
-    },
-    {
-      id: 5,
-      category: "Predictive Tools",
-      title: "Forecast Future Trends",
-      description:
-        "Leverage predictive analytics to anticipate visitor behavior and optimize staffing, layout, and marketing strategies.",
-      image: "/IP.png",
+        "Harness live video feeds and AI to capture real-time demographic and behavioral data.",
+      image: "/ab2.png",
       alt: "Predictive Analytics Interface",
     },
     {
@@ -64,22 +26,42 @@ export default function Offerings() {
     },
     {
       id: 7,
-      category: "Predictive Tools",
-      title: "Forecast Future Trends",
+      category: "Integrated Analytics Hub",
+      title: "Comprehensive Insights",
       description:
-        "Leverage predictive analytics to anticipate visitor behavior and optimize staffing, layout, and marketing strategies.",
+        "Consolidated Data Merge multiple data sources into one platform for streamlined, actionable insights. ",
       image: "/SG3.png",
       alt: "Predictive Analytics Interface",
     },
     {
-      id: 8,
-      category: "Predictive Tools",
-      title: "Forecast Future Trends",
+      id: 4,
+      category: "AI-Enhanced Analytics",
+      title: "Data-Driven Decisions",
       description:
-        "Leverage predictive analytics to anticipate visitor behavior and optimize staffing, layout, and marketing strategies.",
-      image: "/ab2.png",
+        "Leverage AI to uncover hidden trends and drive optimized business performance.",
+      image: "/AI2.png",
+      alt: "Scalable Integration",
+    },
+    {
+      id: 3,
+      category: "AI-Powered BI",
+      title: "Insight-Driven Decisions",
+      description:
+        "Transform complex data into clear, actionable insights with our AI-powered business intelligence platform.",
+      image: "/images/Phone3.png",
+      alt: "AI-Powered Business Intelligence Dashboard",
+    },
+
+    {
+      id: 5,
+      category: "Scalable Integration",
+      title: "Effortless System Connectivity",
+      description:
+        "Seamlessly integrate with your current systems to unify data streams and streamline your operations for scalable growth.",
+      image: "/IP.png",
       alt: "Predictive Analytics Interface",
     },
+
     {
       id: 9,
       category: "Predictive Tools",

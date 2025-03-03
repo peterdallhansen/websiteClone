@@ -168,7 +168,7 @@ export function NavigationMenuDemo() {
                     "inline-flex items-center gap-2 "
                   )}
                 >
-                  <component.icon className="size-10 p-2 border rounded-[10px] min-w-[40px] h-[40px] bg-transparent text-current group-hover:bg-white group-hover:border-white group-hover:text-black " />
+                  <component.icon className="size-10 p-2 border rounded-[10px] min-w-[40px] h-[40px] bg-transparent text-current group-hover:bg-primary group-hover:border-primary group-hover:text-background " />
 
                   <ListItem
                     key={component.title}
