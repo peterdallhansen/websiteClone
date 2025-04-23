@@ -7,7 +7,7 @@ function Main() {
       {/* Center container for video and overlay */}
       <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
         {/* Video Container */}
-        <div className="relative  h-screen w-screen flex align-center justify-center rounded-2xl p-16 py-8 pt-16">
+        <div className="relative  h-screen w-screen flex align-center justify-center rounded-2xl p-8 py-8 pt-16">
           <video
             className="w-full h-full p-4 lg:w-full md:p-0 md:rounded-xl object-cover "
             autoPlay
@@ -15,7 +15,7 @@ function Main() {
             loop
             playsInline
           >
-            <source src="/videos/Untitled design (2).mp4" type="video/mp4" />
+            <source src="/2.mp4" type="video/mp4" />
           </video>
           {/*    <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex flex-col items-center justify-center space-y-6 z-[10] px-4 text-center min-w-[350px]  ">
             <BlurFade delay={0} inView>
@@ -51,8 +51,9 @@ function Main() {
             </BlurFade>
             <BlurFade delay={0.1} inView>
               <h2 className="text-lg md:text-lg xl:text-xl text-gray-200 leading-normal font-semibold">
-                Using clear, real-time analytics, we empower companies to <br />
-                understand their traffic and improve everyday operations.
+                Our cloud-based AI solution enables 2D cameras <br /> to deliver
+                real-time analytics, helping companies understand visitor <br />
+                behavior, optimize traffic, and enhance everyday operations.
               </h2>
             </BlurFade>
             <BlurFade delay={0.3} inView>

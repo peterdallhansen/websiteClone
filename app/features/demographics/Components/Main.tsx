@@ -1,7 +1,5 @@
 "use client";
 import BlurFade from "@/components/ui/blur-fade";
-import HeroVideoDialog from "@/components/ui/hero-video-dialog";
-import Image from "next/image";
 
 function Main() {
   return (

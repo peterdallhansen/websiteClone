@@ -1,19 +1,14 @@
 "use client";
-import { useEffect, useRef, useState } from "react";
-import { useTheme } from "next-themes";
-import Main from "@/components/Sections/Main";
-import Info from "@/components/Sections/Info/page";
 import Offerings from "@/components/Offerings";
-import News from "@/components/Sections/News/News";
 import { Gallery } from "@/components/Sections/Gallary/Gallary";
-import BlurFade from "@/components/ui/blur-fade";
-import { ArrowRightIcon, ArrowUpRight, LucideLock } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import AnimatedShinyText from "@/components/ui/animated-shiny-text";
 import GDPR from "@/components/Sections/GDPR";
+import Info from "@/components/Sections/Info/page";
+import Main from "@/components/Sections/Main";
 import MissionStatement from "@/components/Sections/MissionStatement";
-import CookieBanner from "@/components/CookieBanner";
+import BlurFade from "@/components/ui/blur-fade";
+import { useTheme } from "next-themes";
 import Image from "next/image";
+import { useEffect, useRef, useState } from "react";
 
 export default function Home() {
   const { setTheme } = useTheme();
@@ -50,7 +45,7 @@ export default function Home() {
 
     // Cleanup the observer on unmount
     return () => {
-      setTheme("dark");
+      setTheme("light");
       if (mainRef.current) observer.unobserve(mainRef.current);
       if (missionStatementRef.current)
         observer.unobserve(missionStatementRef.current);
@@ -66,7 +61,7 @@ export default function Home() {
     }
     // Switch themes based on the visibility of the two sections:
     if (sectionsVisible.main || sectionsVisible.mission) {
-      setTheme("dark");
+      setTheme("light");
     } else {
       setTheme("light");
     }

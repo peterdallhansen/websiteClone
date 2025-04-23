@@ -1,6 +1,5 @@
-import WIP from "@/components/WIP";
-import Showcase from "./Components/Showcase";
 import Main from "./Components/Main";
+import Showcase from "./Components/Showcase";
 
 export default function Home() {
   return (

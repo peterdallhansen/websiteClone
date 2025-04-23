@@ -1,8 +1,7 @@
 import AnimatedShinyText from "@/components/ui/animated-shiny-text";
 import BlurFade from "@/components/ui/blur-fade";
-import { ArrowRightIcon, ChevronRight } from "lucide-react";
+import { ChevronRight } from "lucide-react";
 import Image from "next/image";
-import React from "react";
 
 function Page() {
   const solutions = [

@@ -1,10 +1,8 @@
 "use client";
 import BlurFade from "@/components/ui/blur-fade";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
 import { LinkedInLogoIcon } from "@radix-ui/react-icons";
 import { ArrowUpRight, MailIcon, PhoneIcon } from "lucide-react";
-import Image from "next/image";
 
 interface TeamMember {
   picture: string;
@@ -60,18 +58,11 @@ const management: TeamMember[] = [
 
 const board: TeamMember[] = [
   {
-    picture: "/SMO2.jpg",
-    name: "Simon Møller Olsen",
-    title: "Retail Data Analytics",
-    linkedin: "https://www.linkedin.com/in/simon-m%C3%B8ller-olsen-58090",
-    job: "Professional Board Member, Former CEO at Nielsen IQ Denmark",
-  },
-  {
-    picture: "/ADH.jpg",
+    picture: "/ADH.png",
     name: "Anders Dall-Hansen",
     title: "Data Science",
     linkedin: "https://www.linkedin.com/in/andersdallhansen/",
-    job: "Data Scientist - A.P. Møller Maersk",
+    job: "Data Scientist - Halfspace.ai",
   },
   {
     picture: "/upscalemedia-transformed.webp",
@@ -104,23 +95,16 @@ const legal: TeamMember[] = [
     linkedin: "https://www.linkedin.com/in/marlenewintherplas",
     job: "Partner, DLA Piper",
   },
-  {
-    picture: "/NLG2.jpg",
-    name: "Nicholas Lerche-Gredal",
-    title: "Corporate Law & M&A",
-    linkedin: "https://www.linkedin.com/in/nicholaslerchegredal",
-    job: "Partner, DLA Piper",
-  },
 ];
 
-const developers: TeamMember[] = [
+/* const developers: TeamMember[] = [
   {
     picture: "/images/PDH.jpeg",
     name: "Peter Dall-Hansen",
     title: "Frontend Developer",
     linkedin: "https://www.linkedin.com/in/marlenewintherplas",
   },
-];
+]; */
 
 function TeamMemberCard({
   picture,

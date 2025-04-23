@@ -15,12 +15,10 @@ import {
 import { cn } from "@/lib/utils";
 import {
   Building,
-  CalendarIcon,
   ChartArea,
-  FileIcon,
   Film,
+  GalleryVerticalEnd,
   GlobeIcon,
-  LayersIcon,
   PlaneTakeoff,
   Share2,
   ShoppingCart,
@@ -46,7 +44,7 @@ const components: {
     title: "Real-Time Dashboard",
     href: "/features/workspaces",
     description: "Instant views for decisions.",
-    icon: LayersIcon,
+    icon: GalleryVerticalEnd,
   },
   {
     title: "Predictive Tools",

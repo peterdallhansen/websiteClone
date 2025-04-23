@@ -1,9 +1,7 @@
 // Import necessary libraries and components
 import {
-  BookOpen,
   Briefcase,
   Clipboard,
-  Edit,
   FileText,
   Handshake,
   Laptop,

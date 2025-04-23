@@ -15,15 +15,20 @@ function GDPR() {
             <br /> Trusted Privacy.
           </h1>
           <p className="text-black/80 max-w-3xl">
-            Our platform is engineered to meet the{" "}
-            <span className="font-bold">highest GDPR standards</span> fully
-            complying with <span className="font-bold">GDPR</span> and the{" "}
-            <span className="font-bold">AI Act</span>. We ensure{" "}
-            <span className="font-bold">transparent user consent</span>, robust{" "}
-            <span className="font-bold">data anonymization</span>, and strict{" "}
-            <span className="font-bold">data protection</span> measures so you
-            gain actionable insights without compromising privacy.
+            Our platform is designed with{" "}
+            <span className="font-bold">privacy by default</span>, fully
+            compliant with
+            <span className="font-bold"> GDPR</span> and the{" "}
+            <span className="font-bold">AI Act</span>. We use
+            <span className="font-bold"> real-time anonymization</span>, avoid
+            storing
+            <span className="font-bold">
+              {" "}
+              personally identifiable information
+            </span>
+            . You gain deep insights—without ever compromising user privacy.
           </p>
+
           <a href={"/compliance"}>
             <AnimatedShinyText
               color={"text-accent"}

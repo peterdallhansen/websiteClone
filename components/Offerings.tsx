@@ -1,75 +1,64 @@
 "use client";
-import { ChevronLeftIcon, ChevronRightIcon, Zap } from "lucide-react";
+import { ChevronLeftIcon, ChevronRightIcon } from "lucide-react";
 import Image from "next/image";
-import BlurFade from "./ui/blur-fade";
 import { useEffect, useRef, useState } from "react";
+import BlurFade from "./ui/blur-fade";
 
 export default function Offerings() {
   const offerings = [
     {
-      id: 8,
+      id: 1,
       category: "Real-Time Analytics",
-      title: "Instant Visitor Insights",
+      title: "Live Visitor Metrics",
       description:
         "Harness live video feeds and AI to capture real-time demographic and behavioral data.",
       image: "/ab2.png",
       alt: "Predictive Analytics Interface",
     },
     {
-      id: 6,
-      category: "Predictive Tools",
-      title: "Forecast Future Trends",
+      id: 2,
+      category: "Predictive Analytics",
+      title: "Trend Forecasting",
       description:
         "Leverage predictive analytics to anticipate visitor behavior and optimize staffing, layout, and marketing strategies.",
-      image: "/predict.png",
+      image: "/images/Predict.png",
       alt: "Predictive Analytics Interface",
     },
     {
-      id: 7,
-      category: "Integrated Analytics Hub",
-      title: "Comprehensive Insights",
+      id: 3,
+      category: "Unified Analytics Hub",
+      title: "All-in-One Insights",
       description:
-        "Consolidated Data Merge multiple data sources into one platform for streamlined, actionable insights. ",
-      image: "/SG3.png",
+        "Consolidated data from multiple sources into a single platform for streamlined, actionable insights.",
+      image: "/images/Frame 72.png",
       alt: "Predictive Analytics Interface",
     },
     {
       id: 4,
-      category: "AI-Enhanced Analytics",
-      title: "Data-Driven Decisions",
+      category: "System Integration",
+      title: "Effortless Integration",
       description:
-        "Leverage AI to uncover hidden trends and drive optimized business performance.",
-      image: "/AI2.png",
-      alt: "Scalable Integration",
-    },
-    {
-      id: 3,
-      category: "AI-Powered BI",
-      title: "Insight-Driven Decisions",
-      description:
-        "Transform complex data into clear, actionable insights with our AI-powered business intelligence platform.",
-      image: "/images/Phone3.png",
-      alt: "AI-Powered Business Intelligence Dashboard",
-    },
-
-    {
-      id: 5,
-      category: "Scalable Integration",
-      title: "Effortless System Connectivity",
-      description:
-        "Seamlessly integrate with your current systems to unify data streams and streamline your operations for scalable growth.",
+        "Seamlessly connect with your existing systems to streamline operations and scale effortlessly.",
       image: "/IP.png",
       alt: "Predictive Analytics Interface",
     },
-
     {
-      id: 9,
-      category: "Predictive Tools",
-      title: "Forecast Future Trends",
+      id: 5,
+      category: "Queue Management",
+      title: "Smart Queue Management",
       description:
-        "Leverage predictive analytics to anticipate visitor behavior and optimize staffing, layout, and marketing strategies.",
-      image: "/BAR.png",
-      alt: "Predictive Analytics Interface",
+        "Optimize queue times and enhance visitor satisfaction with our intelligent queue management system.",
+      image: "/images/Queue2.png",
+      alt: "Queue Management Tool Interface",
+    },
+    {
+      id: 6,
+      category: "Retrospective Analytics",
+      title: "Historic Data Replay",
+      description:
+        "Access and analyze historical video data to revisit past activity, validate changes, and answer new questions on demand.",
+      image: "/images/Replay.png",
+      alt: "Historic Data Replay Interface",
     },
   ];
 

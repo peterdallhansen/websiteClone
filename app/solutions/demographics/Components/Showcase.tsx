@@ -1,20 +1,8 @@
 "use client";
 import SidebarMenu from "@/components/SidebarMenu";
-import AnimatedGridPattern from "@/components/ui/animated-grid-pattern";
 import AnimatedShinyText from "@/components/ui/animated-shiny-text";
-import { AnimatedListDemo } from "@/components/ui/AnimatedListDemo";
-import { BentoCard, BentoGrid } from "@/components/ui/bento-grid";
 import BlurFade from "@/components/ui/blur-fade";
-import DotPattern from "@/components/ui/dot-pattern";
-import { cn } from "@/lib/utils";
-import {
-  ArrowRightIcon,
-  BarChart2Icon,
-  ClockIcon,
-  CogIcon,
-  SlidersHorizontal,
-  Users,
-} from "lucide-react";
+import { ArrowRightIcon } from "lucide-react";
 import Image from "next/image";
 import { useEffect, useMemo, useState } from "react";
 

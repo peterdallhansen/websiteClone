@@ -1,5 +1,12 @@
 import React from "react";
-import { Users, Layers, Globe, Share2, File } from "lucide-react"; // Replace with your icon library
+import {
+  Users,
+  Layers,
+  Globe,
+  Share2,
+  File,
+  GalleryVerticalEnd,
+} from "lucide-react"; // Replace with your icon library
 
 interface Section {
   id: string;
@@ -27,7 +34,11 @@ const SidebarMenu: React.FC<SidebarMenuProps> = ({
   const menuItems: MenuItem[] = [
     { href: "/features/demographics", label: "Demographics", icon: Users },
 
-    { href: "/features/workspaces", label: "Workspaces", icon: Layers },
+    {
+      href: "/features/workspaces",
+      label: "Workspaces",
+      icon: GalleryVerticalEnd,
+    },
     { href: "/features/map", label: "3D Map", icon: Globe },
     {
       href: "/features/calendar",

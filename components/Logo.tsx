@@ -1,7 +1,7 @@
 "use client";
-import Image from "next/image";
-import React, { useState, useEffect } from "react";
 import { useTheme } from "next-themes";
+import Image from "next/image";
+import React from "react";
 
 interface Props {
   className?: string;

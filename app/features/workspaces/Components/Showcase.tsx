@@ -10,6 +10,10 @@ import {
   Building2,
   ClockIcon,
   FileText,
+  LucideFileChartColumn,
+  LucideGlobe,
+  LucideShare2,
+  LucideUsers,
   Users,
 } from "lucide-react";
 import Image from "next/image";
@@ -20,63 +24,38 @@ function Showcase() {
 
   const features = [
     {
-      id: "workspace-insights",
-      Icon: BriefcaseBusiness,
-      name: "Workspace Insights",
-      description: "Understand usage patterns and optimize space allocation.",
-      href: "#workspace-insights",
+      id: "interactive-map",
+      Icon: LucideGlobe, // Replace with your preferred icon
+      name: "Interactive Map",
+      description:
+        "Visualize visitor flows, heatmaps, and spatial interactions in real time.",
+      href: "#interactive-map",
       cta: "Learn more",
-      className: "row-span-2 col-span-3 lg:col-span-1",
+      className: "row-span-1 col-span-3 lg:col-span-5",
       background: <></>,
     },
+
     {
-      id: "tenant-management",
-      Icon: Users,
-      name: "Tenant Management",
-      description: "Streamline tenant operations and improve satisfaction.",
-      href: "#tenant-management",
-      cta: "Learn more",
-      className: "row-span-2 col-span-3 lg:col-span-2",
-      background: <></>,
-    },
-    {
-      id: "facility-optimization",
-      Icon: Building2,
-      name: "Facility Optimization",
-      description: "Enhance operational efficiency across your facilities.",
-      href: "#facility-optimization",
-      cta: "Learn more",
-      className: "row-span-2 col-span-3 lg:col-span-2",
-      background: <></>,
-    },
-    {
-      id: "custom-workspace-reports",
-      Icon: FileText,
-      name: "Custom Workspace Reports",
-      description: "Generate reports tailored to your workspace needs.",
-      href: "#custom-workspace-reports",
-      cta: "Learn more",
-      className: "row-span-3 col-span-3 lg:col-span-1",
-      background: <></>,
-    },
-    {
-      id: "real-time-tracking",
-      Icon: ClockIcon,
-      name: "Real-Time Tracking",
-      description: "Get live updates on workspace activity and metrics.",
-      href: "#real-time-tracking",
+      id: "automated-reports",
+      Icon: LucideFileChartColumn,
+      name: "Automated Reports",
+      description:
+        "Schedule and send workspace performance reports via email on a daily, weekly, monthly, or custom cadence.",
+      href: "#automated-reports",
       cta: "Learn more",
       className: "row-span-1 col-span-3 lg:col-span-2",
+
       background: <></>,
     },
     {
-      id: "workspace-performance",
-      Icon: BarChartIcon,
-      name: "Workspace Performance",
-      description: "Measure and analyze workspace efficiency with precision.",
-      href: "#workspace-performance",
+      id: "role-based-sharing",
+      Icon: LucideUsers,
+      name: "Role-Based Sharing",
+      description:
+        "Invite colleagues with Viewer, Editor, or Admin permissions—track, resend, or revoke access as needed.",
+      href: "#role-based-sharing",
       cta: "Learn more",
-      className: "row-span-2 col-span-3 lg:col-span-4",
+      className: "row-span-1 col-span-3 lg:col-span-2",
       background: <></>,
     },
   ];
@@ -84,46 +63,26 @@ function Showcase() {
   const sections = useMemo(
     () => [
       {
-        id: "workspace-insights",
-        title: "Workspace Insights",
-        body: `Gain a clear understanding of workspace usage patterns, including occupancy rates, peak usage times, and resource allocation. This feature helps you identify underutilized spaces and optimize layouts to enhance productivity and cost-efficiency. Transform workspace data into actionable strategies that benefit your team and organization.`,
+        id: "interactive-movement-analytics",
+        title: "Interactive Movement Analytics",
+        body: `Explore how visitors move through your space with powerful, visual insights. This feature offers animated playback of movement patterns, heatmaps of high-traffic zones, and interactive time filtering—giving you a complete picture of how people interact with your environment. Zoom in to specific areas, compare structure activity, and customize filters to focus on key demographic groups. Perfect for optimizing layouts, planning operations, and improving visitor experience.`,
         cta: "Learn more",
-        href: "#workspace-insights",
+        href: "#interactive-movement-analytics",
+        image: "/images/3dmap.png",
       },
       {
-        id: "tenant-management",
-        title: "Tenant Management",
-        body: `Simplify tenant operations with centralized management tools. From onboarding to communication, this feature streamlines tenant interactions and ensures satisfaction. Keep track of lease agreements, payment statuses, and requests, making tenant management seamless and efficient.`,
+        id: "role-based-sharing",
+        title: "Role-Based Sharing & Permissions",
+        body: `Easily invite team members or external users to your workspace and assign them Viewer, Editor, or Admin roles. Track pending invitations, resend or revoke access, and adjust permissions instantly to keep collaboration secure and organized.`,
         cta: "Learn more",
-        href: "#tenant-management",
+        href: "#role-based-sharing",
       },
       {
-        id: "facility-optimization",
-        title: "Facility Optimization",
-        body: `Maximize operational efficiency by optimizing facility management processes. Use real-time data to optimize cleaning schedules, adjust staffing levels, and enhance visitor flow. Gain insights into peak usage times to improve space utilization and deliver a seamless experience while reducing operational costs. This approach ensures facilities are managed intelligently and effectively.`,
+        id: "automated-reports",
+        title: "Automated Scheduled Reports",
+        body: `Set up custom schedules to automatically generate and deliver workspace reports. Choose from summary or detailed formats, specify multiple email recipients, and receive updates on a daily, weekly, monthly—or any custom—cadence without lifting a finger.`,
         cta: "Learn more",
-        href: "#facility-optimization",
-      },
-      {
-        id: "custom-workspace-reports",
-        title: "Custom Workspace Reports",
-        body: `Create detailed reports tailored to your workspace management needs. Highlight key metrics, trends, and insights to support strategic decision-making. Whether you need high-level overviews or deep dives into specific areas, Custom Workspace Reports keep you informed and prepared.`,
-        cta: "Learn more",
-        href: "#custom-workspace-reports",
-      },
-      {
-        id: "real-time-tracking",
-        title: "Real-Time Tracking",
-        body: `Stay updated with real-time tracking of workspace activity. Monitor occupancy levels, environmental conditions, and resource usage as they happen. This feature empowers you to respond quickly to changes, improving responsiveness and operational agility.`,
-        cta: "Learn more",
-        href: "#real-time-tracking",
-      },
-      {
-        id: "workspace-performance",
-        title: "Workspace Performance",
-        body: `Track and analyze key performance metrics across your workspaces. Identify trends, measure efficiency, and gain actionable insights to drive better outcomes. Use this data to improve productivity, reduce costs, and align workspace operations with your organizational goals.`,
-        cta: "Learn more",
-        href: "#workspace-performance",
+        href: "#automated-reports",
       },
     ],
     []
@@ -204,7 +163,7 @@ function Showcase() {
                 </a>
 
                 <Image
-                  src={"/images/localhost_3001_ (1).png"}
+                  src={section.image || "/images/DashboardPreview.png"}
                   width={1000}
                   height={400}
                   quality={100}

@@ -6,7 +6,7 @@ import Image from "next/image";
 export default function Home() {
   return (
     <main className="min-h-screen bg-background antialiased w-full mx-auto scroll-smooth flex flex-col overflow-hidden items-center mt-40">
-      <div className="text-center mb-16">
+      {/* <div className="text-center mb-16">
         <BlurFade delay={0.25} inView>
           <h4 className="text-sm md:text-lg text-primary text-center">
             About Us
@@ -76,7 +76,7 @@ export default function Home() {
                     <div className="grid gap-1">
                       <h3 className="text-xl font-bold">Growth & Evolution</h3>
                       <p className="text-zinc-500 dark:text-zinc-400">
-                        Over the years, we've expanded our services and
+                        Over the years, we&apos;ve expanded our services and
                         expertise, always staying true to our core values of
                         innovation, quality, and client satisfaction.
                       </p>
@@ -97,8 +97,8 @@ export default function Home() {
             </div>
           </BlurFade>
         </div>
-      </section>
-      <MissionStatement />
+      </section> */}
+      {/* <MissionStatement /> */}
 
       <Team />
     </main>

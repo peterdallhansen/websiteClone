@@ -5,11 +5,10 @@ import { cn } from "@/lib/utils";
 import { Inter } from "@next/font/google";
 import type { Metadata } from "next";
 import "./globals.css";
-import CookieBanner from "@/components/CookieBanner";
 
 export const metadata: Metadata = {
-  title: "Zonify.ai – Pioneering Real-Time Analytics",
-  description: "Footfall Analytics Reinvented",
+  title: "Zonify.ai – Cloud-based AI through 2D cameras to understand visitors",
+  description: `Our cloud-based AI solution enables 2D cameras to deliver real-time analytics, helping companies understand visitor behavior, optimize traffic, and enhance everyday operations.`,
 };
 
 const inter = Inter({
