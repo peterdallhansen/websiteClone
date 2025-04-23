@@ -54,7 +54,7 @@ function Showcase() {
       name: "Workspaces",
       description:
         "Build flexible, widget-based dashboards with full layout control and cross-role visibility.",
-      href: "#custom-workspaces",
+      href: "#workspaces",
       cta: "Explore Workspaces",
       className: "row-span-2 col-span-3 lg:col-span-3",
       background: <></>,
@@ -90,16 +90,16 @@ function Showcase() {
         id: "interactive-map",
         title: "Interactive Map",
         body: `Explore how visitors move through your space with powerful, visual insights. This feature offers animated playback of movement patterns, heatmaps of high-traffic zones, and interactive time filtering—giving you a complete picture of how people interact with your environment. Zoom in to specific areas, compare structure activity, and customize filters to focus on key demographic groups. Perfect for optimizing layouts, planning operations, and improving visitor experience.`,
-        cta: "Learn more",
-        href: "#interactive-movement-analytics",
+        cta: "See It in Action",
+        href: "https://app.zonify.ai/map",
         image: "/images/3dmap.png",
       },
       {
         id: "role-based-sharing",
         title: "Custom Roles & Access Control",
         body: `Grant tailored access by creating custom roles for users, teams, or partners. Limit visibility or permissions to ensure secure, efficient collaboration across your analytics hub.`,
-        cta: "Learn more",
-        href: "#role-based-sharing",
+        cta: "Try now",
+        href: "https://app.zonify.ai/",
         image: "/images/Share6.png",
         imageWidth: 1150,
       },
@@ -107,17 +107,26 @@ function Showcase() {
         id: "automated-reports",
         title: "Automated Scheduled Reports",
         body: `Set up custom schedules to automatically generate and deliver workspace reports. Choose from summary or detailed formats, specify multiple email recipients, and receive updates on a daily, weekly, monthly—or any custom—cadence without lifting a finger.`,
-        cta: "Learn more",
-        href: "#automated-reports",
+        cta: "Explore now",
+        href: "https://app.zonify.ai/",
         image: "/images/Reports8.png",
+        imageWidth: 1150,
+      },
+      {
+        id: "automated-reports",
+        title: "Automated Scheduled Reports",
+        body: `Set up custom schedules to automatically generate and deliver workspace reports. Choose from summary or detailed formats, specify multiple email recipients, and receive updates on a daily, weekly, monthly—or any custom—cadence without lifting a finger.`,
+        cta: "Explore now",
+        href: "https://app.zonify.ai/reports",
+        image: "/images/Reports9.png",
         imageWidth: 1150,
       },
       {
         id: "smart-filtering",
         title: "Smart Filtering & Dynamic Date Selection",
         body: `Empower your analytics with powerful filtering tools and flexible date controls. Choose from predefined or custom date ranges, save reusable filter presets, and switch between aggregation modes like daily, weekly, or monthly. Use demographic filters like gender, age, category, tenant size, and even advanced logic-based groups to refine your data view. Perfect for conducting precise comparisons and unlocking insights across different segments and timeframes.`,
-        cta: "Learn more",
-        href: "#smart-filtering",
+        cta: "Check it out",
+        href: "https://app.zonify.ai/",
         image: "/images/Filters4.png",
         imageWidth: 1150,
         className: "bg-[#f6f6f6] rounded-xl",
@@ -127,7 +136,7 @@ function Showcase() {
         title: "Workspaces",
         body: `Design tailored analytics dashboards with drag-and-drop layouts and modular widgets. Workspaces allow you to build flexible, role-specific views—whether for marketing, operations, or executive teams. Rearrange components, export reports, and manage layouts across devices with full control over content and structure.`,
         cta: "Explore Workspaces",
-        href: "#custom-workspaces",
+        href: "https://app.zonify.ai/",
         image: "/images/EditingDashboard3.png", // Replace with your actual workspace image
         imageWidth: 1150,
       },
@@ -136,7 +145,7 @@ function Showcase() {
         title: "Workspaces",
         body: `Design tailored analytics dashboards with drag-and-drop layouts and modular widgets. Workspaces allow you to build flexible, role-specific views—whether for marketing, operations, or executive teams. Rearrange components, export reports, and manage layouts across devices with full control over content and structure.`,
         cta: "Explore Workspaces",
-        href: "#custom-workspaces",
+        href: "https://app.zonify.ai/",
         image: "/images/EditingDashboard2.png", // Replace with your actual workspace image
         imageWidth: 1150,
       },
@@ -198,7 +207,7 @@ function Showcase() {
             <SidebarMenu
               sections={sections}
               activeSection={activeSection}
-              currentPath="/features/workspaces"
+              currentPath="/features/analytics-hub"
             />
           </div>
 

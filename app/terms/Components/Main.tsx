@@ -62,7 +62,7 @@ const termsSections = [
 export default function TermsAndConditions() {
   return (
     <div className="container mx-auto px-4 py-8 max-w-[900px]">
-      <Card className="bg-transparent border-none">
+      <Card className="bg-transparent border-none shadow-none ">
         <CardHeader>
           <BlurFade delay={0} inView>
             <h2 className="text-2xl md:text-3xl xl:text-5xl font-bold leading-tight text-primary text-center">

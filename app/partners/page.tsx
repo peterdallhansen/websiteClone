@@ -12,14 +12,14 @@ const partners: Partner[] = [
   {
     id: 1,
     name: "Microsoft",
-    logo: "/images/Partners/microsoft+logo+white.png",
+    logo: "/images/Partners/microsoft-logo-white-transparent_2166875.png",
     description:
       "Microsoft is a global leader in software, services, devices, and solutions that help people and businesses realize their full potential.",
   },
   {
     id: 2,
     name: "NVIDIA",
-    logo: "/images/Partners/NVIDIA.png",
+    logo: "/images/Partners/images (1).png",
     description:
       "NVIDIA specializes in the design and manufacture of graphics processing units (GPUs) for gaming and professional markets, as well as system on a chip units (SoCs) for the mobile computing and automotive market.",
   },
@@ -43,15 +43,12 @@ export default function PartnersPage() {
         </BlurFade>
         <BlurFade delay={0.5} inView>
           <h2 className="text-2xl md:text-3xl xl:text-5xl font-bold leading-tight text-primary text-center mb-8">
-            Collaborating with Industry Experts
+            Working Together with Trusted Partners
           </h2>
         </BlurFade>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {partners.map((partner, index) => (
-            <div
-              key={partner.id}
-              className="rounded-lg shadow-md p-6 flex flex-col items-center  bg-opacity-10 backdrop-blur-sm"
-            >
+            <div key={partner.id} className="p-6 flex flex-col items-center ">
               <BlurFade inView delay={0.25 + 0.2 * index}>
                 <div className="w-64 h-48 mb-4 relative">
                   <Image

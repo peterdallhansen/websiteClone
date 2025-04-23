@@ -15,8 +15,8 @@ function Page() {
       image: "/images/Phone3.png",
     },
     {
-      title: "Real-Time Dashboard",
-      href: "/features/workspaces",
+      title: "Analytics Hub",
+      href: "/features/analytics-hub",
       description: "Instant views for decisions.",
       longDescription:
         "Our real-time dashboards provide immediate visibility into critical metrics, enabling faster and more informed decision-making across your organization.",

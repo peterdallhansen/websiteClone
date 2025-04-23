@@ -41,8 +41,8 @@ const components: {
     icon: UserIcon,
   },
   {
-    title: "Real-Time Dashboard",
-    href: "/features/workspaces",
+    title: "Analytics Hub",
+    href: "/features/analytics-hub",
     description: "Instant views for decisions.",
     icon: GalleryVerticalEnd,
   },

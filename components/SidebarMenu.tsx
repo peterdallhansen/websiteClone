@@ -35,8 +35,8 @@ const SidebarMenu: React.FC<SidebarMenuProps> = ({
     { href: "/features/demographics", label: "Demographics", icon: Users },
 
     {
-      href: "/features/workspaces",
-      label: "Workspaces",
+      href: "/features/analytics-hub",
+      label: "Analytics Hub",
       icon: GalleryVerticalEnd,
     },
     { href: "/features/map", label: "3D Map", icon: Globe },
@@ -65,10 +65,10 @@ const SidebarMenu: React.FC<SidebarMenuProps> = ({
                   {sections.map((section) => (
                     <a key={section.id} href={`#${section.id}`}>
                       <h2
-                        className={`text-xl md:text-xl xl:text-[14px] leading-tight max-w-[750px] mb-2 font-semibold hover:text-primary/80 ${
+                        className={`text-xl md:text-xl xl:text-[14px] leading-tight max-w-[750px] mb-2  hover:text-primary/80 ${
                           activeSection === section.id
-                            ? "text-primary"
-                            : "text-primary text-opacity-40"
+                            ? "font-bold"
+                            : "font-semibold"
                         }`}
                       >
                         {section.title}

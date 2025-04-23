@@ -1,7 +1,9 @@
 "use client";
 import SidebarMenu from "@/components/SidebarMenu";
 import AnimatedShinyText from "@/components/ui/animated-shiny-text";
+import { AnimatedBeamDemo } from "@/components/ui/AnimatedBeamDemo";
 import BlurFade from "@/components/ui/blur-fade";
+import { cn } from "@/lib/utils";
 import { ArrowRightIcon } from "lucide-react";
 import Image from "next/image";
 import { useEffect, useMemo, useState } from "react";
@@ -23,6 +25,7 @@ function Showcase() {
         title: "Ease of Maintenance",
         body: `Engineered for simplicity, our solution minimizes hardware dependencies and streamlines updates. Experience robust performance with reduced downtime, letting your team focus on strategic initiatives instead of system upkeep.`,
         cta: "Learn more",
+        image: "/images/Change3.png",
         href: "#ease-of-maintenance",
       },
       {
@@ -31,6 +34,8 @@ function Showcase() {
         body: `Transition effortlessly from legacy systems. Our platform supports smooth data migration from popular people counters like Vemco and Xovis, integrating historical data into a unified analytics solution without disruption.`,
         cta: "Learn more",
         href: "#data-migration",
+        image: "/images/Transfer2.png",
+        className: "rounded-xl",
       },
     ],
     []
@@ -79,39 +84,37 @@ function Showcase() {
             />
           </div>
 
-          <div className="flex align-start justify-start flex-col h-full container text-left">
+          <div className="flex align-start justify-start flex-col h-full container text-left ">
             {sections.map((section, index) => (
               <div key={index}>
                 <h2
                   id={section.id}
-                  className="text-xl md:text-1xl xl:text-4xl leading-tight text-primary max-w-[750px] mb-8 text-left font-bold scroll-mt-40"
+                  className="text-xl md:text-1xl xl:text-4xl leading-tight text-primary  max-w-[750px] mb-8 text-left font-bold scroll-mt-40"
                 >
                   {section.title}
                 </h2>
-                <p className="text-xl md:text-1xl xl:text-md leading-tight text-primary max-w-[750px] text-opacity-60 mb-8 text-left">
+                <h2 className="text-xl md:text-1xl xl:text-md leading-tight text-primary max-w-[750px] text-opacity-60 mb-8 text-left">
                   {section.body}
-                </p>
+                </h2>
                 <a href={section.href}>
-                  <AnimatedShinyText className="inline-flex items-center justify-center px-4 pl-0 py-1 transition ease-out hover:text-neutral-600  hover:dark:text-neutral-400 mb-8">
+                  <AnimatedShinyText className="inline-flex items-center justify-center px-4  pl-0 py-1 transition ease-out hover:text-neutral-600  hover:dark:text-neutral-400  mb-8 ">
                     <span>{section.cta}</span>
                     <ArrowRightIcon className="ml-1 size-3 transition-transform duration-300 ease-in-out group-hover:translate-x-0.5" />
                   </AnimatedShinyText>
                 </a>
 
-                <Image
-                  src={
-                    index % 2 !== 0
-                      ? "/images/Frame611.png"
-                      : index === 2
-                      ? "/images/Frame64.png"
-                      : "/images/Frame66.png"
-                  }
-                  width={1000}
-                  height={600}
-                  style={{ borderRadius: 15 }}
-                  className="mb-20 border"
-                  alt={section.title}
-                />
+                {index === 0 ? (
+                  <AnimatedBeamDemo />
+                ) : (
+                  <Image
+                    src={section.image || "/images/DashboardPreview.png"}
+                    width={1000}
+                    height={400}
+                    quality={100}
+                    className={cn("mb-20", section.className)}
+                    alt={section.title}
+                  />
+                )}
               </div>
             ))}
           </div>

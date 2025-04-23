@@ -1,3 +1,4 @@
+import { AnimatedBeamDemo } from "@/components/ui/AnimatedBeamDemo";
 import BlurFade from "@/components/ui/blur-fade";
 import Image from "next/image";
 
@@ -25,8 +26,7 @@ function Main() {
         <BlurFade delay={0.6} inView>
           <div className="relative overflow-hidden rounded-xl">
             <Image
-              src="/images/Frame611.png"
-              className="transform scale-100 hover:scale-110 transition-transform duration-500"
+              src="/images/Change3.png"
               alt="Hero image"
               width={1500}
               height={2016}

@@ -45,7 +45,7 @@ export default function Header() {
           href: "/solutions/analytics-hub",
         },
         {
-          label: "Real-Time Dashboard",
+          label: "Analytics Hub",
           href: "/solutions/real-time-dashboard",
         },
         {
@@ -158,7 +158,7 @@ export default function Header() {
             </SheetTrigger>
             <SheetContent
               side="top"
-              className="p-6 flex flex-col h-full bg-transparent backdrop-blur-[4px] overflow-y-auto border-none"
+              className="p-6 flex flex-col h-full bg-white  overflow-y-auto border-none"
             >
               {/* Logo Section */}
               <Logo width={150} height={48} className="ml-[-20px] w-fit" />
@@ -228,7 +228,7 @@ export default function Header() {
                 >
                   <Button
                     variant="outline"
-                    className="w-full text-center bg-white text-black rounded-3xl py-6"
+                    className="w-full text-center bg-black text-white rounded-3xl py-6"
                   >
                     Login
                   </Button>
