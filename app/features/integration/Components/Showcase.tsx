@@ -1,7 +1,7 @@
 "use client";
 import SidebarMenu from "@/components/SidebarMenu";
 import AnimatedShinyText from "@/components/ui/animated-shiny-text";
-import { AnimatedBeamDemo } from "@/components/ui/AnimatedBeamDemo";
+import AnimatedBeamDemo from "@/components/ui/AnimatedBeamDemo";
 import BlurFade from "@/components/ui/blur-fade";
 import { cn } from "@/lib/utils";
 import { ArrowRightIcon } from "lucide-react";
@@ -23,7 +23,7 @@ function Showcase() {
       {
         id: "ease-of-maintenance",
         title: "Ease of Maintenance",
-        body: `Engineered for simplicity, our solution minimizes hardware dependencies and streamlines updates. Experience robust performance with reduced downtime, letting your team focus on strategic initiatives instead of system upkeep.`,
+        body: `Our fully cloud-native, software-only solution removes hardware dependencies and streamlines maintenance. Experience robust performance with reduced downtime, letting your team focus on strategic initiatives instead of system upkeep.`,
         cta: "Learn more",
         image: "/images/Change3.png",
         href: "#ease-of-maintenance",

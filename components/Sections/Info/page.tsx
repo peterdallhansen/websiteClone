@@ -22,9 +22,9 @@ export default function Info() {
                     AI-Powered Video Analytics
                   </h3>
                   <p className="text-gray-500 dark:text-primary/60">
-                    Our software transforms standard 2D security cameras into
-                    intelligent sensors using real-time computer vision,
-                    eliminating the need for costly hardware upgrades.
+                    Our software transforms standard 2D cameras into intelligent
+                    sensors using real-time computer vision, eliminating the
+                    need for costly hardware upgrades.
                   </p>
                 </div>
                 <div className="space-y-2">
@@ -45,6 +45,15 @@ export default function Info() {
                     from any device with a browser.
                   </p>
                 </div>
+              </div>
+              <div className="space-y-2">
+                <h3 className="text-xl font-bold">Global Sensor Network</h3>
+                <p className="text-gray-500 dark:text-primary/60">
+                  Our platform doesn't just analyze isolated feeds—it connects
+                  all your cameras into a unified, real-time view. Gain holistic
+                  insights across locations, enabling smarter decisions through
+                  a truly global perspective.
+                </p>
               </div>
             </div>
             <div className="relative flex items-center justify-center">
@@ -195,8 +204,9 @@ export default function Info() {
                     Measure Anything—Even in Retrospect
                   </h3>
                   <p className="text-gray-500 dark:text-primary/60">
-                    Revisit past data to answer new questions without
-                    reconfiguring hardware or re-collecting footage.
+                    Need answers from last week or last month? Our platform lets
+                    you measure new zones and metrics using existing footage—no
+                    rework, just results.
                   </p>
                 </div>
                 <div className="space-y-2">

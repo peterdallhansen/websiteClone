@@ -41,8 +41,8 @@ export default function Header() {
       label: "Solutions",
       sublinks: [
         {
-          label: "Analytics Hub",
-          href: "/solutions/analytics-hub",
+          label: "Analytics",
+          href: "/solutions/analytics",
         },
         {
           label: "Analytics Hub",
@@ -61,7 +61,7 @@ export default function Header() {
           href: "/solutions/ai-powered-bi",
         },
         {
-          label: "Scalable Integration",
+          label: "Effortless Integration",
           href: "/solutions/workspaces",
         },
       ],

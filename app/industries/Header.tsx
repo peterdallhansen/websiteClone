@@ -4,6 +4,7 @@ import Logo from "@/components/Logo";
 import { Button } from "@/components/ui/button";
 import { NavigationMenuDemo } from "@/components/ui/NavigationMenuDemo";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { industries, solutions } from "@/lib/constants";
 import { AnimatePresence, motion } from "framer-motion";
 import { Menu } from "lucide-react"; // Use an icon library for the hamburger icon
 import Link from "next/link";
@@ -33,77 +34,27 @@ export default function Header() {
   const links: {
     label: string;
     sublinks: {
-      label: string;
+      title: string;
       href: string;
     }[];
   }[] = [
     {
       label: "Solutions",
-      sublinks: [
-        {
-          label: "Demographics",
-          href: "/solutions/demographics",
-        },
-        {
-          label: "Workspaces",
-          href: "/solutions/workspaces",
-        },
-        {
-          label: "Demographics",
-          href: "/solutions/demographics",
-        },
-        {
-          label: "Workspaces",
-          href: "/solutions/workspaces",
-        },
-        {
-          label: "Demographics",
-          href: "/solutions/demographics",
-        },
-        {
-          label: "Workspaces",
-          href: "/solutions/workspaces",
-        },
-      ],
+      sublinks: solutions,
     },
     {
       label: "Industries",
-      sublinks: [
-        {
-          label: "Retail",
-          href: "/industries/retail",
-        },
-        {
-          label: "Malls",
-          href: "/industries/malls",
-        },
-        {
-          label: "Leisure",
-          href: "/industries/leisure",
-        },
-        {
-          label: "Supermarkets",
-          href: "/industries/supermarkets",
-        },
-        {
-          label: "Airports",
-          href: "/industries/airports",
-        },
-        {
-          label: "Public Transportation",
-          href: "/industries/public-transportation",
-        },
-      ],
+      sublinks: industries,
     },
     {
       label: "About Us",
       sublinks: [
         {
-          label: "Our Team",
+          title: "Our Team",
           href: "/about/team",
         },
         {
-          label: "Careers",
+          title: "Careers",
           href: "/about/careers",
         },
       ],
@@ -112,11 +63,11 @@ export default function Header() {
       label: "Company",
       sublinks: [
         {
-          label: "Blog",
+          title: "Blog",
           href: "/company/blog",
         },
         {
-          label: "Press",
+          title: "Press",
           href: "/company/press",
         },
       ],
@@ -125,15 +76,15 @@ export default function Header() {
       label: "Legal",
       sublinks: [
         {
-          label: "Privacy Policy",
+          title: "Privacy Policy",
           href: "/legal/privacy",
         },
         {
-          label: "Terms of Service",
+          title: "Terms of Service",
           href: "/legal/terms",
         },
         {
-          label: "Compliance",
+          title: "Compliance",
           href: "/legal/compliance",
         },
       ],

@@ -19,6 +19,10 @@ import {
   Film,
   GalleryVerticalEnd,
   GlobeIcon,
+  LucideBarChart,
+  LucideBarChart2,
+  LucideChartColumn,
+  LucideChartColumnBig,
   PlaneTakeoff,
   Share2,
   ShoppingCart,
@@ -27,94 +31,7 @@ import {
   UserIcon,
   Zap,
 } from "lucide-react";
-
-const components: {
-  title: string;
-  href: string;
-  description: string;
-  icon: React.ElementType;
-}[] = [
-  {
-    title: "Analytics Hub",
-    href: "/features/demographics",
-    description: "Real-time unified insights.",
-    icon: UserIcon,
-  },
-  {
-    title: "Analytics Hub",
-    href: "/features/analytics-hub",
-    description: "Instant views for decisions.",
-    icon: GalleryVerticalEnd,
-  },
-  {
-    title: "Predictive Tools",
-    href: "/features/map",
-    description: "Accurate trend forecasts.",
-    icon: ChartArea,
-  },
-  {
-    title: "Digital Twin",
-    href: "/features/integration",
-    description: "Simulate scenarios, optimize outcomes.",
-    icon: GlobeIcon,
-  },
-  {
-    title: "AI-Powered BI",
-    href: "/features/calendar",
-    description: "Transform data with AI.",
-    icon: Zap,
-  },
-  {
-    title: "Scalable Integration",
-    href: "/features/integration",
-    description: "Seamless connectivity with systems.",
-    icon: Share2,
-  },
-];
-
-const caseStudies: {
-  title: string;
-  href: string;
-  description: string;
-  icon: React.ElementType;
-}[] = [
-  {
-    title: "Retail",
-    href: "/industries/retail",
-    description: "Transform retail with advanced analytics.",
-    icon: ShoppingCart,
-  },
-  {
-    title: "Malls",
-    href: "/industries/malls",
-    description: "Optimize malls with data intelligence.",
-    icon: Building,
-  },
-  {
-    title: "Leisure",
-    href: "/industries/leisure",
-    description: "Boost leisure with smart analytics.",
-    icon: Film,
-  },
-  {
-    title: "Supermarkets",
-    href: "/industries/supermarkets",
-    description: "Boost efficiency with in-store insights.",
-    icon: Store,
-  },
-  {
-    title: "Airports",
-    href: "/industries/airports",
-    description: "Streamline airports with predictive analytics.",
-    icon: PlaneTakeoff,
-  },
-  {
-    title: "Public Transportation",
-    href: "/industries/public-transportation",
-    description: "Boost transit with real-time insights.",
-    icon: Train,
-  },
-];
+import { industries, solutions } from "@/lib/constants";
 
 export function NavigationMenuDemo() {
   return (
@@ -126,7 +43,7 @@ export function NavigationMenuDemo() {
           </NavigationMenuTrigger>
           <NavigationMenuContent>
             <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] bg-transparent">
-              {components.map((component) => (
+              {solutions.map((component) => (
                 <a
                   href={component.href}
                   key={component.title}
@@ -157,7 +74,7 @@ export function NavigationMenuDemo() {
           </NavigationMenuTrigger>
           <NavigationMenuContent>
             <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] bg-transparent">
-              {caseStudies.map((component) => (
+              {industries.map((component) => (
                 <a
                   href={component.href}
                   key={component.title}
