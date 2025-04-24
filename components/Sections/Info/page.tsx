@@ -61,7 +61,7 @@ export default function Info() {
                 alt="Dashboard showing visitor analytics"
                 className="rounded-lg overflow-hidden aspect-square object-contain bg-[#f6f6f6]"
                 height={600}
-                src="/images/Paths.png"
+                src="/predict.png"
                 width={800}
                 quality={100}
               />

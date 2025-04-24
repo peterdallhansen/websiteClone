@@ -1,65 +1,11 @@
 import AnimatedShinyText from "@/components/ui/animated-shiny-text";
 import BlurFade from "@/components/ui/blur-fade";
+import { solutions } from "@/lib/constants";
+import { cn } from "@/lib/utils";
 import { ChevronRight } from "lucide-react";
 import Image from "next/image";
 
 function Page() {
-  const solutions = [
-    {
-      title: "Analytics Hub",
-      href: "/features/demographics",
-      description: "Real-time unified insights.",
-      longDescription:
-        "We develop advanced analytics tools to streamline and support complex business workflows. Together with our clients we help unleash the immense potential for positive impact and transformative value from data analytics.",
-      caseExample: "Go to Page",
-      image: "/images/Phone3.png",
-    },
-    {
-      title: "Analytics Hub",
-      href: "/features/analytics-hub",
-      description: "Instant views for decisions.",
-      longDescription:
-        "Our real-time dashboards provide immediate visibility into critical metrics, enabling faster and more informed decision-making across your organization.",
-      caseExample: "Case example",
-      image: "/predict.png",
-    },
-    {
-      title: "Predictive Tools",
-      href: "/features/map",
-      description: "Accurate trend forecasts.",
-      longDescription:
-        "We leverage advanced analytics and data science to transform raw data into actionable insights, enabling data-driven decision-making. Our predictive tools uncover hidden patterns and optimize operations.",
-      caseExample: "Case example",
-      image: "/SG3.png",
-    },
-    {
-      title: "Digital Twin",
-      href: "/features/integration",
-      description: "Simulate scenarios, optimize outcomes.",
-      longDescription:
-        "Our digital twin technology creates virtual replicas of physical systems, allowing for scenario testing and optimization without real-world consequences.",
-      caseExample: "Case example",
-      image: "/AI2.png",
-    },
-    {
-      title: "Predictive Tools",
-      href: "/features/map",
-      description: "Accurate trend forecasts.",
-      longDescription:
-        "We leverage advanced analytics and data science to transform raw data into actionable insights, enabling data-driven decision-making. Our predictive tools uncover hidden patterns and optimize operations.",
-      caseExample: "Case example",
-      image: "/SG3.png",
-    },
-    {
-      title: "Digital Twin",
-      href: "/features/integration",
-      description: "Simulate scenarios, optimize outcomes.",
-      longDescription:
-        "Our digital twin technology creates virtual replicas of physical systems, allowing for scenario testing and optimization without real-world consequences.",
-      caseExample: "Case example",
-      image: "/AI2.png",
-    },
-  ];
   return (
     <main className="min-h-screen bg-background antialiased w-full mx-auto scroll-smooth flex flex-col overflow-hidden items-center mt-40 px-2">
       <BlurFade delay={0.25} inView>
@@ -101,6 +47,7 @@ function Page() {
                 >
                   <AnimatedShinyText className="inline-flex items-center py-2 transition ease-out text-primary">
                     <span>Go to Page</span>
+
                     <ChevronRight className="ml-1 size-4" />
                   </AnimatedShinyText>
                 </a>
@@ -115,7 +62,9 @@ function Page() {
                     alt={solution.title}
                     fill
                     quality={100}
-                    className="object-contain bg-[#f6f6f6]"
+                    className={cn(
+                      solution.imageClassName ?? "object-cover bg-[#f6f6f6]"
+                    )}
                   />
                 </div>
               </BlurFade>

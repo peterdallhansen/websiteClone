@@ -34,6 +34,7 @@ export default function Main() {
   const jobs = [
     {
       title: "Data Scientist",
+      href: "https://dk.indeed.com/job/data-scientist-79377d62ffc9555e",
       description: `Design, train, and optimize AI models and predictive analytics by means of mathematical and statistical modeling
 Handle real-world, messy data—image, video, time-series, graphs, and more
 Work closely with engineers and business stakeholders to solve practical, customer-facing problems
@@ -116,6 +117,7 @@ Flexible setup, fair compensation that mirrors where we are on our growth journe
     },
     {
       title: "Customer Success Manager",
+      href: "https://dk.indeed.com/job/customer-success-manager-9903a2f1f783b547",
       description: `Emphasizing relationship-building, communication, customer impact, and a key role in the company's growth and culture`,
       fullDescription: `
 
@@ -248,12 +250,14 @@ You might come from customer success, consulting, account management, shopping c
                         {job.locationType}
                       </div>
                     </div>
-                    <Button
-                      variant="outline"
-                      className="absolute bg-primary text-background rounded-full bottom-4 right-4 text-xs"
-                    >
-                      Apply Now
-                    </Button>
+                    <a href={job.href}>
+                      <Button
+                        variant="outline"
+                        className="absolute bg-primary text-background rounded-full bottom-4 right-4 text-xs"
+                      >
+                        Apply Now
+                      </Button>
+                    </a>
                   </CardContent>
                 </Card>
               </BlurFade>
@@ -278,13 +282,12 @@ You might come from customer success, consulting, account management, shopping c
                   {selectedJob.fullDescription}
                 </ReactMarkdown>
                 <DialogFooter>
-                  <Button
-                    onClick={() => {
-                      /* handle apply */
-                    }}
+                  <a
+                     href={job.href}
+                    
                   >
-                    Apply Now
-                  </Button>
+                    <Button>Apply Now</Button>
+                  </>
                 </DialogFooter>
               </>
             )}

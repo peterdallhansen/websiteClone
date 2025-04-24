@@ -7,7 +7,7 @@ function Main() {
       {/* Center container for video and overlay */}
       <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
         {/* Video Container */}
-        <div className="relative  h-screen w-screen flex align-center justify-center rounded-2xl p-1 py-1 md:p-8  pt-16">
+        <div className="relative  h-screen w-screen flex align-center justify-center rounded-2xl p-1  md:p-8  md:pt-16 ">
           <video
             className="w-full h-full p-4 lg:w-full md:p-0 md:rounded-xl object-cover "
             autoPlay

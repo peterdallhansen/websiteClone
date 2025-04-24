@@ -17,43 +17,73 @@ export const solutions: {
   title: string;
   href: string;
   description: string;
+  subtitle: string;
+  longDescription: string;
   icon: React.ElementType;
+  image: string;
+  imageClassName?: string;
 }[] = [
   {
     title: "Analytics",
-    href: "/features/analytics",
+    href: "/solutions/analytics",
     description: "Real-time unified insights.",
+    subtitle: "Track performance. Spot patterns. Respond faster.",
+    longDescription:
+      "Access live visitor data, behavior patterns, and performance metrics in one unified view. Make faster, smarter decisions with insights that adapt to your environment in real time.",
     icon: LucideChartColumn,
+    image: "/ab2.png",
   },
   {
     title: "Analytics Hub",
-    href: "/features/analytics-hub",
+    href: "/solutions/analytics-hub",
     description: "Instant views for decisions.",
+    subtitle: "Your central control panel for spatial intelligence.",
+    longDescription:
+      "Visualize activity across spaces, manage dashboards, and tailor data views by role or location—all from a single, intuitive hub designed for action and clarity.",
     icon: GalleryVerticalEnd,
+    image: "/images/Macbooks.png",
   },
   {
     title: "Predictive Tools",
-    href: "/features/predictive-tools",
+    href: "/solutions/predictive-tools",
     description: "Accurate trend forecasts.",
+    subtitle: "Know what’s coming. Act before it happens.",
+    longDescription:
+      "Use historical data and AI-driven forecasting models to predict foot traffic, crowd flow, and space usage. Plan ahead with confidence—day by day or season by season.",
     icon: ChartArea,
+    image: "/images/Predict.png",
   },
   {
     title: "Digital Twin",
-    href: "/features/digital-twin ",
+    href: "/solutions/digital-twin",
     description: "Simulate scenarios, optimize outcomes.",
+    subtitle: "Test ideas in a risk-free virtual replica.",
+    longDescription:
+      "Our digital twin technology creates virtual replicas of physical systems, allowing for scenario testing, operational simulations, and layout optimizations without impacting live environments.",
     icon: GlobeIcon,
+    image: "/images/3dmap.png",
+    imageClassName: "object-fit",
   },
   {
     title: "AI-Powered BI",
-    href: "/features/ai-powered-bi",
+    href: "/solutions/ai-powered-bi",
     description: "Transform data with AI.",
+    subtitle: "Ask questions. Get instant, actionable answers.",
+    longDescription:
+      "Use natural language to query your data and get meaningful answers in real time. Our AI combines language models with your actual business data to go beyond dashboards and deliver real context.",
     icon: Zap,
+    image: "/AI2.png",
   },
   {
     title: "Effortless Integration",
-    href: "/features/integration",
+    href: "/solutions/integration",
     description: "Seamless connectivity with systems.",
+    subtitle: "Plug in. Sync data. Get insights fast.",
+    longDescription:
+      "Connect easily with existing systems, hardware, and third-party tools. Our platform supports legacy migration, real-time data sync, and flexible APIs for effortless integration at scale.",
     icon: Share2,
+    image: "/images/Change3.png",
+    imageClassName: "object-contain bg-[pink]",
   },
 ];
 
