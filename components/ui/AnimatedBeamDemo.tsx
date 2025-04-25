@@ -44,12 +44,12 @@ export default function AnimatedBeamDemo({
     <div className="bg-[#f6f6f6] mb-20 rounded-xl">
       <div
         className={cn(
-          "relative flex h-[500px] w-full items-center justify-center overflow-hidden p-10 scale-[1.2]",
+          "relative flex h-[500px] w-full items-center justify-center overflow-hidden p-10 ",
           className
         )}
         ref={containerRef}
       >
-        <div className="flex size-full max-w-lg flex-row items-stretch justify-between gap-10">
+        <div className="flex size-full max-w-lg  flex-row items-stretch justify-between gap-10">
           <div className="flex flex-col justify-center gap-2">
             <Circle ref={div1Ref}>
               <Icons.powerbi />

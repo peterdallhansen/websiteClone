@@ -198,11 +198,7 @@ You might come from customer success, consulting, account management, shopping c
             Be a Part of Something Great
           </h2>
         </BlurFade>
-        <BlurFade delay={0.6} inView>
-          <p className="text-xl md:text-1xl xl:text-2xl mb-8 leading-tight text-primary text-center max-w-[750px] text-opacity-60">
-            See open job positions
-          </p>
-        </BlurFade>
+
         <section className="w-full max-w-6xl flex flex-col gap-2 mt-12">
           <BlurFade delay={0.6} inView>
             <h4 className="text-sm md:text-lg text-primary font-medium">
@@ -282,12 +278,9 @@ You might come from customer success, consulting, account management, shopping c
                   {selectedJob.fullDescription}
                 </ReactMarkdown>
                 <DialogFooter>
-                  <a
-                     href={job.href}
-                    
-                  >
+                  <a href={selectedJob.href}>
                     <Button>Apply Now</Button>
-                  </>
+                  </a>
                 </DialogFooter>
               </>
             )}

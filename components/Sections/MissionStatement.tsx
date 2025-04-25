@@ -11,15 +11,17 @@ function MissionStatement() {
       </BlurFade>
       <BlurFade delay={0.5} inView>
         <h2 className="text-2xl md:text-3xl xl:text-5xl font-bold leading-tight text-primary text-center">
-          Empowering Smarter Decisions
+          Transforming everyday spaces into intelligent environments.
         </h2>
       </BlurFade>
       <BlurFade delay={0.6} inView>
         <p className="text-base md:text-lg text-primary text-center">
-          Transforming raw data into actionable insights with advanced,
-          AI-driven analytics that not only fuel your business success but also
-          drive sustainable growth, inspire innovation, and empower operational
-          excellence across every sector.
+          By turning existing cameras into AI-powered sensors, we deliver
+          real-time, predictive, and retrospective analytics that help
+          organizations understand how people move, engage, and behave. Our
+          platform empowers smarter decisions—without costly hardware, invasive
+          tracking, or complexity. From one store to global networks, we make
+          physical spaces measurable, manageable, and ready for what’s next.
         </p>
       </BlurFade>
     </section>

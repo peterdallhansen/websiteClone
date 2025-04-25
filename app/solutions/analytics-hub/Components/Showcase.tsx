@@ -95,33 +95,6 @@ function Showcase() {
         image: "/images/3dmap.png",
       },
       {
-        id: "role-based-sharing",
-        title: "Custom Roles & Access Control",
-        body: `Grant tailored access by creating custom roles for users, teams, or partners. Limit visibility or permissions to ensure secure, efficient collaboration across your analytics hub.`,
-        cta: "Try now",
-        href: "https://app.zonify.ai/",
-        image: "/images/Share6.png",
-        imageWidth: 1150,
-      },
-      {
-        id: "automated-reports",
-        title: "Automated Scheduled Reports",
-        body: `Set up custom schedules to automatically generate and deliver workspace reports. Choose from summary or detailed formats, specify multiple email recipients, and receive updates on a daily, weekly, monthly—or any custom—cadence without lifting a finger.`,
-        cta: "Explore now",
-        href: "https://app.zonify.ai/",
-        image: "/images/Reports8.png",
-        imageWidth: 1150,
-      },
-      {
-        id: "automated-reports",
-        title: "Automated Scheduled Reports",
-        body: `Set up custom schedules to automatically generate and deliver workspace reports. Choose from summary or detailed formats, specify multiple email recipients, and receive updates on a daily, weekly, monthly—or any custom—cadence without lifting a finger.`,
-        cta: "Explore now",
-        href: "https://app.zonify.ai/reports",
-        image: "/images/Reports9.png",
-        imageWidth: 1150,
-      },
-      {
         id: "smart-filtering",
         title: "Smart Filtering & Dynamic Date Selection",
         body: `Empower your analytics with powerful filtering tools and flexible date controls. Choose from predefined or custom date ranges, save reusable filter presets, and switch between aggregation modes like daily, weekly, or monthly. Use demographic filters like gender, age, category, tenant size, and even advanced logic-based groups to refine your data view. Perfect for conducting precise comparisons and unlocking insights across different segments and timeframes.`,
@@ -140,7 +113,35 @@ function Showcase() {
         image: "/images/EditingDashboard3.png", // Replace with your actual workspace image
         imageWidth: 1150,
       },
+      /*  {
+        id: "automated-reports",
+        title: "Automated Scheduled Reports",
+        body: `Set up custom schedules to automatically generate and deliver workspace reports. Choose from summary or detailed formats, specify multiple email recipients, and receive updates on a daily, weekly, monthly—or any custom—cadence without lifting a finger.`,
+        cta: "Explore now",
+        href: "https://app.zonify.ai/reports",
+        image: "/images/Reports9.png",
+        imageWidth: 1150,
+      }, */
       {
+        id: "automated-reports",
+        title: "Automated Scheduled Reports",
+        body: `Set up custom schedules to automatically generate and deliver workspace reports. Choose from summary or detailed formats, specify multiple email recipients, and receive updates on a daily, weekly, monthly—or any custom—cadence without lifting a finger.`,
+        cta: "Explore now",
+        href: "https://app.zonify.ai/",
+        image: "/images/Reports8.png",
+        imageWidth: 1150,
+      },
+      {
+        id: "role-based-sharing",
+        title: "Custom Roles & Access Control",
+        body: `Grant tailored access by creating custom roles for users, teams, or partners. Limit visibility or permissions to ensure secure, efficient collaboration across your analytics hub.`,
+        cta: "Try now",
+        href: "https://app.zonify.ai/",
+        image: "/images/Share6.png",
+        imageWidth: 1150,
+      },
+
+      /*   {
         id: "workspaces",
         title: "Workspaces",
         body: `Design tailored analytics dashboards with drag-and-drop layouts and modular widgets. Workspaces allow you to build flexible, role-specific views—whether for marketing, operations, or executive teams. Rearrange components, export reports, and manage layouts across devices with full control over content and structure.`,
@@ -148,7 +149,7 @@ function Showcase() {
         href: "https://app.zonify.ai/",
         image: "/images/EditingDashboard2.png", // Replace with your actual workspace image
         imageWidth: 1150,
-      },
+      }, */
     ],
     []
   );
