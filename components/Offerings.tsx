@@ -102,17 +102,8 @@ export default function Offerings() {
       title: "No New Hardware Required",
       description:
         "Our software-only platform works with your existing cameras—no need for sensors, rewiring, or expensive installs.",
-      image: <LucideGauge className="w-60 h-60" />,
+      image: <LucideGauge className="w-60 h-60 " color="black" />,
       alt: "Camera integration with analytics overlay",
-    },
-    {
-      id: 5,
-      subtitle: "Security is non-negotiable.",
-      title: "Privacy-First by Design",
-      description:
-        "We’re fully GDPR-compliant, with no facial recognition and zero personal data collection—only safe, anonymized insights.",
-      image: <LucideLock className="w-60 h-60" />,
-      alt: "Secure system illustration with shield icon",
     },
     {
       id: 6,
@@ -132,12 +123,22 @@ export default function Offerings() {
       alt: "API connectors and data integration icons",
     },
     {
+      id: 5,
+      subtitle: "Security is non-negotiable.",
+      title: "Privacy-First by Design",
+      description:
+        "We’re fully GDPR-compliant, with no facial recognition and zero personal data collection—only safe, anonymized insights.",
+      image: <LucideLock className="w-60 h-60" color="black" />,
+      alt: "Secure system illustration with shield icon",
+    },
+
+    {
       id: 7,
       subtitle: "See trends and opportunities.",
       title: "Retrospective Analytics",
       description:
         "Access past data, compare performance across time, and understand what’s changing and why—retrospectively and in context.",
-      image: <LucideRotateCcw className="w-60 h-60" />,
+      image: <LucideRotateCcw className="w-60 h-60" color="black" />,
       alt: "Timeline view of visitor trends",
     },
     {
@@ -205,7 +206,7 @@ export default function Offerings() {
 
   return (
     <>
-      <div className="relative w-full max-w-screen mx-auto px-4 mb-20 ">
+      {/*    <div className="relative w-full max-w-screen mx-auto px-4 mb-20 ">
         <div className="flex justify-between items-end mb-12 max-w-[1500px] mx-auto ">
           <div className=" space-y-6">
             <BlurFade delay={0.25} inView>
@@ -258,7 +259,7 @@ export default function Offerings() {
             className="flex gap-5 snap-x snap-mandatory scrollbar-hide"
             style={{ paddingLeft: "calc((100% - 1500px)/2)" }} // Align first card with above text
           >
-            {/*   <div className="rounded-lg overflow-hidden min-w-full md:min-w-[485px] space-y-2 snap-start hidden xl:flex"></div> */}
+            {/*   <div className="rounded-lg overflow-hidden min-w-full md:min-w-[485px] space-y-2 snap-start hidden xl:flex"></div> 
             {offerings.map((offering, index) => (
               <div
                 key={offering.id}
@@ -271,7 +272,6 @@ export default function Offerings() {
                         src={offering.image}
                         alt={offering.alt}
                         fill
-                        quality={100}
                         className="object-cover rounded-lg h-full object-center"
                       />
                     ) : (
@@ -294,7 +294,7 @@ export default function Offerings() {
             ))}
           </div>
         </div>
-      </div>
+      </div> */}
       <div className="relative w-full max-w-screen mx-auto px-4 mb-20 ">
         <div className="flex justify-between items-end mb-12 max-w-[1500px] mx-auto ">
           <div className=" space-y-6">
@@ -354,7 +354,7 @@ export default function Offerings() {
                 className="rounded-lg overflow-hidden min-w-full md:min-w-[500px] space-y-2 snap-end"
               >
                 <BlurFade delay={0.25 + index > 4 ? 0 : 0.1 * index} inView>
-                  <div className="h-[500px] relative bg-[#f6f6f6] rounded-xl flex items-center justify-center">
+                  <div className="h-[500px] relative bg-[#f6f6f6] rounded-xl flex items-center justify-center ">
                     {typeof offering.image === "string" ? (
                       <Image
                         src={offering.image}

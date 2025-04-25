@@ -8,10 +8,24 @@ import Logo from "./Logo";
 import { Button } from "./ui/button";
 import { NavigationMenuDemo } from "./ui/NavigationMenuDemo";
 import { Sheet, SheetContent, SheetTrigger } from "./ui/sheet";
+import { industries, solutions } from "@/lib/constants";
 
 export default function Header() {
   const [isMobile, setIsMobile] = useState(false);
   const [expandedMenu, setExpandedMenu] = useState<string | null>(null);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const isScrolled = window.scrollY > 10;
+      if (isScrolled !== scrolled) {
+        setScrolled(isScrolled);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [scrolled]);
 
   // Check for mobile screen size
   useEffect(() => {
@@ -32,81 +46,29 @@ export default function Header() {
 
   const links: {
     label: string;
-    sublinks: {
+    href?: string;
+    sublinks?: {
       label: string;
       href: string;
     }[];
   }[] = [
     {
       label: "Solutions",
-      sublinks: [
-        {
-          label: "Analytics",
-          href: "/solutions/analytics",
-        },
-        {
-          label: "Analytics Hub",
-          href: "/solutions/real-time-dashboard",
-        },
-        {
-          label: "Predictive Tools",
-          href: "/solutions/predictive-tool",
-        },
-        {
-          label: "Digital Twin",
-          href: "/solutions/digital-twin",
-        },
-        {
-          label: "AI-Powered BI",
-          href: "/solutions/ai-powered-bi",
-        },
-        {
-          label: "Effortless Integration",
-          href: "/solutions/workspaces",
-        },
-      ],
+      sublinks: solutions.map((solution) => ({
+        label: solution.title,
+        href: solution.href,
+      })),
     },
     {
       label: "Industries",
-      sublinks: [
-        {
-          label: "Retail",
-          href: "/industries/retail",
-        },
-        {
-          label: "Malls",
-          href: "/industries/malls",
-        },
-        {
-          label: "Leisure",
-          href: "/industries/leisure",
-        },
-        {
-          label: "Supermarkets",
-          href: "/industries/supermarkets",
-        },
-        {
-          label: "Airports",
-          href: "/industries/airports",
-        },
-        {
-          label: "Public Transportation",
-          href: "/industries/public-transportation",
-        },
-      ],
+      sublinks: industries.map((industry) => ({
+        label: industry.title,
+        href: industry.href,
+      })),
     },
     {
       label: "About Us",
-      sublinks: [
-        {
-          label: "Our Team",
-          href: "/about/team",
-        },
-        {
-          label: "Careers",
-          href: "/about/careers",
-        },
-      ],
+      href: "/about-us",
     },
     {
       label: "Company",
@@ -145,7 +107,7 @@ export default function Header() {
   };
 
   return (
-    <header className="fixed top-0 z-50 py-3 backdrop-blur-[4px] w-screen">
+    <header className="fixed top-0 z-50 py-2 backdrop-blur-[4px] w-screen">
       <div className="flex justify-between items-center  mx-auto md:px-[64px] px-4 sm:px-4 md:px-4 xl-px-[64px] ">
         <Logo />
 
@@ -168,7 +130,7 @@ export default function Header() {
                 {links.map((link) => (
                   <div key={link.label} className="w-full">
                     <button
-                      onClick={() => toggleMenu(link.label)}
+                      onClick={() => link.sublinks && toggleMenu(link.label)}
                       className={`flex justify-between items-center w-full hover:text-primary text-left ${
                         expandedMenu === link.label
                           ? "text-primary"
@@ -177,7 +139,9 @@ export default function Header() {
                       aria-expanded={expandedMenu === link.label}
                       aria-controls={`${link.label}-sublinks`}
                     >
-                      <span>{link.label}</span>
+                      <a href={link.href}>
+                        <span>{link.label}</span>
+                      </a>
                     </button>
                     <AnimatePresence>
                       {expandedMenu === link.label && (
@@ -189,18 +153,19 @@ export default function Header() {
                           transition={{ duration: 0.3, ease: "easeInOut" }}
                           className="mt-2 pl-4 overflow-hidden"
                         >
-                          {link.sublinks.map((sublink) => (
-                            <Link
-                              key={sublink.label}
-                              href={sublink.href}
-                              className="block py-2 hover:text-gray-700"
-                              onClick={() => {
-                                setExpandedMenu(null);
-                              }}
-                            >
-                              {sublink.label}
-                            </Link>
-                          ))}
+                          {link.sublinks &&
+                            link.sublinks.map((sublink) => (
+                              <Link
+                                key={sublink.label}
+                                href={sublink.href}
+                                className="block py-2 hover:text-gray-700"
+                                onClick={() => {
+                                  setExpandedMenu(null);
+                                }}
+                              >
+                                {sublink.label}
+                              </Link>
+                            ))}
                         </motion.div>
                       )}
                     </AnimatePresence>

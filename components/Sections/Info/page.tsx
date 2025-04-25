@@ -32,24 +32,17 @@ export default function Info() {
                     Plug-and-Play Deployment
                   </h3>
                   <p className="text-gray-500 dark:text-primary/60">
-                    The system integrates seamlessly with your existing setup.
-                    No specialized hardware or complex installation—just install
-                    the software and start capturing insights.
-                  </p>
-                </div>
-                <div className="space-y-2">
-                  <h3 className="text-xl font-bold">Remote & Scalable</h3>
-                  <p className="text-gray-500 dark:text-primary/60">
-                    Whether you manage a single store or a nationwide chain, our
-                    platform scales effortlessly and can be monitored remotely
-                    from any device with a browser.
+                    No specialized hardware, no on-site setup. Our software
+                    integrates with your existing infrastructure and is
+                    installed remotely—getting you up and running with zero
+                    disruption.
                   </p>
                 </div>
               </div>
               <div className="space-y-2">
-                <h3 className="text-xl font-bold">Global Sensor Network</h3>
+                <h3 className="text-xl font-bold">Unified Camera Network</h3>
                 <p className="text-gray-500 dark:text-primary/60">
-                  Our platform doesn't just analyze isolated feeds—it connects
+                  Our solution doesn't just analyze isolated feeds—it connects
                   all your cameras into a unified, real-time view. Gain holistic
                   insights across locations, enabling smarter decisions through
                   a truly global perspective.
@@ -199,16 +192,6 @@ export default function Info() {
                 </h2>
               </div>
               <div className="space-y-8">
-                <div className="space-y-2">
-                  <h3 className="text-xl font-bold">
-                    Measure Anything—Even in Retrospect
-                  </h3>
-                  <p className="text-gray-500 dark:text-primary/60">
-                    Need answers from last week or last month? Our platform lets
-                    you measure new zones and metrics using existing footage—no
-                    rework, just results.
-                  </p>
-                </div>
                 <div className="space-y-2">
                   <h3 className="text-xl font-bold">Iterate With Confidence</h3>
                   <p className="text-gray-500 dark:text-primary/60">

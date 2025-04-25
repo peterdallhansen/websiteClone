@@ -7,14 +7,14 @@ import Image from "next/image";
 
 function Page() {
   return (
-    <main className="min-h-screen bg-background antialiased w-full mx-auto scroll-smooth flex flex-col overflow-hidden items-center mt-40 px-2">
+    <main className="min-h-screen bg-background antialiased w-full mx-auto scroll-smooth flex flex-col overflow-hidden items-center pt-40 px-2">
       <BlurFade delay={0.25} inView>
         <h4 className="text-sm md:text-lg text-primary text-center">
           Solutions
         </h4>
       </BlurFade>
       <BlurFade delay={0.3} inView>
-        <h2 className="text-2xl md:text-3xl xl:text-4xl font-bold mb-2 leading-tight text-primary">
+        <h2 className="text-2xl md:text-3xl xl:text-4xl font-bold mb-2 leading-tight text-center  text-primary">
           Discover solutions designed for your industry needs
         </h2>
       </BlurFade>

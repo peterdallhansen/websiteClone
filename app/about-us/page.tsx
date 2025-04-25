@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-background antialiased w-full mx-auto scroll-smooth flex flex-col overflow-hidden items-center mt-40">
+    <main className="min-h-screen bg-background antialiased w-full mx-auto scroll-smooth flex flex-col overflow-hidden items-center pt-40">
       {/* <div className="text-center mb-16">
         <BlurFade delay={0.25} inView>
           <h4 className="text-sm md:text-lg text-primary text-center">

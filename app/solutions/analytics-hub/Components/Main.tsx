@@ -13,7 +13,7 @@ function Main() {
         </BlurFade>
         <BlurFade delay={0.5} inView>
           <h2 className="text-2xl md:text-3xl xl:text-5xl font-bold leading-tight text-primary text-center">
-            One Platform. Endless Insights.
+            One Place For Everything That Matters.
           </h2>
         </BlurFade>
         <BlurFade delay={0.6} inView>

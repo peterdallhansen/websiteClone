@@ -65,7 +65,7 @@ const board: TeamMember[] = [
     job: "Data Scientist - Halfspace.ai",
   },
   {
-    picture: "/upscalemedia-transformed.webp",
+    picture: "/images/Untitled.png",
     name: "Lars Lund",
     title: "Software Integration",
     linkedin: "https://www.linkedin.com/in/larslunddk/",
@@ -211,7 +211,7 @@ const sections = [
 
 export function Team() {
   return (
-    <div className="bg-gradient-to-b from-background to-background/80  min-h-screen py-20">
+    <div className="bg-gradient-to-b from-background to-background/80  min-h-screen">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <BlurFade delay={0.25} inView>

@@ -76,7 +76,7 @@ export default function Home() {
       <Info />
       <Offerings />
       {/* Mission Statement Section with ref */}
-      <BlurFade delay={0.25} inView>
+      {/* <BlurFade delay={0.25} inView>
         <h4 className="text-sm md:text-lg text-primary text-center mt-20">
           Cases
         </h4>
@@ -143,7 +143,7 @@ export default function Home() {
             </div>
           </BlurFade>
         </div>
-      </div>
+      </div> */}
       <MissionStatement />
       <GDPR />
       <div
