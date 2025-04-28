@@ -3,7 +3,6 @@ import {
   ChevronLeftIcon,
   ChevronRightIcon,
   LucideGauge,
-  LucideGaugeCircle,
   LucideLock,
   LucideRotateCcw,
 } from "lucide-react";
@@ -12,63 +11,6 @@ import { useEffect, useRef, useState } from "react";
 import BlurFade from "./ui/blur-fade";
 
 export default function Offerings() {
-  const offerings = [
-    {
-      id: 1,
-      category: "Real-Time Analytics",
-      title: "Live Visitor Metrics",
-      description:
-        "Harness live video feeds and AI to capture real-time demographic and behavioral data.",
-      image: "/ab2.png",
-      alt: "Predictive Analytics Interface",
-    },
-    {
-      id: 2,
-      category: "Predictive Analytics",
-      title: "Trend Forecasting",
-      description:
-        "Leverage predictive analytics to anticipate visitor behavior and optimize staffing, layout, and marketing strategies.",
-      image: "/images/Predict.png",
-      alt: "Predictive Analytics Interface",
-    },
-    {
-      id: 3,
-      category: "Unified Analytics Hub",
-      title: "All-in-One Insights",
-      description:
-        "Consolidated data from multiple sources into a single platform for streamlined, actionable insights.",
-      image: "/images/Macbooks.png",
-      alt: "Predictive Analytics Interface",
-    },
-    {
-      id: 4,
-      category: "System Integration",
-      title: "Effortless Integration",
-      description:
-        "Seamlessly connect with your existing systems to streamline operations and scale effortlessly.",
-      image: "/IP.png",
-      alt: "Predictive Analytics Interface",
-    },
-    {
-      id: 5,
-      category: "Queue Management",
-      title: "Smart Queue Management",
-      description:
-        "Optimize queue times and enhance visitor satisfaction with our intelligent queue management system.",
-      image: "/images/Queue2.png",
-      alt: "Queue Management Tool Interface",
-    },
-    {
-      id: 6,
-      category: "Retrospective Analytics",
-      title: "Historic Data Replay",
-      description:
-        "Access and analyze historical video data to revisit past activity, validate changes, and answer new questions on demand.",
-      image: "/images/Replay.png",
-      alt: "Historic Data Replay Interface",
-    },
-  ];
-
   const keyPoints: {
     id: number;
     subtitle: string;
@@ -141,15 +83,7 @@ export default function Offerings() {
       image: <LucideRotateCcw className="w-60 h-60" color="black" />,
       alt: "Timeline view of visitor trends",
     },
-    {
-      id: 8,
-      subtitle: "From layout to operations.",
-      title: "Optimize Every Square Meter",
-      description:
-        "Access and analyze historical video data to revisit past activity, validate changes, and answer new questions on demand.",
-      image: "/images/keypoints/layout-optimization.png",
-      alt: "Optimized retail layout visual",
-    },
+
     {
       id: 9,
       subtitle: "One place for everything that matters.",

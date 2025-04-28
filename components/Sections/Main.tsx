@@ -15,6 +15,7 @@ function Main() {
               muted
               loop
               playsInline
+              controls={false} // Ensures the play button is hidden
             >
               <source src="/videos/bg2.mp4" type="video/mp4" />
             </video>

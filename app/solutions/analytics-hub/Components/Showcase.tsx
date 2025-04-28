@@ -6,18 +6,11 @@ import BlurFade from "@/components/ui/blur-fade";
 import { cn } from "@/lib/utils";
 import {
   ArrowRightIcon,
-  BarChartIcon,
-  BriefcaseBusiness,
-  Building2,
-  ClockIcon,
-  FileText,
   LucideFileChartColumn,
   LucideGalleryVerticalEnd,
   LucideGlobe,
   LucideSettings2,
-  LucideShare2,
   LucideUsers,
-  Users,
 } from "lucide-react";
 import Image from "next/image";
 import { useEffect, useMemo, useState } from "react";

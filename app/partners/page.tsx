@@ -46,7 +46,7 @@ export default function PartnersPage() {
             Working Together with Trusted Partners
           </h2>
         </BlurFade>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-0 md:gap-8">
           {partners.map((partner, index) => (
             <div key={partner.id} className="p-6 flex flex-col items-center ">
               <BlurFade inView delay={0.25 + 0.2 * index}>

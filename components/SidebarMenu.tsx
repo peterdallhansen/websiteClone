@@ -1,13 +1,5 @@
-import React from "react";
-import {
-  Users,
-  Layers,
-  Globe,
-  Share2,
-  File,
-  GalleryVerticalEnd,
-} from "lucide-react"; // Replace with your icon library
 import { solutions } from "@/lib/constants";
+import React from "react";
 
 interface Section {
   id: string;

@@ -12,20 +12,34 @@ export default function CookieBanner({
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    // Check if user has already made a cookie choice
-    const cookieChoice = localStorage.getItem("cookieChoice");
-    if (!cookieChoice) {
+    if (!localStorage.getItem("cookieChoice")) {
       setIsVisible(true);
     }
   }, []);
 
+  const updateConsent = (granted: boolean) => {
+    if (!window.gtag) return;
+
+    window.gtag("consent", "update", {
+      ad_storage: granted ? "granted" : "denied",
+      analytics_storage: granted ? "granted" : "denied",
+    });
+
+    if (granted) {
+      // fire the initial page_view event
+      window.gtag("event", "page_view");
+    }
+  };
+
   const handleAcceptAll = () => {
     localStorage.setItem("cookieChoice", "acceptAll");
+    updateConsent(true);
     setIsVisible(false);
   };
 
   const handleRejectNonEssential = () => {
     localStorage.setItem("cookieChoice", "rejectNonEssential");
+    updateConsent(false);
     setIsVisible(false);
   };
 

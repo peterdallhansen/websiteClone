@@ -1,6 +1,5 @@
 "use client";
 
-import Link from "next/link";
 import * as React from "react";
 
 import {
@@ -10,30 +9,14 @@ import {
   NavigationMenuLink,
   NavigationMenuList,
   NavigationMenuTrigger,
-  navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
+import { industries, solutions } from "@/lib/constants";
 import { cn } from "@/lib/utils";
 import {
-  Building,
-  ChartArea,
-  Film,
-  GalleryVerticalEnd,
-  GlobeIcon,
-  LucideBarChart,
-  LucideBarChart2,
   LucideBriefcaseBusiness,
-  LucideChartColumn,
-  LucideChartColumnBig,
-  LucideUser,
-  PlaneTakeoff,
-  Share2,
-  ShoppingCart,
-  Store,
-  Train,
-  UserIcon,
-  Zap,
+  LucideHandshake,
+  LucideUsers,
 } from "lucide-react";
-import { industries, solutions } from "@/lib/constants";
 
 export function NavigationMenuDemo({
   linkClassName,
@@ -50,7 +33,7 @@ export function NavigationMenuDemo({
       title: "Team",
       href: "/team",
       description: "Learn about our team.",
-      icon: LucideUser,
+      icon: LucideUsers,
     },
     {
       title: "Careers",
@@ -62,7 +45,7 @@ export function NavigationMenuDemo({
       title: "Partners",
       href: "/partners",
       description: "Discover our partners and collaborations.",
-      icon: Share2,
+      icon: LucideHandshake,
     },
   ];
   return (

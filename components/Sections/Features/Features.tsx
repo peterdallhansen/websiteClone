@@ -1,4 +1,3 @@
-import { BentoDemo } from "@/components/ui/BentoDemo";
 import BlurFade from "@/components/ui/blur-fade";
 import React from "react";
 
@@ -20,9 +19,9 @@ function Features() {
             Uncover Unexplored Business Insights
           </h2>
         </BlurFade>
-        <BlurFade delay={1} inView>
+        {/*   <BlurFade delay={1} inView>
           <BentoDemo />
-        </BlurFade>
+        </BlurFade> */}
       </main>
     </div>
   );

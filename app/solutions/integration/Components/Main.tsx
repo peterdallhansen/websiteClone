@@ -1,4 +1,3 @@
-import { AnimatedBeamDemo } from "@/components/ui/AnimatedBeamDemo";
 import BlurFade from "@/components/ui/blur-fade";
 import Image from "next/image";
 

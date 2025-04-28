@@ -3,9 +3,9 @@
 import React, { forwardRef, useRef } from "react";
 
 import { cn } from "@/lib/utils";
-import { AnimatedBeam } from "./animated-beam";
-import { LucideDatabase, LucideDatabaseBackup } from "lucide-react";
+import { LucideDatabase } from "lucide-react";
 import LogoIcon from "../LogoIcon";
+import { AnimatedBeam } from "./animated-beam";
 
 const Circle = forwardRef<
   HTMLDivElement,
@@ -38,7 +38,6 @@ export default function AnimatedBeamDemo({
   const div4Ref = useRef<HTMLDivElement>(null);
   const div5Ref = useRef<HTMLDivElement>(null);
   const div6Ref = useRef<HTMLDivElement>(null);
-  const div7Ref = useRef<HTMLDivElement>(null);
 
   return (
     <div className="bg-[#f6f6f6] mb-20 rounded-xl">

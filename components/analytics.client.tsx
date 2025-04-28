@@ -1,13 +1,13 @@
 "use client";
-import { useEffect } from "react";
 import Script from "next/script";
+import { useEffect } from "react";
 
 const GA_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID!;
 
 export default function Analytics() {
   useEffect(() => {
     window.dataLayer = window.dataLayer || [];
-    function gtag(...args: any[]) {
+    function gtag(...args: unknown[]) {
       window.dataLayer.push(args);
     }
 

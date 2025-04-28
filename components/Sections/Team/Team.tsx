@@ -8,8 +8,8 @@ import {
   MailIcon,
   PhoneIcon,
 } from "lucide-react";
+import Image from "next/image";
 import { useState } from "react";
-import { motion } from "framer-motion";
 
 interface TeamMember {
   picture: string;
@@ -57,19 +57,19 @@ const management: TeamMember[] = [
     linkedin: "https://www.linkedin.com/in/ole-dall-hansen-4674622/",
     description: `Ole is the Executive Chairman of Zonify.ai, bringing over 25 years of experience in real estate fund management, corporate finance, and business development. He has served as a tech co-founder, CFO, and Executive Chairman of Ivensa Vision ApS, specializing in AI-powered retail performance management software. Throughout his career, Ole has held senior positions across equity research, M&A, investment management, private equity, and fund development, with a strong track record in international fundraising, investor relations, and alternative investments such as real estate, wind, and solar power. His background combines deep financial expertise with entrepreneurial leadership and a strong focus on scaling technology-driven businesses.`,
   },
-  {
+  /*   {
     picture: "/images/people/PDH-Blue2.png",
     name: "Peter Dall-Hansen",
     title: "Frontend Developer",
     linkedin: "https://www.linkedin.com/in/marlenewintherplas",
     description: `Peter is a Frontend Developer and Co-Founder at Zonify.ai, contributing to product development, frontend architecture, and brand direction. He specializes in designing and developing user-facing solutions, combining technical skills with a strong focus on user experience and visual identity. Prior to Zonify.ai, Peter gained hands-on experience in customer onboarding and collaborative problem-solving as a student assistant at Ivensa Vision ApS. He holds an STX diploma with a focus on Mathematics A and Physics A from Nærum Gymnasium.`,
     email: "pdh@zonify.ai",
-  },
+  }, */
 ];
 
 const board: TeamMember[] = [
   {
-    picture: "/images/people/ADH-Blue2.png",
+    picture: "/images/people/ADH-Blue.png",
     name: "Anders Dall-Hansen",
     title: "Advisor",
     linkedin: "https://www.linkedin.com/in/andersdallhansen/",
@@ -122,16 +122,15 @@ function TeamMemberCard({
   const toggleExpand = () => setIsExpanded((prev) => !prev);
 
   return (
-    <div
-      className="overflow-hidden w-full h-[500px] rounded-2xl flex p-3"
-      style={{
-        backgroundImage: `url(${picture})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        backgroundRepeat: "no-repeat",
-        flexDirection: "column-reverse",
-      }}
-    >
+    <div className="relative overflow-hidden w-full h-[500px] rounded-2xl flex p-3 flex-col-reverse">
+      <Image
+        src={picture}
+        alt={name}
+        fill
+        className="object-cover object-center -z-10 rounded-2xl"
+        priority
+      />
+
       <div
         className="relative rounded-xl p-4"
         style={{

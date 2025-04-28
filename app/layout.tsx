@@ -1,15 +1,12 @@
+import Analytics from "@/components/analytics.client";
 import Header from "@/components/Header";
 import { Footer } from "@/components/Sections/Footer";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import { cn } from "@/lib/utils";
 import { Inter } from "@next/font/google";
 import type { Metadata } from "next";
-import "./globals.css";
-import CookieBanner from "@/components/CookieBanner";
-import Script from "next/script";
-import ClientOnly from "@/components/ClientOnly";
 import React from "react";
-import Analytics from "@/components/analytics.client";
+import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Zonify.ai – Cloud-based AI through 2D cameras to understand visitors",
@@ -20,8 +17,6 @@ const inter = Inter({
   subsets: ["latin"], // Adjust subsets based on your needs
   variable: "--font-inter", // Optional: CSS variable for font customization
 });
-
-const GA_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID;
 
 export default function RootLayout({
   children,

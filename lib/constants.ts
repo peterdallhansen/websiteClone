@@ -4,7 +4,7 @@ import {
   Film,
   GalleryVerticalEnd,
   GlobeIcon,
-  LucideChartColumn,
+  LucideBarChart2,
   PlaneTakeoff,
   Share2,
   ShoppingCart,
@@ -29,8 +29,8 @@ export const solutions: {
     description: "Real-time unified insights.",
     subtitle: "Track performance. Spot patterns. Respond faster.",
     longDescription:
-      "Access live visitor data, behavior patterns, and performance metrics in one unified view. Make faster, smarter decisions with insights that adapt to your environment in real time.",
-    icon: LucideChartColumn,
+      "Transform live video feeds into real-time visitor insights with AI-powered anonymization, demographic profiling, and behavioral tracking. Core delivers GDPR-compliant data, flexible filtering, and benchmarking—all while leveraging your existing infrastructure with a simple, software-only deployment.",
+    icon: LucideBarChart2,
     image: "/ab2.png",
   },
   {

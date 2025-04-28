@@ -1,10 +1,4 @@
-import {
-  FileCheck2,
-  Handshake,
-  LucideLock,
-  LucideProps,
-  ShieldCheck,
-} from "lucide-react";
+import { Handshake, LucideLock, LucideProps, ShieldCheck } from "lucide-react";
 import Image from "next/image";
 import { ForwardRefExoticComponent, RefAttributes } from "react";
 import { IconType } from "react-icons/lib";
@@ -68,7 +62,7 @@ const sections: Section[] = [
       {
         title: "High Availability & Redundancy",
         description:
-          "Our cloud infrastructure is designed for high availability and disaster recovery, ensuring continuous service uptime.",
+          "Our cloud infrastructure is designed for high availability, ensuring continuous service uptime.",
       },
     ],
   },

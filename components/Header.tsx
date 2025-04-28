@@ -75,7 +75,14 @@ export default function Header() {
 
   const backgroundClass = isHome && atTop ? "" : "backdrop-blur-[4px]";
 
-  const links = [
+  const links: {
+    label: string;
+    href?: string;
+    sublinks?: {
+      label: string;
+      href: string;
+    }[];
+  }[] = [
     {
       label: "Solutions",
       sublinks: solutions.map((s) => ({ label: s.title, href: s.href })),

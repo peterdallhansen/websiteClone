@@ -1,5 +1,3 @@
-"use client";
-
 import BlurFade from "@/components/ui/blur-fade";
 
 function Main() {
@@ -27,7 +25,7 @@ function Main() {
         <BlurFade delay={0.6} inView>
           <div className="relative overflow-hidden rounded-xl">
             <video
-              src="/ad2.mp4"
+              src="/videos/ad2.mp4"
               width={1500}
               height={2016}
               autoPlay
