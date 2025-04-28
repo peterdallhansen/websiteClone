@@ -3,23 +3,23 @@ import { Button } from "../ui/button";
 
 function Main() {
   return (
-    <section className="relative h-screen w-screen overflow-hidden mb-20">
+    <section className="relative h-screen w-screen overflow-hidden mb-20 ">
       {/* Center container for video and overlay */}
-      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 ">
+      <div className="">
         {/* Video Container */}
-        <div className="relativ   h-screen w-screen flex align-center justify-center rounded-2xl p-1  md:p-8  md:pt-16 ">
+        <div className="relativ   h-screen w-screen flex align-center justify-center rounded-2xl  ">
           <div className="w-full h-full relative">
             <video
-              className="w-full h-full p-4 lg:w-full md:p-0 md:rounded-xl object-cover "
+              className="w-full h-full p-0 lg:w-full md:p-0 md:rounded-xl object-cover "
               autoPlay
               muted
               loop
               playsInline
             >
-              <source src="/videos/bg.mp4" type="video/mp4" />
+              <source src="/videos/bg2.mp4" type="video/mp4" />
             </video>
 
-            <div className="absolute bottom-8 left-12 p-4 md:p-16 flex flex-col items-start justify-center space-y-6 z-10 text-left min-w-[350px]">
+            <div className="absolute bottom-8 left-2 md:left-10 p-4 md:p-16 flex flex-col items-start justify-center space-y-6 z-10 text-left min-w-[350px]">
               <BlurFade delay={0} inView>
                 <h1 className="text-5xl md:text-5xl xl:text-7xl font-bold text-white leading-tight">
                   AI-Driven Insights <br /> from Every Footstep

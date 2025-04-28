@@ -83,7 +83,7 @@ export const solutions: {
       "Connect easily with existing systems, hardware, and third-party tools. Our platform supports legacy migration, real-time data sync, and flexible APIs for effortless integration at scale.",
     icon: Share2,
     image: "/images/Change3.png",
-    imageClassName: "object-contain bg-[pink]",
+    imageClassName: "object-contain scale-[1.5] md:scale-[1]",
   },
 ];
 

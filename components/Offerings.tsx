@@ -300,15 +300,15 @@ export default function Offerings() {
           <div className=" space-y-6">
             <BlurFade delay={0.25} inView>
               <h4 className="text-sm md:text-lg text-primary text-left">
-                Offerings
+                Key Features
               </h4>
             </BlurFade>
             <BlurFade delay={0.25} inView>
               <h1 className="text-4xl md:text-5xl font-bold">
-                Smarter Data. <br /> Seamless Experience.
+                Everything You Need to <br /> Measure, Understand, and Improve.
               </h1>
             </BlurFade>
-            <BlurFade delay={0.25} inView>
+            {/*  <BlurFade delay={0.25} inView>
               <p className="text-primary/80 max-w-3xl">
                 Our platform is engineered to handle high volumes of footfall
                 data in real time. Built with durable, scalable technology, it
@@ -316,7 +316,7 @@ export default function Offerings() {
                 <span className="font-bold">actionable insights</span> that
                 empower smarter decision-making.
               </p>
-            </BlurFade>
+            </BlurFade> */}
           </div>
           <BlurFade delay={0.25} inView>
             <div className="flex gap-2">

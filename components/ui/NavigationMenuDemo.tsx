@@ -21,8 +21,10 @@ import {
   GlobeIcon,
   LucideBarChart,
   LucideBarChart2,
+  LucideBriefcaseBusiness,
   LucideChartColumn,
   LucideChartColumnBig,
+  LucideUser,
   PlaneTakeoff,
   Share2,
   ShoppingCart,
@@ -33,9 +35,38 @@ import {
 } from "lucide-react";
 import { industries, solutions } from "@/lib/constants";
 
-export function NavigationMenuDemo() {
+export function NavigationMenuDemo({
+  linkClassName,
+}: {
+  linkClassName: string;
+}) {
+  const company: {
+    title: string;
+    href: string;
+    description: string;
+    icon: React.ElementType;
+  }[] = [
+    {
+      title: "Team",
+      href: "/team",
+      description: "Learn about our team.",
+      icon: LucideUser,
+    },
+    {
+      title: "Careers",
+      href: "/careers",
+      description: "Explore career opportunities.",
+      icon: LucideBriefcaseBusiness,
+    },
+    {
+      title: "Partners",
+      href: "/partners",
+      description: "Discover our partners and collaborations.",
+      icon: Share2,
+    },
+  ];
   return (
-    <NavigationMenu>
+    <NavigationMenu className={linkClassName}>
       <NavigationMenuList>
         <NavigationMenuItem>
           <NavigationMenuTrigger className="bg-transparent hover:bg-white">
@@ -101,13 +132,35 @@ export function NavigationMenuDemo() {
         </NavigationMenuItem>
 
         <NavigationMenuItem>
-          <Link href="/about-us" legacyBehavior passHref>
-            <NavigationMenuLink
-              className={cn(navigationMenuTriggerStyle(), "bg-transparent")}
-            >
-              About Us
-            </NavigationMenuLink>
-          </Link>
+          <NavigationMenuTrigger className="bg-transparent">
+            Company
+          </NavigationMenuTrigger>
+          <NavigationMenuContent>
+            <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] bg-transparent">
+              {company.map((component) => (
+                <a
+                  href={component.href}
+                  key={component.title}
+                  className={cn(
+                    "group block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none ",
+                    "inline-flex items-center gap-2 "
+                  )}
+                >
+                  <component.icon className="size-10 p-2 border rounded-[10px] min-w-[40px] h-[40px] bg-transparent text-current group-hover:bg-primary group-hover:border-primary group-hover:text-background " />
+
+                  <ListItem
+                    key={component.title}
+                    title={component.title}
+                    href={component.href}
+                  >
+                    <p className="text-sm font-medium  mt-1 text-primary text-opacity-60 group-hover:text-opacity-100 ">
+                      {component.description}
+                    </p>
+                  </ListItem>
+                </a>
+              ))}
+            </ul>
+          </NavigationMenuContent>
         </NavigationMenuItem>
       </NavigationMenuList>
     </NavigationMenu>

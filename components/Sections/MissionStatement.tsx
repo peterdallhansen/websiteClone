@@ -14,16 +14,12 @@ function MissionStatement() {
           Transforming everyday spaces into intelligent environments.
         </h2>
       </BlurFade>
-      <BlurFade delay={0.6} inView>
+      {/*  <BlurFade delay={0.6} inView>
         <p className="text-base md:text-lg text-primary text-center">
-          By turning existing cameras into AI-powered sensors, we deliver
-          real-time, predictive, and retrospective analytics that help
-          organizations understand how people move, engage, and behave. Our
-          platform empowers smarter decisions—without costly hardware, invasive
-          tracking, or complexity. From one store to global networks, we make
-          physical spaces measurable, manageable, and ready for what’s next.
+          We turn everyday spaces into sources of intelligence—helping
+          organizations move faster, plan smarter, and shape better experiences.
         </p>
-      </BlurFade>
+      </BlurFade> */}
     </section>
   );
 }

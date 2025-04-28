@@ -4,7 +4,7 @@ import Image from "next/image";
 
 function Main() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center flex-1 p-8 pb-0 gap-16 sm:p-20">
+    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center flex-1 p-8  pb-0 gap-16 sm:p-20">
       <main className="flex flex-col gap-4 row-start-2 items-center">
         <BlurFade delay={0.25} inView>
           <h4 className="text-sm md:text-lg text-primary text-center">
@@ -24,7 +24,7 @@ function Main() {
           </p>
         </BlurFade>
         <BlurFade delay={0.6} inView>
-          <div className="relative overflow-hidden rounded-xl">
+          <div className="relative overflow-hidden object-cover scale-[1.5] md:scale-[1] rounded-xl">
             <Image
               src="/images/DashboardPreview.png"
               width={2000}

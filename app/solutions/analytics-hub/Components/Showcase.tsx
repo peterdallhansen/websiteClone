@@ -177,21 +177,18 @@ function Showcase() {
     <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center flex-1 p-8  pb-20 gap-16 sm:p-20 ">
       <main className="flex flex-col gap-4 row-start-2 items-center ">
         <BlurFade delay={0} inView>
-          <h2 className="text-xl md:text-1xl xl:text-2xl leading-tight text-primary text-center max-w-[750px] text-opacity-80 mb-20">
+          <h2 className="text-xl md:text-1xl xl:text-2xl leading-tight text-primary text-center max-w-[750px] text-opacity-80 mb-0 md:mb-20">
             Gain full control of your space through a centralized analytics hub
             built for real-time clarity and strategic insight. Visualize live
             activity with interactive maps, track performance trends, and
             explore spatial usage patterns—all in one intuitive interface.
             Customize your view with smart filters, automate reporting, and
-            compare behavior across time and zones. Understand how people
-            interact with your environment and turn that data into decisions
-            that streamline operations, enhance engagement, and fuel ongoing
-            growth.
+            compare behavior across time and zones.
           </h2>
         </BlurFade>
 
         <BlurFade delay={0.25} inView>
-          <BentoGrid className="hidden sm:grid">
+          <BentoGrid className="hidden sm:grid mt-20">
             {features.map((feature, idx) => (
               <BentoCard key={idx} {...feature} />
             ))}
@@ -200,7 +197,7 @@ function Showcase() {
         <div className="w-full flex flex-row gap-8 pt-40 relative">
           {/* Sidebar */}
           <div
-            className="self-start w-[400px] sticky top-40"
+            className="self-start w-[400px] sticky top-40 hidden md:block"
             style={{
               position: "sticky",
             }}
