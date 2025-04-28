@@ -97,7 +97,7 @@ function Showcase() {
       {
         id: "smart-filtering",
         title: "Smart Filtering & Dynamic Date Selection",
-        body: `Empower your analytics with powerful filtering tools and flexible date controls. Choose from predefined or custom date ranges, save reusable filter presets, and switch between aggregation modes like daily, weekly, or monthly. Use demographic filters like gender, age, category, tenant size, and even advanced logic-based groups to refine your data view. Perfect for conducting precise comparisons and unlocking insights across different segments and timeframes.`,
+        body: `Empower your analytics with powerful filtering tools and flexible date controls. Choose from predefined or custom date ranges, save reusable filter presets, and switch between aggregation modes like daily, weekly, or monthly. Use demographic filters like gender, age, category, size, and even advanced logic-based groups to refine your data view. Perfect for conducting precise comparisons and unlocking insights across different segments and timeframes.`,
         cta: "Check it out",
         href: "https://app.zonify.ai/",
         image: "/images/Filters4.png",

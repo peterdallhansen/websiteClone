@@ -20,7 +20,7 @@ function Main() {
           <p className="text-xl md:text-1xl xl:text-2xl mb-8 leading-tight text-primary text-center max-w-[750px] text-opacity-60">
             Monitor real-time behavior, analyze historical trends, and make
             smarter decisions—all from a single, intuitive dashboard built for
-            spatial performance.
+            decision-makers
           </p>
         </BlurFade>
         <BlurFade delay={0.6} inView>

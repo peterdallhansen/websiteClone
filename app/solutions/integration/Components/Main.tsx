@@ -19,8 +19,7 @@ function Main() {
         <BlurFade delay={0.6} inView>
           <h2 className="text-xl md:text-1xl xl:text-2xl  mb-8 leading-tight text-primary text-center max-w-[750px] text-opacity-60">
             Simplify maintenance, seamlessly migrate data from legacy people
-            counters like Vemco and Xovis, and integrate effortlessly with your
-            existing systems.
+            counters, and integrate effortlessly with your existing systems.
           </h2>
         </BlurFade>
         <BlurFade delay={0.6} inView>

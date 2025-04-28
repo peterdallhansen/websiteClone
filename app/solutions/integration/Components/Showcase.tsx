@@ -23,7 +23,7 @@ function Showcase() {
       {
         id: "ease-of-maintenance",
         title: "Ease of Maintenance",
-        body: `Our fully cloud-native, software-only solution removes hardware dependencies and streamlines maintenance. Experience robust performance with reduced downtime, letting your team focus on strategic initiatives instead of system upkeep.`,
+        body: `Our fully cloud-native, software-only solution removes hardware dependencies and streamlines maintenance. Experience robust performance with garuanteed uptime, letting your team focus on strategic initiatives instead of system upkeep.`,
         cta: "Learn more",
         image: "/images/Change3.png",
         href: "#ease-of-maintenance",
@@ -31,7 +31,7 @@ function Showcase() {
       {
         id: "data-migration",
         title: "Data Migration & Legacy Support",
-        body: `Transition effortlessly from legacy systems. Our platform supports smooth data migration from popular people counters like Vemco and Xovis, integrating historical data into a unified analytics solution without disruption.`,
+        body: `Transition effortlessly from legacy systems. Our platform supports smooth data migration from legacy people counters, integrating historical data into a unified analytics solution without disruption.`,
         cta: "Learn more",
         href: "#data-migration",
         image: "/images/Transfer2.png",
@@ -67,7 +67,7 @@ function Showcase() {
           <h2 className="text-xl md:text-1xl xl:text-2xl leading-tight text-primary text-center max-w-[750px]  mb-20">
             Discover our integration capabilities designed for ease of
             maintenance and seamless data migration—from legacy people counters
-            like Vemco and Xovis to our modern, unified analytics platform.
+            to our modern, unified analytics platform.
           </h2>
         </BlurFade>
 

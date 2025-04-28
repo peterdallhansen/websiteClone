@@ -84,7 +84,7 @@ export default function Info() {
               <div className="space-y-8">
                 <div className="space-y-2">
                   <h3 className="text-xl font-bold">
-                    Understand Visitor Behavior
+                    Understand Visitor Behavior and Demographics
                   </h3>
                   <p className="text-gray-500 dark:text-primary/60">
                     Track movement patterns, dwell times, and engagement zones
@@ -104,7 +104,7 @@ export default function Info() {
                 </div>
                 <div className="space-y-2">
                   <h3 className="text-xl font-bold">
-                    Smarter Business Decisions
+                    Develop Smarter Business Decisions
                   </h3>
                   <p className="text-gray-500 dark:text-primary/60">
                     Make confident, data-driven decisions with analytics that go
@@ -195,13 +195,14 @@ export default function Info() {
                 <div className="space-y-2">
                   <h3 className="text-xl font-bold">Iterate With Confidence</h3>
                   <p className="text-gray-500 dark:text-primary/60">
-                    Test layout changes, campaigns, or service models and use
-                    historical comparisons to validate what works best.
+                    Test layout changes, campaigns, propositions, or service
+                    models and use historical comparisons to validate what works
+                    best.
                   </p>
                 </div>
                 <div className="space-y-2">
                   <h3 className="text-xl font-bold">
-                    Inform Long-Term Strategy
+                    Shape Long-Term Strategy
                   </h3>
                   <p className="text-gray-500 dark:text-primary/60">
                     Use behavioral trends and space utilization data to support
