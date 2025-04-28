@@ -24,8 +24,8 @@ export const solutions: {
   imageClassName?: string;
 }[] = [
   {
-    title: "Analytics",
-    href: "/solutions/analytics",
+    title: "Zonify Core",
+    href: "/solutions/core",
     description: "Real-time unified insights.",
     subtitle: "Track performance. Spot patterns. Respond faster.",
     longDescription:
