@@ -48,7 +48,7 @@ const footerSections: FooterSection[] = [
     links: [
       {
         href: "/about-us",
-        label: "About Us",
+        label: "Team",
         Icon: User,
       },
       {

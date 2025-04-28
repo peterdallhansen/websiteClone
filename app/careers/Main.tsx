@@ -7,6 +7,7 @@ import {
   Card,
   CardContent,
   CardDescription,
+  CardFooter,
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
@@ -23,6 +24,7 @@ import {
   BriefcaseBusiness,
   LucideClock,
   LucideFlag,
+  LucidePin,
 } from "lucide-react";
 import { useState } from "react";
 import ReactMarkdown from "react-markdown";
@@ -30,7 +32,7 @@ import remarkGfm from "remark-gfm";
 
 export default function Main() {
   const [selectedJob, setSelectedJob] = useState<(typeof jobs)[0] | null>(null);
-
+  const [isDialogOpen, setIsDialogOpen] = useState(false);
   const jobs = [
     {
       title: "Data Scientist",
@@ -185,6 +187,20 @@ You might come from customer success, consulting, account management, shopping c
     },
   ];
 
+  const openJob = (job: (typeof jobs)[0]) => {
+    setSelectedJob(job);
+    setIsDialogOpen(true);
+  };
+
+  const onDialogOpenChange = (open: boolean) => {
+    if (!open) {
+      // start the leave animation
+      setIsDialogOpen(false);
+      // after it finishes, clear out the content
+      setTimeout(() => setSelectedJob(null), 200);
+    }
+  };
+
   return (
     <div className="grid grid-rows-[20px_1fr_20px] items-start justify-items-center flex-1 p-8 pb-0 gap-16 sm:p-20">
       <main className="flex flex-col gap-4 row-start-2 items-center">
@@ -195,7 +211,7 @@ You might come from customer success, consulting, account management, shopping c
         </BlurFade>
         <BlurFade delay={0.5} inView>
           <h2 className="text-2xl md:text-3xl xl:text-5xl font-bold leading-tight text-primary text-center">
-            Be a Part of Something Great
+            Be Part of Our Journey
           </h2>
         </BlurFade>
 
@@ -214,46 +230,40 @@ You might come from customer success, consulting, account management, shopping c
           <div className="mt-4 flex flex-col gap-4">
             {jobs.map((job, index) => (
               <BlurFade delay={0.6} inView key={index}>
-                <Card
-                  className="w-full cursor-pointer"
-                  onClick={() => setSelectedJob(job)}
-                >
+                <Card className="cursor-pointer" onClick={() => openJob(job)}>
                   <CardHeader>
-                    <CardTitle>
-                      {job.title}
-                      <Badge
-                        variant="outline"
-                        className="absolute top-4 right-4"
-                      >
-                        <LucideFlag className="w-4 h-4 mr-2 color-primary/80" />
-                        {job.location}
-                      </Badge>
-                    </CardTitle>
-                    <CardDescription>
+                    <CardTitle>{job.title}</CardTitle>
+                    <CardDescription className="text-primary/60">
                       {job.description.length > 200
                         ? `${job.description.slice(0, 200)}...`
                         : job.description}
                     </CardDescription>
                   </CardHeader>
-                  <CardContent className="relative pt-8">
-                    <div className="flex row items-center gap-2">
-                      <div className="flex row items-center text-xs text-primary/80">
+                  <CardContent className="relative pt-8 justify-between flex flex-row gap-2">
+                    <div className="flex flex-wrap items-center gap-2 w-fit">
+                      <div className="flex items-center text-xs text-primary/80">
+                        <LucideFlag className="w-4 h-4 mr-2 color-primary/80" />
+                        {job.location}
+                      </div>
+                      <div className="flex items-center text-xs text-primary/80">
                         <LucideClock className="w-4 h-4 mr-2 color-primary/80" />
                         {job.type}
                       </div>
-                      <div className="flex row items-center text-xs text-primary/80">
+                      <div className="flex items-center text-xs text-primary/80">
                         <BriefcaseBusiness className="w-4 h-4 mr-2 color-primary/80" />
                         {job.locationType}
                       </div>
                     </div>
-                    <a href={job.href}>
-                      <Button
-                        variant="outline"
-                        className="absolute bg-primary text-background rounded-full bottom-4 right-4 text-xs"
-                      >
-                        Apply Now
-                      </Button>
-                    </a>
+                    <div className="flex flex-row-reverse w-fit">
+                      <a href={job.href} className="">
+                        <Button
+                          variant="outline"
+                          className="bg-primary text-background rounded-full text-xs"
+                        >
+                          Apply Now
+                        </Button>
+                      </a>
+                    </div>
                   </CardContent>
                 </Card>
               </BlurFade>
@@ -261,17 +271,15 @@ You might come from customer success, consulting, account management, shopping c
           </div>
         </section>
 
-        <Dialog
-          open={selectedJob !== null}
-          onOpenChange={(open) => !open && setSelectedJob(null)}
-        >
+        <Dialog open={isDialogOpen} onOpenChange={onDialogOpenChange}>
           <DialogContent className="max-w-7xl max-h-[95vh] overflow-y-auto">
             {selectedJob && (
               <>
                 <DialogHeader>
                   <DialogTitle>{selectedJob.title}</DialogTitle>
                   <DialogDescription>
-                    {selectedJob.location} • {selectedJob.type}
+                    {selectedJob.location} • {selectedJob.type} •{" "}
+                    {selectedJob.locationType}
                   </DialogDescription>
                 </DialogHeader>
                 <ReactMarkdown remarkPlugins={[remarkGfm]}>

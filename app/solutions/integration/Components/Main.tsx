@@ -25,7 +25,7 @@ function Main() {
         <BlurFade delay={0.6} inView>
           <div className="relative overflow-hidden rounded-xl">
             <Image
-              src="/images/DashboardPreview.png"
+              src="/images/change3.png"
               alt="Hero image"
               width={2000}
               height={2016}
