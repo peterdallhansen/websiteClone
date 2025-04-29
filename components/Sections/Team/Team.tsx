@@ -71,30 +71,30 @@ const board: TeamMember[] = [
   {
     picture: "/images/People/ADH-Blue.png",
     name: "Anders Dall-Hansen",
-    title: "Advisor",
+    title: "Board of Director",
     linkedin: "https://www.linkedin.com/in/andersdallhansen/",
     description: `Anders is an advisor at Zonify.ai, bringing deep expertise in statistical modeling, machine learning, and AI with a strong focus on value creation. Anders is a Data Scientist at Halfspace, where he continues to build advanced data solutions. Previously, he spent 3.5 years at A.P. Moller - Maersk within pricing and revenue management data science, developing price-sensitive demand forecasting models, price recommendation systems, and global predictive models of container prices. He has built robust end-to-end data pipelines, primarily using Spark on Databricks. Anders holds both an MSc and BSc in Mathematics and Economics from Copenhagen Business School.`,
   },
   {
     picture: "/images/People/LL-Blue.png",
     name: "Lars Lund",
-    title: "Board Member",
+    title: "Advisory Board Member",
     linkedin: "https://www.linkedin.com/in/larslunddk/",
-    description: `Lars is a Board Member at Zonify.ai, bringing extensive expertise in software integration and architecture. As Co-Owner and International Technical Project Manager at AlphaPeople, he has played a key role in bridging the gap between software development and commercial strategy. With deep experience in ERP software, international retail, eCommerce, and cross-channel integration, Lars combines technical leadership with a strong focus on delivering business-driven solutions across global markets.`,
+    description: `Lars is an Advisory Board Member at Zonify.ai, bringing extensive expertise in software integration and architecture. As Co-Owner and International Technical Project Manager at AlphaPeople, he has played a key role in bridging the gap between software development and commercial strategy. With deep experience in ERP software, international retail, eCommerce, and cross-channel integration, Lars combines technical leadership with a strong focus on delivering business-driven solutions across global markets.`,
   },
   {
     picture: "/images/People/LA-Blue.png",
     name: "Lars Andersen",
-    title: "Board Member",
+    title: "Advisory Board Member - Entrepreneurship",
     linkedin: "https://www.linkedin.com/in/seedcapitallarsandersen/",
-    description: `Lars is a Board Member at Zonify.ai, bringing extensive experience in entrepreneurship, leadership, and business growth. As a General Partner at SEED Capital, he has helped drive the success of several prominent companies, with key involvements including Endomondo, Trustpilot, Vivino, and Lunar. Earlier in his career, Lars served as CEO of Columbus IT Partners, where he led the company’s international expansion and grew the team from approximately 50 to over 700 employees across multiple countries. His career reflects a strong track record of scaling businesses and building high-performing organizations in the technology and software sectors.`,
+    description: `Lars is an Advisory Board Member at Zonify.ai, bringing extensive experience in entrepreneurship, leadership, and business growth. As a General Partner at SEED Capital, he has helped drive the success of several prominent companies, with key involvements including Endomondo, Trustpilot, Vivino, and Lunar. Earlier in his career, Lars served as CEO of Columbus IT Partners, where he led the company’s international expansion and grew the team from approximately 50 to over 700 employees across multiple countries. His career reflects a strong track record of scaling businesses and building high-performing organizations in the technology and software sectors.`,
   },
   {
     picture: "/images/People/OWC-Blue.png",
     name: "Ole Wieth Christensen",
-    title: "Board Member",
+    title: "Advisory Board Member - Airports",
     linkedin: "https://www.linkedin.com/in/ole-wieth-christensen-8418ab1",
-    description: `Ole is an Advisor and Board Member at Zonify.ai, bringing deep expertise in airport commercial optimization and development. He has held leadership roles across the aviation sector, including Director positions at CPH Airports and Swedavia AB, where he led European sales, business development, and airline route development. Ole also served as a Senior Advisor in aviation at Ramboll, advising on commercial strategies and infrastructure development. With extensive experience in optimizing airport operations and driving commercial growth, Ole brings valuable industry insight to Zonify.ai.`,
+    description: `Ole is an Advisor and Advisory Board Member at Zonify.ai, bringing deep expertise in airport commercial optimization and development. He has held leadership roles across the aviation sector, including Director positions at CPH Airports and Swedavia AB, where he led European sales, business development, and airline route development. Ole also served as a Senior Advisor in aviation at Ramboll, advising on commercial strategies and infrastructure development. With extensive experience in optimizing airport operations and driving commercial growth, Ole brings valuable industry insight to Zonify.ai.`,
   },
 ];
 
