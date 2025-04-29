@@ -40,7 +40,7 @@ interface TeamSectionProps {
 
 const management: TeamMember[] = [
   {
-    picture: "/images/people/MDH-Blue.png",
+    picture: "/images/People/MDH-Blue.png",
     name: "Mathias Dall-Hansen",
     title: "CEO",
     phone: "+45 31 18 36 80",
@@ -49,7 +49,7 @@ const management: TeamMember[] = [
     description: `Mathias is the CEO of Zonify.ai, bringing deep expertise in software architecture and computer vision. He founded Ivensa Vision ApS, where he successfully developed and commercialized footfall analytics software, leading the company as CEO until 2024. Throughout his career, Mathias has combined technical excellence with entrepreneurial leadership, driving innovation at the intersection of AI and real-world data applications.`,
   },
   {
-    picture: "/images/people/ODH-Blue.png",
+    picture: "/images/People/ODH-Blue.png",
     name: "Ole Dall-Hansen",
     title: "Executive Chairman",
     phone: "+45 60 10 86 87",
@@ -58,7 +58,7 @@ const management: TeamMember[] = [
     description: `Ole is the Executive Chairman of Zonify.ai, bringing over 25 years of experience in real estate fund management, corporate finance, and business development. He has served as a tech co-founder, CFO, and Executive Chairman of Ivensa Vision ApS, specializing in AI-powered retail performance management software. Throughout his career, Ole has held senior positions across equity research, M&A, investment management, private equity, and fund development, with a strong track record in international fundraising, investor relations, and alternative investments such as real estate, wind, and solar power. His background combines deep financial expertise with entrepreneurial leadership and a strong focus on scaling technology-driven businesses.`,
   },
   /*   {
-    picture: "/images/people/PDH-Blue2.png",
+    picture: "/images/People/PDH-Blue2.png",
     name: "Peter Dall-Hansen",
     title: "Frontend Developer",
     linkedin: "https://www.linkedin.com/in/marlenewintherplas",
@@ -69,28 +69,28 @@ const management: TeamMember[] = [
 
 const board: TeamMember[] = [
   {
-    picture: "/images/people/ADH-Blue.png",
+    picture: "/images/People/ADH-Blue.png",
     name: "Anders Dall-Hansen",
     title: "Advisor",
     linkedin: "https://www.linkedin.com/in/andersdallhansen/",
     description: `Anders is an advisor at Zonify.ai, bringing deep expertise in statistical modeling, machine learning, and AI with a strong focus on value creation. Anders is a Data Scientist at Halfspace, where he continues to build advanced data solutions. Previously, he spent 3.5 years at A.P. Moller - Maersk within pricing and revenue management data science, developing price-sensitive demand forecasting models, price recommendation systems, and global predictive models of container prices. He has built robust end-to-end data pipelines, primarily using Spark on Databricks. Anders holds both an MSc and BSc in Mathematics and Economics from Copenhagen Business School.`,
   },
   {
-    picture: "/images/people/LL-Blue.png",
+    picture: "/images/People/LL-Blue.png",
     name: "Lars Lund",
     title: "Board Member",
     linkedin: "https://www.linkedin.com/in/larslunddk/",
     description: `Lars is a Board Member at Zonify.ai, bringing extensive expertise in software integration and architecture. As Co-Owner and International Technical Project Manager at AlphaPeople, he has played a key role in bridging the gap between software development and commercial strategy. With deep experience in ERP software, international retail, eCommerce, and cross-channel integration, Lars combines technical leadership with a strong focus on delivering business-driven solutions across global markets.`,
   },
   {
-    picture: "/images/people/LA-Blue.png",
+    picture: "/images/People/LA-Blue.png",
     name: "Lars Andersen",
     title: "Board Member",
     linkedin: "https://www.linkedin.com/in/seedcapitallarsandersen/",
     description: `Lars is a Board Member at Zonify.ai, bringing extensive experience in entrepreneurship, leadership, and business growth. As a General Partner at SEED Capital, he has helped drive the success of several prominent companies, with key involvements including Endomondo, Trustpilot, Vivino, and Lunar. Earlier in his career, Lars served as CEO of Columbus IT Partners, where he led the company’s international expansion and grew the team from approximately 50 to over 700 employees across multiple countries. His career reflects a strong track record of scaling businesses and building high-performing organizations in the technology and software sectors.`,
   },
   {
-    picture: "/images/people/OWC-Blue.png",
+    picture: "/images/People/OWC-Blue.png",
     name: "Ole Wieth Christensen",
     title: "Board Member",
     linkedin: "https://www.linkedin.com/in/ole-wieth-christensen-8418ab1",
@@ -100,7 +100,7 @@ const board: TeamMember[] = [
 
 const legal: TeamMember[] = [
   {
-    picture: "/images/people/MWP-Blue.png",
+    picture: "/images/People/MWP-Blue.png",
     name: "Marlene Winther Plas",
     title: "Legal Advisor",
     linkedin: "https://www.linkedin.com/in/marlenewintherplas",

@@ -1,4 +1,9 @@
 import { Team } from "@/components/Sections/Team/Team";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Team",
+};
 
 export default function Home() {
   return (

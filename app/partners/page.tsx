@@ -1,6 +1,9 @@
 import BlurFade from "@/components/ui/blur-fade";
 import Image from "next/image";
-
+import { Metadata } from "next";
+export const metadata: Metadata = {
+  title: "Partners",
+};
 interface Partner {
   id: number;
   name: string;

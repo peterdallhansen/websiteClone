@@ -4,6 +4,10 @@ import { solutions } from "@/lib/constants";
 import { cn } from "@/lib/utils";
 import { ChevronRight } from "lucide-react";
 import Image from "next/image";
+import { Metadata } from "next";
+export const metadata: Metadata = {
+  title: "Solutions",
+};
 
 function Page() {
   return (

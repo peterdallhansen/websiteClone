@@ -55,7 +55,7 @@ export default function Offerings() {
         "Connect with your existing systems and sync data instantly—our flexible APIs and plug-ins make it effortless.",
       image: (
         <Image
-          src={"/images/change3.png"}
+          src={"/images/Change3.png"}
           alt={"Seamless Integration"}
           fill
           quality={100}

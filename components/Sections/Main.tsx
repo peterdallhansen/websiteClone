@@ -7,7 +7,14 @@ function Main() {
       {/* Center container for video and overlay */}
       <div className="">
         {/* Video Container */}
-        <div className="relativ   h-screen w-screen flex align-center justify-center rounded-2xl  ">
+        <div
+          className="relativ   h-screen w-screen flex align-center justify-center rounded-2xl  "
+          style={{
+            backgroundImage: `url('/images/bg.jpg')`,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+          }}
+        >
           <div className="w-full h-full relative">
             <video
               className="w-full h-full p-0 lg:w-full md:p-0 md:rounded-xl object-cover "
@@ -15,7 +22,6 @@ function Main() {
               muted
               loop
               playsInline
-              controls={false} // Ensures the play button is hidden
             >
               <source src="/videos/bg2.mp4" type="video/mp4" />
             </video>

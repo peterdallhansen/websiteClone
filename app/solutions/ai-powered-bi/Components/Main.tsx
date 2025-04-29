@@ -25,7 +25,7 @@ function Main() {
         <BlurFade delay={0.6} inView>
           <div className="relative overflow-hidden rounded-xl">
             <video
-              src="/videos/ad2.mp4"
+              src="/videos/Ad2.mp4"
               width={1500}
               height={2016}
               autoPlay

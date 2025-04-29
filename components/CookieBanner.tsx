@@ -1,6 +1,7 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
+import { getLocalStorage, setLocalStorage } from "@/lib/storage-helper";
 import { ChevronRight } from "lucide-react";
 import { useEffect, useState } from "react";
 
@@ -9,42 +10,55 @@ export default function CookieBanner({
 }: {
   textColorClass: string;
 }) {
-  const [isVisible, setIsVisible] = useState(false);
+  const [cookieConsent, setCookieConsent] = useState<boolean | null>(null);
+  const [isLoading, setIsLoading] = useState(true);
 
+  // Retrieve cookie consent status from local storage on component mount
   useEffect(() => {
-    if (!localStorage.getItem("cookieChoice")) {
-      setIsVisible(true);
+    const storedCookieConsent = getLocalStorage("cookie_consent", null);
+    console.log("Cookie Consent retrieved from storage: ", storedCookieConsent);
+
+    if (storedCookieConsent === true || storedCookieConsent === "true") {
+      setCookieConsent(true);
+    } else if (
+      storedCookieConsent === false ||
+      storedCookieConsent === "false"
+    ) {
+      setCookieConsent(false);
+    } else {
+      setCookieConsent(null);
     }
+
+    setIsLoading(false);
   }, []);
 
-  const updateConsent = (granted: boolean) => {
-    if (!window.gtag) return;
-
-    window.gtag("consent", "update", {
-      ad_storage: granted ? "granted" : "denied",
-      analytics_storage: granted ? "granted" : "denied",
-    });
-
-    if (granted) {
-      // fire the initial page_view event
-      window.gtag("event", "page_view");
+  // Update local storage and Google Analytics consent status when cookieConsent changes
+  useEffect(() => {
+    if (cookieConsent !== null) {
+      setLocalStorage("cookie_consent", cookieConsent);
     }
-  };
+
+    const newValue = cookieConsent ? "granted" : "denied";
+
+    if (typeof window !== "undefined" && window.gtag) {
+      window.gtag("consent", "update", {
+        analytics_storage: newValue,
+      });
+    }
+  }, [cookieConsent]);
+
+  // Do not render the banner if loading or consent is already given
+  if (isLoading || cookieConsent !== null) {
+    return null;
+  }
 
   const handleAcceptAll = () => {
-    localStorage.setItem("cookieChoice", "acceptAll");
-    updateConsent(true);
-    setIsVisible(false);
+    setCookieConsent(true);
   };
 
   const handleRejectNonEssential = () => {
-    localStorage.setItem("cookieChoice", "rejectNonEssential");
-    updateConsent(false);
-    setIsVisible(false);
+    setCookieConsent(false);
   };
-
-  if (!isVisible) return null;
-
   return (
     <div
       className={`fixed bottom-0 left-0 right-0 z-50 bg-black/20 backdrop-blur ${textColorClass} p-4 shadow-lg px-4 md:px-20  flex flex-row justify-center align-center `}

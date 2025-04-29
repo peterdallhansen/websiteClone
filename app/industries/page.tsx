@@ -2,7 +2,10 @@ import AnimatedShinyText from "@/components/ui/animated-shiny-text";
 import BlurFade from "@/components/ui/blur-fade";
 import { ChevronRight } from "lucide-react";
 import Image from "next/image";
-
+import { Metadata } from "next";
+export const metadata: Metadata = {
+  title: "Industries",
+};
 function Page() {
   const Industries = [
     {
