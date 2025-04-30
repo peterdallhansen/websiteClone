@@ -101,7 +101,7 @@ export default function ServiceTerms() {
             by Zonify.ai
           </h2>
           {/* Effective date */}
-          <div className="w-full flex justify-end items-center">
+          <div className="w-full flex justify-end items-center pt-8">
             <div className="text-sm">Effective Date: {effectiveDate}</div>
             <a href={downloadUrl} download className="inline-flex items-center">
               <Button variant="link">
