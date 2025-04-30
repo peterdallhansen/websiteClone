@@ -5,6 +5,7 @@ import { LinkedInLogoIcon } from "@radix-ui/react-icons";
 import {
   ArrowDownRight,
   ArrowUpRight,
+  LucideUserRound,
   MailIcon,
   PhoneIcon,
 } from "lucide-react";
@@ -46,7 +47,7 @@ const management: TeamMember[] = [
     phone: "+45 31 18 36 80",
     email: "mdh@zonify.ai",
     linkedin: "https://www.linkedin.com/in/mathias-dall-hansen/",
-    description: `Mathias is the CEO of Zonify.ai, bringing deep expertise in software architecture and computer vision. He founded Ivensa Vision ApS, where he successfully developed and commercialized footfall analytics software, leading the company as CEO until 2024. Throughout his career, Mathias has combined technical excellence with entrepreneurial leadership, driving innovation at the intersection of AI and real-world data applications.`,
+    description: `Mathias is the CEO of Zonify.ai, bringing deep expertise in software architecture and computer vision. He founded Visotia (formerly Ivensa Vision ApS), where he successfully developed and commercialized footfall analytics software, leading the company as CEO until 2024. Throughout his career, Mathias has combined technical excellence with entrepreneurial leadership, driving innovation at the intersection of AI and real-world data applications.`,
   },
   {
     picture: "/images/People/ODH-Blue.png",
@@ -55,19 +56,8 @@ const management: TeamMember[] = [
     phone: "+45 60 10 86 87",
     email: "odh@zonify.ai",
     linkedin: "https://www.linkedin.com/in/ole-dall-hansen-4674622/",
-    description: `Ole is the Executive Chairman of Zonify.ai, bringing over 25 years of experience in real estate fund management, corporate finance, and business development. He has served as a tech co-founder, CFO, and Executive Chairman of Ivensa Vision ApS, specializing in AI-powered retail performance management software. Throughout his career, Ole has held senior positions across equity research, M&A, investment management, private equity, and fund development, with a strong track record in international fundraising, investor relations, and alternative investments such as real estate, wind, and solar power. His background combines deep financial expertise with entrepreneurial leadership and a strong focus on scaling technology-driven businesses.`,
+    description: `Ole is the Executive Chairman of Zonify.ai, bringing over 25 years of experience in real estate fund management, corporate finance, and business development. He has served as a tech co-founder, CFO, and Executive Chairman of Visotia (formerly Ivensa Vision ApS), specializing in AI-powered retail performance management software. Throughout his career, Ole has held senior positions across equity research, M&A, investment management, private equity, and fund development, with a strong track record in international fundraising, investor relations, and alternative investments such as real estate, wind, and solar power. His background combines deep financial expertise with entrepreneurial leadership and a strong focus on scaling technology-driven businesses.`,
   },
-  /*   {
-    picture: "/images/People/PDH-Blue2.png",
-    name: "Peter Dall-Hansen",
-    title: "Frontend Developer",
-    linkedin: "https://www.linkedin.com/in/marlenewintherplas",
-    description: `Peter is a Frontend Developer and Co-Founder at Zonify.ai, contributing to product development, frontend architecture, and brand direction. He specializes in designing and developing user-facing solutions, combining technical skills with a strong focus on user experience and visual identity. Prior to Zonify.ai, Peter gained hands-on experience in customer onboarding and collaborative problem-solving as a student assistant at Ivensa Vision ApS. He holds an STX diploma with a focus on Mathematics A and Physics A from Nærum Gymnasium.`,
-    email: "pdh@zonify.ai",
-  }, */
-];
-
-const board: TeamMember[] = [
   {
     picture: "/images/People/ADH-Blue.png",
     name: "Anders Dall-Hansen",
@@ -75,6 +65,35 @@ const board: TeamMember[] = [
     linkedin: "https://www.linkedin.com/in/andersdallhansen/",
     description: `Anders is an advisor at Zonify.ai, bringing deep expertise in statistical modeling, machine learning, and AI with a strong focus on value creation. Anders is a Data Scientist at Halfspace, where he continues to build advanced data solutions. Previously, he spent 3.5 years at A.P. Moller - Maersk within pricing and revenue management data science, developing price-sensitive demand forecasting models, price recommendation systems, and global predictive models of container prices. He has built robust end-to-end data pipelines, primarily using Spark on Databricks. Anders holds both an MSc and BSc in Mathematics and Economics from Copenhagen Business School.`,
   },
+  {
+    picture: "",
+    name: "Peter Dall-Hansen",
+    title: "Frontend Developer",
+    linkedin: "https://www.linkedin.com/in/marlenewintherplas",
+    description: `Peter is a Frontend Developer and Co-Founder at Zonify.ai, contributing to product development, frontend architecture, and brand direction. He specializes in designing and developing user-facing solutions, combining technical skills with a strong focus on user experience and visual identity. Prior to Zonify.ai, Peter gained hands-on experience in customer onboarding and collaborative problem-solving as a student assistant at Visotia (formerly Ivensa Vision ApS).`,
+    email: "pdh@zonify.ai",
+  },
+  {
+    picture: "/images/People/SKJ.png",
+    name: "Simone Kromand Jessen",
+    title: "Student Assistant",
+    description:
+      "Simone is a Student Assistant at Zonify.ai, supporting customer onboarding as part of the current onboarding team.",
+  },
+  {
+    picture: "/images/People/FSI-Blue.png",
+    name: "Filip Simic",
+    title: "Student Assistant",
+    description: `Filip is a Student Assistant at Zonify.ai, contributing to customer onboarding and operational support. He was previously part of the onboarding team at Visotia (formerly Ivensa Vision ApS). Filip brings a strong service mindset and hands-on experience in supporting the growth of tech-driven solutions.`,
+  },
+  {
+    picture: "",
+    name: "William Jensen",
+    title: "Student Assistant",
+    description:
+      "William is a Student Assistant at Zonify.ai, supporting customer onboarding as part of the current onboarding team.",
+  },
+
   {
     picture: "/images/People/LL-Blue.png",
     name: "Lars Lund",
@@ -96,13 +115,25 @@ const board: TeamMember[] = [
     linkedin: "https://www.linkedin.com/in/ole-wieth-christensen-8418ab1",
     description: `Ole is an Advisor and Advisory Board Member at Zonify.ai, bringing deep expertise in airport commercial optimization and development. He has held leadership roles across the aviation sector, including Director positions at CPH Airports and Swedavia AB, where he led European sales, business development, and airline route development. Ole also served as a Senior Advisor in aviation at Ramboll, advising on commercial strategies and infrastructure development. With extensive experience in optimizing airport operations and driving commercial growth, Ole brings valuable industry insight to Zonify.ai.`,
   },
-];
 
-const legal: TeamMember[] = [
   {
     picture: "/images/People/MWP-Blue.png",
     name: "Marlene Winther Plas",
     title: "Legal Advisor",
+    linkedin: "https://www.linkedin.com/in/marlenewintherplas",
+    description: `Marlene is the Legal Advisor at Zonify.ai, specializing in compliance, IT law, and data privacy. She is a Partner at DLA Piper and an experienced professional board member, advising Danish and international clients on IT law, outsourcing, data privacy, and GDPR compliance. Marlene brings extensive expertise in contract drafting, negotiation, and regulatory advisory, helping organizations navigate complex legal frameworks while supporting business innovation.`,
+  },
+  {
+    picture: "/images/People/MWP-Blue.png",
+    name: "Marlene Winther Plas",
+    title: "Data Scientist",
+    linkedin: "https://www.linkedin.com/in/marlenewintherplas",
+    description: `Marlene is the Legal Advisor at Zonify.ai, specializing in compliance, IT law, and data privacy. She is a Partner at DLA Piper and an experienced professional board member, advising Danish and international clients on IT law, outsourcing, data privacy, and GDPR compliance. Marlene brings extensive expertise in contract drafting, negotiation, and regulatory advisory, helping organizations navigate complex legal frameworks while supporting business innovation.`,
+  },
+  {
+    picture: "/images/People/MWP-Blue.png",
+    name: "Marlene Winther Plas",
+    title: "Customer Success Manager",
     linkedin: "https://www.linkedin.com/in/marlenewintherplas",
     description: `Marlene is the Legal Advisor at Zonify.ai, specializing in compliance, IT law, and data privacy. She is a Partner at DLA Piper and an experienced professional board member, advising Danish and international clients on IT law, outsourcing, data privacy, and GDPR compliance. Marlene brings extensive expertise in contract drafting, negotiation, and regulatory advisory, helping organizations navigate complex legal frameworks while supporting business innovation.`,
   },
@@ -123,13 +154,19 @@ function TeamMemberCard({
 
   return (
     <div className="relative overflow-hidden w-full h-[500px] rounded-2xl flex p-3 flex-col-reverse">
-      <Image
-        src={picture}
-        alt={name}
-        fill
-        className="object-cover object-center -z-10 rounded-2xl"
-        priority
-      />
+      {picture ? (
+        <Image
+          src={picture}
+          alt={name}
+          fill
+          className="object-cover object-center -z-10 rounded-2xl"
+          priority
+        />
+      ) : (
+        <div className="absolute inset-0 flex items-center justify-center -z-10 rounded-2xl">
+          <LucideUserRound className="h-56 w-56 text-gray-500" />
+        </div>
+      )}
 
       <div
         className="relative rounded-xl p-4"
@@ -226,7 +263,7 @@ const TeamSection: React.FC<TeamSectionProps> = ({ title, members, index }) => {
 };
 
 const sections = [
-  { title: "", members: [...management, ...board, ...legal] },
+  { title: "", members: [...management] },
   /*   { title: "Advisory Board", members: board },
   { title: "Legal Advisors", members: legal }, */
 ];
