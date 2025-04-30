@@ -1,9 +1,0 @@
-# *
-User-agent: *
-Allow: /
-
-# Host
-Host: https://zonify.ai
-
-# Sitemaps
-Sitemap: https://zonify.ai/sitemap.xml

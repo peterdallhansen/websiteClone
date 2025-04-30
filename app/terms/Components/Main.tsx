@@ -1,4 +1,3 @@
-import BlurFade from "@/components/ui/blur-fade";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 
 const termsSections = [
@@ -64,26 +63,20 @@ export default function TermsAndConditions() {
     <div className="container mx-auto px-4 py-8 max-w-[900px]">
       <Card className="bg-transparent border-none shadow-none ">
         <CardHeader>
-          <BlurFade delay={0} inView>
-            <h2 className="text-2xl md:text-3xl xl:text-5xl font-bold leading-tight text-primary text-center">
-              Terms & Conditions
-            </h2>
-          </BlurFade>
-          <BlurFade delay={0.2} inView>
-            <h2 className="text-xl md:text-lg xl:text-2xl mb-8 leading-tight text-primary text-center max-w-[750px] text-opacity-60">
-              By using our services, you agree to these terms. <br />
-              Please read them carefully.
-            </h2>
-          </BlurFade>
+          <h2 className="text-2xl md:text-3xl xl:text-5xl font-bold leading-tight text-primary text-center">
+            Terms & Conditions
+          </h2>
+          <h2 className="text-xl md:text-lg xl:text-2xl mb-8 leading-tight text-primary text-center max-w-[750px] text-opacity-60">
+            By using our services, you agree to these terms. <br />
+            Please read them carefully.
+          </h2>
         </CardHeader>
         <CardContent className="space-y-6">
           {termsSections.map((section, index) => (
-            <BlurFade delay={0.25 + 0.1 * index} key={index}>
-              <section id={section.id}>
-                <h2 className="text-xl font-semibold mb-2">{section.title}</h2>
-                <p>{section.content}</p>
-              </section>
-            </BlurFade>
+            <section id={section.id} key={index}>
+              <h2 className="text-xl font-semibold mb-2">{section.title}</h2>
+              <p>{section.content}</p>
+            </section>
           ))}
         </CardContent>
       </Card>

@@ -46,7 +46,7 @@ export default function PartnersPage() {
         </BlurFade>
         <BlurFade delay={0.5} inView>
           <h2 className="text-2xl md:text-3xl xl:text-5xl font-bold leading-tight text-primary text-center mb-8">
-            Working Together with Trusted Partners
+            Working Together With Trusted Partners
           </h2>
         </BlurFade>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-0 md:gap-8">

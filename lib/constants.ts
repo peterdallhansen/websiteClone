@@ -36,7 +36,7 @@ export const solutions: {
   {
     title: "Analytics Hub",
     href: "/solutions/analytics-hub",
-    description: "Instant views for decisions.",
+    description: "One Place For Everything That Matters.",
     subtitle: "Your central control panel for spatial intelligence.",
     longDescription:
       "Visualize activity across spaces, manage dashboards, and tailor data views by role or location—all from a single, intuitive hub designed for action and clarity.",
@@ -67,7 +67,7 @@ export const solutions: {
   {
     title: "AI-Powered BI",
     href: "/solutions/ai-powered-bi",
-    description: "Transform data with AI.",
+    description: "Beyond Dashboards. Into Real Context.",
     subtitle: "Ask questions. Get instant, actionable answers.",
     longDescription:
       "Use natural language to query your data and get meaningful answers in real time. Our AI combines language models with your actual business data to go beyond dashboards and deliver real context.",
@@ -75,7 +75,7 @@ export const solutions: {
     image: "/AI2.png",
   },
   {
-    title: "Effortless Integration",
+    title: "Integrations",
     href: "/solutions/integration",
     description: "Seamless connectivity with systems.",
     subtitle: "Plug in. Sync data. Get insights fast.",

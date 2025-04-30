@@ -243,7 +243,7 @@ export function Team() {
           </BlurFade>
           <BlurFade delay={0.5} inView>
             <h2 className="text-2xl md:text-3xl xl:text-4xl font-bold mb-8 leading-tight text-primary">
-              Meet the people behind Zonify.ai
+              Meet The People Behind Zonify.ai
             </h2>
           </BlurFade>
         </div>

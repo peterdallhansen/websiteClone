@@ -74,6 +74,11 @@ const footerSections: FooterSection[] = [
         Icon: Clipboard,
       },
       {
+        href: "/business-terms",
+        label: "Business terms",
+        Icon: FileText, // You can choose a different icon if preferred
+      },
+      {
         href: "/privacy-policy",
         label: "Privacy",
         Icon: Shield,
