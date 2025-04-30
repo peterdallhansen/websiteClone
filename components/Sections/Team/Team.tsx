@@ -124,18 +124,20 @@ const management: TeamMember[] = [
     description: `Marlene is the Legal Advisor at Zonify.ai, specializing in compliance, IT law, and data privacy. She is a Partner at DLA Piper and an experienced professional board member, advising Danish and international clients on IT law, outsourcing, data privacy, and GDPR compliance. Marlene brings extensive expertise in contract drafting, negotiation, and regulatory advisory, helping organizations navigate complex legal frameworks while supporting business innovation.`,
   },
   {
-    picture: "/images/People/MWP-Blue.png",
-    name: "Marlene Winther Plas",
+    picture: "",
+    name: "We're Hiring",
     title: "Data Scientist",
-    linkedin: "https://www.linkedin.com/in/marlenewintherplas",
-    description: `Marlene is the Legal Advisor at Zonify.ai, specializing in compliance, IT law, and data privacy. She is a Partner at DLA Piper and an experienced professional board member, advising Danish and international clients on IT law, outsourcing, data privacy, and GDPR compliance. Marlene brings extensive expertise in contract drafting, negotiation, and regulatory advisory, helping organizations navigate complex legal frameworks while supporting business innovation.`,
+    description:
+      "We're looking for a talented Data Scientist to join Zonify.ai. Help us build cutting-edge AI solutions for the physical world. Reach out if you're interested!",
+    email: "careers@zonify.ai",
   },
   {
-    picture: "/images/People/MWP-Blue.png",
-    name: "Marlene Winther Plas",
+    picture: "",
+    name: "We're Hiring",
     title: "Customer Success Manager",
-    linkedin: "https://www.linkedin.com/in/marlenewintherplas",
-    description: `Marlene is the Legal Advisor at Zonify.ai, specializing in compliance, IT law, and data privacy. She is a Partner at DLA Piper and an experienced professional board member, advising Danish and international clients on IT law, outsourcing, data privacy, and GDPR compliance. Marlene brings extensive expertise in contract drafting, negotiation, and regulatory advisory, helping organizations navigate complex legal frameworks while supporting business innovation.`,
+    description:
+      "We're hiring a Customer Success Manager to support onboarding and client growth. If you're passionate about helping customers thrive, let's talk!",
+    email: "careers@zonify.ai",
   },
 ];
 
