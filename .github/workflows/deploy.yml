@@ -22,7 +22,8 @@ jobs:
       packages: write
     steps:
       - uses: actions/checkout@v4
-
+      - name: Pull Git LFS files
+        run: git lfs pull
       - name: Login to Azure Container Registry
         uses: azure/docker-login@v1
         with:
