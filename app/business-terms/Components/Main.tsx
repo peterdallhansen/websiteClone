@@ -1,5 +1,4 @@
 "use client";
-import BlurFade from "@/components/ui/blur-fade";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import dayjs from "dayjs";
