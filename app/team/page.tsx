@@ -3,6 +3,7 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Team",
+  description: "Meet The People Behind Zonify.ai",
 };
 
 export default function Home() {

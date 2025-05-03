@@ -5,7 +5,7 @@ const privacyPolicySections = [
     id: "information-we-collect",
     title: "1. Information We Collect",
     content: `
-      At Financia, we take your privacy seriously. We may collect personal information from you when you use our website, fill out forms, or communicate with us. This includes details such as your name, email address, phone number, company name, and any other information you provide.
+      At Zonify.ai, we take your privacy seriously. We may collect personal information from you when you use our website, fill out forms, or communicate with us. This includes details such as your name, email address, phone number, company name, and any other information you provide.
     `,
   },
   {
