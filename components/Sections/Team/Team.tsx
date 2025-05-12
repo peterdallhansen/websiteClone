@@ -66,7 +66,7 @@ const management: TeamMember[] = [
     description: `Anders is an advisor at Zonify.ai, bringing deep expertise in statistical modeling, machine learning, and AI with a strong focus on value creation. Anders is a Data Scientist at Halfspace, where he continues to build advanced data solutions. Previously, he spent 3.5 years at A.P. Moller - Maersk within pricing and revenue management data science, developing price-sensitive demand forecasting models, price recommendation systems, and global predictive models of container prices. He has built robust end-to-end data pipelines, primarily using Spark on Databricks. Anders holds both an MSc and BSc in Mathematics and Economics from Copenhagen Business School.`,
   },
   {
-    picture: "",
+    picture: "/images/People/PDH-Blue.png",
     name: "Peter Dall-Hansen",
     title: "Frontend Developer",
     linkedin: "https://www.linkedin.com/in/marlenewintherplas",

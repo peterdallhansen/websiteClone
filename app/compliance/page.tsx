@@ -3,6 +3,7 @@ import Main from "./Main";
 import { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Compliance",
+  description: "Ensuring Adherence to Industry Standards",
 };
 export default function Home() {
   return (
