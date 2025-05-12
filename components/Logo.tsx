@@ -15,8 +15,8 @@ const Logo: React.FC<Props> = ({
   height = 40,
   variant,
 }) => {
-  const lightLogo = "/images/Logo-alt2-light.png";
-  const darkLogo = "/images/Logo-alt2-dark.png";
+  const lightLogo = "/images/logos/Logo-dark.png";
+  const darkLogo = "/images/logos/Logo-light.png";
 
   return (
     <a className={className} href="/">

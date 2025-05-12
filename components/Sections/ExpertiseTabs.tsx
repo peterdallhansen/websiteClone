@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import {
   Award,
   Edit,
@@ -60,6 +60,19 @@ const tabs = [
 
 export default function ExpertiseTabs() {
   const [activeTab, setActiveTab] = useState(tabs[0].id);
+
+  // whenever activeTab changes (click or auto), restart a 5s timer
+  useEffect(() => {
+    const currentIndex = tabs.findIndex((t) => t.id === activeTab);
+    const nextIndex = (currentIndex + 1) % tabs.length;
+
+    const timeout = setTimeout(() => {
+      setActiveTab(tabs[nextIndex].id);
+    }, 7500);
+
+    // cleanup + reset on activeTab change or unmount
+    return () => clearTimeout(timeout);
+  }, [activeTab]);
 
   const activeContent = tabs.find((tab) => tab.id === activeTab)?.content;
 
@@ -132,21 +145,28 @@ export default function ExpertiseTabs() {
 
               <div className="flex-1 bg-gray-50 rounded-xl  flex items-center justify-center">
                 <div className="relative w-full h-[300px] md:h-[400px] lg:h-[500px]">
-                  {typeof activeContent.image === "object" &&
-                  "src" in activeContent.image ? (
-                    <Image
-                      src={activeContent.image.src}
-                      alt={activeContent.image.alt}
-                      fill
-                      className={cn(
-                        activeContent.image.style,
-                        "object-cover rounded-lg object-top px-4"
+                  {tabs.map((tab) => (
+                    <div
+                      key={tab.id}
+                      className={activeTab === tab.id ? "block" : "hidden"}
+                    >
+                      {typeof activeContent.image === "object" &&
+                      "src" in activeContent.image ? (
+                        <Image
+                          src={activeContent.image.src}
+                          alt={activeContent.image.alt}
+                          fill
+                          priority
+                          className={cn(
+                            "object-cover rounded-lg object-top px-4"
+                          )}
+                          sizes="(min-width: 768px) 66vw, 100vw"
+                        />
+                      ) : (
+                        activeContent.image
                       )}
-                      sizes="(min-width: 768px) 66vw, 100vw"
-                    />
-                  ) : (
-                    activeContent.image
-                  )}
+                    </div>
+                  ))}
                 </div>
               </div>
             </div>

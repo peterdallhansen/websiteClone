@@ -15,7 +15,7 @@ function Infoo() {
       description:
         "Turn any 2D camera into a smart sensor with real-time computer vision—no new hardware needed.",
       image: {
-        src: "/images/Detection3.png",
+        src: "/images/Detection.svg",
         alt: "AI video analytics",
         style: { width: "auto", height: "300px", objectFit: "contain" },
       },
@@ -25,7 +25,7 @@ function Infoo() {
       description:
         "Merge camera feeds into one live view and gain complete visibility across your locations.",
       image: (
-        <div className="w-full h-full flex items-center justify-center h-[300px]">
+        <div className="w-full h-full flex items-center justify-center min-h-[300px]">
           <LucideGlobe className="w-40 h-40 " color="black" />
         </div>
       ),
@@ -35,7 +35,7 @@ function Infoo() {
       description:
         "Install effortlessly with no on-site setup or special equipment required.",
       image: (
-        <div className="w-full h-full flex items-center justify-center h-[300px]">
+        <div className="w-full h-full flex items-center justify-center min-h-[300px]">
           <LucideRocket className="w-40 h-40 " color="black" />
         </div>
       ),
