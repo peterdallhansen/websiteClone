@@ -1,7 +1,7 @@
 "use client";
 
 import { AnimatePresence, motion } from "framer-motion";
-import { Menu } from "lucide-react";
+import { LucideArrowUp, LucideArrowUpRight, Menu } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
@@ -241,7 +241,7 @@ export default function Header() {
               ) : (
                 <>
                   <NavigationMenuDemo linkClassName={textColorClass} />
-                  <div className="flex items-center space-x-4">
+                  <div className="flex items-center space-x-2">
                     <a
                       href="mailto:contact@zonify.ai?subject=Contact%20Us&body=Hello"
                       className={textColorClass + " text-sm"}
@@ -250,13 +250,15 @@ export default function Header() {
                     </a>
                     <Link href="http://accounts.zonify.ai/sign-in">
                       <Button
-                        className={`text-sm px-7 py-5 rounded-3xl ${
+                        className={`text-sm  py-5 rounded-3xl ${
                           isHome && atTop
-                            ? "bg-white text-black hover:bg-white/80"
-                            : "hover:bg-white/60 active:bg-white/40"
+                            ? "text-white hover:text-white/80"
+                            : "hover:text-white/60 active:text-white/40"
                         }`}
+                        variant={"link"}
                       >
-                        Login
+                        Analtyics Hub
+                        <LucideArrowUpRight />
                       </Button>
                     </Link>
                   </div>

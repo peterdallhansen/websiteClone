@@ -4,16 +4,16 @@ import { ArrowRightIcon, LucideLock } from "lucide-react";
 
 function GDPR() {
   return (
-    <section className="items-center justify-items-center mb-20 gap-32 sm:p-20 py-40 px-4">
-      <div className="w-full   max-w-6xl bg-[#F6F6F6] rounded-2xl p-6 md:p-12 lg:p-20 flex flex-col lg:flex-row relative overflow-hidden gap-8">
+    <section className="items-center container  justify-items-center mb-20 gap-32 p-20 mt-20">
+      <div className="w-full    bg-[#212121] rounded-2xl p-6 md:p-12 lg:p-20  flex flex-col lg:flex-row relative overflow-hidden gap-8">
         <div className="space-y-6 w-full">
-          <h4 className="text-sm md:text-lg text-black text-left">
+          <h4 className="text-sm md:text-lg text-white text-left">
             GDPR Compliance
           </h4>
-          <h1 className="text-4xl md:text-5xl font-bold text-black">
+          <h1 className="text-4xl md:text-5xl font-bold text-white">
             Build With <br /> Privacy in Mind
           </h1>
-          <p className="text-black/80 max-w-3xl">
+          <p className="text-white/80 max-w-3xl">
             Our platform is built with{" "}
             <span className="font-bold">full GDPR compliance</span> and{" "}
             <span className="font-bold">privacy by design</span>, ensuring that{" "}
@@ -37,7 +37,7 @@ function GDPR() {
           <a href="/compliance">
             <AnimatedShinyText
               color="text-accent"
-              className="inline-flex items-center justify-center px-4 pl-0 py-2 transition ease-out hover:text-black/60 text-accent mb-8"
+              className="inline-flex items-center justify-center px-4 pl-0 py-2 transition ease-out hover:text-white/60 text-accent mb-8"
             >
               <span>Read Full Article</span>
               <ArrowRightIcon className="ml-1 size-3 transition-transform duration-300 ease-in-out group-hover:translate-x-0.5" />
@@ -45,8 +45,8 @@ function GDPR() {
           </a>
         </div>
         <LucideLock
-          className="h-full w-2/3 flex align-center justify-center"
-          color="black"
+          className="h-full w-1/3 flex align-center justify-center"
+          color="white"
         />
       </div>
     </section>

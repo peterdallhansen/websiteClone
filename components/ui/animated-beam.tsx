@@ -23,6 +23,8 @@ export interface AnimatedBeamProps {
   startYOffset?: number;
   endXOffset?: number;
   endYOffset?: number;
+  fromAnchor?: "left" | "center" | "right";
+  toAnchor?: "left" | "center" | "right";
 }
 
 export const AnimatedBeam: React.FC<AnimatedBeamProps> = ({
@@ -43,6 +45,8 @@ export const AnimatedBeam: React.FC<AnimatedBeamProps> = ({
   startYOffset = 0,
   endXOffset = 0,
   endYOffset = 0,
+  fromAnchor = "center",
+  toAnchor = "center",
 }) => {
   const id = useId();
   const [pathD, setPathD] = useState("");
@@ -62,7 +66,21 @@ export const AnimatedBeam: React.FC<AnimatedBeamProps> = ({
         y1: ["0%", "0%"],
         y2: ["0%", "0%"],
       };
+  const getAnchoredX = (
+    elementRect: DOMRect,
+    anchor: "left" | "center" | "right",
+    containerRect: DOMRect,
+    offset: number
+  ) => {
+    const base =
+      anchor === "left"
+        ? elementRect.left
+        : anchor === "right"
+        ? elementRect.right
+        : elementRect.left + elementRect.width / 2;
 
+    return base - containerRect.left + offset;
+  };
   useEffect(() => {
     const updatePath = () => {
       if (containerRef.current && fromRef.current && toRef.current) {
@@ -74,12 +92,20 @@ export const AnimatedBeam: React.FC<AnimatedBeamProps> = ({
         const svgHeight = containerRect.height;
         setSvgDimensions({ width: svgWidth, height: svgHeight });
 
-        const startX =
-          rectA.left - containerRect.left + rectA.width / 2 + startXOffset;
+        const startX = getAnchoredX(
+          rectA,
+          fromAnchor ?? "center",
+          containerRect,
+          startXOffset
+        );
+        const endX = getAnchoredX(
+          rectB,
+          toAnchor ?? "center",
+          containerRect,
+          endXOffset
+        );
         const startY =
           rectA.top - containerRect.top + rectA.height / 2 + startYOffset;
-        const endX =
-          rectB.left - containerRect.left + rectB.width / 2 + endXOffset;
         const endY =
           rectB.top - containerRect.top + rectB.height / 2 + endYOffset;
 

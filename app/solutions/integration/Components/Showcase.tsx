@@ -125,3 +125,20 @@ function Showcase() {
 }
 
 export default Showcase;
+
+const Icons = {
+  powerbi: () => (
+    <img src="/images/powerbi.svg" alt="Power BI" className="w-6 h-6" />
+  ),
+  deltalake: () => (
+    <img src="/images/deltalake.svg" alt="Delta Lake" className="w-6 h-6" />
+  ),
+  openapi: () => (
+    <img
+      src="/images/openapi.svg"
+      alt="Openapi"
+      className="w-6 h-6 object-contain"
+    />
+  ),
+  excel: () => <img src="/images/excel.svg" alt="Excel" className="w-6 h-6 " />,
+};

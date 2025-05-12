@@ -229,7 +229,7 @@ export default function Offerings() {
           </div>
         </div>
       </div> */}
-      <div className="relative w-full max-w-screen mx-auto px-4 mb-20 ">
+      <div className="relative w-full max-w-screen mx-auto px-4 my-20 ">
         <div className="flex justify-between items-end mb-12 max-w-[1500px] mx-auto ">
           <div className=" space-y-6">
             <BlurFade delay={0.25} inView>
