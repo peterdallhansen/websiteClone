@@ -12,6 +12,7 @@ import Image from "next/image";
 import LogoIcon from "../LogoIcon";
 import { AnimatedBeam } from "../ui/animated-beam";
 import { Button } from "../ui/button";
+import Link from "next/link";
 
 export default function Integrations() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -25,16 +26,29 @@ export default function Integrations() {
     { id: "database", name: "Database", icon: <LucideDatabase /> },
     { id: "openapi", name: "OpenAPI", icon: <Icons.openapi /> },
     { id: "excel", name: "Excel", icon: <Icons.excel /> },
-    { id: "more", name: "More", icon: <LucidePlus /> },
   ];
 
   const analyses = [
-    { id: "footfall-analytics", name: "Footfall Analytics" },
-    { id: "age-demographics", name: "Age Demographics" },
-    { id: "gender-distribution", name: "Gender Distribution" },
-    { id: "heatmap-analysis", name: "Heatmap Analysis" },
-    { id: "queue-management", name: "Queue Management" },
-    { id: "more", name: "More" },
+    {
+      id: "layout-performance",
+      name: "Layout Performance Evaluation",
+    },
+    {
+      id: "behavior-trends",
+      name: "Visitor Behavior Trends Over Time",
+    },
+    {
+      id: "predictive-visitor-forecasting",
+      name: "Predictive Visitor Flow Forecasting",
+    },
+    {
+      id: "zone-engagement",
+      name: "Zone Engagement & Dwell Analysis",
+    },
+    {
+      id: "campaign-response-tracking",
+      name: "Campaign Response & Impact Tracking",
+    },
   ];
   const sourceRefs = useRef<Record<string, HTMLDivElement | null>>({});
   const analysisRefs = useRef<Record<string, HTMLDivElement | null>>({});
@@ -62,9 +76,11 @@ export default function Integrations() {
             Connect your data sources effortlessly and deploy with ease for a
             fast start.
           </h3>
-          <Button className="rounded-full">
-            Learn More <LucideArrowRight />
-          </Button>
+          <Link href={"/solutions/integration"}>
+            <Button className="rounded-full">
+              Learn More <LucideArrowRight />
+            </Button>
+          </Link>
         </div>
         <div className="flex justify-between mb-12">
           <h1 className="text-2xl font-medium text-gray-700">
@@ -79,18 +95,26 @@ export default function Integrations() {
         >
           {/* Left column */}
           <div className="w-1/3 space-y-6">
-            {dataSources.map((source) => (
-              <div
-                key={source.id}
-                ref={(el) => (sourceRefs.current[source.id] = el)}
-                className="bg-gray-100 p-4 rounded-lg flex items-center justify-between"
-              >
-                <span className="text-gray-1000">{source.name}</span>
-                <div className="w-8 h-8 flex items-center justify-center">
-                  {source.icon}
+            {dataSources.map((source, index) => {
+              const middleIndex = Math.floor(dataSources.length / 2);
+              const distance = Math.abs(index - middleIndex);
+              const opacity = Math.exp(-(distance ** 2) / (2 * 2 ** 2));
+              return (
+                <div
+                  key={source.id}
+                  ref={(el) => {
+                    sourceRefs.current[source.id] = el;
+                  }}
+                  style={{ opacity }}
+                  className="bg-gray-50 p-4 rounded-lg flex items-center justify-between transition-opacity duration-300"
+                >
+                  <span className="text-gray-500">{source.name}</span>
+                  <div className="w-8 h-8 flex items-center justify-center">
+                    {source.icon}
+                  </div>
                 </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
 
           {/* Hub */}
@@ -99,24 +123,32 @@ export default function Integrations() {
             ref={hubRef}
           >
             <div className="bg-none rounded-lg p-6 w-36 flex flex-col items-center  ">
-              <LogoIcon className="bg-white rounded-full" />
+              <LogoIcon className="bg-white rounded-full pointer-events-none" />
             </div>
           </div>
 
           {/* Right column */}
           <div className="w-1/3 space-y-6">
-            {analyses.map((analysis) => (
-              <div
-                key={analysis.id}
-                ref={(el) => (analysisRefs.current[analysis.id] = el)}
-                className="bg-gray-100 p-4 rounded-lg flex items-center justify-between"
-              >
-                <span className="text-gray-1000">{analysis.name}</span>
-                <div className="w-8 h-8 flex items-center justify-center">
-                  <CheckCircle className="w-6 h-6 text-gray-400" />
+            {analyses.map((analysis, index) => {
+              const middleIndex = Math.floor(analyses.length / 2);
+              const distance = Math.abs(index - middleIndex);
+              const opacity = Math.exp(-(distance ** 2) / (2 * 2 ** 2));
+              return (
+                <div
+                  key={analysis.id}
+                  ref={(el) => {
+                    analysisRefs.current[analysis.id] = el;
+                  }}
+                  style={{ opacity }}
+                  className="bg-gray-50 p-4 rounded-lg flex items-center justify-between"
+                >
+                  <span className="text-gray-500">{analysis.name}</span>
+                  <div className="w-8 h-8 flex items-center justify-center">
+                    <CheckCircle className="w-6 h-6 text-gray-400" />
+                  </div>
                 </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
 
           {/* Render beams only when all refs are ready */}

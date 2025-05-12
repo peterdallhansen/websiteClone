@@ -9,6 +9,7 @@ import Infoo from "@/components/Sections/Infoo";
 import Integrations from "@/components/Sections/Integrations";
 import Main from "@/components/Sections/Main";
 import MissionStatement from "@/components/Sections/MissionStatement";
+import ContinuousProcessPage from "@/components/Sections/recognize";
 
 export default function Home() {
   return (
@@ -24,6 +25,7 @@ export default function Home() {
       <AnalyticsTeaser />
       {/* <AIBITeaser /> */}
       <Integrations />
+      {/*    <ContinuousProcessPage /> */}
       <Offerings />
 
       {/*  <CaseStudy /> */}

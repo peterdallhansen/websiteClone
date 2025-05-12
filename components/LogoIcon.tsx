@@ -13,7 +13,7 @@ const LogoIcon: React.FC<Props> = ({
   width = 160,
   height = 40,
 }) => {
-  const logoSrc = "/images/Icon.svg";
+  const logoSrc = "/images/logos/Icon.svg";
 
   return (
     <a className={className} href="/">
