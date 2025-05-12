@@ -87,8 +87,8 @@ export default function ExpertiseTabs() {
                 className={cn(
                   "w-full text-left  p-4 rounded-2xl transition-all duration-200 flex items-start gap-3 ",
                   activeTab === tab.id
-                    ? "bg-white shadow-sm text-black bg-gray-50 h-[50%]"
-                    : "text-gray-500 bg-gray-50 hover:bg-gray-100 h-[25%]"
+                    ? "bg-white shadow-sm text-black bg-gray-100 h-[50%]"
+                    : "text-gray-1000 bg-gray-100 hover:bg-gray-100 h-[25%]"
                 )}
               >
                 <div>
@@ -130,7 +130,7 @@ export default function ExpertiseTabs() {
                 <p className="text-gray-600">{activeContent.description}</p>
               </div>
 
-              <div className="flex-1 bg-gray-50 rounded-xl  flex items-center justify-center">
+              <div className="flex-1 bg-gray-100 rounded-xl  flex items-center justify-center">
                 <div className="relative w-full h-[300px] md:h-[400px] lg:h-[500px]">
                   {typeof activeContent.image === "object" &&
                   "src" in activeContent.image ? (

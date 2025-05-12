@@ -56,11 +56,11 @@ export default function Integrations() {
       <div className="container mx-auto">
         <div className="flex flex-col items-center space-y-8">
           <h1 className="text-4xl md:text-5xl lg:text-5xl font-bold tracking-tight max-w-5xl mx-auto">
-            Unlock the Power of Seamless Integrations
+            Effortless Integration & Migration
           </h1>
           <h3 className="text-4xl md:text-5xl lg:text-xl text-primary/80 max-w-xl text-center mx-auto">
-            Connect your data sources effortlessly and gain actionable insights
-            with ease.
+            Connect your data sources effortlessly and deploy with ease for a
+            fast start.
           </h3>
           <Button className="rounded-full">
             Learn More <LucideArrowRight />
@@ -83,9 +83,9 @@ export default function Integrations() {
               <div
                 key={source.id}
                 ref={(el) => (sourceRefs.current[source.id] = el)}
-                className="bg-gray-50 p-4 rounded-lg flex items-center justify-between"
+                className="bg-gray-100 p-4 rounded-lg flex items-center justify-between"
               >
-                <span className="text-gray-500">{source.name}</span>
+                <span className="text-gray-1000">{source.name}</span>
                 <div className="w-8 h-8 flex items-center justify-center">
                   {source.icon}
                 </div>
@@ -109,9 +109,9 @@ export default function Integrations() {
               <div
                 key={analysis.id}
                 ref={(el) => (analysisRefs.current[analysis.id] = el)}
-                className="bg-gray-50 p-4 rounded-lg flex items-center justify-between"
+                className="bg-gray-100 p-4 rounded-lg flex items-center justify-between"
               >
-                <span className="text-gray-500">{analysis.name}</span>
+                <span className="text-gray-1000">{analysis.name}</span>
                 <div className="w-8 h-8 flex items-center justify-center">
                   <CheckCircle className="w-6 h-6 text-gray-400" />
                 </div>

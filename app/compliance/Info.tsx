@@ -126,7 +126,7 @@ export default function Info() {
 
                 {/* Image or Icon Column */}
                 <div
-                  className={`relative flex items-center justify-center bg-[#f6f6f6] aspect-square rounded-xl ${
+                  className={`relative flex items-center justify-center bg-gray-100 aspect-square rounded-xl ${
                     isReversed ? "lg:order-1" : ""
                   }`}
                 >

@@ -125,7 +125,7 @@ function Page() {
                     alt={solution.title}
                     fill
                     quality={100}
-                    className="object-cover bg-[#f6f6f6]"
+                    className="object-cover bg-gray-100"
                   />
                 </div>
               </BlurFade>

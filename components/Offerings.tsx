@@ -200,7 +200,7 @@ export default function Offerings() {
                 className="rounded-lg overflow-hidden min-w-full md:min-w-[500px] space-y-2 snap-end"
               >
                 <BlurFade delay={0.25 + index > 4 ? 0 : 0.1 * index} inView>
-                  <div className="h-[500px] relative bg-[#f6f6f6] rounded-xl flex items-center justify-center">
+                  <div className="h-[500px] relative bg-gray-100 rounded-xl flex items-center justify-center">
                     {typeof offering.image === "string" ? (
                       <Image
                         src={offering.image}
@@ -288,7 +288,7 @@ export default function Offerings() {
                 className="rounded-lg overflow-hidden min-w-full md:min-w-[500px] space-y-2 snap-end"
               >
                 <BlurFade delay={0.25 + index > 4 ? 0 : 0.1 * index} inView>
-                  <div className="h-[500px] relative bg-[#f6f6f6] rounded-xl flex items-center justify-center ">
+                  <div className="h-[500px] relative bg-gray-100 rounded-xl flex items-center justify-center ">
                     {typeof offering.image === "string" ? (
                       <Image
                         src={offering.image}

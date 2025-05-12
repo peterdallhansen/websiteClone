@@ -18,7 +18,7 @@ function CaseStudy() {
       <div className="flex flex-row gap-8 container">
         <div className="rounded-lg overflow-hidden w-full space-y-2 snap-end">
           <BlurFade delay={0.25} inView>
-            <div className="h-[500px] relative bg-[#f6f6f6] rounded-xl">
+            <div className="h-[500px] relative bg-gray-100 rounded-xl">
               <Image
                 alt="Magasin Aalborg"
                 src="https://files.guidedanmark.org/files/483/206197_Magasin_Aalborg.jpg"
@@ -46,7 +46,7 @@ function CaseStudy() {
         </div>
         <div className="rounded-lg overflow-hidden w-full space-y-2 snap-end">
           <BlurFade delay={0.25} inView>
-            <div className="h-[500px] relative bg-[#f6f6f6] rounded-xl">
+            <div className="h-[500px] relative bg-gray-100 rounded-xl">
               <Image
                 src="https://bestofhorsens.dk/f/bytorvhorsens_shopping.jpg"
                 alt="SSCP Shopping Center"

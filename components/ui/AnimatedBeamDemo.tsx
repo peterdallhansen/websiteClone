@@ -40,7 +40,7 @@ export default function AnimatedBeamDemo({
   const div6Ref = useRef<HTMLDivElement>(null);
 
   return (
-    <div className="bg-[#f6f6f6] mb-20 rounded-xl">
+    <div className="bg-gray-100 mb-20 rounded-xl">
       <div
         className={cn(
           "relative flex h-[500px] w-full items-center justify-center overflow-hidden p-10 ",
