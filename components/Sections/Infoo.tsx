@@ -56,7 +56,7 @@ function Infoo() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
             {features.map((feature, idx) => (
               <div key={idx} className="flex flex-col items-center">
-                <div className="bg-gray-50 rounded-2xl mb-8 w-full flex items-center justify-center">
+                <div className="bg-gray-100 rounded-2xl mb-8 w-full flex items-center justify-center">
                   <div className="w-full h-auto rounded-xl overflow-hidden">
                     {typeof feature.image === "object" &&
                     "src" in feature.image ? (

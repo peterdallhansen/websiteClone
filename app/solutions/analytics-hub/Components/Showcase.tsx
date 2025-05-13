@@ -95,7 +95,7 @@ function Showcase() {
         href: "https://app.zonify.ai/",
         image: "/images/Filters4.png",
         imageWidth: 1150,
-        className: "bg-[#f6f6f6] rounded-xl",
+        className: "bg-gray-100 rounded-xl",
       },
       {
         id: "workspaces",

@@ -67,7 +67,7 @@ function Page() {
                     fill
                     quality={100}
                     className={cn(
-                      solution.imageClassName ?? "object-cover bg-[#f6f6f6]"
+                      solution.imageClassName ?? "object-cover bg-gray-100"
                     )}
                   />
                 </div>

@@ -73,8 +73,8 @@ export default function Integrations() {
             Effortless Integration & Migration
           </h1>
           <h3 className="text-2xl md:text-5xl lg:text-xl text-primary/80 max-w-xl text-center mx-auto">
-            Connect your data sources effortlessly and gain actionable insights
-            with ease.
+            Connect your data sources effortlessly and deploy with ease for a
+            fast start.
           </h3>
           <Link href={"/solutions/integration"}>
             <Button className="rounded-full">
