@@ -66,7 +66,7 @@ export default function Integrations() {
   }, []); // Run once on mount
 
   return (
-    <div className="w-full my-20 bg-white p-2">
+    <div className="w-full my-20 bg-white p-2 ">
       <div className="container mx-auto">
         <div className="flex flex-col items-center space-y-8 mb-8">
           <h1 className="text-4xl md:text-5xl lg:text-5xl font-bold tracking-tight text-center max-w-5xl mx-auto">

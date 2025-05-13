@@ -3,7 +3,7 @@ import { Button } from "../ui/button";
 
 function Main() {
   return (
-    <section className="relative h-screen w-screen overflow-hidden mb-20 ">
+    <section className="relative h-screen  w-screen overflow-hidden mb-20 ">
       {/* Center container for video and overlay */}
       <div className="">
         {/* Video Container */}

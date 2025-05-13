@@ -11,6 +11,7 @@ import Main from "@/components/Sections/Main";
 import MissionStatement from "@/components/Sections/MissionStatement";
 import ProcessSteps from "@/components/Sections/process-tabs";
 import ContinuousProcessPage from "@/components/Sections/recognize";
+import ThreePoint from "@/components/Sections/three-point";
 
 export default function Home() {
   return (
@@ -18,7 +19,7 @@ export default function Home() {
       {/* Main Section with ref */}
       <Main />
       <Infoo />
-      <ProcessSteps />
+      <ThreePoint />
       <ExpertiseTabs />
       <GDPR />
 
@@ -28,6 +29,7 @@ export default function Home() {
       {/* <AIBITeaser /> */}
       <Integrations />
       {/*    <ContinuousProcessPage /> */}
+
       <Offerings />
 
       {/*  <CaseStudy /> */}

@@ -11,7 +11,7 @@ import Link from "next/link";
 
 export default function AnalyticsTeaser() {
   return (
-    <section className="py-20 my-20  w-screen">
+    <section className="py-20 my-20  w-screen bg-gray-50 ">
       <div className="container mx-auto px-8">
         <div className="flex flex-col lg:flex-row items-center gap-12">
           {/* Left side - Text content */}

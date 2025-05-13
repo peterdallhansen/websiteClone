@@ -12,6 +12,7 @@ export default function ProcessSteps() {
       image: {
         src: "/images/3dmap2.png",
         alt: "Visitor behavior analytics dashboard",
+        style: "object-contain",
       },
     },
     {
@@ -37,7 +38,7 @@ export default function ProcessSteps() {
   ];
 
   return (
-    <div className="py-20">
+    <div className="py-20 min-h-screen bg-gray-100 w-screen">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold tracking-tight max-w-4xl mx-auto">
@@ -59,12 +60,12 @@ export default function ProcessSteps() {
             >
               {/* Content Side */}
               <div className="w-full md:w-1/2 space-y-6">
-                <div className="flex items-center gap-4">
-                  <div className="text-5xl font-bold text-primary/20">
+                {/* <div className="flex items-center gap-4">
+                  <div className="text-5xl font-bold text-primary">
                     {step.number}
                   </div>
                   <div className="h-px bg-gray-300 flex-grow"></div>
-                </div>
+                </div> */}
 
                 <div className="flex items-start gap-6">
                   <div className="space-y-3">
@@ -76,13 +77,16 @@ export default function ProcessSteps() {
 
               {/* Image Side */}
               <div className="w-full md:w-1/2">
-                <div className="bg-white rounded-2xl">
-                  <div className="relative w-full h-[350px]">
+                <div className="rounded-2xl">
+                  <div className="relative w-full h-[400px]">
                     <Image
                       src={step.image.src || "/placeholder.svg"}
                       alt={step.image.alt}
                       fill
-                      className="object-cover rounded-lg"
+                      className={cn(
+                        "object-cover rounded-lg",
+                        step.image.style
+                      )}
                       sizes="(min-width: 768px) 50vw, 100vw"
                     />
                   </div>
@@ -91,10 +95,10 @@ export default function ProcessSteps() {
             </div>
           ))}
         </div>
-
+        <div className="mt-20 text-center"></div>
         <div className="mt-20 text-center">
           <button className="inline-flex items-center gap-2 bg-primary text-white px-8 py-3 rounded-full font-medium hover:bg-primary/90 transition-colors">
-            Get Started Today
+            Request a Demo
             <ArrowRight className="w-5 h-5" />
           </button>
         </div>

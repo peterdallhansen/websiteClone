@@ -241,20 +241,18 @@ export default function Header() {
               ) : (
                 <>
                   <NavigationMenuDemo linkClassName={textColorClass} />
-                  <div className="flex items-center space-x-2">
-                    <a
-                      href="mailto:contact@zonify.ai?subject=Contact%20Us&body=Hello"
-                      className={textColorClass + " text-sm"}
-                    >
-                      Contact
-                    </a>
+                  <div className="flex items-center">
+                    <Link href="mailto:contact@zonify.ai?subject=Contact%20Us&body=Hello">
+                      <Button
+                        className={`text-sm  py-5 rounded-3xl ${textColorClass}`}
+                        variant={"link"}
+                      >
+                        Contact
+                      </Button>
+                    </Link>
                     <Link href="http://accounts.zonify.ai/sign-in">
                       <Button
-                        className={`text-sm  py-5 rounded-3xl ${
-                          isHome && atTop
-                            ? "text-white hover:text-white/80"
-                            : "hover:text-white/60 active:text-white/40"
-                        }`}
+                        className={`text-sm  py-5 rounded-3xl ${textColorClass}`}
                         variant={"link"}
                       >
                         Analtyics Hub

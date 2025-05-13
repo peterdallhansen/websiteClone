@@ -77,7 +77,7 @@ export default function ExpertiseTabs() {
   const activeContent = tabs.find((tab) => tab.id === activeTab)?.content;
 
   return (
-    <div className="flex flex-col items-center  space-y-32 mt-20 px-2">
+    <div className="flex flex-col items-center  space-y-32 mt-20 px-2 min-h-screen bg-gray-50 w-screen py-20">
       <div className="flex flex-col items-center space-y-8">
         <h1 className="text-4xl md:text-5xl lg:text-5xl font-bold tracking-tight max-w-5xl text-center mx-auto">
           Shape the Future with Data-Driven Insights
@@ -100,8 +100,8 @@ export default function ExpertiseTabs() {
                 className={cn(
                   "w-full text-left  p-4 rounded-2xl transition-all duration-200 flex items-start gap-3 ",
                   activeTab === tab.id
-                    ? " shadow-sm text-black bg-gray-50 h-[50%]"
-                    : "text-gray-500 bg-gray-50 hover:bg-gray-100 h-[25%]"
+                    ? " shadow-sm text-black bg-white h-[50%] hover:bg-gray-100"
+                    : "text-gray-1000 bg-white hover:bg-gray-100 h-[25%]"
                 )}
               >
                 <div>
@@ -143,7 +143,7 @@ export default function ExpertiseTabs() {
                 <p className="text-gray-600">{activeContent.description}</p>
               </div>
 
-              <div className="flex-1 bg-gray-50 rounded-xl  flex items-center justify-center">
+              <div className="flex-1 bg-white rounded-xl  flex items-center justify-center">
                 <div className="relative w-full h-[300px] md:h-[400px] lg:h-[500px]">
                   {tabs.map((tab) => (
                     <div
