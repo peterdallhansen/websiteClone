@@ -66,13 +66,13 @@ export default function Integrations() {
   }, []); // Run once on mount
 
   return (
-    <div className="w-full my-20 bg-white p-8">
+    <div className="w-full my-20 bg-white p-2">
       <div className="container mx-auto">
-        <div className="flex flex-col items-center space-y-8">
-          <h1 className="text-4xl md:text-5xl lg:text-5xl font-bold tracking-tight max-w-5xl mx-auto">
+        <div className="flex flex-col items-center space-y-8 mb-8">
+          <h1 className="text-4xl md:text-5xl lg:text-5xl font-bold tracking-tight text-center max-w-5xl mx-auto">
             Effortless Integration & Migration
           </h1>
-          <h3 className="text-4xl md:text-5xl lg:text-xl text-primary/80 max-w-xl text-center mx-auto">
+          <h3 className="text-2xl md:text-5xl lg:text-xl text-primary/80 max-w-xl text-center mx-auto">
             Connect your data sources effortlessly and gain actionable insights
             with ease.
           </h3>
@@ -90,11 +90,11 @@ export default function Integrations() {
         </div>
 
         <div
-          className="flex justify-between items-center relative"
+          className="flex justify-between items-center relative gap-2"
           ref={containerRef}
         >
           {/* Left column */}
-          <div className="w-1/3 space-y-6">
+          <div className="w-full md:w-1/3 space-y-6">
             {dataSources.map((source, index) => {
               const middleIndex = Math.floor(dataSources.length / 2);
               const distance = Math.abs(index - middleIndex);
@@ -122,13 +122,13 @@ export default function Integrations() {
             className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10  overflow-visible"
             ref={hubRef}
           >
-            <div className="bg-none rounded-lg p-6 w-36 flex flex-col items-center  ">
+            <div className="bg-none rounded-lg p-6 w-8 md:w-36 flex flex-col items-center  ">
               <LogoIcon className="bg-white rounded-full pointer-events-none" />
             </div>
           </div>
 
           {/* Right column */}
-          <div className="w-1/3 space-y-6">
+          <div className="w-full md:w-1/3 space-y-6">
             {analyses.map((analysis, index) => {
               const middleIndex = Math.floor(analyses.length / 2);
               const distance = Math.abs(index - middleIndex);
@@ -142,7 +142,9 @@ export default function Integrations() {
                   style={{ opacity }}
                   className="bg-gray-50 p-4 rounded-lg flex items-center justify-between"
                 >
-                  <span className="text-gray-500">{analysis.name}</span>
+                  <span className="text-gray-500 truncate max-w-[100px] md:max-w-none">
+                    {analysis.name}
+                  </span>
                   <div className="w-8 h-8 flex items-center justify-center">
                     <CheckCircle className="w-6 h-6 text-gray-400" />
                   </div>
@@ -163,7 +165,7 @@ export default function Integrations() {
                 gradientstopColor="#71ADFF"
                 fromAnchor="right"
                 toAnchor="center"
-                reverse
+                className="hidden md:block"
               />
             ))}
 
@@ -178,6 +180,7 @@ export default function Integrations() {
                 gradientstopColor="#71ADFF"
                 fromAnchor="left"
                 toAnchor="center"
+                className="hidden md:block"
               />
             ))}
         </div>

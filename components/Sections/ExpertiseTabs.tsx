@@ -77,18 +77,18 @@ export default function ExpertiseTabs() {
   const activeContent = tabs.find((tab) => tab.id === activeTab)?.content;
 
   return (
-    <div className="flex flex-col items-center  space-y-32 mt-20">
+    <div className="flex flex-col items-center  space-y-32 mt-20 px-2">
       <div className="flex flex-col items-center space-y-8">
-        <h1 className="text-4xl md:text-5xl lg:text-5xl font-bold tracking-tight max-w-5xl mx-auto">
+        <h1 className="text-4xl md:text-5xl lg:text-5xl font-bold tracking-tight max-w-5xl text-center mx-auto">
           Shape the Future with Data-Driven Insights
         </h1>
-        <h3 className="text-4xl md:text-5xl lg:text-xl text-primary/80 max-w-xl text-center mx-auto">
+        <h3 className="text-2xl md:text-5xl lg:text-xl text-primary/80 max-w-xl text-center mx-auto">
           Discover trends, evaluate performance, and forecast what’s
           next—powered by real-time and historical data.
         </h3>
       </div>
 
-      <div className="flex flex-col md:flex-row gap-8 bg-white rounded-xl overflow-hidden container h-full md:h-[600px]">
+      <div className="flex flex-col md:flex-row gap-8  rounded-xl overflow-hidden container h-full md:h-[600px]">
         {/* Left side - Tabs */}
 
         <div className="w-full md:w-1/3 h-full">
@@ -100,7 +100,7 @@ export default function ExpertiseTabs() {
                 className={cn(
                   "w-full text-left  p-4 rounded-2xl transition-all duration-200 flex items-start gap-3 ",
                   activeTab === tab.id
-                    ? "bg-white shadow-sm text-black bg-gray-50 h-[50%]"
+                    ? " shadow-sm text-black bg-gray-50 h-[50%]"
                     : "text-gray-500 bg-gray-50 hover:bg-gray-100 h-[25%]"
                 )}
               >
@@ -133,7 +133,7 @@ export default function ExpertiseTabs() {
         </div>
 
         {/* Right side - Content */}
-        <div className="w-full md:w-2/3 px-6 rounded-2xl">
+        <div className="w-full md:w-2/3  px-0 md:px-6 rounded-2xl">
           {activeContent && (
             <div className="flex flex-col h-full">
               <div className="mb-6">
@@ -158,7 +158,7 @@ export default function ExpertiseTabs() {
                           fill
                           priority
                           className={cn(
-                            "object-cover rounded-lg object-top px-4"
+                            "object-cover rounded-lg object-top px-0 md:px-4"
                           )}
                           sizes="(min-width: 768px) 66vw, 100vw"
                         />

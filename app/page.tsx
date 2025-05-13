@@ -9,6 +9,7 @@ import Infoo from "@/components/Sections/Infoo";
 import Integrations from "@/components/Sections/Integrations";
 import Main from "@/components/Sections/Main";
 import MissionStatement from "@/components/Sections/MissionStatement";
+import ProcessSteps from "@/components/Sections/process-tabs";
 import ContinuousProcessPage from "@/components/Sections/recognize";
 
 export default function Home() {
@@ -17,6 +18,7 @@ export default function Home() {
       {/* Main Section with ref */}
       <Main />
       <Infoo />
+      <ProcessSteps />
       <ExpertiseTabs />
       <GDPR />
 
