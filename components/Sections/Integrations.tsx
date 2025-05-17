@@ -13,6 +13,7 @@ import LogoIcon from "../LogoIcon";
 import { AnimatedBeam } from "../ui/animated-beam";
 import { Button } from "../ui/button";
 import Link from "next/link";
+import BlurFade from "../ui/blur-fade";
 
 export default function Integrations() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -69,121 +70,129 @@ export default function Integrations() {
     <div className="w-full my-20 bg-white p-2 ">
       <div className="container mx-auto">
         <div className="flex flex-col items-center space-y-8 mb-8">
-          <h1 className="text-4xl md:text-5xl lg:text-5xl font-bold tracking-tight text-center max-w-5xl mx-auto">
-            Effortless Integration & Migration
-          </h1>
-          <h3 className="text-2xl md:text-5xl lg:text-xl text-primary/80 max-w-xl text-center mx-auto">
-            Connect your data sources effortlessly and deploy with ease for a
-            fast start.
-          </h3>
-          <Link href={"/solutions/integration"}>
-            <Button className="rounded-full">
-              Learn More <LucideArrowRight />
-            </Button>
-          </Link>
+          <BlurFade inView delay={0.2}>
+            <h1 className="text-4xl md:text-5xl lg:text-5xl font-bold tracking-tight text-center max-w-5xl mx-auto">
+              Effortless Integration & Migration
+            </h1>
+          </BlurFade>
+          <BlurFade inView delay={0.3}>
+            <h3 className="text-2xl md:text-5xl lg:text-xl text-primary/80 max-w-xl text-center mx-auto">
+              Connect your data sources effortlessly and deploy with ease for a
+              fast start.
+            </h3>
+          </BlurFade>
+          <BlurFade inView delay={0.4}>
+            <Link href={"/solutions/integration"}>
+              <Button className="rounded-full">
+                Learn More <LucideArrowRight />
+              </Button>
+            </Link>
+          </BlurFade>
         </div>
-        <div className="flex justify-between mb-12">
-          <h1 className="text-2xl font-medium text-gray-700">
-            Your Data Sources
-          </h1>
-          <h1 className="text-2xl font-medium text-gray-700">Analysis</h1>
-        </div>
-
-        <div
-          className="flex justify-between items-center relative gap-2"
-          ref={containerRef}
-        >
-          {/* Left column */}
-          <div className="w-full md:w-1/3 space-y-6">
-            {dataSources.map((source, index) => {
-              const middleIndex = Math.floor(dataSources.length / 2);
-              const distance = Math.abs(index - middleIndex);
-              const opacity = Math.exp(-(distance ** 2) / (2 * 2 ** 2));
-              return (
-                <div
-                  key={source.id}
-                  ref={(el) => {
-                    sourceRefs.current[source.id] = el;
-                  }}
-                  style={{ opacity }}
-                  className="bg-gray-50 p-4 rounded-lg flex items-center justify-between transition-opacity duration-300"
-                >
-                  <span className="text-gray-500">{source.name}</span>
-                  <div className="w-8 h-8 flex items-center justify-center">
-                    {source.icon}
-                  </div>
-                </div>
-              );
-            })}
+        <BlurFade inView delay={0.5}>
+          <div className="flex justify-between mb-12">
+            <h1 className="text-2xl font-medium text-gray-700">
+              Your Data Sources
+            </h1>
+            <h1 className="text-2xl font-medium text-gray-700">Analysis</h1>
           </div>
 
-          {/* Hub */}
           <div
-            className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10  overflow-visible"
-            ref={hubRef}
+            className="flex justify-between items-center relative gap-2"
+            ref={containerRef}
           >
-            <div className="bg-none rounded-lg p-6 w-8 md:w-36 flex flex-col items-center  ">
-              <LogoIcon className="bg-white rounded-full pointer-events-none" />
-            </div>
-          </div>
-
-          {/* Right column */}
-          <div className="w-full md:w-1/3 space-y-6">
-            {analyses.map((analysis, index) => {
-              const middleIndex = Math.floor(analyses.length / 2);
-              const distance = Math.abs(index - middleIndex);
-              const opacity = Math.exp(-(distance ** 2) / (2 * 2 ** 2));
-              return (
-                <div
-                  key={analysis.id}
-                  ref={(el) => {
-                    analysisRefs.current[analysis.id] = el;
-                  }}
-                  style={{ opacity }}
-                  className="bg-gray-50 p-4 rounded-lg flex items-center justify-between"
-                >
-                  <span className="text-gray-500 truncate max-w-[100px] md:max-w-none">
-                    {analysis.name}
-                  </span>
-                  <div className="w-8 h-8 flex items-center justify-center">
-                    <CheckCircle className="w-6 h-6 text-gray-400" />
+            {/* Left column */}
+            <div className="w-full md:w-1/3 space-y-6">
+              {dataSources.map((source, index) => {
+                const middleIndex = Math.floor(dataSources.length / 2);
+                const distance = Math.abs(index - middleIndex);
+                const opacity = Math.exp(-(distance ** 2) / (2 * 2 ** 2));
+                return (
+                  <div
+                    key={source.id}
+                    ref={(el) => {
+                      sourceRefs.current[source.id] = el;
+                    }}
+                    style={{ opacity }}
+                    className="bg-gray-50 p-4 rounded-lg flex items-center justify-between transition-opacity duration-300"
+                  >
+                    <span className="text-gray-500">{source.name}</span>
+                    <div className="w-8 h-8 flex items-center justify-center">
+                      {source.icon}
+                    </div>
                   </div>
-                </div>
-              );
-            })}
+                );
+              })}
+            </div>
+
+            {/* Hub */}
+            <div
+              className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10  overflow-visible"
+              ref={hubRef}
+            >
+              <div className="bg-none rounded-lg p-6 w-8 md:w-36 flex flex-col items-center  ">
+                <LogoIcon className="bg-white rounded-full pointer-events-none" />
+              </div>
+            </div>
+
+            {/* Right column */}
+            <div className="w-full md:w-1/3 space-y-6">
+              {analyses.map((analysis, index) => {
+                const middleIndex = Math.floor(analyses.length / 2);
+                const distance = Math.abs(index - middleIndex);
+                const opacity = Math.exp(-(distance ** 2) / (2 * 2 ** 2));
+                return (
+                  <div
+                    key={analysis.id}
+                    ref={(el) => {
+                      analysisRefs.current[analysis.id] = el;
+                    }}
+                    style={{ opacity }}
+                    className="bg-gray-50 p-4 rounded-lg flex items-center justify-between"
+                  >
+                    <span className="text-gray-500 truncate max-w-[100px] md:max-w-none">
+                      {analysis.name}
+                    </span>
+                    <div className="w-8 h-8 flex items-center justify-center">
+                      <CheckCircle className="w-6 h-6 text-gray-400" />
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+
+            {/* Render beams only when all refs are ready */}
+            {ready &&
+              dataSources.map((src) => (
+                <AnimatedBeam
+                  key={`beam-src-${src.id}`}
+                  containerRef={containerRef}
+                  fromRef={{ current: sourceRefs.current[src.id]! }}
+                  toRef={hubRef}
+                  gradientStartColor="#BEDAFF"
+                  gradientstopColor="#71ADFF"
+                  fromAnchor="right"
+                  toAnchor="center"
+                  className="hidden md:block"
+                />
+              ))}
+
+            {ready &&
+              analyses.map((an) => (
+                <AnimatedBeam
+                  key={`beam-an-${an.id}`}
+                  containerRef={containerRef}
+                  fromRef={{ current: analysisRefs.current[an.id]! }}
+                  toRef={hubRef}
+                  gradientStartColor="#BEDAFF"
+                  gradientstopColor="#71ADFF"
+                  fromAnchor="left"
+                  toAnchor="center"
+                  className="hidden md:block"
+                />
+              ))}
           </div>
-
-          {/* Render beams only when all refs are ready */}
-          {ready &&
-            dataSources.map((src) => (
-              <AnimatedBeam
-                key={`beam-src-${src.id}`}
-                containerRef={containerRef}
-                fromRef={{ current: sourceRefs.current[src.id]! }}
-                toRef={hubRef}
-                gradientStartColor="#BEDAFF"
-                gradientstopColor="#71ADFF"
-                fromAnchor="right"
-                toAnchor="center"
-                className="hidden md:block"
-              />
-            ))}
-
-          {ready &&
-            analyses.map((an) => (
-              <AnimatedBeam
-                key={`beam-an-${an.id}`}
-                containerRef={containerRef}
-                fromRef={{ current: analysisRefs.current[an.id]! }}
-                toRef={hubRef}
-                gradientStartColor="#BEDAFF"
-                gradientstopColor="#71ADFF"
-                fromAnchor="left"
-                toAnchor="center"
-                className="hidden md:block"
-              />
-            ))}
-        </div>
+        </BlurFade>
       </div>
     </div>
   );
