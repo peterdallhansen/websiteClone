@@ -7,7 +7,7 @@ function GDPR() {
   return (
     <section className="flex items-center container  justify-items-center min-h-1/2  gap-32 p-2 md:p-20">
       <BlurFade inView delay={0.2} className="w-full">
-        <div className="w-full    bg-[#212121] rounded-2xl p-6 md:p-12 lg:p-20  flex flex-col lg:flex-row relative overflow-hidden gap-8">
+        <div className="w-full    bg-[#212121] rounded-3xl p-6 md:p-12 lg:p-20  flex flex-col lg:flex-row relative overflow-hidden gap-8">
           <div className="space-y-6 w-full">
             <h4 className="text-sm md:text-lg text-white text-left">
               GDPR Compliance

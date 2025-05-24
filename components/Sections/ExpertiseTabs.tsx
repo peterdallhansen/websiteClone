@@ -1,7 +1,12 @@
 "use client";
 
 import { useEffect, useState, useRef } from "react";
-import { LucideGauge, LucideRoute, LucideTrendingUpDown } from "lucide-react";
+import {
+  LucideGauge,
+  LucideRoute,
+  LucideTrendingUpDown,
+  Plus,
+} from "lucide-react";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 import BlurFade from "../ui/blur-fade";
@@ -109,20 +114,20 @@ export default function ExpertiseTabs() {
         }
       `}</style>
 
-      <div className="w-screen py-20 px-0 md:px-2 flex flex-col items-center space-y-32">
+      <div className="w-screen py-40 min-h-screen px-0 md:px-2 flex flex-col items-left mx-auto container space-y-32">
         {/* Header */}
-        <div className="text-center space-y-8 px-4 md:px-0 max-w-5xl">
+        <div className="space-y-8 px-4 md:px-0 text-left">
           <BlurFade inView delay={0.2}>
-            <h1 className="text-4xl md:text-5xl font-bold tracking-tight">
+            <h1 className="text-4xl md:text-5xl font-bold tracking-tight  ">
               Shape the Future with Data-Driven Insights
             </h1>
           </BlurFade>
-          <BlurFade inView delay={0.3}>
+          {/* <BlurFade inView delay={0.3}>
             <h3 className="text-2xl md:text-4xl text-primary/80">
               Discover trends, evaluate performance, and forecast what’s
               next—powered by real-time and historical data.
             </h3>
-          </BlurFade>
+          </BlurFade> */}
         </div>
 
         {/* Mobile Carousel with fixed dots */}
@@ -147,7 +152,7 @@ export default function ExpertiseTabs() {
                 )}
               >
                 <div className="flex items-center gap-2 mb-4">
-                  {tab.icon}
+                  {/*   {tab.icon} */}
                   <h3 className="text-xl font-semibold">{tab.label}</h3>
                 </div>
                 <h2 className="text-2xl font-bold mb-2">{tab.content.title}</h2>
@@ -198,21 +203,21 @@ export default function ExpertiseTabs() {
                   key={tab.id}
                   onClick={() => setActiveTab(tab.id)}
                   className={cn(
-                    "w-full text-left p-4 rounded-2xl transition-all duration-200 flex items-start gap-3",
+                    "w-full text-left p-4 rounded-2xl relative transition-all duration-200 flex items-start gap-3",
                     activeTab === tab.id
                       ? "bg-gray-100 text-black shadow-sm hover:bg-gray-200 h-[50%]"
                       : "bg-gray-100 text-gray-600 hover:bg-gray-200 h-[25%]"
                   )}
                 >
                   <div>
-                    <div
+                    {/*    <div
                       className={cn(
                         "p-2",
                         activeTab === tab.id ? "block text-black" : "hidden"
                       )}
                     >
                       {tab.icon}
-                    </div>
+                    </div> */}
                     <h3
                       className={cn(
                         "font-semibold text-2xl",
@@ -226,6 +231,12 @@ export default function ExpertiseTabs() {
                         {activeContent.description.substring(0, 100)}…
                       </p>
                     )}
+                    <a
+                      className="absolute bottom-4 right-4 rounded-full  bg-black/60 p-1 hover:bg-black/70"
+                      href="/"
+                    >
+                      <Plus color="white" size={20} />
+                    </a>
                   </div>
                 </button>
               ))}
@@ -240,7 +251,7 @@ export default function ExpertiseTabs() {
                   </h2>
                   <p className="text-gray-600">{activeContent.description}</p>
                 </div>
-                <div className="flex-1 bg-gray-100 rounded-xl flex items-center justify-center">
+                <div className="flex-1 rounded-xl flex items-center justify-center">
                   <div className="relative w-full h-full">
                     {tabs.map((tab) => (
                       <div

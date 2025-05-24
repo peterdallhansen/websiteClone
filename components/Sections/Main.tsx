@@ -1,18 +1,37 @@
+"use client";
+import { useEffect, useState } from "react";
 import BlurFade from "../ui/blur-fade";
 import { Button } from "../ui/button";
 
 function Main() {
+  const [paddingTop, setPaddingTop] = useState(0);
+  useEffect(() => {
+    if (window.innerWidth <= 768) return; // Disable on mobile
+
+    const scrollFactor = 0.2; // 50% of the actual scroll
+    const handleScroll = () => {
+      const scrollY = window.scrollY;
+      const maxPad = window.innerHeight;
+      // apply factor here:
+      const rawPad = scrollY * scrollFactor;
+      setPaddingTop(Math.min(rawPad, maxPad));
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <section className="relative h-screen  w-screen overflow-hidden mb-20 ">
+    <section className="relative w-screen overflow-hidden mb-20 min-h-screen">
       {/* Center container for video and overlay */}
       <div className="">
         {/* Video Container */}
         <div
-          className="relativ   h-screen w-screen flex align-center justify-center rounded-2xl  "
+          className="relativ   h-screen w-screen flex align-center justify-center rounded-2xl "
           style={{
-            backgroundImage: `url('/images/bg.jpg')`,
             backgroundSize: "cover",
             backgroundPosition: "center",
+            padding: paddingTop,
           }}
         >
           <div className="w-full h-full relative">
@@ -52,9 +71,9 @@ function Main() {
               </BlurFade>
             </div>
             {/*  <img
-            className="w-full h-full p-4 lg:w-full md:p-0 md:rounded-xl object-cover "
-            src="/images/pexels-bob-price-2512175-764880.jpg"
-          /> */}
+              className="w-full h-full p-4 lg:w-full md:p-0 md:rounded-xl object-cover "
+              src="/images/pexels-bob-price-2512175-764880.jpg"
+            /> */}
           </div>
 
           {/* Text Overlay - positioned relative to the video container */}

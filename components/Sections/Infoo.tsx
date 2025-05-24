@@ -44,7 +44,7 @@ function Infoo() {
   ];
 
   return (
-    <div className="flex flex-col  py-20 px-2  mb-20">
+    <div className="flex flex-col  py-20 px-2   min-h-screen">
       <main className="flex-1">
         {/* Hero Section */}
         <section className="container mx-auto px-4 py-16 text-center">

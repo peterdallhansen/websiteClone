@@ -6,31 +6,58 @@ import { GallaryCard } from "./GallaryCard";
 
 const Gallarys = [
   {
-    title: "NVIDIA Inception",
-    label: "News",
-    backgroundImage: "/images/Frame-1.jpg",
-    href: "https://www.linkedin.com/feed/update/urn:li:activity:7290028182383042560",
-  },
-
-  {
-    title: "Microsoft For Startups",
-    label: "News",
-    backgroundImage: "/images/Frame45.png",
-    dark: true,
-    href: "https://www.linkedin.com/feed/update/urn:li:activity:7275098778791989248",
+    title: "Zonify x DSC",
+    label: "Collaboration",
+    backgroundImage: "/images/banners/ZonifyxDSC.png",
+    href: "https://www.linkedin.com/feed/update/urn:li:activity:YOUR_DSC_LINK",
   },
   {
-    title: "Retail Debut",
-    label: "Story",
-    backgroundImage: "/images/1733477217351.jpeg",
-    href: "https://www.linkedin.com/feed/update/urn:li:activity:7270730429932978176",
+    title: "Zonify x ECE",
+    label: "Collaboration",
+    backgroundImage: "/images/banners/ZonifyxECE.png",
+    href: "https://www.linkedin.com/feed/update/urn:li:activity:YOUR_ECE_LINK",
   },
   {
-    title: "Example",
-    label: "News",
-    backgroundImage: "/images/1725378290468.jpeg",
-    dark: true,
-    href: "https://www.linkedin.com/feed/update/urn:li:activity:7236761072173502464",
+    title: "Zonify x H&M",
+    label: "Collaboration",
+    backgroundImage: "/images/banners/ZonifyxHM.png",
+    href: "https://www.linkedin.com/feed/update/urn:li:activity:YOUR_HM_LINK",
+  },
+  {
+    title: "Zonify x Klépierre",
+    label: "Collaboration",
+    backgroundImage: "/images/banners/ZonifyxKlepierre.png",
+    href: "https://www.linkedin.com/feed/update/urn:li:activity:YOUR_KLEPIERRE_LINK",
+  },
+  {
+    title: "Zonify x Magasin",
+    label: "Collaboration",
+    backgroundImage: "/images/banners/ZonifyxMagasin.png",
+    href: "https://www.linkedin.com/feed/update/urn:li:activity:YOUR_MAGASIN_LINK",
+  },
+  {
+    title: "Zonify x Milestone",
+    label: "Collaboration",
+    backgroundImage: "/images/banners/ZonifyxMilestone.png",
+    href: "https://www.linkedin.com/feed/update/urn:li:activity:YOUR_MILESTONE_LINK",
+  },
+  {
+    title: "Zonify x SEED",
+    label: "Collaboration",
+    backgroundImage: "/images/banners/ZonifyxSEED.png",
+    href: "https://www.linkedin.com/feed/update/urn:li:activity:YOUR_SEED_LINK",
+  },
+  {
+    title: "Zonify x SSCP",
+    label: "Collaboration",
+    backgroundImage: "/images/banners/ZonifyxSSCP.png",
+    href: "https://www.linkedin.com/feed/update/urn:li:activity:YOUR_SSCP_LINK",
+  },
+  {
+    title: "Zonify x Microsoft For Startups",
+    label: "Collaboration",
+    backgroundImage: "/images/banners/ZonifyxMicrosoft.png",
+    href: "https://www.linkedin.com/feed/update/urn:li:activity:YOUR_MICROSOFT_LINK",
   },
 ];
 

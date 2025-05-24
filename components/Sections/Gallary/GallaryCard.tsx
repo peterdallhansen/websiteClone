@@ -1,4 +1,5 @@
 import { cn } from "@/lib/utils";
+import Image from "next/image";
 
 interface GallaryCardProps {
   title: string;
@@ -17,39 +18,25 @@ export function GallaryCard({
   dark,
   href,
 }: GallaryCardProps) {
-  // Determine the background style if a backgroundImage is provided
-  const backgroundStyle = backgroundImage
-    ? {
-        backgroundImage: `url(${backgroundImage})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        backgroundRepeat: "no-repeat",
-      }
-    : {};
-
   return (
     <a
       href={href}
       className={cn(
-        "relative flex flex-col items-center justify-center w-[300px] md:w-[800px] h-[400px] rounded-2xl p-6 cursor-",
-        "transition-transform hover:scale-[1.02]  transition-all duration-500",
-        // Apply gradient only if backgroundImage is not provided
-        !backgroundImage && gradient
+        "relative flex flex-col items-center justify-center w-[300px] md:w-[300px] h-[400px] p-6 cursor-pointer",
+        "transition-transform hover:scale-[1.02] transition-all duration-500"
       )}
-      style={backgroundImage ? backgroundStyle : {}}
     >
-      {/* Label */}
-      <span
-        className={cn(
-          "absolute top-4 left-4 text-sm font-medium ",
-          dark ? "text-black/90" : "text-white/90"
-        )}
-      >
-        {label}
-      </span>
-
-      {/* Title */}
-      <h3 className="text-xl font-semibold text-white mt-auto">{title}</h3>
+      {backgroundImage ? (
+        <Image
+          src={backgroundImage}
+          alt={title}
+          layout="fill"
+          objectFit="cover"
+          className="absolute inset-0 z-0"
+        />
+      ) : (
+        <div className={cn("absolute inset-0 z-0", gradient)} />
+      )}
     </a>
   );
 }
