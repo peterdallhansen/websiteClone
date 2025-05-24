@@ -1,3 +1,4 @@
+import CaseStudy from "@/components/CaseStudy/CaseStudy";
 import GetToKnow from "@/components/GetToKnow";
 import GetToKnow2 from "@/components/GetToKnow2";
 import Offerings from "@/components/Offerings";
@@ -26,12 +27,11 @@ export default function Home() {
       {/* Main Section with ref */}
       <Main />
       <GetToKnow />
-      {/* <Partners /> */}
 
       <ThreePoint />
 
       <GetToKnow2 />
-      {/* <Infoo /> */}
+      {/*  <Infoo /> */}
       {/*    <WhatYouGet /> */}
       <ExpertiseTabs />
       <GDPR />
@@ -42,12 +42,12 @@ export default function Home() {
       <Integrations />
       {/*    <ContinuousProcessPage /> */}
       <DeploymentSection />
+
+      {/*  <Offerings /> */}
+
+      {/* <CaseStudy /> */}
+      {/*   <MissionStatement /> */}
       <CurrentDeployments />
-      {/* <Offerings /> */}
-
-      {/*  <CaseStudy /> */}
-      {/*  <MissionStatement /> */}
-
       <Hiring />
 
       {/*   <News /> */}
