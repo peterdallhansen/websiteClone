@@ -17,6 +17,14 @@ const nextConfig = {
       },
       {
         protocol: "https",
+        hostname: "antigravity.google",
+      },
+      {
+        protocol: "https",
+        hostname: "chatgpt.com"
+      },
+      {
+        protocol: "https",
         hostname: "avatar.vercel.sh",
       },
       {

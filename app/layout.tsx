@@ -2,12 +2,13 @@ import Header from "@/components/Header";
 import { Footer } from "@/components/Sections/Footer";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import { cn } from "@/lib/utils";
-import { Inter } from "next/font/google";
+import { Inter, Google } from "next/font/google";
 import type { Metadata } from "next";
 import React, { Suspense } from "react";
 import "./globals.css";
 import GoogleAnalytics from "@/components/google-analytics";
 import CookieBanner from "@/components/CookieBanner";
+import SmoothScroll from "@/components/SmoothScroll";
 
 export const metadata: Metadata = {
   title: {
@@ -25,13 +26,18 @@ const inter = Inter({
   variable: "--font-inter", // Optional: CSS variable for font customization
 });
 
+const googleSans = Inter({
+  subsets: ["latin"], // Adjust subsets based on your needs
+  variable: "--font-inter", // Optional: CSS variable for font customization
+});
+
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={cn(inter.variable, "scroll-smooth")}>
+    <html lang="en" className={cn(inter.variable)}>
       <head>
         <link
           href="https://db.onlinewebfonts.com/c/a20b7f0e9287edbc64a2ef52ba343440?family=ABC+Normal+White"
@@ -51,8 +57,9 @@ export default function RootLayout({
           <Suspense fallback={null}>
             <GoogleAnalytics GA_MEASUREMENT_ID="G-QED3S3G00L" />
           </Suspense>
-
-          {children}
+          <SmoothScroll>
+            {children}
+          </SmoothScroll>
           <Footer />
         </ThemeProvider>
       </body>
