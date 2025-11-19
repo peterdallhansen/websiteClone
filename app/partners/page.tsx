@@ -33,6 +33,18 @@ const partners: Partner[] = [
     description:
       "Innofactor provides innovative IT solutions and services, focusing on digital transformation, cloud computing, and enterprise software to help businesses optimize their operations.",
   },
+  {
+    id: 4,
+    name: "DTU Skylab",
+    logo: "/images/Partners/DTU-skylab-logo.png",
+    description: "",
+  },
+  {
+    id: 4,
+    name: "Milestone",
+    logo: "/images/Partners/milestone_logo.png",
+    description: "",
+  },
 ];
 
 export default function PartnersPage() {
@@ -49,9 +61,13 @@ export default function PartnersPage() {
             Working Together With Trusted Partners
           </h2>
         </BlurFade>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-0 md:gap-8">
+        <div className="flex flex-wrap justify-center gap-8">
           {partners.map((partner, index) => (
-            <div key={partner.id} className="p-6 flex flex-col items-center ">
+            <div
+              key={partner.id}
+              className="flex flex-col items-center"
+              style={{ flex: "0 1 calc(33.333% - 2rem)" }} // max 3 per row, minus gap
+            >
               <BlurFade inView delay={0.25 + 0.2 * index}>
                 <div className="w-64 h-48 mb-4 relative">
                   <Image
@@ -63,11 +79,6 @@ export default function PartnersPage() {
                   />
                 </div>
               </BlurFade>
-
-              {/*   <h3 className="text-xl font-semibold mb-2 text-center text-primary">
-                {partner.name}
-              </h3> */}
-              {/*  <p className="text-gray-300 text-center">{partner.description}</p> */}
             </div>
           ))}
         </div>

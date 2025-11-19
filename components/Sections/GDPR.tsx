@@ -5,8 +5,8 @@ import BlurFade from "../ui/blur-fade";
 
 function GDPR() {
   return (
-    <section className="flex items-center container  justify-items-center min-h-1/2  gap-32 p-2 md:p-20">
-      <BlurFade inView delay={0.2} className="w-full">
+    <section className="flex items-center w-screen px-4  justify-items-center min-h-1/2  gap-32 p-2 md:p-20">
+      <BlurFade inView delay={0.2} className="w-full container mx-auto">
         <div className="w-full    bg-[#212121] rounded-3xl p-6 md:p-12 lg:p-20  flex flex-col lg:flex-row relative overflow-hidden gap-8">
           <div className="space-y-6 w-full">
             <h4 className="text-sm md:text-lg text-white text-left">
@@ -38,8 +38,8 @@ function GDPR() {
 
             <a href="/compliance">
               <AnimatedShinyText
-                color="text-accent"
-                className="inline-flex items-center justify-center px-4 pl-0 py-2 transition ease-out hover:text-white/60 text-accent mb-8"
+                color="text-white"
+                className="inline-flex items-center justify-center px-4 pl-0 py-2 mt-2 transition ease-out hover:text-white/60 text-white mb-8"
               >
                 <span>Read Full Article</span>
                 <ArrowRightIcon className="ml-1 size-3 transition-transform duration-300 ease-in-out group-hover:translate-x-0.5" />

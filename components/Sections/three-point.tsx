@@ -61,7 +61,7 @@ export default function ThreePoint() {
 
         <div className="relative rounded-2xl overflow-hidden mb-12 min-h-[600px]">
           <BlurFade inView delay={0.3}>
-            <VideoComparison img="/images/b.png" width={2000} height={600} />
+            <VideoComparison img="/images/b.png" width={2000} height={550} />
           </BlurFade>
         </div>
       </div>

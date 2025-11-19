@@ -80,7 +80,7 @@ export default function GetToKnow() {
       <div className="flex justify-between items-end mb-12 container mx-auto">
         <div className="space-y-6">
           <BlurFade delay={0.1} inView>
-            <h1 className="text-4xl md:text-5xl font-bold">
+            <h1 className="text-4xl md:text-5xl font-normal">
               Everything You Need to <br /> Measure, Understand, and Improve.
             </h1>
           </BlurFade>

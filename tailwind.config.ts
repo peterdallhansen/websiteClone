@@ -118,6 +118,22 @@ const config: Config = {
           "100%": { transform: "translateX(0)" },
         },
       },
+      fontFamily: {
+        // Override Tailwind's default sans with Britti Sans first, then fallbacks
+        sans: [
+          '"Britti Sans"',
+          "Inter",
+          "Manrope",
+          "Poppins",
+          "system-ui",
+          "-apple-system",
+          "Segoe UI",
+          "Roboto",
+          "Helvetica",
+          "Arial",
+          "sans-serif",
+        ],
+      },
       animation: {
         marquee: "marquee var(--duration) infinite linear",
         "marquee-vertical": "marquee-vertical var(--duration) linear infinite",

@@ -1,16 +1,16 @@
 "use client";
 import BlurFade from "@/components/ui/blur-fade";
-import { Button } from "@/components/ui/button";
 import { LinkedInLogoIcon } from "@radix-ui/react-icons";
-import {
-  ArrowDownRight,
-  ArrowUpRight,
-  LucideUserRound,
-  MailIcon,
-  PhoneIcon,
-} from "lucide-react";
+import { LucideUserRound } from "lucide-react";
 import Image from "next/image";
-import { useState } from "react";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
 
 interface TeamMember {
   picture: string;
@@ -22,16 +22,7 @@ interface TeamMember {
   description?: string;
   job?: string;
 }
-interface TeamMemberProps {
-  picture: string;
-  name: string;
-  title: string;
-  phone?: string;
-  email?: string;
-  linkedin?: string;
-  description?: string;
-  job?: string;
-}
+interface TeamMemberProps extends TeamMember {}
 
 interface TeamSectionProps {
   title: string;
@@ -145,101 +136,156 @@ function TeamMemberCard({
   picture,
   name,
   title,
-  phone,
   email,
   linkedin,
   description,
-  job,
 }: TeamMemberProps) {
-  const [isExpanded, setIsExpanded] = useState(false);
-  const toggleExpand = () => setIsExpanded((prev) => !prev);
+  const showExpand = (description?.length ?? 0) > 140;
 
   return (
-    <div className="relative overflow-hidden w-full h-[500px] rounded-2xl flex p-3 flex-col-reverse">
-      {picture ? (
-        <Image
-          src={picture}
-          alt={name}
-          fill
-          className="object-cover object-center -z-10 rounded-2xl"
-          priority
-        />
-      ) : (
-        <div className="absolute inset-0 flex items-center justify-center -z-10 rounded-2xl">
-          <LucideUserRound className="h-56 w-56 text-gray-500" />
-        </div>
-      )}
-
-      <div
-        className="relative rounded-xl p-4"
-        style={{
-          backgroundColor: "rgba(0,0,0,0.5)",
-          backdropFilter: "blur(4px)",
-        }}
-      >
-        {description && (
-          <Button
-            variant="ghost"
-            size="icon"
-            className="absolute top-2 right-2"
-            onClick={toggleExpand}
-            asChild
-            aria-label={isExpanded ? "Collapse bio" : "Expand bio"}
-          >
-            <span>
-              {isExpanded ? (
-                <ArrowDownRight color="#fff" className="h-4 w-4" />
-              ) : (
-                <ArrowUpRight color="#fff" className="h-4 w-4" />
-              )}
-            </span>
-          </Button>
-        )}
-
-        <h3 className="text-lg text-white font-bold">{name}</h3>
-        <p className="text-xs text-white font-semibold mb-1">{title}</p>
-        {job && <p className="text-xs text-white/80 mb-2">{job}</p>}
-
-        {description && (
-          <p
-            className={`text-xs text-white/80 mb-2 transition-all text-ellipsis overflow-hidden`}
-            style={{
-              maxHeight: !isExpanded ? "3rem" : "14rem",
-              transition: "max-height 0.5s ease",
-              overflow: "clip",
-              textOverflow: "ellipsis",
-            }}
-          >
-            {description}
-          </p>
-        )}
-
-        <div className="flex space-x-1 mt-2">
-          {phone && (
-            <Button variant="ghost" size="icon" asChild>
-              <a href={`tel:${phone}`} aria-label="Phone">
-                <PhoneIcon color="#fff" className="h-3 w-3" />
-              </a>
-            </Button>
+    <div className="h-full">
+      {/* PHOTO PLATE */}
+      <div className="">
+        <div
+          className="relative aspect-[4/5] w-full overflow-hidden
+                     rounded-2xl border border-neutral-100 bg-neutral-100"
+        >
+          {picture ? (
+            <Image
+              src={picture}
+              alt={name}
+              fill
+              sizes="(min-width: 1024px) 22vw, 50vw"
+              className="
+                object-cover
+                contrast-110
+              "
+              priority
+            />
+          ) : (
+            <div className="absolute inset-0 grid place-items-center">
+              <LucideUserRound className="h-64 w-64 text-neutral-300" />
+            </div>
           )}
+        </div>
+      </div>
+
+      {/* TEXT BLOCK */}
+      <div className=" pb-6 pt-4">
+        <h3 className="text-[15px] font-semibold text-neutral-900 leading-tight">
+          {name}
+        </h3>
+
+        <p className="mt-1 text-[13px] text-neutral-600">{title}</p>
+
+        {description && (
+          <>
+            {/* true multi-line CSS ellipsing, no manual '...' */}
+            <p
+              className="mt-1 text-[13px] text-neutral-600"
+              style={{
+                display: "-webkit-box",
+                WebkitLineClamp: 3,
+                WebkitBoxOrient: "vertical" as const,
+                overflow: "hidden",
+              }}
+            >
+              {description}
+            </p>
+
+            {showExpand && (
+              <Dialog>
+                <DialogTrigger asChild>
+                  <button
+                    className="mt-2 text-[13px] font-medium text-neutral-700 underline hover:text-neutral-900"
+                    aria-label={`Show full bio for ${name}`}
+                  >
+                    Show more
+                  </button>
+                </DialogTrigger>
+                <DialogContent className="sm:max-w-[840px]">
+                  <div className="grid grid-cols-1 md:grid-cols-[1fr_1.4fr] gap-6">
+                    <div className="relative aspect-[4/5] w-full overflow-hidden rounded-xl bg-neutral-100">
+                      {picture ? (
+                        <Image
+                          src={picture}
+                          alt={name}
+                          fill
+                          sizes="(min-width: 768px) 360px, 80vw"
+                          className="object-cover contrast-110"
+                          priority
+                        />
+                      ) : (
+                        <div className="absolute inset-0 grid place-items-center">
+                          <LucideUserRound className="h-40 w-40 text-neutral-300" />
+                        </div>
+                      )}
+                    </div>
+
+                    <div>
+                      <DialogHeader>
+                        <DialogTitle className="text-2xl leading-tight">
+                          {name}
+                        </DialogTitle>
+                        <DialogDescription className="text-sm text-neutral-600">
+                          {title}
+                        </DialogDescription>
+                      </DialogHeader>
+
+                      <div className="mt-4 text-[14px] leading-7 text-neutral-800 whitespace-pre-line">
+                        {description}
+                      </div>
+
+                      <div className="mt-6 flex items-center gap-3">
+                        {email && (
+                          <a
+                            href={`mailto:${email}`}
+                            className="text-[14px] text-neutral-700 underline underline-offset-2 hover:text-neutral-900"
+                          >
+                            {email}
+                          </a>
+                        )}
+                        {linkedin && (
+                          <a
+                            href={linkedin}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label={`${name} on LinkedIn`}
+                            className="inline-flex h-6 w-6 items-center justify-center rounded border border-neutral-300 text-neutral-600 hover:text-neutral-900"
+                          >
+                            <LinkedInLogoIcon className="h-4 w-4" />
+                          </a>
+                        )}
+                      </div>
+                    </div>
+                  </div>
+                </DialogContent>
+              </Dialog>
+            )}
+          </>
+        )}
+
+        <div className="mt-3 flex items-center gap-3">
           {email && (
-            <Button variant="ghost" size="icon" asChild>
-              <a href={`mailto:${email}`} aria-label="Email">
-                <MailIcon color="#fff" className="h-3 w-3" />
-              </a>
-            </Button>
+            <a
+              href={`mailto:${email}`}
+              className="text-[13px] text-neutral-700 hover:underline"
+            >
+              {email}
+            </a>
           )}
           {linkedin && (
-            <Button variant="ghost" size="icon" asChild>
-              <a
-                href={linkedin}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="LinkedIn"
-              >
-                <LinkedInLogoIcon color="#fff" className="h-3 w-3" />
-              </a>
-            </Button>
+            <a
+              href={linkedin}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={`${name} on LinkedIn`}
+              className="inline-flex h-5 w-5 items-center justify-center rounded
+                         border border-neutral-300 text-neutral-500
+                         hover:text-neutral-800"
+            >
+              <LinkedInLogoIcon className="h-3.5 w-3.5" />
+            </a>
           )}
         </div>
       </div>
@@ -250,13 +296,17 @@ function TeamMemberCard({
 const TeamSection: React.FC<TeamSectionProps> = ({ title, members, index }) => {
   return (
     <section className="space-y-6">
-      <BlurFade delay={0.25 + 0.1 * index} inView>
-        <h2 className="text-2xl font-bold text-center mb-6">{title}</h2>
-      </BlurFade>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4 gap-4">
-        {members.map((member, index) => (
-          <BlurFade key={index} delay={0.1 * index} inView>
-            <TeamMemberCard {...member} />
+      {title ? (
+        <BlurFade delay={0.25 + 0.1 * index} inView>
+          <h2 className="text-2xl font-bold text-center mb-6">{title}</h2>
+        </BlurFade>
+      ) : null}
+
+      {/* Wider gaps + consistent columns to mirror the reference */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        {members.map((m, i) => (
+          <BlurFade key={`${m.name}-${i}`} delay={0.05 * i} inView>
+            <TeamMemberCard {...m} />
           </BlurFade>
         ))}
       </div>
@@ -264,30 +314,24 @@ const TeamSection: React.FC<TeamSectionProps> = ({ title, members, index }) => {
   );
 };
 
-const sections = [
-  { title: "", members: [...management] },
-  /*   { title: "Advisory Board", members: board },
-  { title: "Legal Advisors", members: legal }, */
-];
+const sections = [{ title: "", members: [...management] }];
 
 export function Team() {
   return (
-    <div className="bg-gradient-to-b from-background to-background/80  min-h-screen">
+    <div className="bg-background min-h-screen w-full">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
+        <div className="text-center mb-20">
           <BlurFade delay={0.25} inView>
-            <h4 className="text-sm md:text-lg text-primary text-center">
-              Our Team
-            </h4>
+            <h4 className="text-sm md:text-lg text-primary">Our Team</h4>
           </BlurFade>
           <BlurFade delay={0.5} inView>
-            <h2 className="text-2xl md:text-3xl xl:text-4xl font-bold mb-8 leading-tight text-primary">
+            <h2 className="text-3xl md:text-5xl  tracking-tight">
               Meet The People Behind Zonify.ai
             </h2>
           </BlurFade>
         </div>
 
-        <div className="space-y-20">
+        <div className="space-y-16">
           {sections.map((section, index) => (
             <TeamSection
               key={index}

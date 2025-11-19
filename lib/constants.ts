@@ -130,3 +130,80 @@ export const industries: {
     icon: Train,
   },
 ];
+
+export const Industries = [
+  {
+    title: "Retail",
+    href: "/industries/retail",
+    description: "Real-time Customer Insights",
+    longDescription:
+      "Leverage advanced footfall analytics and AI-driven BI to monitor visitor behavior, optimize store layouts, and tailor marketing strategies for increased profitability.",
+    caseExample: "Go to Page",
+    image: "/images/unsplash/clothes.jpg",
+  },
+  {
+    title: "Malls",
+    href: "/industries/malls",
+    description: "Instant Operational Views",
+    longDescription:
+      "Unlock comprehensive mall analytics with real-time visitor tracking, tenant performance monitoring, and predictive insights to optimize operations and enhance tenant mix.",
+    caseExample: "Case example",
+
+    image: "/images/unsplash/center.jpg",
+  },
+  {
+    title: "Leisure",
+    href: "/industries/leisure",
+    description: "Engage Visitors & Enhance Experiences",
+    longDescription:
+      "Transform leisure spaces with dynamic analytics that capture real-time crowd behavior, enabling optimized layouts, improved customer service, and more engaging experiences.",
+    caseExample: "Case example",
+    image:
+      "https://images.pexels.com/photos/3379934/pexels-photo-3379934.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+  },
+  {
+    title: "Supermarkets",
+    href: "/industries/supermarkets",
+    description: "Streamlined In-Store Analytics",
+    longDescription:
+      "Harness real-time data to analyze shopper behavior, optimize product placements, and manage staffing effectively, ensuring enhanced customer satisfaction and operational efficiency.",
+    caseExample: "Case example",
+    image: "/images/unsplash/stand.jpg",
+  },
+  {
+    title: "Airports",
+    href: "/industries/airports",
+    description: "Comprehensive Passenger Analytics",
+    longDescription:
+      "Improve airport operations by tracking real-time passenger flow, predicting congestion points, and streamlining services with AI-powered insights tailored for high-traffic environments.",
+    caseExample: "Case example",
+    image: "/images/unsplash/plane.jpg",
+  },
+  {
+    title: "Smart Cities",
+    href: "/industries/smart-cities",
+    description: "Optimized Urban Insights",
+    longDescription:
+      "Leverage data analytics to enhance urban planning, improve public safety, and optimize resource allocation in smart city initiatives.",
+    caseExample: "Case example",
+    image: "/images/unsplash/smartcity.jpg",
+  },
+  {
+    title: "Public Transportation",
+    href: "/industries/public-transportation",
+    description: "Optimized Transit Insights",
+    longDescription:
+      "Empower your transit network with actionable analytics that reveal rider behavior and service performance, enabling optimized scheduling, reduced wait times, and improved overall efficiency.",
+    caseExample: "Case example",
+    image: "/images/unsplash/train.jpg",
+  },
+  {
+    title: "Events & Venues",
+    href: "/industries/events-venues",
+    description: "Dynamic Event Analytics",
+    longDescription:
+      "Enhance event management with real-time crowd analytics, enabling optimized layouts, improved safety measures, and enriched attendee experiences through data-driven insights.",
+    caseExample: "Case example",
+    image: "/images/unsplash/concert.jpg",
+  },
+];

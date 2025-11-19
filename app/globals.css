@@ -3,13 +3,95 @@
 @tailwind utilities;
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Manrope:wght@200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
-body {
-  font-family: "Inter", sans-serif;
+/* Britti Sans - font files were uploaded under /public/fonts/britti-sans-font-family-1761561563-0 */
+@font-face {
+  font-family: "Britti Sans";
+  src: url("/fonts/britti-sans-font-family-1761561563-0/BrittiSansTrial-Light-BF6757bfd494951.otf")
+    format("opentype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
 
+@font-face {
+  font-family: "Britti Sans";
+  src: url("/fonts/britti-sans-font-family-1761561563-0/BrittiSansTrial-LightItalic-BF6757bfd48c7c7.otf")
+    format("opentype");
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Britti Sans";
+  src: url("/fonts/britti-sans-font-family-1761561563-0/BrittiSansTrial-Regular-BF6757bfd47ffbf.otf")
+    format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Britti Sans";
+  src: url("/fonts/britti-sans-font-family-1761561563-0/BrittiSansTrial-RegularItalic-BF6757bfd44e013.otf")
+    format("opentype");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Britti Sans";
+  src: url("/fonts/britti-sans-font-family-1761561563-0/BrittiSansTrial-Semibold-BF6757bfd443a8a.otf")
+    format("opentype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Britti Sans";
+  src: url("/fonts/britti-sans-font-family-1761561563-0/BrittiSansTrial-SemiboldItalic-BF6757bfd411c3a.otf")
+    format("opentype");
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Britti Sans";
+  src: url("/fonts/britti-sans-font-family-1761561563-0/BrittiSansTrial-Bold-BF6757bfd4a96ed.otf")
+    format("opentype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Britti Sans";
+  src: url("/fonts/britti-sans-font-family-1761561563-0/BrittiSansTrial-BoldItalic-BF6757bfd4a2285.otf")
+    format("opentype");
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Body and global font fallback stack */
+body {
+  font-family: "Britti Sans", "Inter", "Manrope", "Poppins", system-ui,
+    -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans",
+    "Liberation Sans", sans-serif;
   padding-top: 90px;
 }
 
 @layer utilities {
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
   .text-balance {
     text-wrap: balance;
   }

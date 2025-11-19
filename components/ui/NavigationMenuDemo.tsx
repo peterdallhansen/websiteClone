@@ -20,8 +20,12 @@ import {
 
 export function NavigationMenuDemo({
   linkClassName,
+  onHover,
+  onHoverEnd
 }: {
   linkClassName: string;
+  onHover: () => void;
+  onHoverEnd: () => void;
 }) {
   const company: {
     title: string;
@@ -49,8 +53,9 @@ export function NavigationMenuDemo({
     },
   ];
   return (
-    <NavigationMenu className={linkClassName}>
-      <NavigationMenuList>
+   
+    <NavigationMenu className={linkClassName} onMouseOver={onHover}  onMouseLeave={onHoverEnd}>
+      <NavigationMenuList >
         <NavigationMenuItem>
           <NavigationMenuTrigger className="bg-transparent hover:bg-white">
             Solutions

@@ -7,11 +7,11 @@ import type { Metadata } from "next";
 import React, { Suspense } from "react";
 import "./globals.css";
 import GoogleAnalytics from "@/components/google-analytics";
+import CookieBanner from "@/components/CookieBanner";
 
 export const metadata: Metadata = {
   title: {
-    default:
-      "Zonify.ai – Cloud-based AI through 2D cameras to understand visitors",
+    default: "Zonify.ai | AI-Driven Insights from Every Footstep",
     template: "%s | Zonify.ai",
   },
   description: `Our cloud-based AI solution enables 2D cameras to deliver real-time analytics, helping companies understand visitor behavior, optimize traffic, and enhance everyday operations.`,
@@ -32,6 +32,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={cn(inter.variable, "scroll-smooth")}>
+      <head>
+        <link
+          href="https://db.onlinewebfonts.com/c/a20b7f0e9287edbc64a2ef52ba343440?family=ABC+Normal+White"
+          rel="stylesheet"
+          type="text/css"
+        />
+      </head>
       <body className={`  antialiased   p-0  `}>
         <ThemeProvider
           attribute="class"
@@ -47,8 +54,6 @@ export default function RootLayout({
 
           {children}
           <Footer />
-          {/* Cookies banner not needed if google analytics is only used to track traffic */}
-          {/* <CookieBanner /> */}
         </ThemeProvider>
       </body>
     </html>
