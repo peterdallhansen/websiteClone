@@ -21,6 +21,8 @@ import CardSection from "@/components/CardSection";
 import GetToKnow from "@/components/GetToKnow";
 import GetToKnow2 from "@/components/GetToKnow2";
 import PremiumFeatures from "@/components/Sections/PremiumFeatures";
+import GetToKnow3 from "@/components/Sections/GetToKnow3";
+import MainCentered from "@/components/Sections/MainCentered";
 
 
 export default function Home() {
@@ -30,18 +32,20 @@ export default function Home() {
       className="min-h-screen bg-background antialiased w-full mx-auto flex flex-col items-center transition-colors duration-500"
     >
       {/* All your content remains nested inside the transformed <main> element */}
-      <Main />
+      {/* <Main /> */}
+      <MainCentered/>
       <FeaturesSection />
-      <FixedScrollLayout3D />
+      <FixedScrollLayout3D disable3D={false} />
       {/* <PremiumFeatures /> */}
-      <GetToKnow2 />
+      {/* <GetToKnow2 /> */}
+      <GetToKnow3 />
 
       <div className="mx-auto container px-6 py-16 md:px-12 md:py-10">
         <div className="flex flex-row justify-between w-full items-center mb-2">
           <p className="text-2xl font">News</p>
           <a
             href="/news"
-            className="inline-flex items-center gap-2 text-2xl group"
+            className="inline-flex items-center gap-2 text-primary/80 text-1xl group"
           >
             See all
             <ArrowRight className="w-4 h-4 group-hover:animate-wiggleRight" />

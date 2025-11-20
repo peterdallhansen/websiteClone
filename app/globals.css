@@ -77,6 +77,10 @@
 }
 
 /* Body and global font fallback stack */
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Britti Sans", "Inter", "Manrope", "Poppins", system-ui,
     -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans",

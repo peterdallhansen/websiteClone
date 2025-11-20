@@ -18,6 +18,10 @@ import {
   TextureLoader,
   LinearToneMapping,
   Vector3,
+  QuadraticBezierCurve3,
+  TubeGeometry,
+  DoubleSide,
+  AdditiveBlending,
 } from "three";
 
 const COORDINATE_SCALE = 1 / 1000;
@@ -48,6 +52,7 @@ export interface ViewState {
   };
   structureColors?: { [entityName: string]: string };
   floorColor?: string;
+  showArcs?: boolean;
 }
 
 interface ThreeMapProps {
@@ -329,6 +334,160 @@ export function LogoBillboard({
   );
 }
 
+// --- Helper: Close Ring ---
+const closeRing = (ring: [number, number][]) => {
+  const validRing = ring.filter(
+    (pt): pt is [number, number] =>
+      Array.isArray(pt) &&
+      pt.length === 2 &&
+      typeof pt[0] === "number" &&
+      typeof pt[1] === "number"
+  );
+  if (
+    validRing.length > 0 &&
+    (validRing[0][0] !== validRing[validRing.length - 1][0] ||
+      validRing[0][1] !== validRing[validRing.length - 1][1])
+  ) {
+    return [...validRing, validRing[0]];
+  }
+  return [...validRing];
+};
+
+// --- Arc Layer ---
+function ArcLayer({ structures }: { structures: any[] }) {
+  const arcs = useMemo(() => {
+    if (!structures || structures.length < 2) return [];
+
+    // Assume first structure is origin
+    const origin = structures[0];
+    const originCoordsRaw = origin.structure.coordinates_x.map((x: number, i: number) => [x, origin.structure.coordinates_y[i]]) as [number, number][];
+    const originRing = closeRing(originCoordsRaw);
+    
+    let originCenter;
+    try {
+        originCenter = turf.center(turf.polygon([originRing]));
+    } catch (e) {
+        const sum = originRing.reduce((acc, p) => [acc[0] + p[0], acc[1] + p[1]], [0, 0]);
+        originCenter = { geometry: { coordinates: [sum[0] / originRing.length, sum[1] / originRing.length] } };
+    }
+    
+    const originCoords = originCenter.geometry.coordinates;
+    const start = new Vector3(originCoords[0] * COORDINATE_SCALE, originCoords[1] * COORDINATE_SCALE, 0);
+
+    const curves: { curve: QuadraticBezierCurve3; id: string; radius: number; material: ShaderMaterial }[] = [];
+
+    structures.slice(1).forEach((target, i) => {
+      const targetCoordsRaw = target.structure.coordinates_x.map((x: number, i: number) => [x, target.structure.coordinates_y[i]]) as [number, number][];
+      const targetRing = closeRing(targetCoordsRaw);
+      
+      let targetCenter;
+      try {
+          targetCenter = turf.center(turf.polygon([targetRing]));
+      } catch (e) {
+           const sum = targetRing.reduce((acc, p) => [acc[0] + p[0], acc[1] + p[1]], [0, 0]);
+           targetCenter = { geometry: { coordinates: [sum[0] / targetRing.length, sum[1] / targetRing.length] } };
+      }
+      
+      const targetCoords = targetCenter.geometry.coordinates;
+      const end = new Vector3(targetCoords[0] * COORDINATE_SCALE, targetCoords[1] * COORDINATE_SCALE, 0);
+
+      // Calculate control point (midpoint + height)
+      const mid = new Vector3().addVectors(start, end).multiplyScalar(0.5);
+      const dist = start.distanceTo(end);
+      mid.z += dist * 0.5; // Arc height proportional to distance
+
+      // Filter based on distance (probability decreases with distance)
+      // Adjust factor to control falloff. 
+      // e.g. at dist=1, prob=0.5. at dist=2, prob=0.33
+      const probability = 1 / (1 + dist * 3.0); 
+      
+      // Use a deterministic random based on index to keep consistent set across renders
+      const randomVal = Math.abs(Math.sin(i * 123.456) * 10000 % 1);
+      
+      if (randomVal > probability) return;
+
+      const curve = new QuadraticBezierCurve3(start, mid, end);
+      
+      // Calculate radius based on distance (longer = thinner)
+      // Base radius 0.02, min radius 0.005
+      const radius = Math.max(0.005, 0.01 / (1 + dist * 0.5));
+
+      // Create unique material for this arc
+      const material = new ShaderMaterial({
+        uniforms: {
+          uProgress: { value: 0 },
+          uColor: { value: new Color("#81d1f9") },
+          uRadius: { value: radius },
+        },
+        vertexShader: `
+          uniform float uRadius;
+          varying vec2 vUv;
+          void main() {
+            vUv = uv;
+            
+            // Taper logic: shrink radius as we move away from start (uv.x goes 0->1)
+            // We move the vertex inwards along the normal
+            float taperFactor = 0.8; // Taper down to 20%
+            float shrinkage = uRadius * vUv.x * taperFactor;
+            vec3 pos = position - normal * shrinkage;
+
+            gl_Position = projectionMatrix * modelViewMatrix * vec4(pos, 1.0);
+          }
+        `,
+        fragmentShader: `
+          uniform float uProgress;
+          uniform vec3 uColor;
+          varying vec2 vUv;
+          
+          void main() {
+            // Grow animation
+            float alpha = step(vUv.x, uProgress);
+            
+            // Smooth tip
+            float edge = smoothstep(uProgress, uProgress - 0.05, vUv.x);
+            alpha = min(alpha, edge);
+
+            if (alpha < 0.01) discard;
+
+            // Solid color with slight transparency, no additive blending
+            gl_FragColor = vec4(uColor, 0.8); 
+          }
+        `,
+        transparent: true,
+        side: DoubleSide,
+        depthWrite: false,
+      });
+
+      curves.push({ curve, id: `arc-${i}`, radius, material });
+    });
+
+    return curves;
+  }, [structures]);
+
+  useFrame((state, delta) => {
+    // Animate all materials
+    const speed = 0.8;
+    arcs.forEach(({ material }) => {
+      if (material.uniforms.uProgress.value < 1.0) {
+        material.uniforms.uProgress.value += delta * speed;
+      } else {
+        material.uniforms.uProgress.value = 1.0;
+      }
+    });
+  });
+
+  return (
+    <group>
+      {arcs.map(({ curve, id, radius, material }) => (
+        <mesh key={id}>
+          <tubeGeometry args={[curve, 64, radius, 8, false]} /> 
+          <primitive object={material} />
+        </mesh>
+      ))}
+    </group>
+  );
+}
+
 // --- Scene Content ---
 const SceneContent: React.FC<{ mapData: MapData; viewState?: ViewState }> = ({ mapData, viewState }) => {
   const { structures, structuresWithIcon, mapFloor, mapCenter } = mapData;
@@ -429,24 +588,6 @@ const SceneContent: React.FC<{ mapData: MapData; viewState?: ViewState }> = ({ m
       }
     }
   });
-
-  const closeRing = (ring: [number, number][]) => {
-    const validRing = ring.filter(
-      (pt): pt is [number, number] =>
-        Array.isArray(pt) &&
-        pt.length === 2 &&
-        typeof pt[0] === "number" &&
-        typeof pt[1] === "number"
-    );
-    if (
-      validRing.length > 0 &&
-      (validRing[0][0] !== validRing[validRing.length - 1][0] ||
-        validRing[0][1] !== validRing[validRing.length - 1][1])
-    ) {
-      return [...validRing, validRing[0]];
-    }
-    return [...validRing];
-  };
 
   const roundedStructures = useMemo(() => {
     return structures?.map((s) => {
@@ -606,6 +747,9 @@ const SceneContent: React.FC<{ mapData: MapData; viewState?: ViewState }> = ({ m
                 />
             );
         })}
+
+        {/* Arc Layer */}
+        {viewState?.showArcs && <ArcLayer structures={structures} />}
       </group>
     </>
   );

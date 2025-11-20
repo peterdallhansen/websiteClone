@@ -19,6 +19,7 @@ export default function GetToKnow2() {
     {
       icon: Footprints,
       title: "Long Customer Journey",
+      image: "/images/unsplash/center.jpg",
       description:
         "Track the complete path from entry to exit. Understand cross-shopping patterns and flow between zones.",
     },
@@ -98,7 +99,7 @@ export default function GetToKnow2() {
 
   return (
     <div className="relative w-full max-w-screen mx-auto px-4 py-40 overflow-x-hidden">
-      <div className="flex justify-between items-end mb-12 container mx-auto">
+      <div className="flex justify-between items-end mb-12 w-full pl-10">
         <div className="space-y-6">
           <BlurFade delay={0.1} inView>
             <h1 className="text-4xl md:text-5xl">
@@ -132,8 +133,7 @@ export default function GetToKnow2() {
         style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
       >
         <div
-                className="flex gap-10 snap-x snap-mandatory scrollbar-hide"
-          style={{ paddingLeft: "calc((100% - 1536px)/2)" }}
+                className="flex gap-10 snap-x snap-mandatory scrollbar-hide pl-10"
         >
           {keyPoints.map((offering, index) => (
             <div
@@ -142,7 +142,11 @@ export default function GetToKnow2() {
             >
               <BlurFade delay={0.1 * index + 0.1} inView className="flex flex-col gap-6">
                 {/* Icon Container */}
-                <div className="aspect-square w-full rounded-[2.5rem] border bg-[#F8F9FA] flex items-center justify-center group hover:bg-gray-50 transition-colors duration-300">
+                <div style={{
+                  backgroundImage: `url(${offering.image})`,
+                  backgroundSize: "cover",
+                  backgroundPosition: "center",
+                }} className="aspect-square w-full rounded-[2.5rem] border  bg-[#F8F9FA] flex items-center justify-center group hover:bg-gray-50 transition-colors duration-300">
                   <offering.icon 
                     className="w-16 h-16 transition-transform duration-500 group-hover:scale-110" 
                     strokeWidth={1.5} 

@@ -18,7 +18,7 @@ const sections = [
       },
     ],
     image: {
-      src: "/images/8f5a6602-635e-46bf-8052-990e2dd293ba.png",
+      src: "/images/1.png",
       alt: "Deep Analytics Dashboard",
     },
     viewState: {
@@ -29,7 +29,11 @@ const sections = [
       pitch: 30,
       altitude: 1.5,
       advanced: {
-        cameraPosition: [3.0, 0.5, 1.2] as [number, number, number],
+        cameraPosition: [
+            1.9024673309766915,
+          -0.6495240091540171,
+          2.5872274101434285
+         ] as [number, number, number],
         targetPosition: [
           2.5613970834247226,
           1.7482853703047996,
@@ -61,9 +65,7 @@ const sections = [
       altitude: 1.5,
       advanced: {
         cameraPosition: [
-          1.9024673309766915,
-          -0.6495240091540171,
-          2.5872274101434285
+         3.0, 0.5, 1.2
         ] as [number, number, number],
         targetPosition: [
           2.5613970834247226,
@@ -71,6 +73,7 @@ const sections = [
           -0.0057146296951979605
         ] as [number, number, number],
       },
+      showArcs: true,
     },
   },
   {
@@ -84,7 +87,7 @@ const sections = [
       },
     ],
     image: {
-      src: "/images/DashboardPreview.png",
+      src: "/images/25.png",
       alt: "Unified Control Dashboard",
     },
     viewState: {
@@ -115,7 +118,7 @@ const sections = [
       },
     ],
     image: {
-      src: "/images/Predict.png",
+      src: "/images/Reports9.png",
       alt: "Strategic Growth Prediction",
     },
     viewState: {
@@ -172,7 +175,7 @@ const sections = [
   },
 ];
 
-export default function FixedScrollLayout3D() {
+export default function FixedScrollLayout3D({disable3D}: {disable3D?: boolean }) {
   const [activeSection, setActiveSection] = useState(0);
   const [mapData, setMapData] = useState<MapData | null>(null);
 
@@ -219,12 +222,12 @@ export default function FixedScrollLayout3D() {
   }, []);
 
   return (
-    <div className="w-full bg-background pt-32 mb-[-200px] mt-32">
+    <div className="w-full bg-background mb-[-200px]">
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex flex-col gap-6 mb-40 text-center">
-          <h2 className="text-3xl sm:text-6xl font tracking-tight">
-            Our models. All business.
-          </h2>
+          <h2 className="text-3xl md:text-5xl font-bold mb-8 text-white">
+          A Digital Twin of Your Portfolio
+        </h2>
         </div>
 
         <div
@@ -302,16 +305,26 @@ export default function FixedScrollLayout3D() {
                 transition={{ duration: 0.4 }}
                 className="w-full h-[700px]  rounded-2xl overflow-hidden"
               >
-                {mapData ? (
-                  <ThreeMap
-                    mapData={mapData}
-                    className="w-full h-full"
+                {!disable3D ? (
+                  <>
+                 {mapData ? (
+                   <ThreeMap
+                     mapData={mapData}
+                     className="w-full h-full"
                    viewState={sections[activeSection].viewState}
                   />
-                ) : (
-                  <div className="flex items-center justify-center w-full h-full text-muted-foreground">
-                    Loading Map…
-                  </div>
+                 ) : (
+                   <div className="flex items-center justify-center w-full h-full text-muted-foreground">
+                   </div>
+                 )}
+                </>) : (
+                  <Image
+                    src={sections[activeSection].image.src}
+                    alt={sections[activeSection].image.alt}
+                    width={800}
+                    height={800}
+                    className={cn("w-[800px] h-auto")}
+                  />
                 )}
               </motion.div>
             </div>

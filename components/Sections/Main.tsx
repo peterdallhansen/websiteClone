@@ -45,7 +45,7 @@ function Main() {
               loop
               playsInline
             >
-              <source src="/videos/bg2.mp4" type="video/mp4" />
+              <source src="/videos/Futuristic_Mall_Data_Visualization_Video.mp4" type="video/mp4" />
             </video>
 
             {/* Text Overlay - bottom left */}

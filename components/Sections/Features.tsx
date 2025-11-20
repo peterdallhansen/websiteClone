@@ -2,15 +2,15 @@ import {
   ArrowRight,
   LucideGlobe,
   LucideLayoutDashboard,
-  LucideLock,
+  LucideUsers,
 } from "lucide-react";
 
 export function FeaturesSection() {
   return (
-    <section className="py-10 px-6">
+    <section className="py-10 px-6" id="features">
       <div className="max-w-7xl mx-auto">
         <h1 className="text-6xl font-normal text-center mb-20 text-balance">
-          Intelligence That Pays For Itself
+          Data That Drives Decisions
         </h1>
         <div className="grid md:grid-cols-3 gap-16">
           {/* Render features from an array */}
@@ -31,7 +31,7 @@ export function FeaturesSection() {
             title: "Know Your Visitors",
             description:
               "Go beyond counting. Segment visitors by age, gender, and dwell time to target marketing and measure campaign impact.",
-            icon: LucideLock,
+            icon: LucideUsers,
           },
           ].map((feature, idx) => {
             const Icon = feature.icon;
