@@ -54,7 +54,7 @@ export default function IndustriesCarousel({
         <div className="space-y-6">
           <BlurFade delay={0.1} inView>
             <h1 className="text-3xl md:text-4xl font-normal">
-              Powering progress across industries
+              Built for Physical Spaces
             </h1>
           </BlurFade>
         </div>

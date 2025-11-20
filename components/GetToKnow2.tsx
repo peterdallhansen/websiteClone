@@ -1,15 +1,15 @@
 "use client";
 
 import {
+  BarChart3,
   ChevronLeftIcon,
   ChevronRightIcon,
   Clock,
-  Eye,
-  LucideTrendingUpDown,
+  Footprints,
+  GitGraph,
   LucideShare2,
-  Route,
+  Map,
   Users,
-  Plus,
 } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import BlurFade from "./ui/blur-fade";
@@ -17,59 +17,74 @@ import BlurFade from "./ui/blur-fade";
 export default function GetToKnow2() {
   const keyPoints = [
     {
-      icon: Eye,
-      title: "Live Visitor Counts",
+      icon: Footprints,
+      title: "Long Customer Journey",
       description:
-        "See exactly how many people are in your space at any moment—with zero delay.",
+        "Track the complete path from entry to exit. Understand cross-shopping patterns and flow between zones.",
+    },
+    {
+      icon: GitGraph,
+      title: "True Conversion",
+      description:
+        "Measure capture rate. Know exactly how many passersby enter each store vs. just walking by.",
     },
     {
       icon: Users,
-      title: "Demographic Segmentation",
+      title: "Demographic Insights",
       description:
-        "Break down traffic by age, gender, and group size for targeted insights.",
+        "Segment visitors by age and gender. Tailor your tenant mix and marketing to who is actually there.",
+    },
+    {
+      icon: BarChart3,
+      title: "Leasing Intelligence",
+      description:
+        "Justify rents with data. Prove the value of every square meter with concrete traffic evidence.",
+    },
+    {
+      icon: Map,
+      title: "Zone Heatmaps",
+      description:
+        "Visualize engagement. See exactly where visitors stop, linger, and interact with displays.",
     },
     {
       icon: Clock,
-      title: "Heatmaps & Dwell-Time Analytics",
+      title: "Predictive Analytics",
       description:
-        "Visualize hotspots and measure how long visitors linger in key areas.",
-    },
-
-    {
-      icon: Route,
-      title: "End-to-End Journey",
-      description:
-        "Track each visitor’s complete journey—from entry to exit—to reveal visit patterns, timing, and repeat behaviors.",
-    },
-    {
-      icon: LucideTrendingUpDown,
-      title: "Predictive Forecasting",
-      description:
-        "Anticipate peaks and valleys in foot traffic to optimize staffing and promotions.",
+        "Forecast traffic. Optimize staffing and operations before the rush happens.",
     },
     {
       icon: LucideShare2,
-      title: "Reports, Alerts & Data Export",
+      title: "API & Integration",
       description:
-        "Generate custom reports, set real-time alerts, and push data to your BI tools via our API.",
+        "Connect to your ecosystem. Push raw data or insights directly to your BI tools.",
     },
   ];
 
   const scrollRef = useRef<HTMLDivElement>(null);
   const [scrollAmount, setScrollAmount] = useState(500);
+  const [paddingLeft, setPaddingLeft] = useState(24);
 
   useEffect(() => {
-    const updateScrollAmount = () => {
+    const updateLayout = () => {
+      // Scroll amount
       if (window.innerWidth >= 768) {
         setScrollAmount(500);
       } else {
         setScrollAmount(300);
       }
+
+      // Padding calculation for centering
+      // Target container width: 1200px (approx laptop/desktop content width)
+      // We want the first card to align with where a 1200px container would start.
+      const containerWidth = 1200;
+      const windowWidth = window.innerWidth;
+      const calculatedPadding = Math.max(24, (windowWidth - containerWidth) / 2);
+      setPaddingLeft(calculatedPadding);
     };
 
-    updateScrollAmount();
-    window.addEventListener("resize", updateScrollAmount);
-    return () => window.removeEventListener("resize", updateScrollAmount);
+    updateLayout();
+    window.addEventListener("resize", updateLayout);
+    return () => window.removeEventListener("resize", updateLayout);
   }, []);
 
   const scroll = (direction: "left" | "right") => {
@@ -82,17 +97,17 @@ export default function GetToKnow2() {
   };
 
   return (
-    <div className="relative w-full max-w-screen mx-auto px-4 py-40 bg-gray-50 ">
+    <div className="relative w-full max-w-screen mx-auto px-4 py-40 overflow-x-hidden">
       <div className="flex justify-between items-end mb-12 container mx-auto">
         <div className="space-y-6">
           <BlurFade delay={0.1} inView>
-            <h1 className="text-4xl md:text-5xl font-bold">
+            <h1 className="text-4xl md:text-5xl">
               Everything You Need to <br /> Measure, Understand, and Improve.
             </h1>
           </BlurFade>
         </div>
         <BlurFade delay={0.25} inView>
-          <div className="flex gap-2">
+         <div className="flex gap-2">
             <button
               onClick={() => scroll("left")}
               className="p-2 rounded-full hover:animate-wiggleLeft"
@@ -112,40 +127,38 @@ export default function GetToKnow2() {
       </div>
 
       <div
-        className="overflow-x-auto overflow-y-visible scrollbar-hide snap-x snap-mandatory"
+     className="overflow-x-auto overflow-y-visible scrollbar-hide snap-x snap-mandatory"
         ref={scrollRef}
         style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
       >
         <div
-          className="flex gap-5 snap-x snap-mandatory scrollbar-hide"
+                className="flex gap-10 snap-x snap-mandatory scrollbar-hide"
           style={{ paddingLeft: "calc((100% - 1536px)/2)" }}
         >
           {keyPoints.map((offering, index) => (
             <div
               key={index}
-              className="min-w-full md:min-w-[405px] space-y-3 snap-end overflow-visible h-[330px] flex flex-col items-center justify-center"
+      className=" space-y-3 snap-end overflow-visible  min-h-[400px]  min-w-[400px]  flex flex-col items-center justify-center"
             >
-              <div className="rounded-2xl overflow-hidden hover:scale-[1.025] w-full  transition-all duration-300">
-                <BlurFade delay={0.1 * index + 0.1} inView>
-                  <div className="h-[315px] relative bg-white rounded-2xl flex items-center justify-center">
-                    <div className="p-4 absolute spacing-y-4 top-0 left-0">
-                      <offering.icon className="w-8 h-8 mb-2" color="black" />
-                      <p className="text-2xl  font-semibold mb-1">
-                        {offering.title}
-                      </p>
-                      <h3 className="text-md text-primary mb-2">
-                        {offering.description}
-                      </h3>
-                    </div>
-                    <a
-                      className="absolute bottom-4 right-4 rounded-full  bg-black/60 p-2 hover:bg-black/70"
-                      href="/"
-                    >
-                      <Plus color="white" />
-                    </a>
-                  </div>
-                </BlurFade>
-              </div>
+              <BlurFade delay={0.1 * index + 0.1} inView className="flex flex-col gap-6">
+                {/* Icon Container */}
+                <div className="aspect-square w-full rounded-[2.5rem] border bg-[#F8F9FA] flex items-center justify-center group hover:bg-gray-50 transition-colors duration-300">
+                  <offering.icon 
+                    className="w-16 h-16 transition-transform duration-500 group-hover:scale-110" 
+                    strokeWidth={1.5} 
+                  />
+                </div>
+                
+                {/* Text Content */}
+                <div className="space-y-2">
+                  <h3 className="text-2xl font-medium text-gray-900">
+                    {offering.title}
+                  </h3>
+                  <p className="text-gray-600 leading-relaxed text-lg">
+                    {offering.description}
+                  </p>
+                </div>
+              </BlurFade>
             </div>
           ))}
         </div>

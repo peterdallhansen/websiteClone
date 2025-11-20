@@ -93,7 +93,7 @@ export default function ServiceTerms() {
     <div className="container mx-auto px-4 py-8 max-w-[900px]">
       <Card className="bg-transparent border-none shadow-none">
         <CardHeader>
-          <h2 className="text-2xl md:text-3xl xl:text-5xl font-bold leading-tight text-primary text-center">
+          <h2 className="text-2xl md:text-3xl xl:text-5xl leading-tight text-primary text-center">
             Business Terms
           </h2>
           <h2 className="text-xl md:text-lg xl:text-2xl mb-2 leading-tight text-primary text-center max-w-[750px] text-opacity-60">

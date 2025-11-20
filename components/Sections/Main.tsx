@@ -58,16 +58,14 @@ function Main() {
 
               <BlurFade delay={0.1} inView>
                 <h2 className="text-base sm:text-lg xl:text-xl text-gray-200 leading-relaxed font-medium ">
-                  Our cloud-based AI solution enables 2D cameras to deliver
-                  real-time analytics — helping companies understand visitor
-                  behavior, optimize traffic, and enhance everyday operations.
+                  The only AI platform that transforms your existing cameras into a strategic asset - giving shopping centers and retailers unmatched visitor intelligence without new hardware.
                 </h2>
               </BlurFade>
 
               <BlurFade delay={0.3} inView>
                 <a href="#features">
                   <Button className="bg-white hover:text-white text-black  py-5 px-6 rounded-3xl shadow-lg hover:bg-black transition-all duration-300">
-                    Learn More
+                    See It In Action
                   </Button>
                 </a>
               </BlurFade>

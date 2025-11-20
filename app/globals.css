@@ -82,6 +82,7 @@ body {
     -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans",
     "Liberation Sans", sans-serif;
   padding-top: 90px;
+  overflow-x: hidden;
 }
 
 @layer utilities {

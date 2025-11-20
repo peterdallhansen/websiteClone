@@ -10,30 +10,29 @@ export function FeaturesSection() {
     <section className="py-10 px-6">
       <div className="max-w-7xl mx-auto">
         <h1 className="text-6xl font-normal text-center mb-20 text-balance">
-          Secure. Adaptable. Designed for your business.
+          Intelligence That Pays For Itself
         </h1>
         <div className="grid md:grid-cols-3 gap-16">
           {/* Render features from an array */}
           {[
             {
-              title: "Security",
-              description:
-                "GDPR-first by design: privacy-safe video processing, role-based access, audit logs, and data minimization so no PII is stored by default.",
-              icon: LucideLock,
-            },
-            {
-              title: "Deployment",
-              description:
-                "Flexible rollout on cloud or on-prem: private, firewall-protected, and designed to keep footage off external networks.",
-
-              icon: LucideGlobe,
-            },
-            {
-              title: "Customization",
-              description:
-                "Model tuning for your layout and cameras, flexible zone definitions and KPIs, and dashboards that match your workflows and stack.",
-              icon: LucideLayoutDashboard,
-            },
+            title: "Justify Rents & Minimize Vacancy",
+            description:
+              "Walk into every negotiation with data. Prove the value of each unit with concrete foot traffic and demographic evidence.",
+            icon: LucideLayoutDashboard,
+          },
+          {
+            title: "Works With Your Existing Cameras",
+            description:
+              "No new hardware required. We connect to your current IP cameras to deliver advanced analytics without the capex.",
+            icon: LucideGlobe,
+          },
+          {
+            title: "Know Your Visitors",
+            description:
+              "Go beyond counting. Segment visitors by age, gender, and dwell time to target marketing and measure campaign impact.",
+            icon: LucideLock,
+          },
           ].map((feature, idx) => {
             const Icon = feature.icon;
             return (
@@ -46,10 +45,10 @@ export function FeaturesSection() {
                   {feature.description}
                 </p>
                 <a
-                  href="#"
+                  href={idx === 0 ? "/solutions/analytics-hub" : idx === 1 ? "/contact" : "/security"}
                   className="inline-flex items-center gap-2 text-sm font-medium hover:gap-3 transition-all"
                 >
-                  Learn more <ArrowRight className="w-4 h-4" />
+                  {idx === 0 ? "Explore Use Cases" : idx === 1 ? "See Integration Options" : "Read Security Whitepaper"} <ArrowRight className="w-4 h-4" />
                 </a>
               </div>
             );

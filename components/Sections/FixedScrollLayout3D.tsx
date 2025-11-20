@@ -9,12 +9,43 @@ import ThreeMap, { MapData } from "@/components/Map/ThreeMap";
 const sections = [
   {
     id: "section-1",
-    title: "Intelligent Vision",
+    title: "Actionable Intelligence",
     items: [
       {
-        title: "Your Cameras, Reimagined.",
+        title: "The Science of Movement.",
         description:
-          "Transform existing security feeds into intelligent sensors. No new hardware. No complex setup. Just plug, play, and unlock real-time analytics from day one.",
+          "Turn foot traffic into financial insights. Visualize visitor journeys, optimize high-value zones, and measure the true impact of every square meter.",
+      },
+    ],
+    image: {
+      src: "/images/8f5a6602-635e-46bf-8052-990e2dd293ba.png",
+      alt: "Deep Analytics Dashboard",
+    },
+    viewState: {
+      latitude: 1748.2853703047995,
+      longitude: 2561.3970834247225,
+      zoom: 4.415037499279608,
+      bearing: -60,
+      pitch: 30,
+      altitude: 1.5,
+      advanced: {
+        cameraPosition: [3.0, 0.5, 1.2] as [number, number, number],
+        targetPosition: [
+          2.5613970834247226,
+          1.7482853703047996,
+          -0.0057146296951979605
+        ] as [number, number, number],
+      },
+    },
+  },
+  {
+    id: "section-2",
+    title: "Seamless Integration",
+    items: [
+      {
+        title: "Your Cameras. Our Brains.",
+        description:
+          "Zero new hardware required. We transform your existing security feeds into intelligent sensors, deploying across your entire portfolio in days, not months.",
       },
     ],
     image: {
@@ -43,79 +74,13 @@ const sections = [
     },
   },
   {
-    id: "section-2",
-    title: "Deep Analytics",
-    items: [
-      {
-        title: "The Science of Movement.",
-        description:
-          "Visualize visitor journeys, dwell times, and traffic flow. Optimize layouts, staff efficiently, and measure what truly drives engagement in your space.",
-      },
-    ],
-    image: {
-      src: "/images/8f5a6602-635e-46bf-8052-990e2dd293ba.png",
-      alt: "Deep Analytics Dashboard",
-    },
-    viewState: {
-      latitude: 1748.2853703047995,
-      longitude: 2561.3970834247225,
-      zoom: 4.415037499279608,
-      bearing: -60,
-      pitch: 30,
-      altitude: 1.5,
-      advanced: {
-        cameraPosition: [3.0, 0.5, 1.2] as [number, number, number],
-        targetPosition: [
-          2.5613970834247226,
-          1.7482853703047996,
-          -0.0057146296951979605
-        ] as [number, number, number],
-      },
-    },
-  },
-  {
     id: "section-3",
-    title: "Privacy First",
+    title: "Portfolio Command",
     items: [
       {
-        title: "Insights, Not Surveillance.",
+        title: "One Dashboard. Total Control.",
         description:
-          "100% GDPR-compliant by design. We analyze patterns, not people—delivering deep behavioral insights without ever compromising visitor privacy.",
-      },
-    ],
-    image: {
-      src: "/images/Reports8.png",
-      alt: "Privacy First Reporting",
-    },
-    viewState: {
-      latitude: 1748.2853703047995,
-      longitude: 2561.3970834247225,
-      zoom: 4.415037499279608,
-      bearing: -30,
-      pitch: 60,
-      altitude: 1.5,
-      advanced: {
-        cameraPosition: [
-          2.430792741134297,
-          0.3682561171960492,
-          3.301845196344019
-        ] as [number, number, number],
-        targetPosition: [
-          2.5613970834247226,
-          1.7482853703047996,
-          -0.0057146296951979605
-        ] as [number, number, number],
-      },
-    },
-  },
-  {
-    id: "section-4",
-    title: "Unified Control",
-    items: [
-      {
-        title: "One View. Total Clarity.",
-        description:
-          "From a single store to a global network, manage every location from one intuitive dashboard. Spot trends, compare performance, and scale with confidence.",
+          "From a single asset to a global portfolio. Benchmark performance, standardize operations, and spot network-wide trends from one centralized command center.",
       },
     ],
     image: {
@@ -140,13 +105,13 @@ const sections = [
     },
   },
   {
-    id: "section-5",
-    title: "Strategic Growth",
+    id: "section-4",
+    title: "Data-Driven Leasing",
     items: [
       {
         title: "Predict. Plan. Prosper.",
         description:
-          "Move beyond hindsight. Leverage predictive modeling to forecast trends, validate strategic decisions, and stay ahead of evolving market demands.",
+          "Stop guessing. Use predictive modeling to identify the perfect tenant mix, justify premium lease rates, and forecast asset value with precision.",
       },
     ],
     image: {
@@ -162,6 +127,41 @@ const sections = [
       altitude: 1.5,
       advanced: {
         cameraPosition: [2.0, 3.0, 1.0] as [number, number, number],
+        targetPosition: [
+          2.5613970834247226,
+          1.7482853703047996,
+          -0.0057146296951979605
+        ] as [number, number, number],
+      },
+    },
+  },
+  {
+    id: "section-5",
+    title: "Privacy by Design",
+    items: [
+      {
+        title: "Insights, Not Surveillance.",
+        description:
+          "100% GDPR-compliant. We analyze anonymous patterns, not individuals—giving you the data you need without the liability you don't.",
+      },
+    ],
+    image: {
+      src: "/images/Reports8.png",
+      alt: "Privacy First Reporting",
+    },
+    viewState: {
+      latitude: 1748.2853703047995,
+      longitude: 2561.3970834247225,
+      zoom: 4.415037499279608,
+      bearing: -30,
+      pitch: 60,
+      altitude: 1.5,
+      advanced: {
+        cameraPosition: [
+          2.430792741134297,
+          0.3682561171960492,
+          3.301845196344019
+        ] as [number, number, number],
         targetPosition: [
           2.5613970834247226,
           1.7482853703047996,
@@ -219,7 +219,7 @@ export default function FixedScrollLayout3D() {
   }, []);
 
   return (
-    <div className="w-full bg-background pt-32 pb-20 mt-32 mb-20">
+    <div className="w-full bg-background pt-32 mb-[-200px] mt-32">
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex flex-col gap-6 mb-40 text-center">
           <h2 className="text-3xl sm:text-6xl font tracking-tight">
@@ -229,7 +229,7 @@ export default function FixedScrollLayout3D() {
 
         <div
           ref={scrollRef}
-          className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-20 relative"
+          className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-20 relative pt-[150px]"
         >
           {/* LEFT COLUMN */}
           <div className="flex flex-col pb-[500px]  gap-[260px]">
@@ -292,7 +292,7 @@ export default function FixedScrollLayout3D() {
 
           {/* RIGHT COLUMN — Pure CSS Sticky Center */}
           <div
-            className="hidden lg:block relative pt-24"
+            className="hidden lg:block relative pt-[150px]"
             style={{ width: "calc(50vw - 5em)" }}
           >
             <div className="sticky top-1/2 -translate-y-1/2  ">

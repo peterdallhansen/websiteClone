@@ -35,10 +35,20 @@ function Prove() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-black mb-8 text-4xl sm:text-5xl md:text-6xl lg:text-5xl xl:text-5xl font leading-tight text-balance px-4"
+            className="text-black mb-6 text-4xl sm:text-5xl md:text-6xl lg:text-5xl xl:text-5xl font leading-tight text-balance px-4"
           >
-            How leading organizations are redefining analytics with Zonify.ai.
+            Ready for Enterprise Scale.
           </motion.h1>
+
+          <motion.p
+             initial={{ opacity: 0, y: 20 }}
+             whileInView={{ opacity: 1, y: 0 }}
+             viewport={{ once: true }}
+             transition={{ duration: 0.8, delay: 0.3 }}
+             className="text-gray-600 text-lg mb-8 max-w-2xl mx-auto"
+          >
+            Start with a pilot using your existing cameras. No new hardware, no disruption.
+          </motion.p>
 
           <Link href="/news">
             <Button
@@ -67,7 +77,7 @@ function Prove() {
           className="relative z-10 px-4 sm:px-6 pb-12 sm:pb-16 pt-32 text-center"
         >
           <motion.p className="text-sm font-medium tracking-wider text-gray-500 mb-8 ">
-            Select Enterprise Partners
+            Built for Enterprise Integration
           </motion.p>
           <Partners />
         </motion.div>

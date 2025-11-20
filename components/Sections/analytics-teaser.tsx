@@ -97,7 +97,7 @@ export default function AnalyticsTeaser() {
             </BlurFade>
             <BlurFade inView delay={0.2}>
               <h2 className="text-5xl md:text-6xl font-normal text-white leading-[1.1] ">
-                One Place For Everything That Matters
+                Every Metric. Every Location. One Screen.
               </h2>
             </BlurFade>
             

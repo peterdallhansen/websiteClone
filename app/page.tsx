@@ -6,11 +6,21 @@ import FixedScrollLayout from "@/components/Sections/FixedScrollLayout";
 import IndustriesCarousel from "@/components/magicui/Sections/IndustriesCarousel";
 import Prove from "@/components/prove";
 import { FeaturesSection } from "@/components/Sections/Features";
-import Section2Light from "@/components/Sections/section2-light";
 import { ArrowRight } from "lucide-react";
 import { NewsGrid } from "./news/components/news-grid";
 import Info from "@/components/Sections/Info/page";
 import FixedScrollLayout3D from "@/components/Sections/FixedScrollLayout3D";
+
+import { HowItWorks } from "@/components/Sections/HowItWorks";
+import Features from "@/components/Sections/Features/Features";
+import Infoo from "@/components/Sections/Infoo";
+import Section2 from "@/components/Sections/section2";
+import UseCases from "@/components/Sections/UseCases";
+import WhatYouGet from "@/components/Sections/what-you-get";
+import CardSection from "@/components/CardSection";
+import GetToKnow from "@/components/GetToKnow";
+import GetToKnow2 from "@/components/GetToKnow2";
+import PremiumFeatures from "@/components/Sections/PremiumFeatures";
 
 
 export default function Home() {
@@ -23,6 +33,8 @@ export default function Home() {
       <Main />
       <FeaturesSection />
       <FixedScrollLayout3D />
+      {/* <PremiumFeatures /> */}
+      <GetToKnow2 />
 
       <div className="mx-auto container px-6 py-16 md:px-12 md:py-10">
         <div className="flex flex-row justify-between w-full items-center mb-2">
@@ -45,7 +57,7 @@ export default function Home() {
         <IndustriesCarousel />
       </div>
 
-      <Section2Light />
+
 
       <Prove />
       <Hiring />
