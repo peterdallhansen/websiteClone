@@ -18,7 +18,7 @@ export default function GetToKnow3() {
   const keyPoints = [
     {
       icon: Footprints,
-      title: "Long Customer Journey",
+      title: "Complete Visitor Journey",
       image: "/images/reports9.png",
       description:
         "Track the complete path from entry to exit. Understand cross-shopping patterns and flow between zones.",

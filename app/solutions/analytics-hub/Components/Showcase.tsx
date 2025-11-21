@@ -207,7 +207,7 @@ function Showcase() {
               <div key={index}>
                 <h2
                   id={section.id}
-                  className="text-xl md:text-1xl xl:text-4xl leading-tight text-primary  max-w-[750px] mb-8 text-left font-bold scroll-mt-40"
+                  className="text-xl md:text-1xl xl:text-4xl leading-tight text-primary  max-w-[750px] mb-8 text-left  scroll-mt-40"
                 >
                   {section.title}
                 </h2>
