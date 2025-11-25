@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import BlurFade from "../ui/blur-fade";
 import { Button } from "../ui/button";
 import { cn } from "@/lib/utils";
+import { Mouse } from "lucide-react";
 
 function Main() {
   const [paddingTop, setPaddingTop] = useState(0);
@@ -45,32 +46,29 @@ function Main() {
               loop
               playsInline
             >
-              <source src="/videos/Futuristic_Mall_Data_Visualization_Video.mp4" type="video/mp4" />
+              <source src="/videos/bg2.mp4" type="video/mp4" />
             </video>
 
             {/* Text Overlay - bottom left */}
-            <div className="absolute bottom-12 sm:bottom-16 md:bottom-20 left-2 md:left-6 sm:left-10 md:left-16 flex flex-col items-start justify-end space-y-6 z-10 text-left max-w-3xl px-4">
+            <div className="absolute bottom-12 sm:bottom-16 md:bottom-8 left-2 md:left-6 sm:left-10 md:left-16 flex flex-col items-start justify-end space-y-6 z-10 text-left max-w-3xl px-4">
               <BlurFade delay={0} inView>
-                <h1 className="text-4xl sm:text-5xl xl:text-7xl font text-white leading-tight tracking-tight ">
-                  AI-Driven Insights <br /> from Every Footstep
+                <h1 className="text-4xl sm:text-5xl xl:text-8xl font text-white leading-tight tracking-tight ">
+                  Total clarity from cloud to crowd.
                 </h1>
               </BlurFade>
 
               <BlurFade delay={0.1} inView>
-                <h2 className="text-base sm:text-lg xl:text-xl text-gray-200 leading-relaxed font-medium ">
-                  The only AI platform that transforms your existing cameras into a strategic asset - giving shopping centers and retailers unmatched visitor intelligence without new hardware.
+                <h2 className="text-base sm:text-lg xl:text-2xl text-gray-200 leading-relaxed font-medium ">
+                  Zonify.ai is forging the new frontier of spatial intelligence
+                  to unlock a more intelligent, interoperable built environment.
                 </h2>
-              </BlurFade>
-
-              <BlurFade delay={0.3} inView>
-                <a href="#features">
-                  <Button className="bg-white hover:text-white text-black  py-5 px-6 rounded-3xl shadow-lg hover:bg-black transition-all duration-300">
-                    See It In Action
-                  </Button>
-                </a>
               </BlurFade>
             </div>
           </div>
+        </div>
+        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center gap-2 z-20 opacity-80">
+          <Mouse className="w-8 h-8 text-white" />
+          <span className="text-white text-sm font-medium">Scroll</span>
         </div>
       </div>
     </section>

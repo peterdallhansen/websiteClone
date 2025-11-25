@@ -37,10 +37,10 @@ export function NewsCard({ article }: { article: Article }) {
         </div>
       </div>
       <div className="flex flex-col gap-2">
-        <h2 className="text-balance font-sans text-xl font-normal leading-tight text-foreground md:text-2xl">
+        <h2 className="text-balance font-sans text-xl font-normal leading-tight text-primary/90 md:text-2xl">
           {article.title}
         </h2>
-        <p className="text-sm text-muted-foreground">
+        <p className="text-sm text-primary/60">
           {article.company} / {article.date}
         </p>
       </div>

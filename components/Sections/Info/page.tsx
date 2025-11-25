@@ -107,15 +107,15 @@ const sections: {
 export default function Info() {
   return (
     <div
-      className="grid grid-rows-[20px_1fr_20px] items-center ustify-items-center flex-1 p-2 pb-10 gap-32 sm:p-10 text-primary"
+      className=" w-screen items-center ustify-items-center flex-1 pb-10 gap-32 sm:p-10 text-primary"
       id="features"
     >
-      <section className="flex flex-col gap-32 row-start-2 items-center w-full">
-        <h2 className="text-3xl  text-center  sm:text-6xl">
-          Our models. All business.
+      <section className="flex  flex-col gap-32 row-start-2 items-center w-full">
+        <h2 className="text-3xl  text-center  sm:text-6xl max-w-4xl mx-auto mb-16">
+          Fueling every part of the spatial intelligence cycle
         </h2>
         {sections.map((section, i) => (
-          <section key={i} className="w-full px-4 md:px-6 container mx-auto">
+          <section key={i} className="w-full">
             <div className="grid gap-6 lg:grid-cols-2 lg:gap-48 xl:grid-cols-2 items-center">
               {i % 2 === 0 && (
                 <div className="relative hidden md:flex items-center justify-start md:-mx-8 md:sm:-mx-16">

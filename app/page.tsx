@@ -23,22 +23,35 @@ import GetToKnow2 from "@/components/GetToKnow2";
 import PremiumFeatures from "@/components/Sections/PremiumFeatures";
 import GetToKnow3 from "@/components/Sections/GetToKnow3";
 import MainCentered from "@/components/Sections/MainCentered";
-
+import Main2 from "@/components/Sections/Main2";
 
 export default function Home() {
-
   return (
-    <main
-      className="min-h-screen bg-background antialiased w-full mx-auto flex flex-col items-center transition-colors duration-500"
-    >
+    <main className="min-h-screen bg-background antialiased w-full mx-auto flex flex-col items-center transition-colors duration-500">
       {/* All your content remains nested inside the transformed <main> element */}
-      {/* <Main /> */}
-      <MainCentered/>
-      <FeaturesSection />
-      <FixedScrollLayout3D disable3D={false} />
+      <Main2 />
+      {/* <MainCentered/> */}
+      {/* <FeaturesSection /> */}
+      <div className="w-full mx-auto max-w-7xl px-6 md:px-12">
+        <h1 className="text-6xl font-medium text-center mb-8 text-balance">
+          Zonify.ai gives you the tools to unify your intelligence
+        </h1>
+        <h5 className="text-center text-primary/80 max-w-3xl mx-auto text-lg">
+          Building a clear picture of how people use physical spaces is harder
+          than ever. Data is scattered, insights are siloed, and teams lack a
+          shared view. Zonify.ai brings your existing camera data together into
+          one AI-ready platform, unlocking real-time behavioral insights and a
+          living digital model of every location.
+        </h5>
+      </div>
+      <FixedScrollLayout3D disable3D={true} />
+      {/* <Info /> */}
+
       {/* <PremiumFeatures /> */}
       {/* <GetToKnow2 /> */}
+      <GetToKnow2 />
       <GetToKnow3 />
+      <Section2 />
 
       <div className="mx-auto container px-6 py-16 md:px-12 md:py-10">
         <div className="flex flex-row justify-between w-full items-center mb-2">
@@ -60,8 +73,6 @@ export default function Home() {
       <div className="py-16 md:py-10 w-screen">
         <IndustriesCarousel />
       </div>
-
-
 
       <Prove />
       <Hiring />

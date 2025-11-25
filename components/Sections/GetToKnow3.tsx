@@ -26,7 +26,7 @@ export default function GetToKnow3() {
     {
       icon: GitGraph,
       title: "True Conversion",
-      image: "/images/DashboardPreview.png",
+      image: "/images/Entrance.png",
 
       description:
         "Measure capture rate. Know exactly how many passersby enter each store vs. just walking by.",
@@ -34,28 +34,28 @@ export default function GetToKnow3() {
     {
       icon: Users,
       title: "Demographic Insights",
-      image: "/images/5.png",
+      image: "/images/Frame2_1.png",
       description:
         "Segment visitors by age and gender. Tailor your tenant mix and marketing to who is actually there.",
     },
     {
       icon: BarChart3,
       title: "Leasing Intelligence",
-      image: "/images/TenantMap.png",
+      image: "/images/Frame82.png",
       description:
         "Justify rents with data. Prove the value of every square meter with concrete traffic evidence.",
     },
     {
       icon: Map,
       title: "Zone Heatmaps",
-      image: "/images/TenantMap4.png",
+      image: "/images/Frame93.png",
       description:
         "Visualize engagement. See exactly where visitors stop, linger, and interact with displays.",
     },
     {
       icon: Clock,
       title: "Predictive Analytics",
-      image: "/images/imag2.png",
+      image: "/images/Frame91.png",
       description:
         "Forecast traffic. Optimize staffing and operations before the rush happens.",
     },
@@ -85,7 +85,10 @@ export default function GetToKnow3() {
       // We want the first card to align with where a 1200px container would start.
       const containerWidth = 1200;
       const windowWidth = window.innerWidth;
-      const calculatedPadding = Math.max(24, (windowWidth - containerWidth) / 2);
+      const calculatedPadding = Math.max(
+        24,
+        (windowWidth - containerWidth) / 2
+      );
       setPaddingLeft(calculatedPadding);
     };
 
@@ -109,12 +112,17 @@ export default function GetToKnow3() {
         <div className="space-y-6">
           <BlurFade delay={0.1} inView>
             <h1 className="text-4xl md:text-5xl">
-              Everything You Need to <br /> Measure, Understand, and Improve.
+              Everything You Need to <br />{" "}
+              <span className="text-primary/60">
+                {" "}
+                Measure, Understand, and Improve
+              </span>
+              .
             </h1>
           </BlurFade>
         </div>
         <BlurFade delay={0.25} inView>
-         <div className="flex gap-2">
+          <div className="flex gap-2">
             <button
               onClick={() => scroll("left")}
               className="p-2 rounded-full hover:animate-wiggleLeft"
@@ -134,38 +142,45 @@ export default function GetToKnow3() {
       </div>
 
       <div
-     className="overflow-x-auto overflow-y-visible scrollbar-hide snap-x snap-mandatory"
+        className="overflow-x-auto overflow-y-visible scrollbar-hide snap-x snap-mandatory"
         ref={scrollRef}
         style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
       >
-        <div
-                className="flex gap-6 snap-x snap-mandatory scrollbar-hide pl-10"
-        >
+        <div className="flex gap-6 snap-x snap-mandatory scrollbar-hide pl-10">
           {keyPoints.map((offering, index) => (
             <div
               key={index}
-      className=" space-y-3 snap-end overflow-visible  pt-2  flex flex-col items-center justify-center"
+              className=" space-y-3 snap-end overflow-visible  pt-2  flex flex-col items-center justify-center"
             >
-              <BlurFade delay={0.1 * index + 0.1} inView className="flex flex-col gap-6">
+              <BlurFade
+                delay={0.1 * index + 0.1}
+                inView
+                className="flex flex-col gap-6"
+              >
                 {/* Icon Container */}
-                <div style={{
-                  backgroundImage: `url(${offering.image})`,
-                  backgroundSize: "contain",
-                  backgroundRepeat: "no-repeat",
-                  backgroundPosition: "bottom",
-                }} className="h-[500px] min-w-[700px]   w-full rounded-2xl border  bg-[#F8F9FA] flex items-center justify-center group hover:bg-gray-50 transition-colors duration-300">
-                  {!offering.image && <offering.icon 
-                    className="w-16 h-16 transition-transform duration-500 group-hover:scale-110" 
-                    strokeWidth={1.5} 
-                  />}
+                <div
+                  style={{
+                    backgroundImage: `url(${offering.image})`,
+                    backgroundSize: "cover",
+                    backgroundRepeat: "no-repeat",
+                    backgroundPosition: "bottom",
+                  }}
+                  className="h-[500px] min-w-[700px]   w-full rounded-2xl border  bg-[#F8F9FA] flex items-center justify-center group hover:bg-gray-50 transition-colors duration-300"
+                >
+                  {!offering.image && (
+                    <offering.icon
+                      className="w-16 h-16 transition-transform duration-500 group-hover:scale-110"
+                      strokeWidth={1.5}
+                    />
+                  )}
                 </div>
-                
+
                 {/* Text Content */}
                 <div className="space-y-2">
-                  <h3 className="text-2xl font-medium text-gray-900">
+                  <h3 className="text-2xl font-medium text-primary/90">
                     {offering.title}
                   </h3>
-                  <p className="text-gray-600 leading-relaxed text-lg">
+                  <p className="text-primary/60 leading-relaxed text-lg">
                     {offering.description}
                   </p>
                 </div>

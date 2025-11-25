@@ -57,9 +57,7 @@ export default function RootLayout({
           <Suspense fallback={null}>
             <GoogleAnalytics GA_MEASUREMENT_ID="G-QED3S3G00L" />
           </Suspense>
-          <SmoothScroll>
-            {children}
-          </SmoothScroll>
+          <SmoothScroll>{children}</SmoothScroll>
           <Footer />
         </ThemeProvider>
       </body>

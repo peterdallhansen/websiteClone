@@ -77,14 +77,7 @@ export default function AnalyticsTeaser() {
   }, []);
 
   return (
-    <section className="relative my-10 w-screen container  max-w-[1800px] rounded-3xl overflow-hidden">
-      {/* Particle Canvas Background */}
-      <canvas
-        ref={canvasRef}
-        className="absolute inset-0 w-full h-full"
-        style={{ background: "#000000" }}
-      />
-
+    <section className="relative my-10 bg-primary w-screen container  max-w-[1800px] rounded-3xl overflow-hidden">
       {/* Content */}
       <div className="relative z-10 mx-auto pl-16">
         <div className="flex flex-col lg:flex-row items-stretch gap-12 w-full">
@@ -92,7 +85,7 @@ export default function AnalyticsTeaser() {
           <div className="w-full lg:w-1/2 space-y-8 my-auto py-20">
             <BlurFade inView delay={0.1}>
               <h5 className="text-1xl md:text-2xl font-normal text-white ">
-               Analytics Hub
+                Analytics Hub
               </h5>
             </BlurFade>
             <BlurFade inView delay={0.2}>
@@ -100,7 +93,7 @@ export default function AnalyticsTeaser() {
                 Every Metric. Every Location. One Screen.
               </h2>
             </BlurFade>
-            
+
             <BlurFade inView delay={0.3}>
               <div className="flex flex-wrap gap-3 pt-2">
                 <Link href={"/solutions/analytics-hub"}>

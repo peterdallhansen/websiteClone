@@ -12,7 +12,7 @@ const useCaseData = {
       "Gain real-time visibility into how many visitors are in your space at any given moment. Our AI-powered platform transforms ordinary 2D cameras into powerful traffic sensors.",
     stagingText: "Monitor metrics like...",
     items: ["current occupancy", "entry rates", "exit rates"],
-    image: "/images/Detection3.png",
+    image: "/images/cloud.png",
     thumbnails: [],
   },
   "Demographic Segmentation": {
@@ -40,48 +40,6 @@ const useCaseData = {
     items: ["visit duration", "return rates", "path patterns"],
     thumbnails: [],
     image: "/images/3dmap.png",
-  },
-  "Predictive Forecasting": {
-    title: "Anticipate Tomorrow's Traffic Today",
-    description:
-      "Our AI forecasting models predict foot traffic trends before they happen — helping you optimize staffing, campaigns, and operations with confidence.",
-    stagingText: "Forecast metrics including...",
-    items: ["expected visitors", "peak hours", "conversion potential"],
-    thumbnails: [],
-  },
-  "Reports & Alerts": {
-    title: "Stay Informed, Instantly",
-    description:
-      "Generate tailored reports and set up real-time alerts for what matters most. Push data to Power BI, Excel, or your analytics stack via Zonify's API.",
-    stagingText: "Configure alerts for...",
-    items: ["visitor surges", "low dwell times", "campaign performance"],
-    thumbnails: [],
-    image: "/images/Reports8.png",
-  },
-  "Heatmaps & Dwell-Time 2": {
-    title: "Visualize Movement and Engagement",
-    description:
-      "See where people spend the most time. Zonify's heatmaps reveal visitor hotspots, dwell times, and spatial flow to help optimize layouts and displays.",
-    stagingText: "Track key insights such as...",
-    items: ["hotspot areas", "average dwell-time", "zone engagement"],
-    thumbnails: [],
-  },
-  "End-to-End Journey 2": {
-    title: "Track the Complete Visitor Journey",
-    description:
-      "Follow each visitor's full journey — from entry to exit — to uncover path patterns, peak hours, and repeat behaviors across your locations.",
-    stagingText: "Measure journey data like...",
-    items: ["visit duration", "return rates", "path patterns"],
-    thumbnails: [],
-  },
-  "Predictive Forecasting 2": {
-    title: "Anticipate Tomorrow's Traffic Today",
-    description:
-      "Our AI forecasting models predict foot traffic trends before they happen — helping you optimize staffing, campaigns, and operations with confidence.",
-    stagingText: "Forecast metrics including...",
-    items: ["expected visitors", "peak hours", "conversion potential"],
-    image: "/images/predictive-forecast.jpg",
-    thumbnails: [],
   },
 };
 
@@ -113,29 +71,7 @@ export default function UseCases() {
         transition={{ duration: 0.8 }}
         className="w-full mx-auto max-w-7xl px-4 sm:px-6 pt-20  pb-0 md:pb-16 text-center"
       >
-        <h1 className="mx-auto max-w-4xl text-4xl sm:text-5xl md:text-[5.5rem]  leading-[1.1] tracking-tight text-black break-words">
-          AI-Driven Insights from Every Footstep
-        </h1>
-
-        <p className="mx-auto mt-8 max-w-3xl text-base sm:text-lg leading-relaxed text-black">
-          Zonify turns everyday cameras into powerful analytic tools —
-          delivering real-time visitor insights, helping companies understand
-          behavior, optimize traffic, and improve operations.
-        </p>
-
-        <Button
-          variant="outline"
-          size="lg"
-          className="mt-10 rounded-full border-2 border-black bg-transparent px-8 py-6 text-base font-normal text-black hover:bg-black hover:text-white transition-colors"
-        >
-          Learn More
-        </Button>
-
         <div className="mt-16 w-full">
-          <p className="text-xs font-medium tracking-wider text-gray-500 mb-6">
-            ZONIFY.AI CAPABILITIES
-          </p>
-
           <div className="relative w-full">
             <div className="overflow-x-auto overflow-y-hidden pb-4 scrollbar-thin scrollbar-hide scrollbar-thumb-gray-300 scrollbar-track-transparent">
               <div className="flex md:flex-wrap items-center justify-start md:justify-center gap-1 md:gap-3 min-w-min">
