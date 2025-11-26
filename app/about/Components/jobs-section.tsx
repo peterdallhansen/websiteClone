@@ -1,29 +1,6 @@
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-
-const jobs = [
-  { title: "Frontend Engineer", department: "Engineering", location: "Remote" },
-  {
-    title: "Data Scientist, Visitor Analytics",
-    department: "Data",
-    location: "Remote",
-  },
-  {
-    title: "Product Manager, Analytics Hub",
-    department: "Product",
-    location: "Remote",
-  },
-  {
-    title: "Solutions Engineer",
-    department: "Engineering",
-    location: "Remote",
-  },
-  {
-    title: "Customer Success Manager",
-    department: "Customer",
-    location: "Remote",
-  },
-];
+import { jobs } from "@/lib/jobs";
 
 export function JobsSection() {
   return (
@@ -41,17 +18,19 @@ export function JobsSection() {
             >
               <div className="font-normal text-base">{job.title}</div>
               <div className="text-muted-foreground text-sm md:text-base">
-                {job.department}
+                {job.type}
               </div>
               <div className="text-muted-foreground text-sm md:text-base">
                 {job.location}
               </div>
-              <Button
-                variant="ghost"
-                className="text-sm hover:underline justify-start md:justify-end p-0 h-auto font-normal"
-              >
-                Apply
-              </Button>
+              <a href={job.href} target="_blank" rel="noopener noreferrer">
+                <Button
+                  variant="link"
+                  className="text-sm hover:underline justify-start md:justify-end p-0 h-auto font-normal hover:bg-transparent"
+                >
+                  Apply
+                </Button>
+              </a>
             </div>
           ))}
         </div>

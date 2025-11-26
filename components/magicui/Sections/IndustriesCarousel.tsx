@@ -30,7 +30,7 @@ export default function IndustriesCarousel({
       if (window.innerWidth >= 768) {
         setScrollAmount(500);
       } else {
-        setScrollAmount(300);
+        setScrollAmount(250);
       }
     };
 
@@ -93,12 +93,12 @@ export default function IndustriesCarousel({
               className="space-y-3 snap-end overflow-visible flex flex-col items-center justify-center"
             >
               <div className="rounded-2xl overflow-hidden  w-full  group">
-                <BlurFade delay={0.1 * idx + 0.1} inView>
+                <BlurFade delay={0.05 * idx + 0.05} inView>
                   <Link href={it.href}>
                     <article
                       key={idx}
                       data-card
-                      className="relative flex-shrink-0 w-[420px] h-[420px] rounded-2xl overflow-hidden shadow-md snap-start bg-gray-100 group"
+                      className="relative flex-shrink-0 w-[280px] sm:w-[340px] md:w-[420px] h-[280px] sm:h-[340px] md:h-[420px] rounded-2xl overflow-hidden shadow-md snap-start bg-gray-100 group"
                     >
                       <Image
                         src={it.image}
@@ -108,14 +108,14 @@ export default function IndustriesCarousel({
                         loading={idx === 0 ? "eager" : "lazy"}
                         fetchPriority={idx === 0 ? "high" : "low"}
                         // Make sure to tune sizes to your breakpoints:
-                        sizes="(max-width: 640px) 320px, (max-width: 768px) 360px, 420px"
+                        sizes="(max-width: 640px) 280px, (max-width: 768px) 340px, 420px"
                         className="object-cover transition-transform duration-300 group-hover:scale-[1.03]"
                         // decode async to avoid main-thread block:
                         decoding="async"
                         draggable={false}
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
-                      <div className="absolute left-4 top-4 text-white text-2xl font-medium">
+                      <div className="absolute left-3 top-3 md:left-4 md:top-4 text-white text-lg sm:text-xl md:text-2xl font-medium">
                         {it.title}
                       </div>
                     </article>

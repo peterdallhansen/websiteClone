@@ -57,17 +57,17 @@ ${message}
   }
 
   return (
-    <main className="container mx-auto px-4 py-20 mt-20 flex flex-row gap-16">
-      <div className="mb-12 flex flex-col gap-8 w-1/4">
+    <main className="container mx-auto px-4 sm:px-6 py-12 sm:py-16 md:py-20 mt-12 sm:mt-16 md:mt-20 flex flex-col lg:flex-row gap-8 sm:gap-12 lg:gap-16">
+      <div className="mb-6 sm:mb-8 lg:mb-12 flex flex-col gap-6 sm:gap-8 w-full lg:w-1/4">
         <div className="text-sm">
-          <p className="text-muted-foreground">
+          <p className="text-muted-foreground mb-2">
             <span>→ Contact</span>
           </p>
-          <p>contact@zonify.ai</p>
+          <p className="mb-1">contact@zonify.ai</p>
           <p>+45 60 10 86 87</p>
         </div>
         <div className="text-sm">
-          <p className="text-muted-foreground">
+          <p className="text-muted-foreground mb-2">
             <span>→ Location</span>
           </p>
           <p>Lyngby</p>
@@ -77,15 +77,15 @@ ${message}
         </div>
       </div>
       <div className="w-full flex-1">
-        <h1 className="text-3xl  mb-4">Contact us</h1>
-        <p className="text-muted-foreground mb-8">
+        <h1 className="text-2xl sm:text-3xl mb-3 sm:mb-4">Contact us</h1>
+        <p className="text-muted-foreground mb-6 sm:mb-8">
           Send us a message and we'll get back to you shortly.
         </p>
-        <form onSubmit={handleSubmit} className="space-y-4 ">
+        <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-5">
           <div>
-            <label className="block text-sm font-medium">Name</label>
+            <label className="block text-sm font-medium mb-1.5">Name</label>
             <Input
-              className="w-full rounded-md border px-3 py-2 h-10"
+              className="w-full rounded-md border px-3 py-2 h-10 sm:h-11"
               value={name}
               onChange={(e) => setName(e.target.value)}
               required
@@ -93,10 +93,10 @@ ${message}
           </div>
 
           <div>
-            <label className="block text-sm font-medium">Email</label>
+            <label className="block text-sm font-medium mb-1.5">Email</label>
             <Input
               type="email"
-              className="w-full rounded-md border px-3 py-2 h-10"
+              className="w-full rounded-md border px-3 py-2 h-10 sm:h-11"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
@@ -104,9 +104,9 @@ ${message}
           </div>
 
           <div>
-            <label className="block text-sm font-medium">Subject</label>
+            <label className="block text-sm font-medium mb-1.5">Subject</label>
             <Input
-              className="w-full rounded-md border px-3 py-2 h-10"
+              className="w-full rounded-md border px-3 py-2 h-10 sm:h-11"
               value={subject}
               onChange={(e) => setSubject(e.target.value)}
               required
@@ -114,9 +114,9 @@ ${message}
           </div>
 
           <div>
-            <label className="block text-sm font-medium">Message</label>
+            <label className="block text-sm font-medium mb-1.5">Message</label>
             <Textarea
-              className="w-full rounded-md border px-3 py-2 h-40"
+              className="w-full rounded-md border px-3 py-2 h-32 sm:h-40"
               value={message}
               onChange={(e) => setMessage(e.target.value)}
               required
@@ -124,16 +124,24 @@ ${message}
           </div>
 
           <div>
-            <Button type="submit" disabled={status === "sending"}>
+            <Button
+              type="submit"
+              disabled={status === "sending"}
+              className="w-full sm:w-auto"
+            >
               {status === "sending" ? "Sending…" : "Send message"}
             </Button>
           </div>
 
           {status === "success" && (
-            <p className="text-green-600">Message sent — thank you!</p>
+            <p className="text-green-600 text-sm sm:text-base">
+              Message sent — thank you!
+            </p>
           )}
           {status === "error" && (
-            <p className="text-red-600">Error: {errorMessage}</p>
+            <p className="text-red-600 text-sm sm:text-base">
+              Error: {errorMessage}
+            </p>
           )}
         </form>
       </div>

@@ -77,7 +77,7 @@ export default function GetToKnow3() {
       if (window.innerWidth >= 768) {
         setScrollAmount(500);
       } else {
-        setScrollAmount(300);
+        setScrollAmount(280);
       }
 
       // Padding calculation for centering
@@ -86,7 +86,7 @@ export default function GetToKnow3() {
       const containerWidth = 1200;
       const windowWidth = window.innerWidth;
       const calculatedPadding = Math.max(
-        24,
+        16,
         (windowWidth - containerWidth) / 2
       );
       setPaddingLeft(calculatedPadding);
@@ -107,11 +107,11 @@ export default function GetToKnow3() {
   };
 
   return (
-    <div className="relative w-full max-w-screen mx-auto px-4 py-40 overflow-x-hidden">
-      <div className="flex justify-between items-end mb-12 w-full pl-10">
-        <div className="space-y-6">
+    <div className="relative w-full max-w-screen mx-auto px-4 py-16 sm:py-24 md:py-32 lg:py-40 overflow-x-hidden">
+      <div className="flex justify-between items-end mb-8 sm:mb-10 md:mb-12 w-full pl-0 sm:pl-4 md:pl-10">
+        <div className="space-y-4 sm:space-y-6">
           <BlurFade delay={0.1} inView>
-            <h1 className="text-4xl md:text-5xl">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl leading-tight">
               Everything You Need to <br />{" "}
               <span className="text-primary/60">
                 {" "}
@@ -125,17 +125,17 @@ export default function GetToKnow3() {
           <div className="flex gap-2">
             <button
               onClick={() => scroll("left")}
-              className="p-2 rounded-full hover:animate-wiggleLeft"
+              className="p-1.5 sm:p-2 rounded-full hover:animate-wiggleLeft"
               aria-label="Scroll left"
             >
-              <ChevronLeftIcon className="w-6 h-6" />
+              <ChevronLeftIcon className="w-5 h-5 sm:w-6 sm:h-6" />
             </button>
             <button
               onClick={() => scroll("right")}
-              className="p-2 rounded-full hover:animate-wiggleRight"
+              className="p-1.5 sm:p-2 rounded-full hover:animate-wiggleRight"
               aria-label="Scroll right"
             >
-              <ChevronRightIcon className="w-6 h-6" />
+              <ChevronRightIcon className="w-5 h-5 sm:w-6 sm:h-6" />
             </button>
           </div>
         </BlurFade>
@@ -146,16 +146,16 @@ export default function GetToKnow3() {
         ref={scrollRef}
         style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
       >
-        <div className="flex gap-6 snap-x snap-mandatory scrollbar-hide pl-10">
+        <div className="flex gap-4 sm:gap-5 md:gap-6 snap-x snap-mandatory scrollbar-hide pl-4 sm:pl-6 md:pl-10">
           {keyPoints.map((offering, index) => (
             <div
               key={index}
-              className=" space-y-3 snap-end overflow-visible  pt-2  flex flex-col items-center justify-center"
+              className="space-y-3 snap-end overflow-visible pt-2 flex flex-col items-center justify-center"
             >
               <BlurFade
                 delay={0.1 * index + 0.1}
                 inView
-                className="flex flex-col gap-6"
+                className="flex flex-col gap-4 sm:gap-5 md:gap-6"
               >
                 {/* Icon Container */}
                 <div
@@ -165,22 +165,22 @@ export default function GetToKnow3() {
                     backgroundRepeat: "no-repeat",
                     backgroundPosition: "bottom",
                   }}
-                  className="h-[500px] min-w-[700px]   w-full rounded-2xl border  bg-[#F8F9FA] flex items-center justify-center group hover:bg-gray-50 transition-colors duration-300"
+                  className="h-[280px] min-w-[320px] sm:h-[380px] sm:min-w-[500px] md:h-[500px] md:min-w-[700px] w-full rounded-xl sm:rounded-2xl border bg-[#F8F9FA] flex items-center justify-center group hover:bg-gray-50 transition-colors duration-300"
                 >
                   {!offering.image && (
                     <offering.icon
-                      className="w-16 h-16 transition-transform duration-500 group-hover:scale-110"
+                      className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 transition-transform duration-500 group-hover:scale-110"
                       strokeWidth={1.5}
                     />
                   )}
                 </div>
 
                 {/* Text Content */}
-                <div className="space-y-2">
-                  <h3 className="text-2xl font-medium text-primary/90">
+                <div className="space-y-1.5 sm:space-y-2 max-w-[320px] sm:max-w-[500px] md:max-w-[700px]">
+                  <h3 className="text-xl sm:text-2xl font-medium text-primary/90">
                     {offering.title}
                   </h3>
-                  <p className="text-primary/60 leading-relaxed text-lg">
+                  <p className="text-primary/60 leading-relaxed text-base sm:text-lg">
                     {offering.description}
                   </p>
                 </div>

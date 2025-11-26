@@ -12,18 +12,21 @@ const content = [
       "Fast, scalable, and maintenance-free. Get started in minutes with our fully managed cloud infrastructure that grows with your needs.",
     image: "/images/cloud.png",
     className: "object-contain p-8",
+    href: "/deployment/cloud",
   },
   {
     title: "On-Premises Deployment",
     description:
       "Maximum control and data sovereignty. Deploy on your own infrastructure with full customization and complete data ownership.",
     image: "/images/OnPremise.png",
+    href: "/deployment/onprem",
   },
   {
     title: "Hybrid Solutions",
     description:
       "Best of both worlds. Combine cloud flexibility with on-premises security for a deployment strategy tailored to your requirements.",
     image: "/images/Hybrid.png",
+    href: "/contact",
   },
 ];
 
@@ -47,47 +50,41 @@ function Section2() {
                 transition={{ duration: 0.6, delay: 0.8 + index * 0.2 }}
                 className="relative overflow-hidden rounded-2xl w-full"
               >
-                {/* Card content */}
-                <div className="relative  flex flex-col h-full">
-                  {/* Image container */}
-                  <div className="relative w-full aspect-[4/4] mb-6 rounded-2xl overflow-hidden bg-[#EFEFEF]">
-                    <Image
-                      src={item.image || "/placeholder.svg"}
-                      alt={item.title}
-                      fill
-                      className={cn("object-cover", item.className)}
-                    />
-                  </div>
+                <Link href={item.href} className="block cursor-pointer">
+                  {/* Card content */}
+                  <div className="relative flex flex-col h-full">
+                    {/* Image container */}
+                    <div className="relative w-full aspect-[4/4] mb-6 rounded-2xl overflow-hidden bg-[#EFEFEF]">
+                      <Image
+                        src={item.image || "/placeholder.svg"}
+                        alt={item.title}
+                        fill
+                        className={cn("object-cover", item.className)}
+                      />
+                    </div>
 
-                  {/* Text content */}
-                  <div className="flex-1 flex flex-col items-center text-center">
-                    <h3 className="text-primary text-2xl  mb-3">
-                      {item.title}
-                    </h3>
-                    <p className="text-primary/80 text-base leading-relaxed">
-                      {item.description}
-                    </p>
+                    {/* Text content */}
+                    <div className="flex-1 flex flex-col items-center text-center">
+                      <h3 className="text-primary text-2xl mb-3">
+                        {item.title}
+                      </h3>
+                      <p className="text-primary/80 text-base leading-relaxed">
+                        {item.description}
+                      </p>
+                    </div>
                   </div>
-                </div>
+                </Link>
               </motion.div>
             ))}
           </div>
-          {/* Learn More Button */}
-          <div className="mt-12 flex justify-center gap-2">
-            <Link href="/deployment/cloud">
+          {/* CTA Button */}
+          <div className="mt-12 flex justify-center">
+            <Link href="/contact">
               <Button
                 size="lg"
                 className="bg-black text-white hover:bg-gray-900 rounded-full px-8 py-4"
               >
-                Explore Cloud
-              </Button>
-            </Link>
-            <Link href="/deployment/onprem">
-              <Button
-                size="lg"
-                className="bg-white border shadow-none border-primary/20 text-black hover:bg-gray-100 rounded-full px-8 py-4"
-              >
-                Explore On-Premises
+                Explore Deployment Options
               </Button>
             </Link>
           </div>

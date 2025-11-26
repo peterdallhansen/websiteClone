@@ -154,7 +154,7 @@ type NewsGridProps = {
 
 export function NewsGrid({ max }: NewsGridProps) {
   return (
-    <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3 lg:gap-8">
+    <div className="grid gap-4 sm:gap-6 md:gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-full">
       {newsArticles.slice(0, max || newsArticles.length).map((article) => (
         <NewsCard key={article.id} article={article} />
       ))}

@@ -287,7 +287,7 @@ export default function Header() {
             onHoverEnd={onHoverEnd}
           >
             {/* --- REFACTORED: Use a 3-column grid for proper centering --- */}
-            <div className="grid grid-cols-2 md:grid-cols-3 items-center mx-auto px-4 md:px-[64px] h-[60px]">
+            <div className="grid grid-cols-2 md:grid-cols-3 items-center mx-auto px-2 h-[60px]">
               {/* Left: Logo */}
               <div className="justify-self-start">
                 <Logo

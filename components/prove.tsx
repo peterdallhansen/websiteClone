@@ -27,9 +27,9 @@ const content = [
 
 function Prove() {
   return (
-    <div className="relative min-h-screen w-full flex flex-col py-10">
+    <div className="relative min-h-screen w-full flex flex-col py-10 overflow-x-hidden">
       {/* Hero Section */}
-      <div className="relative flex-1 flex flex-col items-center justify-center px-4 sm:px-6 ">
+      <div className="relative flex-1 flex flex-col items-center justify-center px-4 sm:px-6 max-w-full">
         <div className="relative z-10 text-center max-w-5xl mx-auto w-full pb-20">
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
@@ -41,13 +41,14 @@ function Prove() {
           </motion.h1>
 
           <motion.p
-             initial={{ opacity: 0, y: 20 }}
-             whileInView={{ opacity: 1, y: 0 }}
-             viewport={{ once: true }}
-             transition={{ duration: 0.8, delay: 0.3 }}
-             className="text-gray-600 text-lg mb-8 max-w-2xl mx-auto"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.3 }}
+            className="text-gray-600 text-lg mb-8 max-w-2xl mx-auto"
           >
-            Start with a pilot using your existing cameras. No new hardware, no disruption.
+            Start with a pilot using your existing cameras. No new hardware, no
+            disruption.
           </motion.p>
 
           <Link href="/news">
@@ -64,9 +65,9 @@ function Prove() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6 }}
-          className="relative z-10 px-4 sm:px-6 pb-12 sm:pb-16 text-center"
+          className="relative z-10 w-full px-4 sm:px-6 pb-12 sm:pb-16 text-center"
         >
-          <div className="container mx-auto">
+          <div className="container mx-auto max-w-full">
             <NewsGrid max={3} />
           </div>
         </motion.div>
@@ -74,7 +75,7 @@ function Prove() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.8 }}
-          className="relative z-10 px-4 sm:px-6 pb-12 sm:pb-16 pt-32 text-center"
+          className="relative z-10 w-full px-4 sm:px-6 pb-12 sm:pb-16 pt-32 text-center overflow-hidden"
         >
           <motion.p className="text-sm font-medium tracking-wider text-gray-500 mb-8 ">
             Built for Enterprise Integration
