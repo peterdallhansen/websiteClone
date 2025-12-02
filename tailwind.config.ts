@@ -58,11 +58,11 @@ const config: Config = {
       },
       keyframes: {
         marquee: {
-          from: {
+          "0%": {
             transform: "translateX(0)",
           },
-          to: {
-            transform: "translateX(calc(-100% - var(--gap)))",
+          "100%": {
+            transform: "translateX(calc(-100% / var(--repeat, 2)))",
           },
         },
         "marquee-vertical": {
@@ -146,6 +146,6 @@ const config: Config = {
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [require("tailwindcss-animate"), require("@tailwindcss/typography")],
 };
 export default config;

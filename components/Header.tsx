@@ -9,7 +9,7 @@ import Logo from "./Logo";
 import { Button } from "./ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "./ui/sheet";
 import CookieBanner from "./CookieBanner";
-import { industries, solutions } from "@/lib/constants";
+import { industries, solutions, navigation } from "@/lib/constants";
 
 // NOTE: Original 'solutions' and 'industries' imports are removed as they are replaced by the new navLinks structure.
 // You can adapt your original data into this new structure if needed.
@@ -33,149 +33,8 @@ export default function Header() {
 
   // --- MODIFIED: Using your original links within the new grouped structure ---
 
-  const navLinks: {
-    label: string;
-    href?: string;
-    sublinkGroups?: {
-      title: string;
-      links: { label: string; href: string; external?: boolean }[];
-    }[];
-  }[] = [
-    {
-      label: "Product",
-      sublinkGroups: [
-        {
-          title: "Core Platform",
-          links: [
-            { label: "Analytics Hub", href: "/product/analytics-hub" },
-            { label: "Predictive Forecasting", href: "/product/forecasting" },
-            {
-              label: "Visitor Journey Tracking",
-              href: "/product/journey-tracking",
-            },
-            { label: "Heatmaps & Dwell-Time", href: "/product/heatmaps" },
-            { label: "Reports & Alerts", href: "/product/reports" },
-          ],
-        },
-        {
-          title: "Integrations",
-          links: [
-            { label: "Power BI", href: "/integrations/powerbi" },
-            { label: "Delta Lake", href: "/integrations/delta-lake" },
-            { label: "Excel", href: "/integrations/excel" },
-            { label: "OpenAPI", href: "/integrations/openapi" },
-          ],
-        },
-        {
-          title: "Deployment Options",
-          links: [
-            { label: "Cloud Processing", href: "/deployment/cloud" },
-            { label: "On-Premises Server", href: "/deployment/onprem" },
-          ],
-        },
-      ],
-    },
-    {
-      label: "Use Cases",
-      sublinkGroups: [
-        {
-          title: "Industries We Serve",
-          links: [
-            { label: "Shopping Centers & Retail", href: "/use-cases/retail" },
-            { label: "Smart Cities", href: "/use-cases/smart-cities" },
-            { label: "Airports", href: "/use-cases/airports" },
-            { label: "Education Campuses", href: "/use-cases/education" },
-          ],
-        },
-        {
-          title: "AI in Action",
-          links: [
-            {
-              label: "Traffic Pattern Recognition",
-              href: "/use-cases/traffic-patterns",
-            },
-            {
-              label: "Occupancy Optimization",
-              href: "/use-cases/occupancy-optimization",
-            },
-            {
-              label: "Campaign Impact Analysis",
-              href: "/use-cases/campaign-impact",
-            },
-            {
-              label: "Layout Performance Evaluation",
-              href: "/use-cases/layout-performance",
-            },
-            {
-              label: "Forecasting & Planning",
-              href: "/use-cases/forecasting",
-            },
-          ],
-        },
-      ],
-    },
-    {
-      label: "Learn",
-      sublinkGroups: [
-        {
-          title: "Resources",
-          links: [
-            {
-              label: "Academy",
-              external: true,
-              href: "https://academy.zonify.ai",
-            },
-
-            {
-              label: "Help Center",
-              external: true,
-              href: "https://help.zonify.ai",
-            },
-            {
-              label: "Ways to Use Zonify",
-              external: true,
-              href: "https://help.zonify.ai/ways-to-use",
-            },
-          ],
-        },
-        {
-          title: "Insights",
-          links: [
-            { label: "Customer Stories", href: "/learn/customer-stories" },
-            { label: "Articles & News", href: "/news" },
-            {
-              label: "Research",
-              href: "/research",
-            },
-            { label: "Data Security", href: "/learn/data-security" },
-          ],
-        },
-      ],
-    },
-
-    {
-      label: "Company",
-      sublinkGroups: [
-        {
-          title: "About Zonify.ai",
-          links: [
-            { label: "Our Story", href: "/about" },
-            { label: "Team", href: "/team" },
-            { label: "Careers", href: "/careers" },
-            { label: "Partners", href: "/partners" },
-          ],
-        },
-        {
-          title: "Legal & Compliance",
-          links: [
-            { label: "Privacy Policy", href: "/privacy" },
-            { label: "Terms of Service", href: "/terms" },
-            { label: "GDPR & Data Ethics", href: "/compliance" },
-          ],
-        },
-      ],
-    },
-  ];
+  // Use the unified navigation configuration
+  const navLinks = navigation;
 
   const currentHoveredLinkData = navLinks.find(
     (link) => link.label === hoveredLink

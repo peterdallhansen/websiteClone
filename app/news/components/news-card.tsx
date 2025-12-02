@@ -8,11 +8,12 @@ interface Logo {
 }
 
 interface Article {
-  id: number;
+  slug: string;
   title: string;
   company: string;
   date: string;
   image: string;
+  video?: string;
   logos: Logo[];
   overlayText?: string;
 }
@@ -20,16 +21,27 @@ interface Article {
 export function NewsCard({ article }: { article: Article }) {
   return (
     <Link
-      href={`/news/${article.id}`}
+      href={`/news/${article.slug}`}
       className="group flex flex-col gap-4 transition-opacity hover:opacity-80"
     >
       <div className="relative aspect-[3/2] rounded-2xl overflow-hidden bg-muted">
-        <Image
-          src={article.image || "/placeholder.svg"}
-          alt={article.title}
-          fill
-          className="object-cover"
-        />
+        {article.video ? (
+          <video
+            src={article.video}
+            className="object-cover w-full h-full"
+            autoPlay
+            muted
+            loop
+            playsInline
+          />
+        ) : (
+          <Image
+            src={article.image || "/placeholder.svg"}
+            alt={article.title}
+            fill
+            className="object-cover"
+          />
+        )}
         <div className="absolute inset-0 flex items-center justify-center p-8">
           {article.overlayText && (
             <div className="absolute inset-0 flex items-center justify-center"></div>

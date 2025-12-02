@@ -24,7 +24,7 @@ export default function Partners() {
       <Marquee
         pauseOnHover
         className="[--duration:20s] gap-8 sm:gap-16"
-        repeat={20}
+        repeat={6}
       >
         {companies.map(({ Component }, index) => (
           <BlurFade

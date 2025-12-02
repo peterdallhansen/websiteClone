@@ -25,7 +25,7 @@ function Page() {
       <div className="space-y-32 mt-20 container">
         {Industries.map((solution, index) => (
           <div
-            key={solution.title}
+            key={solution.label}
             className={`flex flex-col ${
               index % 2 === 1 ? "lg:flex-row-reverse" : "lg:flex-row"
             } gap-8 lg:gap-16`}
@@ -33,7 +33,7 @@ function Page() {
             <div className="lg:w-1/2 space-y-4">
               <BlurFade delay={0.2} inView>
                 <h2 className="text-2xl md:text-3xl  text-primary">
-                  {solution.title}
+                  {solution.label}
                 </h2>
               </BlurFade>
 
@@ -61,7 +61,7 @@ function Page() {
                 <div className="relative aspect-[4/4] w-full">
                   <Image
                     src={solution.image || "/placeholder.svg"}
-                    alt={solution.title}
+                    alt={solution.label}
                     fill
                     quality={100}
                     className="object-cover bg-gray-100"

@@ -37,7 +37,7 @@ function Main2() {
             <BlurFade delay={0} inView>
               <h1 className="text-4xl sm:text-5xl xl:text-7xl font text-white leading-tight tracking-tight ">
                 Total clarity from
-                <br /> cloud to crowd.
+                <br /> crowd to cloud.
               </h1>
             </BlurFade>
 

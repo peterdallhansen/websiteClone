@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import { HeroSection } from "./components/hero-section";
 import { NewsGrid } from "./components/news-grid";
+import { getNewsPosts } from "@/lib/news";
 
 export const metadata: Metadata = {
   title: "Articles",
@@ -8,12 +9,13 @@ export const metadata: Metadata = {
 };
 
 export default function NewsPage() {
+  const posts = getNewsPosts();
   return (
     <main className="min-h-screen bg-background">
       <HeroSection />
 
       <div className="mx-auto max-w-[1400px] px-6 py-16 md:px-12 md:py-20">
-        <NewsGrid />
+        <NewsGrid articles={posts} />
       </div>
     </main>
   );

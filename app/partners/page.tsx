@@ -57,7 +57,7 @@ export default function PartnersPage() {
           </h4>
         </BlurFade>
         <BlurFade delay={0.5} inView>
-          <h2 className="text-2xl md:text-3xl xl:text-5xl font-bold leading-tight text-primary text-center mb-8">
+          <h2 className="text-2xl md:text-3xl xl:text-5xl  leading-tight text-primary text-center mb-8">
             Working Together With Trusted Partners
           </h2>
         </BlurFade>

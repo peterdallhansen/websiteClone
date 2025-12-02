@@ -13,85 +13,7 @@ import Link from "next/link";
 import { FaLinkedin } from "react-icons/fa";
 import Logo from "../Logo";
 import { ResearchSection } from "@/app/about/Components/research-section";
-
-// Define the type for a single link (TypeScript interface)
-interface FooterLink {
-  href: string;
-  label: string;
-  Icon: React.ComponentType<React.SVGProps<SVGSVGElement>>;
-}
-
-// Define the type for a footer section
-interface FooterSection {
-  title: string;
-  links: FooterLink[];
-}
-
-// Define the footer sections data
-const footerSections: FooterSection[] = [
-  {
-    title: "Product",
-    links: [
-      {
-        href: "/solutions",
-        label: "Solutions",
-        Icon: Laptop,
-      },
-      {
-        href: "/industries",
-        label: "Industries",
-        Icon: FileText,
-      },
-    ],
-  },
-  {
-    title: "Company",
-    links: [
-      {
-        href: "/about-us",
-        label: "Team",
-        Icon: User,
-      },
-      {
-        href: "/careers",
-        label: "Careers",
-        Icon: Briefcase,
-      },
-
-      {
-        href: "/partners",
-        label: "Partners",
-        Icon: Handshake,
-      },
-    ],
-  },
-
-  {
-    title: "Legal",
-    links: [
-      {
-        href: "/terms",
-        label: "Terms",
-        Icon: Clipboard,
-      },
-      {
-        href: "/business-terms",
-        label: "Business terms",
-        Icon: FileText, // You can choose a different icon if preferred
-      },
-      {
-        href: "/privacy-policy",
-        label: "Privacy",
-        Icon: Shield,
-      },
-      {
-        href: "/compliance",
-        label: "Compliance",
-        Icon: Scale,
-      },
-    ],
-  },
-];
+import { navigation } from "@/lib/constants";
 
 // Define the social media links data
 const socialLinks = [
@@ -109,30 +31,41 @@ export function Footer() {
     <footer className="  mt-auto">
       {/* <ResearchSection /> */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
           {/* Company Logo */}
           <div className="md:col-span-1">
             <Logo width={240} height={100} />
           </div>
 
           {/* Navigation Sections */}
-          {footerSections.map((section) => (
-            <nav key={section.title} className="space-y-4">
-              <h3 className="text-sm font-semibold text-primary uppercase tracking-wider">
-                {section.title}
+          {navigation.map((section) => (
+            <div key={section.label} className="space-y-6">
+              <h3 className="text-sm font-bold text-primary uppercase tracking-wider">
+                {section.label}
               </h3>
-              <ul className="space-y-2">
-                {section.links.map((link) => (
-                  <li key={link.href}>
-                    <Link href={link.href} legacyBehavior>
-                      <a className="text-base text-primary/60 hover:text-primary flex items-center">
-                        {link.label}
-                      </a>
-                    </Link>
-                  </li>
+              <div className="space-y-6">
+                {section.sublinkGroups.map((group) => (
+                  <div key={group.title} className="space-y-3">
+                    {group.title && (
+                      <h4 className="text-xs font-semibold text-primary/40 uppercase tracking-wide">
+                        {group.title}
+                      </h4>
+                    )}
+                    <ul className="space-y-2">
+                      {group.links.map((link) => (
+                        <li key={link.label}>
+                          <Link href={link.href} legacyBehavior>
+                            <a className="text-sm text-primary/60 hover:text-primary transition-colors block">
+                              {link.label}
+                            </a>
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
                 ))}
-              </ul>
-            </nav>
+              </div>
+            </div>
           ))}
         </div>
 

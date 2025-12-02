@@ -44,13 +44,13 @@ export default function Home() {
           living digital model of every location.
         </h5>
       </div>
-      <FixedScrollLayout3D disable3D={true} />
+      <FixedScrollLayout3D disable3D={false} />
       {/* <Info /> */}
 
       {/* <PremiumFeatures /> */}
       {/* <GetToKnow2 /> */}
       <GetToKnow2 />
-      <GetToKnow3 />
+      {/* <GetToKnow3 /> */}
       <Section2 />
 
       <div className="mx-auto container px-6 py-16 md:px-12 md:py-10">

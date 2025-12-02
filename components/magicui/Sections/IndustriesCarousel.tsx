@@ -7,9 +7,9 @@ import Link from "next/link";
 import React, { useEffect, useRef, useState } from "react";
 
 type Item = {
-  title: string;
+  label: string;
   href: string;
-  image: string;
+  image?: string;
   alt?: string;
 };
 
@@ -101,8 +101,8 @@ export default function IndustriesCarousel({
                       className="relative flex-shrink-0 w-[280px] sm:w-[340px] md:w-[420px] h-[280px] sm:h-[340px] md:h-[420px] rounded-2xl overflow-hidden shadow-md snap-start bg-gray-100 group"
                     >
                       <Image
-                        src={it.image}
-                        alt={it.alt ?? it.title}
+                        src={it.image || "/placeholder.svg"}
+                        alt={it.alt ?? it.label}
                         fill
                         priority={idx === 0}
                         loading={idx === 0 ? "eager" : "lazy"}
@@ -116,7 +116,7 @@ export default function IndustriesCarousel({
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
                       <div className="absolute left-3 top-3 md:left-4 md:top-4 text-white text-lg sm:text-xl md:text-2xl font-medium">
-                        {it.title}
+                        {it.label}
                       </div>
                     </article>
                   </Link>

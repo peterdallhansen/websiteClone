@@ -24,8 +24,8 @@ const SidebarMenu: React.FC<SidebarMenuProps> = ({
           {currentPath === item.href ? (
             <>
               <h2 className=" text-xl md:text-xl xl:text-[16px] leading-tight text-primary max-w-[750px] font-bold inline-flex mb-2 items-center flex-row justify-center align-center">
-                <item.icon className="mr-2 size-4" />
-                {item.title}
+                {item.icon && <item.icon className="mr-2 size-4" />}
+                {item.label}
               </h2>
               {/* Render sections only under the current path */}
               {currentPath === item.href && (
@@ -49,8 +49,8 @@ const SidebarMenu: React.FC<SidebarMenuProps> = ({
           ) : (
             <a href={item.href}>
               <h2 className=" text-xl md:text-xl xl:text-[16px] leading-tight text-primary/60 hover:text-primary max-w-[750px] font-bold inline-flex items-center flex-row justify-center align-center">
-                <item.icon className="mr-2 size-4" />
-                {item.title}
+                {item.icon && <item.icon className="mr-2 size-4" />}
+                {item.label}
               </h2>
             </a>
           )}
