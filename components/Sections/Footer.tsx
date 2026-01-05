@@ -72,7 +72,7 @@ export function Footer() {
         {/* Copyright and Social Links */}
         <div className="mt-8  border-gray-200 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-base text-primary/60">
-            &copy; 2025 Zonfiy.ai, ApS. All rights reserved.
+            &copy; 2026 Zonfiy.ai, ApS. All rights reserved.
           </p>
           <div className="flex space-x-6 mt-4 md:mt-0">
             {socialLinks.map((social) => (

@@ -2,7 +2,7 @@
 title: "Partnering with ECE to Expand into the German Market"
 date: "2025-01-26"
 company: "Zonify.ai"
-image: "/images/news/germany-expansion.jpg"
+image: "/images/articles/karsten.jpg"
 ---
 
 Germany represents an important first step into Central European markets for Zonify.ai.

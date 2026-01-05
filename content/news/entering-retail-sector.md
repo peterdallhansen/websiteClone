@@ -2,7 +2,7 @@
 title: "Entering the Retail Sector through Strategic Partnership"
 date: "2024-12-06"
 company: "Zonify.ai"
-image: "/images/news/entering-retail.jpg"
+image: "/images/articles/ZonifyXKlepperie.png"
 ---
 
 Zonify.ai has entered the retail sector through a collaboration with a leading Danish retailer.

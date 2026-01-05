@@ -2,7 +2,7 @@
 title: "First Fully Remote Shopping Center Onboarding Completed"
 date: "2025-10-22"
 company: "Zonify.ai"
-image: "/images/news/remote-onboarding.jpg"
+image: "/images/articles/remote-onboarding.png"
 ---
 
 Zonify.ai has successfully completed the first-ever fully remote onboarding of a shopping center, covering more than 40,000 m² and integrating over 50 video cameras without a single on-site visit.

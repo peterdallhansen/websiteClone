@@ -2,7 +2,7 @@
 title: "Reaching New Heights in the Microsoft for Startups Founders Hub"
 date: "2024-12-18"
 company: "Zonify.ai"
-image: "/images/news/microsoft-founders-hub.jpg"
+image: "/images/articles/image.png"
 ---
 
 Zonify.ai has advanced to the next level in the Microsoft for Startups Founders Hub.

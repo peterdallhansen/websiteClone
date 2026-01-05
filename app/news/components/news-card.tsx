@@ -28,7 +28,7 @@ export function NewsCard({ article }: { article: Article }) {
         {article.video ? (
           <video
             src={article.video}
-            className="object-cover w-full h-full"
+            className="object-contain w-full h-full"
             autoPlay
             muted
             loop
@@ -42,11 +42,13 @@ export function NewsCard({ article }: { article: Article }) {
             className="object-cover"
           />
         )}
-        <div className="absolute inset-0 flex items-center justify-center p-8">
-          {article.overlayText && (
-            <div className="absolute inset-0 flex items-center justify-center"></div>
-          )}
-        </div>
+        {article.overlayText && (
+          <div className="absolute inset-0 flex items-center justify-center p-6 ">
+            <p className="text-white text-xl md:text-2xl font-medium text-center leading-tight">
+              {article.overlayText}
+            </p>
+          </div>
+        )}
       </div>
       <div className="flex flex-col gap-2">
         <h2 className="text-balance font-sans text-xl font-normal leading-tight text-primary/90 md:text-2xl">

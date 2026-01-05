@@ -59,8 +59,8 @@ const management: TeamMember[] = [
   {
     picture: "/images/People/PDH-Blue.png",
     name: "Peter Dall-Hansen",
-    title: "Data Scientist / Fullstack Developer",
-    linkedin: "https://www.linkedin.com/in/marlenewintherplas",
+    title: "Data Scientist & Fullstack Developer",
+    linkedin: "https://www.linkedin.com/in/peterdallhansen",
     description: `Peter is a Data Scientist at Zonify.ai, contributing to product development, frontend architecture, and brand direction. He specializes in designing and developing user-facing solutions, combining technical skills with a strong focus on user experience and visual identity. Prior to Zonify.ai, Peter gained hands-on experience in customer onboarding and collaborative problem-solving as a student assistant at Visotia (formerly Ivensa Vision ApS).`,
     email: "pdh@zonify.ai",
   },

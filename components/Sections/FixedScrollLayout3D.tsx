@@ -6,32 +6,56 @@ import Image from "next/image";
 import React, { useState, useEffect, useRef } from "react";
 import ThreeMap, { MapData } from "@/components/Map/ThreeMap";
 
-const sections = [
+const sections: Array<{
+  id: string;
+  title: string;
+  items: Array<{
+    title: string;
+    description: string;
+  }>;
+  image: {
+    src: string;
+    alt: string;
+  };
+  viewState: {
+    latitude: number;
+    longitude: number;
+    zoom: number;
+    bearing: number;
+    pitch: number;
+    altitude: number;
+    advanced: {
+      cameraPosition: [number, number, number];
+      targetPosition: [number, number, number];
+    };
+    showArcs?: boolean;
+    showFlowPath?: boolean;
+    showHeatmap?: boolean;
+  };
+}> = [
   {
     id: "section-1",
-    title: "Actionable Intelligence",
+    title: "See Every Square Foot in Real-Time",
     items: [
       {
-        title: "The Science of Movement.",
+        title: "No Blind Spots.",
         description:
-          "Turn foot traffic into financial insights. Visualize visitor journeys, optimize high-value zones, and measure the true impact of every square meter.",
+          "Your existing cameras become a unified view of your entire space. Instantly spot underutilized areas, dead zones, and missed opportunities.",
       },
     ],
     image: {
-      src: "/images/Entrance.png",
-      alt: "Deep Analytics Dashboard",
+      src: "/images/6.png",
+      alt: "Digital Twin Overview",
     },
     viewState: {
       latitude: 1748.2853703047995,
       longitude: 2561.3970834247225,
-      zoom: 4.415037499279608,
-      bearing: -60,
-      pitch: 30,
+      zoom: 3.8,
+      bearing: 0,
+      pitch: 45,
       altitude: 1.5,
       advanced: {
-        cameraPosition: [
-          1.9024673309766915, -0.6495240091540171, 2.5872274101434285,
-        ] as [number, number, number],
+        cameraPosition: [2.0, -2.0, 2.0] as [number, number, number],
         targetPosition: [
           2.5613970834247226, 1.7482853703047996, -0.0057146296951979605,
         ] as [number, number, number],
@@ -40,27 +64,31 @@ const sections = [
   },
   {
     id: "section-2",
-    title: "Seamless Integration",
+    title: "Follow Every Customer Journey",
     items: [
       {
-        title: "Your Cameras. Our Brains.",
+        title: "Entry to Exit.",
         description:
-          "Zero new hardware required. We transform your existing security feeds into intelligent sensors, deploying across your entire portfolio in days, not months.",
+          "Track individual visitors through your space with pinpoint accuracy. See where they go, how long they stay, and what catches their attention.",
       },
     ],
     image: {
-      src: "/images/Frame2_1.png",
-      alt: "Intelligent Vision Tracking",
+      src: "/images/8f5a6602-635e-46bf-8052-990e2dd293ba.png",
+      alt: "Individual Path Tracking",
     },
     viewState: {
       latitude: 1748.2853703047995,
       longitude: 2561.3970834247225,
-      zoom: 4.415037499279608,
-      bearing: -103.43840626371144,
-      pitch: 41.92713192993456,
+      zoom: 6.5,
+      bearing: -45,
+      pitch: 30,
       altitude: 1.5,
       advanced: {
-        cameraPosition: [3.0, 0.5, 1.2] as [number, number, number],
+        cameraPosition: [1.9024673309766915, -0.6495240091540171, 1.5] as [
+          number,
+          number,
+          number
+        ],
         targetPosition: [
           2.5613970834247226, 1.7482853703047996, -0.0057146296951979605,
         ] as [number, number, number],
@@ -70,91 +98,62 @@ const sections = [
   },
   {
     id: "section-3",
-    title: "Portfolio Command",
+    title: "Discover Cross-Shopping Patterns",
     items: [
       {
-        title: "One Dashboard. Total Control.",
+        title: "Zone-to-Zone Intelligence.",
         description:
-          "From a single asset to a global portfolio. Benchmark performance, standardize operations, and spot network-wide trends from one centralized command center.",
+          "See which areas drive traffic to others. Validate anchor performance, optimize tenant placement, and prove the value of premium locations.",
       },
     ],
     image: {
-      src: "/images/Frame82.png",
-      alt: "Unified Control Dashboard",
+      src: "/images/Frame2_1.png",
+      alt: "Cross Shopping Analysis",
     },
     viewState: {
       latitude: 1748.2853703047995,
       longitude: 2561.3970834247225,
-      zoom: 4.415037499279608,
-      bearing: 90,
-      pitch: 40,
+      zoom: 4.8,
+      bearing: 45,
+      pitch: 50,
       altitude: 1.5,
       advanced: {
-        cameraPosition: [1.5, 2.0, 1.5] as [number, number, number],
+        cameraPosition: [2.0, -2.0, 2.0] as [number, number, number],
         targetPosition: [
           2.5613970834247226, 1.7482853703047996, -0.0057146296951979605,
         ] as [number, number, number],
       },
+      showFlowPath: true,
     },
   },
   {
     id: "section-4",
-    title: "Data-Driven Leasing",
+    title: "Turn Foot Traffic Into Revenue",
     items: [
       {
-        title: "Predict. Plan. Prosper.",
+        title: "Data-Driven Decisions.",
         description:
-          "Stop guessing. Use predictive modeling to identify the perfect tenant mix, justify premium lease rates, and forecast asset value with precision.",
+          "Aggregate visitor data into clear heatmaps. Justify rent levels, optimize layouts, and make every square foot work harder.",
       },
     ],
     image: {
-      src: "/images/Reports9.png",
-      alt: "Strategic Growth Prediction",
+      src: "/images/DashboardPreview.png",
+      alt: "Aggregate Data View",
     },
     viewState: {
       latitude: 1748.2853703047995,
       longitude: 2561.3970834247225,
-      zoom: 4.415037499279608,
+      zoom: 4.0,
       bearing: 180,
       pitch: 20,
       altitude: 1.5,
       advanced: {
-        cameraPosition: [2.0, 3.0, 1.0] as [number, number, number],
+        cameraPosition: [2.0, -2.0, 2.0] as [number, number, number],
         targetPosition: [
           2.5613970834247226, 1.7482853703047996, -0.0057146296951979605,
         ] as [number, number, number],
       },
-    },
-  },
-  {
-    id: "section-5",
-    title: "Privacy by Design",
-    items: [
-      {
-        title: "Insights, Not Surveillance.",
-        description:
-          "100% GDPR-compliant. We analyze anonymous patterns, not individuals—giving you the data you need without the liability you don't.",
-      },
-    ],
-    image: {
-      src: "/images/Reports8.png",
-      alt: "Privacy First Reporting",
-    },
-    viewState: {
-      latitude: 1748.2853703047995,
-      longitude: 2561.3970834247225,
-      zoom: 4.415037499279608,
-      bearing: -30,
-      pitch: 60,
-      altitude: 1.5,
-      advanced: {
-        cameraPosition: [
-          2.430792741134297, 0.3682561171960492, 3.301845196344019,
-        ] as [number, number, number],
-        targetPosition: [
-          2.5613970834247226, 1.7482853703047996, -0.0057146296951979605,
-        ] as [number, number, number],
-      },
+      showHeatmap: true,
     },
   },
 ];

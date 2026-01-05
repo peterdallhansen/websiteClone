@@ -2,7 +2,7 @@
 title: "Prototyping Next-Generation AI for Business Intelligence"
 date: "2025-02-07"
 company: "Zonify.ai"
-image: "/images/news/prototyping-ai.jpg"
+image: "/images/articles/ZonifyXKlepperie.png"
 ---
 
 Zonify.ai is currently prototyping new AI capabilities for its Business Intelligence platform.

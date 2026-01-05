@@ -5,7 +5,11 @@ import { getNewsPost } from "@/lib/news";
 import { notFound } from "next/navigation";
 import ReactMarkdown from "react-markdown";
 
-export default function NewsArticle({ params }: { params: { article: string } }) {
+export default function NewsArticle({
+  params,
+}: {
+  params: { article: string };
+}) {
   const post = getNewsPost(params.article);
 
   if (!post) {
@@ -50,6 +54,13 @@ export default function NewsArticle({ params }: { params: { article: string } })
                     className="object-cover"
                     priority
                   />
+                )}
+                {post.overlayText && (
+                  <div className="absolute inset-0 flex items-center justify-center p-6">
+                    <p className="text-white text-2xl md:text-3xl lg:text-4xl font-medium text-center leading-tight max-w-xl">
+                      {post.overlayText}
+                    </p>
+                  </div>
                 )}
               </div>
             </div>

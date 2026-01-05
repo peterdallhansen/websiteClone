@@ -2,7 +2,7 @@
 title: "Introducing New Micro Lease Workspace"
 date: "2025-04-15"
 company: "Zonify.ai"
-image: "/images/news/micro-lease.jpg"
+image: "/images/articles/ZonifyXKlepperie2.png"
 ---
 
 Zonify.ai has introduced a new Micro Lease workspace, designed to help retailers, malls, and airports maximize the commercial value of their in-store media and pop-up shop spaces.

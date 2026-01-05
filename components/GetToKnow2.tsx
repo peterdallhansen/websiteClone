@@ -17,47 +17,52 @@ import BlurFade from "./ui/blur-fade";
 export default function GetToKnow3() {
   const keyPoints = [
     {
-      icon: Footprints,
-      title: "Complete Visitor Journey",
-      image: "/images/reports9.png",
+      icon: BarChart3,
+      title: "Close Deals Faster",
+      subtitle: "For Leasing Teams",
+      image: "/images/Frame91.png",
       description:
-        "Track the complete path from entry to exit. Understand cross-shopping patterns and flow between zones.",
-    },
-    {
-      icon: GitGraph,
-      title: "True Conversion",
-      image: "/images/Entrance.png",
-
-      description:
-        "Measure capture rate. Know exactly how many passersby enter each store vs. just walking by.",
+        "Walk into negotiations with irrefutable traffic data. Prove the value of every square meter and justify premium rents.",
     },
     {
       icon: Users,
-      title: "Demographic Insights",
+      title: "Prove Every Dollar",
+      subtitle: "For Marketing Teams",
       image: "/images/Frame2_1.png",
       description:
-        "Segment visitors by age and gender. Tailor your tenant mix and marketing to who is actually there.",
-    },
-    {
-      icon: BarChart3,
-      title: "Leasing Intelligence",
-      image: "/images/Frame82.png",
-      description:
-        "Justify rents with data. Prove the value of every square meter with concrete traffic evidence.",
-    },
-    {
-      icon: Map,
-      title: "Zone Heatmaps",
-      image: "/images/Frame93.png",
-      description:
-        "Visualize engagement. See exactly where visitors stop, linger, and interact with displays.",
+        "Measure exactly who visits, when they come, and how long they stay. Validate campaign ROI with hard numbers.",
     },
     {
       icon: Clock,
-      title: "Predictive Analytics",
-      image: "/images/Frame91.png",
+      title: "Staff Smarter",
+      subtitle: "For Operations",
+      image: "/images/Frame82.png",
       description:
-        "Forecast traffic. Optimize staffing and operations before the rush happens.",
+        "Align security and cleaning resources with real-time traffic patterns. Prevent bottlenecks before they happen.",
+    },
+    {
+      icon: GitGraph,
+      title: "Grow Asset Value",
+      subtitle: "For Asset Managers",
+      image: "/images/Entrance.png",
+      description:
+        "Demonstrate consistent traffic growth and tenant synergy. Give stakeholders the evidence they need.",
+    },
+    {
+      icon: Map,
+      title: "Perfect Your Mix",
+      subtitle: "For Strategy",
+      image: "/images/6.png",
+      description:
+        "Identify high-performing store combinations. Structure your layout to maximize cross-shopping and dwell time.",
+    },
+    {
+      icon: LucideShare2,
+      title: "Strengthen Partnerships",
+      subtitle: "For Tenant Relations",
+      image: "/images/reports9.png",
+      description:
+        "Share actionable insights with tenants. Help them improve conversion and align with center-wide traffic.",
     },
   ];
 
@@ -102,19 +107,15 @@ export default function GetToKnow3() {
 
   return (
     <div className="relative w-full max-w-7xl mx-auto px-4 sm:px-6 py-16 sm:py-24 md:py-32 lg:py-40">
-      <div className="flex justify-center items-center mb-8 sm:mb-10 md:mb-12 w-full">
-        <div className="space-y-4 sm:space-y-6 text-center">
-          <BlurFade delay={0.1} inView>
-            <h1 className="text-3xl sm:text-4xl md:text-5xl leading-tight">
-              Everything You Need to <br />{" "}
-              <span className="text-primary/60">
-                {" "}
-                Measure, Understand, and Improve
-              </span>
-              .
-            </h1>
-          </BlurFade>
-        </div>
+      <div className="text-center mb-12 md:mb-16">
+        <BlurFade delay={0.1} inView>
+          <p className="text-sm uppercase tracking-widest text-primary/50 mb-4">
+            Built For Every Team
+          </p>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-medium text-balance">
+            Data That Drives Every Decision
+          </h2>
+        </BlurFade>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 md:gap-6">
@@ -145,6 +146,9 @@ export default function GetToKnow3() {
 
               {/* Text Content */}
               <div className="space-y-1.5 sm:space-y-2">
+                <p className="text-sm uppercase tracking-wide text-primary/50">
+                  {offering.subtitle}
+                </p>
                 <h3 className="text-xl sm:text-2xl font-medium text-primary/90">
                   {offering.title}
                 </h3>

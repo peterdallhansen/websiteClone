@@ -1,64 +1,56 @@
 "use client";
 import AnalyticsTeaser from "@/components/Sections/analytics-teaser";
 import Hiring from "@/components/Sections/hiring";
-import Main from "@/components/Sections/Main";
-import FixedScrollLayout from "@/components/Sections/FixedScrollLayout";
 import IndustriesCarousel from "@/components/magicui/Sections/IndustriesCarousel";
-import Prove from "@/components/prove";
-import { FeaturesSection } from "@/components/Sections/Features";
 import { ArrowRight } from "lucide-react";
 import { NewsGrid } from "./news/components/news-grid";
-import Info from "@/components/Sections/Info/page";
 import FixedScrollLayout3D from "@/components/Sections/FixedScrollLayout3D";
-
-import { HowItWorks } from "@/components/Sections/HowItWorks";
-import Features from "@/components/Sections/Features/Features";
-import Infoo from "@/components/Sections/Infoo";
 import Section2 from "@/components/Sections/section2";
-import UseCases from "@/components/Sections/UseCases";
-import WhatYouGet from "@/components/Sections/what-you-get";
-import CardSection from "@/components/CardSection";
-import GetToKnow from "@/components/GetToKnow";
 import GetToKnow2 from "@/components/GetToKnow2";
-import PremiumFeatures from "@/components/Sections/PremiumFeatures";
-import GetToKnow3 from "@/components/Sections/GetToKnow3";
-import MainCentered from "@/components/Sections/MainCentered";
 import Main2 from "@/components/Sections/Main2";
+import HowItWorks2 from "@/components/Sections/HowItWorks2";
+import FAQ from "@/components/Sections/FAQ";
+import Traction from "@/components/Sections/Traction";
 
 export default function Home() {
   return (
     <main className="min-h-screen bg-background antialiased w-full mx-auto flex flex-col items-center transition-colors duration-500">
-      {/* All your content remains nested inside the transformed <main> element */}
+      {/* Hero Section */}
       <Main2 />
-      {/* <MainCentered/> */}
-      {/* <FeaturesSection /> */}
+
+      {/* How It Works - 3 step process */}
+      <HowItWorks2 />
+
+      {/* Interactive 3D Demo Section */}
       <div className="w-full mx-auto max-w-7xl px-6 md:px-12">
-        <h1 className="text-6xl font-medium text-center mb-8 text-balance">
-          Zonify.ai gives you the tools to unify your intelligence
-        </h1>
-        <h5 className="text-center text-primary/80 max-w-3xl mx-auto text-lg">
-          Building a clear picture of how people use physical spaces is harder
-          than ever. Data is scattered, insights are siloed, and teams lack a
-          shared view. Zonify.ai brings your existing camera data together into
-          one AI-ready platform, unlocking real-time behavioral insights and a
-          living digital model of every location.
-        </h5>
+        <h2 className="text-4xl md:text-5xl font-medium text-center mb-6 text-balance">
+          See Your Space Come to Life
+        </h2>
+        <p className="text-center text-primary/70 max-w-2xl mx-auto text-lg">
+          Create a living digital twin of your physical space. Track every
+          visitor journey and uncover insights that drive revenue.
+        </p>
       </div>
       <FixedScrollLayout3D disable3D={false} />
-      {/* <Info /> */}
 
-      {/* <PremiumFeatures /> */}
-      {/* <GetToKnow2 /> */}
+      {/* Benefits by Team Role */}
       <GetToKnow2 />
-      {/* <GetToKnow3 /> */}
+
+      {/* Industries Served */}
+      <div className="py-16 md:py-20 w-screen">
+        <IndustriesCarousel />
+      </div>
+
+      {/* Deployment Options */}
       <Section2 />
 
-      <div className="mx-auto container px-6 py-16 md:px-12 md:py-10">
-        <div className="flex flex-row justify-between w-full items-center mb-2">
-          <p className="text-2xl font">News</p>
+      {/* News Section */}
+      <div className="mx-auto container px-6 py-16 md:px-12 md:py-20">
+        <div className="flex flex-row justify-between w-full items-center mb-6">
+          <p className="text-2xl font-medium">Latest News</p>
           <a
             href="/news"
-            className="inline-flex items-center gap-2 text-primary/80 text-1xl group"
+            className="inline-flex items-center gap-2 text-primary/80 text-base group"
           >
             See all
             <ArrowRight className="w-4 h-4 group-hover:animate-wiggleRight" />
@@ -67,14 +59,18 @@ export default function Home() {
         <NewsGrid max={3} />
       </div>
 
+      {/* CTA Section */}
       <div className="px-4 w-screen mx-auto flex items-center justify-center">
         <AnalyticsTeaser />
       </div>
-      <div className="py-16 md:py-10 w-screen">
-        <IndustriesCarousel />
-      </div>
 
-      <Prove />
+      {/* Traction - Production Stats */}
+      <Traction />
+
+      {/* FAQ Section */}
+      <FAQ />
+
+      {/* Careers */}
       <Hiring />
     </main>
   );

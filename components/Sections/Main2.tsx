@@ -28,6 +28,17 @@ function Main2() {
             alt="Background Fallback"
             className="w-full h-full object-cover rounded-2xl absolute inset-0"
           />
+          {/* <video
+            className="w-full h-full object-cover rounded-2xl absolute inset-0"
+            autoPlay
+            loop
+            muted
+          >
+            <source
+              src="https://cdn.prod.website-files.com/64b7a800fdc4c22a4d8534a3%2F670269f0131d41ce93d71304_HP-transcode.mp4"
+              type="video/mp4"
+            />
+          </video> */}
           {/* Subtle black gradient overlay */}
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_0%,rgba(0,0,0,0.2)_100%)] rounded-2xl pointer-events-none"></div>
           {/* Linear gradient at bottom */}
@@ -36,15 +47,15 @@ function Main2() {
           <div className="absolute bottom-12 sm:bottom-16 md:bottom-8 left-2 md:left-6 sm:left-10 md:left-16 flex flex-col items-start justify-end space-y-6 z-10 text-left max-w-3xl px-4">
             <BlurFade delay={0} inView>
               <h1 className="text-4xl sm:text-5xl xl:text-7xl font text-white leading-tight tracking-tight ">
-                Total clarity from
-                <br /> crowd to cloud.
+                Turn Your Cameras Into
+                <br /> Revenue Intelligence.
               </h1>
             </BlurFade>
 
             <BlurFade delay={0.1} inView>
-              <h2 className="text-base sm:text-lg xl:text-2xl text-gray-200 leading-relaxed font-medium ">
-                Zonify.ai is forging the new frontier of spatial intelligence to
-                unlock a more intelligent, interoperable environment.
+              <h2 className="text-base sm:text-lg xl:text-2xl text-gray-200 leading-relaxed font-medium max-w-2xl">
+                Unlock real-time visitor analytics from your existing camera
+                infrastructure. No new hardware required.
               </h2>
             </BlurFade>
           </div>

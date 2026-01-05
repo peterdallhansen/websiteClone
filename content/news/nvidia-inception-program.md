@@ -2,7 +2,7 @@
 title: "Joining the NVIDIA Inception Program to Accelerate AI Innovation"
 date: "2025-01-28"
 company: "Zonify.ai"
-image: "/images/news/nvidia-inception.jpg"
+image: "/images/articles/Untitled 3.png"
 ---
 
 Zonify.ai has joined the NVIDIA Inception Program.
