@@ -7,7 +7,7 @@ import { Button } from "../ui/button";
 
 function Hiring() {
   return (
-    <section className=" flex items-center container justify-items-center min-h-1/2 gap-8 md:gap-32 p-2 md:p-8  py-10 bg-[#FAFAFA]">
+    <section className=" flex items-center container justify-items-center min-h-1/2 gap-8 md:gap-32 p-2 md:p-8  py-10 ">
       <BlurFade inView delay={0.2} className="w-full">
         <div className="w-full bg-[#0C0C0C] rounded-2xl p-4 sm:p-6 md:p-12 lg:p-20 flex flex-col md:flex-row relative overflow-hidden gap-6 md:gap-8 items-center">
           <div className="space-y-4 sm:space-y-6 w-full md:w-2/3">

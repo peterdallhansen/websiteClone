@@ -42,7 +42,7 @@ export default function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
-    <section className="w-full py-20 md:py-32 bg-[#FAFAFA]">
+    <section className="w-full py-20 md:py-32">
       <div className="container mx-auto px-4 md:px-6 max-w-3xl">
         <BlurFade delay={0} inView>
           <div className="text-center mb-12">
@@ -59,7 +59,7 @@ export default function FAQ() {
           {faqs.map((faq, index) => (
             <BlurFade key={index} delay={0.05 * (index + 1)} inView>
               <div
-                className="bg-white rounded-xl border border-border/50 overflow-hidden"
+                className="bg-gray-50 rounded-xl border border-border/50 overflow-hidden"
               >
                 <button
                   onClick={() => setOpenIndex(openIndex === index ? null : index)}

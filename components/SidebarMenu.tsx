@@ -36,7 +36,7 @@ const SidebarMenu: React.FC<SidebarMenuProps> = ({
                         className={`text-xl md:text-xl xl:text-[14px] leading-tight max-w-[750px] mb-2  hover:text-primary/80 ${
                           activeSection === section.id
                             ? "font-bold"
-                            : "font-semibold"
+                            : "font-normal"
                         }`}
                       >
                         {section.title}
@@ -48,7 +48,7 @@ const SidebarMenu: React.FC<SidebarMenuProps> = ({
             </>
           ) : (
             <a href={item.href}>
-              <h2 className=" text-xl md:text-xl xl:text-[16px] leading-tight text-primary/60 hover:text-primary max-w-[750px] font-bold inline-flex items-center flex-row justify-center align-center">
+              <h2 className=" text-xl md:text-xl xl:text-[16px] leading-tight text-primary/60 hover:text-primary max-w-[750px]  inline-flex items-center flex-row justify-center align-center">
                 {item.icon && <item.icon className="mr-2 size-4" />}
                 {item.label}
               </h2>

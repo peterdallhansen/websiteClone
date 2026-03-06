@@ -10,7 +10,7 @@ function Main() {
           </h4>
         </BlurFade>
         <BlurFade delay={0.5} inView>
-          <h2 className="text-2xl md:text-3xl xl:text-5xl font-bold leading-tight text-primary text-center">
+          <h2 className="text-2xl md:text-3xl xl:text-5xl  leading-tight text-primary text-center">
             Beyond Dashboards. Into Real Context.
           </h2>
         </BlurFade>
@@ -18,7 +18,7 @@ function Main() {
           <p className="text-xl md:text-1xl xl:text-2xl mb-8 leading-tight text-primary text-center max-w-[750px] text-opacity-60">
             Charts and tables are useful—but they don’t always tell the whole
             story. Our AI lets you ask natural questions and uncover the{" "}
-            <strong>why</strong> behind the numbers, turning raw data into real
+            why behind the numbers, turning raw data into real
             decisions.
           </p>
         </BlurFade>

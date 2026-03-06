@@ -1,60 +1,108 @@
 "use client";
 import SidebarMenu from "@/components/SidebarMenu";
 import AnimatedShinyText from "@/components/ui/animated-shiny-text";
+import { BentoCard, BentoGrid } from "@/components/ui/bento-grid";
 import BlurFade from "@/components/ui/blur-fade";
-import { ArrowRightIcon } from "lucide-react";
+import { cn } from "@/lib/utils";
+import {
+  ArrowRightIcon,
+  LucideBrainCircuit,
+  LucideMessageSquareText,
+  LucideTrendingUp,
+} from "lucide-react";
 import Image from "next/image";
+import Lottie from "lottie-react";
 import { useEffect, useMemo, useState } from "react";
 
 function Showcase() {
   const [activeSection, setActiveSection] = useState("");
+  const [researchAnim, setResearchAnim] = useState<any>(null);
+  const [loadingResearchAnim, setLoadingResearchAnim] = useState<any>(null);
+const [researchAnim2, setResearchAnim2] = useState<any>(null);
+  useEffect(() => {
+    fetch("/animations/Research.json")
+      .then((res) => res.json())
+      .then((data) => setResearchAnim(data))
+      .catch(console.error);
+
+    fetch("/animations/LoadingResearch.json")
+      .then((res) => res.json())
+      .then((data) => setLoadingResearchAnim(data))
+      .catch(console.error);
+
+    fetch("/animations/Research3.json")
+      .then((res) => res.json())
+      .then((data) => setResearchAnim2(data))
+      .catch(console.error);
+  }, []);
+
+  const features = [
+    {
+      id: "ai-data-queries",
+      Icon: LucideMessageSquareText,
+      name: "Natural Language Queries",
+      description:
+        "Talk to your data naturally. Ask questions like 'What is the peak hour on Fridays?' and get instant, accurate answers.",
+      href: "#ai-data-queries",
+      cta: "Learn more",
+      className: "row-span-1 col-span-3 lg:col-span-4",
+      background: <></>,
+    },
+    {
+      id: "contextual-analysis",
+      Icon: LucideBrainCircuit,
+      name: "Contextual Analysis",
+      description:
+        "Go beyond charts. The AI processes raw spatial data to explain the 'why' behind visitor behaviors and anomalies.",
+      href: "#contextual-analysis",
+      cta: "Learn more",
+      className: "row-span-2 col-span-3 lg:col-span-3",
+      background: <></>,
+    },
+    {
+      id: "automated-insights",
+      Icon: LucideTrendingUp,
+      name: "Automated Insights",
+      description:
+        "Receive proactive AI summaries highlighting significant traffic shifts, operational bottlenecks, or emerging trends.",
+      href: "#automated-insights",
+      cta: "Learn more",
+      className: "row-span-2 col-span-3 lg:col-span-1",
+      background: <></>,
+    },
+  ];
 
   const sections = useMemo(
     () => [
       {
-        id: "audience-insights",
-        title: "Audience Insights",
-        body: `Gain a deep understanding of your visitors with detailed demographic analysis. Uncover behavior patterns and tailor your strategies for maximum impact.`,
-        cta: "Learn more",
-        href: "#audience-insights",
+        id: "ai-data-queries",
+        title: "Natural Language Queries",
+        body: <p>Stop digging through complex reports to find the answers you need. With our conversational AI interface, you can simply ask your data questions in plain English. Want to know the conversion rate at the front display yesterday, or compare foot traffic between two floors? Just ask. The agent instantly translates your query into a dynamic chart or concise summary, saving you hours of manual analysis.</p>,
+        cta: "See It in Action",
+        href: "https://app.zonify.ai/",
+        animation: researchAnim,
+        className: "bg-gray-100/50 rounded-xl p-8 py-0 flex items-center justify-center",
       },
       {
-        id: "real-time-analytics",
-        title: "Real-Time Analytics",
-        body: `Monitor live data streams to capture immediate insights. Stay agile with up-to-the-minute metrics that drive proactive decision-making.`,
-        cta: "Learn more",
-        href: "#real-time-analytics",
+        id: "contextual-analysis",
+        title: "Deep Contextual Analysis",
+        body: <p>Dashboards show you <strong>what</strong> is happening, but our AI agent explains <strong>why</strong>. When you notice a sudden drop in dwell time or an unexpected spike in cross-visits, the agent analyzes historical patterns and multiple spatial variables simultaneously to provide the underlying context. It turns raw spatial metrics into a clear, narrative explanation, empowering you to make informed decisions faster.</p>,
+        cta: "Explore the Agent",
+        href: "https://app.zonify.ai/",
+        animation: loadingResearchAnim,
+        className: "bg-gray-100/50 rounded-xl p-8 py-0 flex items-center justify-center",
       },
       {
-        id: "data-visualization",
-        title: "Data Visualization",
-        body: `Transform complex datasets into intuitive charts and interactive graphs. Visualize your data in ways that simplify analysis and highlight trends.`,
-        cta: "Learn more",
-        href: "#data-visualization",
-      },
-      {
-        id: "predictive-analytics",
-        title: "Predictive Analytics",
-        body: `Leverage advanced algorithms to forecast trends and outcomes. Empower your strategy with data-driven predictions that reveal future opportunities.`,
-        cta: "Learn more",
-        href: "#predictive-analytics",
-      },
-      {
-        id: "custom-dashboards",
-        title: "Custom Dashboards",
-        body: `Customize your analytics workspace to focus on what matters most. Build dashboards that reflect your unique KPIs and performance metrics.`,
-        cta: "Learn more",
-        href: "#custom-dashboards",
-      },
-      {
-        id: "advanced-reporting",
-        title: "Advanced Reporting",
-        body: `Generate comprehensive reports to drive strategic decisions. Analyze historical and real-time data with robust reporting tools tailored to your needs.`,
-        cta: "Learn more",
-        href: "#advanced-reporting",
+        id: "automated-insights",
+        title: "Proactive AI Insights",
+        body: <p>Don't wait until you log in to discover important operational shifts. The AI agent acts as your dedicated analyst, continuously monitoring your location's data in the background. It proactively surface actionable insights, alerting you to emerging trends, operational bottlenecks, or successful marketing campaigns as they happen. Stay one step ahead of your visitors' needs without looking at a single graph.</p>,
+        cta: "Automate Your BI",
+        href: "https://app.zonify.ai/",
+        animation: researchAnim2,
+        className: "bg-gray-100/50 rounded-xl p-8 py-0 flex items-center justify-center",
       },
     ],
-    []
+    [researchAnim, loadingResearchAnim, researchAnim2]
   );
 
   useEffect(() => {
@@ -80,22 +128,31 @@ function Showcase() {
     <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center flex-1 p-8 pb-20 gap-16 sm:p-20">
       <main className="flex flex-col gap-4 row-start-2 items-center">
         <BlurFade delay={0} inView>
-          <h2 className="text-xl md:text-1xl xl:text-2xl leading-tight text-primary text-center max-w-[750px] text-opacity-80 mb-20">
-            Unlock the power of data with our Analytics Hub. Transform raw data
-            into actionable insights and drive smarter business decisions.
+          <h2 className="text-xl md:text-1xl xl:text-2xl leading-tight text-primary text-center max-w-[750px] text-opacity-80 mb-0 md:mb-20">
+            Augment your decision-making with powerful AI models analyzing your spatial data.
+            Turn complex metrics into actionable context, seamlessly forecasting the future
+            and answering critical business questions instantly.
           </h2>
         </BlurFade>
+
+        {/* <BlurFade delay={0.25} inView>
+          <BentoGrid className="hidden sm:grid mt-20">
+            {features.map((feature, idx) => (
+              <BentoCard key={idx} {...feature} />
+            ))}
+          </BentoGrid>
+        </BlurFade> */}
 
         <div className="w-full flex flex-row gap-8 pt-40 relative">
           {/* Sidebar */}
           <div
-            className="self-start w-[400px] sticky top-40 hidden md:visible sm:flex"
+            className="self-start w-[400px] sticky top-40 hidden md:block"
             style={{ position: "sticky" }}
           >
             <SidebarMenu
               sections={sections}
-              currentPath={"/solutions/ai-powered-bi"}
               activeSection={activeSection}
+              currentPath="/solutions/ai-powered-bi"
             />
           </div>
 
@@ -104,34 +161,34 @@ function Showcase() {
               <div key={index}>
                 <h2
                   id={section.id}
-                  className="text-xl md:text-1xl xl:text-4xl leading-tight text-primary max-w-[750px] mb-8 text-left font-bold scroll-mt-40"
+                  className="text-xl md:text-1xl xl:text-4xl leading-tight text-primary max-w-[750px] mb-8 text-left scroll-mt-40"
                 >
                   {section.title}
                 </h2>
-                <p className="text-xl md:text-1xl xl:text-md leading-tight text-primary max-w-[750px] text-opacity-60 mb-8 text-left">
+                <h2 className="text-xl md:text-1xl xl:text-md leading-tight text-primary max-w-[750px] text-opacity-60 mb-8 text-left">
                   {section.body}
-                </p>
+                </h2>
                 <a href={section.href}>
-                  <AnimatedShinyText className="inline-flex items-center justify-center px-4 pl-0 py-1 transition ease-out hover:text-neutral-600 hover:duration-300 hover:dark:text-neutral-400 mb-8">
+                  <AnimatedShinyText className="inline-flex items-center justify-center px-4 pl-0 py-1 transition ease-out hover:text-neutral-600 hover:dark:text-neutral-400 mb-8">
                     <span>{section.cta}</span>
                     <ArrowRightIcon className="ml-1 size-3 transition-transform duration-300 ease-in-out group-hover:translate-x-0.5" />
                   </AnimatedShinyText>
                 </a>
 
-                <Image
-                  src={
-                    index % 2 !== 0
-                      ? "/images/Frame611.png"
-                      : index === 2
-                      ? "/images/Frame64.png"
-                      : "/images/Frame66.png"
-                  }
-                  width={1000}
-                  height={600}
-                  style={{ borderRadius: 15 }}
-                  className="mb-20 border"
-                  alt={section.title}
-                />
+                <div className={cn("mb-20 overflow-hidden flex items-center justify-center", section.className)}>
+                  {section.animation ? (
+                    <div className="w-full h-auto flex items-center justify-center">
+                      <Lottie 
+                        animationData={section.animation} 
+                        loop={true} 
+                        autoplay={true}
+                        className="w-full max-w-[600px] h-auto"
+                      />
+                    </div>
+                  ) : (
+                    <div className="text-muted-foreground animate-pulse text-sm">Loading visual...</div>
+                  )}
+                </div>
               </div>
             ))}
           </div>

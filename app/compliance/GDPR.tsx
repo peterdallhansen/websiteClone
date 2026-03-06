@@ -10,68 +10,46 @@ dayjs.extend(localizedFormat);
 const privacySections = [
   {
     id: "gdpr",
-    title: "GDPR COMPLIANCE & DATA PROTECTION",
+    title: "GDPR COMPLIANCE & PRIVACY BY DESIGN",
     content:
-      "Zonify.ai is built with privacy by design, adhering to all GDPR requirements for data collection, storage, and handling.",
+      "Zonify.ai is built from the ground up to respect visitor privacy. We operate strictly on behavioral data, ensuring total compliance with global privacy standards like GDPR.",
     bulletPoints: [
-      "Our platform follows the privacy-by-design principle and is fully compliant with GDPR.",
-      "Only anonymized data is processed—no personally identifiable information is collected or stored.",
-      "We never use facial recognition technology. Behavioral analytics are our sole focus.",
+      "No personally identifiable information (PII) is ever collected or stored.",
+      "We rely entirely on secure vector embeddings and spatial metrics—no facial recognition technology is used.",
+      "Our processes are designed to support legitimate business interests without compromising individual anonymity.",
     ],
   },
   {
-    id: "security-infrastructure",
-    title: "SECURITY & INFRASTRUCTURE",
+    id: "infrastructure",
+    title: "ENTERPRISE-GRADE INFRASTRUCTURE",
     content:
-      "Zonify.ai ensures secure data processing and robust system reliability through cutting-edge technology and practices.",
+      "Our entire platform and data processing pipeline are securely hosted on Microsoft Azure, providing world-class reliability and data protection.",
     bulletPoints: [
-      "All data is encrypted in transit and at rest using industry best practices.",
-      "Granular, role-based access controls restrict data access to authorized personnel only.",
-      "Our infrastructure is built for high availability and includes redundancy to prevent downtime.",
-    ],
-  },
-  {
-    id: "transparency-compliance",
-    title: "TRANSPARENCY & COMPLIANCE",
-    content:
-      "We prioritize transparency and accountability through comprehensive logging and compliance initiatives.",
-    bulletPoints: [
-      "Detailed audit trails and data logs ensure full visibility into platform activity and data access.",
-      "Regional data residency options support local legal and regulatory requirements.",
-      "Zonify.ai undergoes regular third-party security assessments and compliance audits.",
+      "Leveraging Azure Kubernetes Service (AKS) allows our systems to scale dynamically and handle complex data streams reliably.",
+      "All data is encrypted both in transit and at rest using industry best practices.",
+      "Granular, role-based access controls ensure that only authorized personnel can access your analytics dashboards.",
     ],
   },
   {
     id: "data-processing-overview",
     title: "DATA PROCESSING OVERVIEW",
     content:
-      "Zonify.ai anonymizes and analyzes behavioral data with patented methods to support privacy and insight generation.",
+      "Zonify.ai anonymizes and analyzes behavioral data in real-time to support privacy and insight generation without ever storing sensitive video.",
     bulletPoints: [
-      "Captured video is encrypted and sent via secure IPSec tunnel for processing.",
-      "Image segments are isolated, encoded into vectors, and anonymized within milliseconds.",
-      "No image data is stored—only anonymized identifiers are retained for analysis.",
+      "Video frames are instantly converted into anonymized vector embeddings—no raw images are kept.",
+      "Movements are analyzed as continuous, anonymous paths to provide building-wide analytics.",
+      "No image data is stored—only anonymized identifiers are retained for spatial analysis.",
     ],
   },
   {
-    id: "third-party-providers",
-    title: "THIRD-PARTY PROVIDERS",
+    id: "security-audits",
+    title: "TRANSPARENCY & ACCOUNTABILITY",
     content:
-      "Zonify.ai partners exclusively with EU-based providers that maintain the same high standards of data protection.",
+      "We believe trust is built on transparency. Our systems are continuously monitored and audited to maintain the highest security standards.",
     bulletPoints: [
-      "GleSYS (Sweden): Provides infrastructure for real-time anonymization and deletion of image data.",
-      "Digital Ocean (Germany): Hosts platform data such as user credentials and logs—no video data.",
-      "All processing occurs within the EU and complies with GDPR.",
-    ],
-  },
-  {
-    id: "purpose-and-legitimacy",
-    title: "PROCESSING PURPOSE & LEGAL BASIS",
-    content:
-      "Zonify.ai processes anonymized data to help clients understand visitor behavior and optimize operations.",
-    bulletPoints: [
-      "Supports legitimate interests under GDPR Article 6(1)(f).",
-      "Approved through prior consultation with data protection authorities in the EU.",
-      "Use cases include analyzing visitor flows, optimizing layouts, and improving staffing efficiency.",
+      "Detailed audit trails and logs provide full visibility into platform activity and access.",
+      "We utilize structural redundancy and high-availability cloud architecture to guarantee uptime.",
+      "Regular assessments ensure our methods continually meet evolving legal and regulatory requirements.",
     ],
   },
 ];

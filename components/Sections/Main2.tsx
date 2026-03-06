@@ -20,25 +20,25 @@ function Main2() {
         >
           {/* Background Image */}
           {/* Background Image */}
-          <LayeredParallax
+          {/* <LayeredParallax
             background="/images/background2.png"
             foreground="/images/depthlayer.png"
             sensitivity={0.2}
             brightness={0.9}
             alt="Background Fallback"
             className="w-full h-full object-cover rounded-2xl absolute inset-0"
-          />
-          {/* <video
+          /> */}
+          <video
             className="w-full h-full object-cover rounded-2xl absolute inset-0"
             autoPlay
             loop
             muted
           >
             <source
-              src="https://cdn.prod.website-files.com/64b7a800fdc4c22a4d8534a3%2F670269f0131d41ce93d71304_HP-transcode.mp4"
+              src="https://www.pexels.com/download/video/854621/"
               type="video/mp4"
             />
-          </video> */}
+          </video>
           {/* Subtle black gradient overlay */}
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_0%,rgba(0,0,0,0.2)_100%)] rounded-2xl pointer-events-none"></div>
           {/* Linear gradient at bottom */}

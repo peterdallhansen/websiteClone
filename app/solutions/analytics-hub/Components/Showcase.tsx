@@ -11,12 +11,22 @@ import {
   LucideGlobe,
   LucideSettings2,
   LucideUsers,
+  LucideMessageSquareText,
 } from "lucide-react";
 import Image from "next/image";
+import Lottie from "lottie-react";
 import { useEffect, useMemo, useState } from "react";
 
 function Showcase() {
   const [activeSection, setActiveSection] = useState("");
+  const [researchAnim, setResearchAnim] = useState<any>(null);
+
+  useEffect(() => {
+    fetch("/animations/Research3.json")
+      .then((res) => res.json())
+      .then((data) => setResearchAnim(data))
+      .catch(console.error);
+  }, []);
 
   const features = [
     {
@@ -28,6 +38,17 @@ function Showcase() {
       href: "#interactive-map",
       cta: "Learn more",
       className: "row-span-1 col-span-3 lg:col-span-4",
+      background: <></>,
+    },
+    {
+      id: "ai-assistant",
+      Icon: LucideMessageSquareText,
+      name: "AI Data Assistant",
+      description:
+        "Talk to your data naturally and uncover the 'why' behind visitor behaviors.",
+      href: "/solutions/ai-powered-bi",
+      cta: "Explore AI Features",
+      className: "row-span-1 col-span-3 lg:col-span-2",
       background: <></>,
     },
     {
@@ -88,6 +109,15 @@ function Showcase() {
         image: "/images/3dmap.png",
       },
       {
+        id: "ai-assistant",
+        title: "AI Data Assistant",
+        body: `Don't just look at charts—talk to your data. Our conversational AI translates complex spatial metrics into clear answers. Ask plain-English questions about foot traffic, conversion rates, or demographic trends and receive instant, context-aware insights along with dynamic visual reports.`,
+        cta: "Discover AI-Powered BI",
+        href: "/solutions/ai-powered-bi",
+        animation: researchAnim,
+        className: "rounded-xl",
+      },
+      {
         id: "smart-filtering",
         title: "Smart Filtering & Dynamic Date Selection",
         body: `Empower your analytics with powerful filtering tools and flexible date controls. Choose from predefined or custom date ranges, save reusable filter presets, and switch between aggregation modes like daily, weekly, or monthly. Use demographic filters like gender, age, category, size, and even advanced logic-based groups to refine your data view. Perfect for conducting precise comparisons and unlocking insights across different segments and timeframes.`,
@@ -144,7 +174,7 @@ function Showcase() {
         imageWidth: 1150,
       }, */
     ],
-    []
+    [researchAnim]
   );
 
   useEffect(() => {
@@ -180,13 +210,13 @@ function Showcase() {
           </h2>
         </BlurFade>
 
-        <BlurFade delay={0.25} inView>
+        {/* <BlurFade delay={0.25} inView>
           <BentoGrid className="hidden sm:grid mt-20">
             {features.map((feature, idx) => (
               <BentoCard key={idx} {...feature} />
             ))}
           </BentoGrid>
-        </BlurFade>
+        </BlurFade> */}
         <div className="w-full flex flex-row gap-8 pt-40 relative">
           {/* Sidebar */}
           <div
@@ -221,14 +251,27 @@ function Showcase() {
                   </AnimatedShinyText>
                 </a>
 
-                <Image
-                  src={section.image || "/images/DashboardPreview.png"}
-                  width={section.imageWidth || 1000}
-                  height={400}
-                  quality={100}
-                  className={cn("mb-20", section.className)}
-                  alt={section.title}
-                />
+                <div className={cn("mb-20 overflow-hidden rounded-xl", section.className)}>
+                  {section.animation ? (
+                    <div className="w-full h-auto flex items-center justify-center p-8 py-0 bg-gray-100">
+                      <Lottie 
+                        animationData={section.animation} 
+                        loop={true}
+                        autoplay={true} 
+                        className="w-full max-w-[600px] h-auto"
+                      />
+                    </div>
+                  ) : (
+                    <Image
+                      src={section.image || "/images/DashboardPreview.png"}
+                      width={section.imageWidth || 1000}
+                      height={400}
+                      quality={100}
+                      alt={section.title}
+                      className="w-full h-auto"
+                    />
+                  )}
+                </div>
               </div>
             ))}
           </div>
